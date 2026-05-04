@@ -79,7 +79,7 @@ ul { list-style: none; }
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--copper);
@@ -102,10 +102,10 @@ h1, h2, h3 {
 }
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
-h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
 
 p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.75;
   color: var(--text-muted);
 }
@@ -117,7 +117,7 @@ p {
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 16px 36px;
@@ -181,7 +181,7 @@ p {
   gap: 40px;
 }
 .nav-links li a {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.85);
@@ -271,7 +271,7 @@ p {
   width: 100%;
 }
 .hero-label {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--sand);
@@ -357,7 +357,7 @@ p {
   margin-bottom: 4px;
 }
 .numero-item span {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -444,7 +444,7 @@ p {
   font-weight: normal;
 }
 .equipe-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--text-muted);
 }
@@ -503,7 +503,7 @@ p {
 }
 .servico-card p {
   color: rgba(255,255,255,0.5);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -552,7 +552,7 @@ p {
 }
 .portfolio-tag {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sand);
@@ -565,7 +565,7 @@ p {
 }
 .portfolio-info p {
   color: rgba(255,255,255,0.7);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
 }
 
 /* ============================================
@@ -611,7 +611,7 @@ p {
 }
 .processo-step p {
   color: rgba(255,255,255,0.5);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* ============================================
@@ -687,7 +687,7 @@ p {
 }
 .form-group.full { grid-column: span 2; }
 .form-group label {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--navy);
@@ -719,7 +719,7 @@ p {
   grid-column: span 2;
   text-align: center;
   color: var(--copper);
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 12px;
   border: 1px solid var(--copper);
 }
@@ -744,7 +744,7 @@ p {
   object-fit: contain;
 }
 .footer-copy {
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(255,255,255,0.35);
 }
 .footer-nav {
@@ -752,7 +752,7 @@ p {
   gap: 32px;
 }
 .footer-nav a {
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
