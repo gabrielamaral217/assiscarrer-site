@@ -50,7 +50,7 @@
    ============================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 17px; }
 
 body {
   font-family: var(--font-body);
@@ -79,7 +79,7 @@ ul { list-style: none; }
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--copper);
@@ -105,7 +105,7 @@ h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
 h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
 
 p {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.75;
   color: var(--text-muted);
 }
@@ -117,7 +117,7 @@ p {
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 16px 36px;
@@ -181,7 +181,7 @@ p {
   gap: 40px;
 }
 .nav-links li a {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.85);
@@ -271,7 +271,7 @@ p {
   width: 100%;
 }
 .hero-label {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--sand);
@@ -291,7 +291,7 @@ p {
   color: rgba(255,255,255,0.75);
   max-width: 460px;
   margin-bottom: 40px;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 .hero-scroll {
   position: absolute;
@@ -357,7 +357,7 @@ p {
   margin-bottom: 4px;
 }
 .numero-item span {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -420,7 +420,7 @@ p {
   margin-bottom: 16px;
 }
 .equipe-intro {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   margin-bottom: 40px;
   line-height: 1.75;
@@ -438,20 +438,20 @@ p {
 }
 .equipe-card h4 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--navy);
   margin-bottom: 10px;
   font-weight: normal;
 }
 .equipe-card p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: var(--text-muted);
 }
 .equipe-quote {
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-style: italic;
   color: var(--copper);
   font-style: italic;
@@ -499,11 +499,11 @@ p {
 .servico-card h3 {
   color: var(--white);
   margin-bottom: 16px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 .servico-card p {
   color: rgba(255,255,255,0.5);
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
@@ -552,7 +552,7 @@ p {
 }
 .portfolio-tag {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sand);
@@ -565,7 +565,7 @@ p {
 }
 .portfolio-info p {
   color: rgba(255,255,255,0.7);
-  font-size: 0.95rem;
+  font-size: 1.15rem;
 }
 
 /* ============================================
@@ -645,7 +645,7 @@ p {
 }
 .processo-step p {
   color: rgba(255,255,255,0.5);
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 /* ============================================
@@ -679,7 +679,7 @@ p {
   align-items: center;
   gap: 14px;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1.15rem;
 }
 .contato-lista li svg {
   width: 18px;
@@ -721,7 +721,7 @@ p {
 }
 .form-group.full { grid-column: span 2; }
 .form-group label {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--navy);
@@ -734,7 +734,7 @@ p {
   background: var(--white);
   padding: 14px 16px;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: var(--text);
   outline: none;
   transition: border-color 0.3s;
@@ -753,7 +753,7 @@ p {
   grid-column: span 2;
   text-align: center;
   color: var(--copper);
-  font-size: 1rem;
+  font-size: 1.15rem;
   padding: 12px;
   border: 1px solid var(--copper);
 }
@@ -778,7 +778,7 @@ p {
   object-fit: contain;
 }
 .footer-copy {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255,255,255,0.35);
 }
 .footer-nav {
@@ -786,7 +786,7 @@ p {
   gap: 32px;
 }
 .footer-nav a {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
