@@ -865,8 +865,14 @@ p {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-  .portfolio-item { height: 300px; }
-  .portfolio-overlay { opacity: 1; }
+  .portfolio-item { height: 320px; }
+  .portfolio-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(28,45,64,0.95) 0%, rgba(28,45,64,0.4) 70%, transparent 100%);
+  }
+  .portfolio-info h3 { font-size: 1rem; }
+  .portfolio-info p { font-size: 0.9rem; display: none; }
+  .portfolio-tag { font-size: 11px; }
 
   .processo-steps { flex-direction: column; gap: 32px; }
   .processo-line { width: 40px; height: 1px; margin: 0; }
@@ -877,5 +883,6 @@ p {
   .form-group.full { grid-column: span 1; }
 
   .footer-inner { flex-direction: column; text-align: center; gap: 20px; }
-  .footer-nav { flex-wrap: wrap; justify-content: center; }
+  .footer-nav { flex-wrap: nowrap; justify-content: center; gap: 16px; }
+  .footer-nav a { font-size: 11px; }
 }
