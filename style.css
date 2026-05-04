@@ -517,7 +517,7 @@ p {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 480px 480px;
+  grid-template-rows: 480px 480px 480px;
   gap: 4px;
   margin-top: 0;
 }
