@@ -288,7 +288,7 @@ p {
   color: var(--sand);
 }
 .hero-sub {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.92);
   max-width: 460px;
   margin-bottom: 40px;
   font-size: 1.15rem;
@@ -475,7 +475,7 @@ p {
 }
 .servicos .section-tag { color: var(--sand); }
 .servicos h2 { color: var(--white); }
-.servicos .section-header p { color: rgba(255,255,255,0.5); }
+.servicos .section-header p { color: rgba(255,255,255,0.80); }
 .servicos-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -503,7 +503,7 @@ p {
   font-size: 1.15rem;
 }
 .servico-card p {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.80);
   font-size: 1.15rem;
   line-height: 1.7;
 }
@@ -565,7 +565,7 @@ p {
   font-size: 1.2rem;
 }
 .portfolio-info p {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.95);
   font-size: 1.15rem;
 }
 
@@ -645,7 +645,7 @@ p {
   margin-bottom: 12px;
 }
 .processo-step p {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.80);
   font-size: 1.15rem;
 }
 
@@ -780,7 +780,7 @@ p {
 }
 .footer-copy {
   font-size: 14px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.70);
 }
 .footer-nav {
   display: flex;
@@ -790,7 +790,7 @@ p {
   font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.75);
   transition: color 0.3s;
 }
 .footer-nav a:hover { color: var(--sand); }
