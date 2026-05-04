@@ -569,6 +569,40 @@ p {
 }
 
 /* ============================================
+   CLIENTES
+   ============================================ */
+.clientes {
+  padding: clamp(80px, 10vw, 120px) 0;
+  background: var(--cream);
+}
+.clientes-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(40px, 6vw, 80px);
+  flex-wrap: wrap;
+}
+.cliente-item {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: filter var(--transition), opacity var(--transition);
+}
+.cliente-item:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.cliente-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ============================================
    PROCESSO
    ============================================ */
 .processo {
