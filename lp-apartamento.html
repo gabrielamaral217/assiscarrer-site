@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Apartamento Pequeno Pode Ser Incrível — Assis Carrer Arquitetura</title>
+  <meta name="description" content="Transformamos apartamentos compactos em espaços completos, elegantes e funcionais. Projeto de interiores em São José dos Campos." />
+  <style>
+    @font-face { font-family: 'Now'; src: url('fonts/Now-Light.otf') format('opentype'); font-weight: 300; }
+    @font-face { font-family: 'Now'; src: url('fonts/Now-Regular.otf') format('opentype'); font-weight: 400; }
+    @font-face { font-family: 'Now'; src: url('fonts/Now-Medium.otf') format('opentype'); font-weight: 500; }
+
+    :root {
+      --navy:   #254467;
+      --copper: #A96D3E;
+      --dark:   #1C2D40;
+      --sand:   #C79872;
+      --cream:  #F5F0EB;
+      --white:  #ffffff;
+      --text:   #2a2a2a;
+      --muted:  #6b6b6b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Now', sans-serif; font-weight: 300; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    .lp-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(28,45,64,0.15);
+      backdrop-filter: blur(8px);
+    }
+    .lp-header img { height: 36px; width: auto; }
+    .lp-header a.cta-header {
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white); border: 1px solid rgba(255,255,255,0.5);
+      padding: 10px 24px; transition: all 0.3s;
+    }
+    .lp-header a.cta-header:hover { background: var(--white); color: var(--navy); }
+
+    /* HERO */
+    .hero {
+      height: 100vh; min-height: 600px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      position: relative; overflow: hidden;
+    }
+    .hero-left {
+      background: var(--dark);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: clamp(80px, 10vw, 140px) clamp(40px, 5vw, 80px);
+      position: relative; z-index: 2;
+    }
+    .hero-tag {
+      font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--sand); margin-bottom: 24px;
+    }
+    .hero-left h1 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.2; color: var(--white);
+      margin-bottom: 24px;
+    }
+    .hero-left h1 em { font-style: normal; color: var(--sand); }
+    .hero-left p {
+      font-size: 1rem; line-height: 1.75;
+      color: rgba(255,255,255,0.65); max-width: 420px; margin-bottom: 40px;
+    }
+    .hero-right { position: relative; }
+    .hero-right img { height: 100%; object-position: center; }
+    .hero-right::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--dark) 0%, transparent 30%);
+    }
+
+    /* DORES */
+    .dores { background: var(--cream); padding: 80px 40px; }
+    .dores-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--copper); display: block; margin-bottom: 16px;
+    }
+    .dores h2 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--dark); margin-bottom: 16px; line-height: 1.25;
+    }
+    .dores > .dores-inner > p {
+      font-size: 1rem; color: var(--muted); max-width: 600px;
+      line-height: 1.75; margin-bottom: 56px;
+    }
+    .dores-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    }
+    .dor-item {
+      background: var(--white); padding: 36px 28px;
+      border-bottom: 2px solid transparent; transition: border-color 0.3s;
+    }
+    .dor-item:hover { border-color: var(--copper); }
+    .dor-num {
+      font-size: 2.5rem; font-weight: 300;
+      color: rgba(37,68,103,0.1); line-height: 1; margin-bottom: 16px;
+    }
+    .dor-item h3 { font-size: 1rem; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
+    .dor-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    /* TRANSFORMAÇÃO */
+    .transformacao { padding: 0; }
+    .transformacao-grid {
+      display: grid; grid-template-columns: 1fr 1fr; min-height: 600px;
+    }
+    .transf-img { overflow: hidden; }
+    .transf-img img { height: 100%; transition: transform 0.7s ease; }
+    .transf-img:hover img { transform: scale(1.04); }
+    .transf-text {
+      background: var(--navy);
+      padding: clamp(60px, 8vw, 100px) clamp(40px, 5vw, 80px);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .transf-text .section-tag { color: var(--sand); }
+    .transf-text h2 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--white); margin-bottom: 24px; line-height: 1.25;
+    }
+    .transf-text p { color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 16px; }
+    .beneficios { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+    .beneficios li {
+      display: flex; align-items: flex-start; gap: 12px;
+      color: rgba(255,255,255,0.8); font-size: 0.95rem;
+    }
+    .beneficios li::before {
+      content: ''; width: 18px; height: 1px; background: var(--copper);
+      flex-shrink: 0; margin-top: 11px;
+    }
+
+    /* GALERIA */
+    .galeria { display: grid; grid-template-columns: repeat(3, 1fr); height: 400px; gap: 2px; }
+    .galeria-item { overflow: hidden; }
+    .galeria-item img { height: 100%; transition: transform 0.6s ease; }
+    .galeria-item:hover img { transform: scale(1.06); }
+
+    /* PROCESSO LP */
+    .processo-lp { background: var(--cream); padding: 80px 40px; }
+    .processo-lp .inner { max-width: 1100px; margin: 0 auto; }
+    .processo-lp h2 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--dark); margin-bottom: 48px; text-align: center;
+    }
+    .etapas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .etapa { text-align: center; }
+    .etapa-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      font-size: 14px; font-weight: 500; letter-spacing: 0.1em;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .etapa h4 { font-weight: 500; font-size: 0.95rem; color: var(--navy); margin-bottom: 10px; }
+    .etapa p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+
+    /* FORM */
+    .form-section {
+      background: var(--dark); padding: 80px 40px;
+    }
+    .form-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+    }
+    .form-texto .section-tag { color: var(--sand); }
+    .form-texto h2 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--white); margin-bottom: 20px; line-height: 1.25;
+    }
+    .form-texto p { color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 32px; }
+    .garantias { display: flex; flex-direction: column; gap: 12px; }
+    .garantia {
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,0.7); font-size: 0.9rem;
+    }
+    .garantia-icon {
+      width: 32px; height: 32px; border: 1px solid var(--copper);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--copper); flex-shrink: 0; font-size: 14px;
+    }
+    form { display: flex; flex-direction: column; gap: 16px; }
+    form input, form select, form textarea {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      padding: 14px 16px; font-family: 'Now', sans-serif; font-size: 0.95rem;
+      color: var(--white); outline: none; transition: border-color 0.3s;
+      border-radius: 0; -webkit-appearance: none;
+    }
+    form input::placeholder, form textarea::placeholder { color: rgba(255,255,255,0.3); }
+    form input:focus, form select:focus, form textarea:focus { border-color: var(--copper); }
+    form select option { background: var(--dark); color: var(--white); }
+    form textarea { resize: vertical; min-height: 100px; }
+    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .btn-submit {
+      background: var(--copper); border: none; color: var(--white);
+      padding: 16px; font-family: 'Now', sans-serif; font-size: 12px;
+      letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
+      transition: background 0.3s; margin-top: 8px;
+    }
+    .btn-submit:hover { background: var(--sand); }
+    .form-ok { display: none; color: var(--sand); font-size: 0.9rem; text-align: center; padding: 12px; border: 1px solid var(--copper); }
+    .form-ok.show { display: block; }
+
+    /* FOOTER LP */
+    .lp-footer {
+      background: #111; padding: 32px 40px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .lp-footer img { height: 28px; width: auto; }
+    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .lp-header { padding: 16px 20px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 45vh; }
+      .hero-left { padding: 100px 24px 48px; }
+      .dores { padding: 60px 24px; }
+      .dores-grid { grid-template-columns: 1fr; gap: 2px; }
+      .transformacao-grid { grid-template-columns: 1fr; }
+      .transf-img { height: 300px; }
+      .galeria { grid-template-columns: 1fr 1fr; height: auto; }
+      .galeria-item { height: 200px; }
+      .etapas { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .form-inner { grid-template-columns: 1fr; gap: 40px; }
+      .processo-lp, .form-section { padding: 60px 24px; }
+      .lp-footer { flex-direction: column; text-align: center; padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="lp-header">
+    <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" />
+    <a href="#form" class="cta-header">Quero meu projeto</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">Projeto de Interiores — São José dos Campos</p>
+      <h1>Seu apê pequeno pode ser <em>exatamente o lar que você imaginou</em></h1>
+      <p>Apartamentos compactos têm um potencial enorme — e a gente sabe como transformar cada centímetro em funcionalidade, conforto e estilo que reflete quem você é.</p>
+      <a href="#form" style="display:inline-block;background:var(--copper);color:#fff;padding:16px 36px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;transition:background 0.3s;" onmouseover="this.style.background='#C79872'" onmouseout="this.style.background='#A96D3E'">Quero transformar meu espaço</a>
+    </div>
+    <div class="hero-right">
+      <img src="images/lp/apto-sala.jpg" alt="Sala de apartamento projetada pela Assis Carrer" />
+    </div>
+  </section>
+
+  <!-- DORES -->
+  <section class="dores">
+    <div class="dores-inner">
+      <span class="section-tag">Você se identifica?</span>
+      <h2>Os desafios de quem está montando o primeiro apê</h2>
+      <p>Adquirir um apartamento é uma conquista enorme. Mas aí vem a dúvida: como fazer tudo caber sem parecer pequeno, apertado ou sem personalidade?</p>
+      <div class="dores-grid">
+        <div class="dor-item">
+          <div class="dor-num">01</div>
+          <h3>Espaço que não rende</h3>
+          <p>Cada metro quadrado conta — mas sem planejamento, o espaço se perde e os ambientes parecem improvisados.</p>
+        </div>
+        <div class="dor-item">
+          <div class="dor-num">02</div>
+          <h3>Sem saber por onde começar</h3>
+          <p>Móvel, revestimento, iluminação... são tantas decisões ao mesmo tempo que paralisa qualquer um.</p>
+        </div>
+        <div class="dor-item">
+          <div class="dor-num">03</div>
+          <h3>Medo de gastar errado</h3>
+          <p>Comprar peça por peça sem projeto certo gera retrabalho, desperdício e um resultado que nunca parece completo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMAÇÃO -->
+  <section class="transformacao">
+    <div class="transformacao-grid">
+      <div class="transf-img">
+        <img src="images/lp/apto-cozinha.jpg" alt="Cozinha planejada em apartamento" />
+      </div>
+      <div class="transf-text">
+        <span class="section-tag">Nossa solução</span>
+        <h2>Um projeto completo que faz tudo fazer sentido — do primeiro rascunho à entrega</h2>
+        <p>Com a Assis Carrer, você tem um projeto de interiores personalizado do início ao fim. Nada de improvisar — cada detalhe é pensado para o seu espaço, seu estilo e sua rotina.</p>
+        <ul class="beneficios">
+          <li>Levantamento completo do espaço e briefing detalhado</li>
+          <li>Visualização 3D realista antes de comprar qualquer coisa</li>
+          <li>Especificação de materiais, móveis e iluminação</li>
+          <li>Projeto executivo para compras e execução sem surpresas</li>
+          <li>Possibilidade de execução completa com nosso time</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <div class="galeria">
+    <div class="galeria-item"><img src="images/lp/apto-quarto.jpg" alt="Quarto planejado" /></div>
+    <div class="galeria-item"><img src="images/lp/apto-jantar.jpg" alt="Sala de jantar" /></div>
+    <div class="galeria-item"><img src="images/portfolio/proj2-hero.jpg" alt="Cozinha integrada" /></div>
+  </div>
+
+  <!-- PROCESSO -->
+  <section class="processo-lp">
+    <div class="inner">
+      <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;">Como funciona</span>
+      <h2>Do seu apê atual ao espaço dos seus sonhos</h2>
+      <div class="etapas">
+        <div class="etapa">
+          <div class="etapa-num">01</div>
+          <h4>Briefing</h4>
+          <p>Conversamos sobre seu estilo de vida, necessidades e o que você sonha para o espaço.</p>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">02</div>
+          <h4>Levantamento e 3D</h4>
+          <p>Medimos o espaço e criamos imagens realistas para você ver o resultado antes da obra.</p>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">03</div>
+          <h4>Projeto Executivo</h4>
+          <p>Documentação técnica completa para compras, contratações e execução sem imprevistos.</p>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">04</div>
+          <h4>Execução</h4>
+          <p>Com ou sem nossa equipe — você escolhe. Garantimos o resultado que foi projetado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="form">
+    <div class="form-inner">
+      <div class="form-texto">
+        <span class="section-tag">Vamos começar?</span>
+        <h2>Conte para a gente sobre seu apartamento</h2>
+        <p>Preencha o formulário e uma das nossas arquitetas entra em contato para uma conversa sem compromisso sobre o seu projeto.</p>
+        <div class="garantias">
+          <div class="garantia">
+            <div class="garantia-icon">✓</div>
+            <span>Atendimento presencial em São José dos Campos</span>
+          </div>
+          <div class="garantia">
+            <div class="garantia-icon">✓</div>
+            <span>+100 projetos entregues com qualidade</span>
+          </div>
+          <div class="garantia">
+            <div class="garantia-icon">✓</div>
+            <span>+6 anos transformando espaços em SJC</span>
+          </div>
+          <div class="garantia">
+            <div class="garantia-icon">✓</div>
+            <span>Resposta em até 24 horas úteis</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="lpForm1">
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" name="nome" placeholder="Seu nome" required />
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="tel" name="whatsapp" placeholder="(12) 9 0000-0000" required />
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" name="email" placeholder="seu@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Tamanho do apartamento</label>
+          <select name="tamanho">
+            <option value="">Selecione...</option>
+            <option>Até 40m²</option>
+            <option>40 a 60m²</option>
+            <option>60 a 80m²</option>
+            <option>Acima de 80m²</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Qual ambiente precisa de mais atenção?</label>
+          <select name="ambiente">
+            <option value="">Selecione...</option>
+            <option>Apartamento completo</option>
+            <option>Sala + Cozinha</option>
+            <option>Quarto</option>
+            <option>Banheiro</option>
+            <option>Área de serviço</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Quero meu projeto de interiores</button>
+        <p class="form-ok" id="ok1">Recebemos! Em breve uma arquiteta entra em contato.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="lp-footer">
+    <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" />
+    <p>© 2025 Assis Carrer Arquitetura — São José dos Campos, SP</p>
+  </footer>
+
+  <script>
+    document.getElementById('lpForm1').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(this));
+      const body = encodeURIComponent(`Nome: ${d.nome}\nWhatsApp: ${d.whatsapp}\nE-mail: ${d.email}\nTamanho: ${d.tamanho}\nAmbiente: ${d.ambiente}`);
+      window.location.href = `mailto:arquitetura@assiscarrer.com?subject=${encodeURIComponent('Lead LP Apartamento — ' + d.nome)}&body=${body}`;
+      document.getElementById('ok1').classList.add('show');
+    });
+  </script>
+</body>
+</html>
