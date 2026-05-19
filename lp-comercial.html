@@ -35,7 +35,7 @@
       background: rgba(28,45,64,0.2);
       backdrop-filter: blur(8px);
     }
-    .lp-header img { height: 36px; width: auto; }
+    .lp-header img { height: 40px; width: auto; filter: drop-shadow(0 1px 4px rgba(0,0,0,0.35)); }
     .lp-header a.cta-header {
       font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
       color: var(--white); border: 1px solid rgba(255,255,255,0.5);
@@ -51,7 +51,7 @@
       padding-bottom: 80px;
     }
     .hero-bg { position: absolute; inset: 0; }
-    .hero-bg img { height: 100%; object-position: center 40%; }
+    .hero-bg img { height: 100%; object-position: center 40%; filter: brightness(1.04) contrast(1.02) saturate(1.08); }
     .hero-bg::after {
       content: ''; position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(28,45,64,0.92) 0%, rgba(28,45,64,0.5) 50%, rgba(28,45,64,0.2) 100%);
@@ -222,23 +222,87 @@
     .lp-footer img { height: 28px; width: auto; }
     .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
 
+    /* WHATSAPP FLOATING BUTTON */
+    .whatsapp-float {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4), 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 9999; transition: transform 0.2s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.08); }
+    .whatsapp-float svg { width: 32px; height: 32px; }
+
+    /* PROJETO LIGHTBOX */
+    .projeto-modal {
+      position: fixed; inset: 0;
+      background: rgba(15,31,53,0.94); backdrop-filter: blur(6px);
+      z-index: 10001; display: none;
+      align-items: center; justify-content: center;
+      padding: 24px; opacity: 0; transition: opacity 0.3s ease;
+    }
+    .projeto-modal.open { display: flex; opacity: 1; }
+    .projeto-modal-content {
+      position: relative; max-width: 92vw; max-height: 88vh;
+      display: flex; align-items: center; justify-content: center;
+      transform: scale(0.97); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+    }
+    .projeto-modal.open .projeto-modal-content { transform: scale(1); }
+    .projeto-modal-img {
+      max-width: 100%; max-height: 88vh; object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .projeto-modal-logo {
+      position: absolute; width: 110px; height: 110px;
+      opacity: 0.75; pointer-events: none;
+      filter: brightness(0) invert(1) drop-shadow(0 4px 16px rgba(0,0,0,0.8));
+    }
+    .projeto-modal-close {
+      position: absolute; top: 12px; right: 16px;
+      background: none; border: none; color: #fff;
+      font-size: 2.4rem; line-height: 1; cursor: pointer;
+      padding: 8px 16px; z-index: 2; opacity: 0.85;
+    }
+    .caso-card { cursor: pointer; }
+
     @media (max-width: 768px) {
-      .lp-header { padding: 16px 20px; }
+      html { font-size: 16px; }
+      .lp-header { padding: 12px 16px; gap: 12px; }
+      .lp-header img { height: 28px; }
+      .lp-header a.cta-header { padding: 8px 14px; font-size: 10px; white-space: nowrap; letter-spacing: 0.12em; }
+      .hero { padding-bottom: 56px; min-height: 560px; }
       .hero-content { padding: 0 24px; }
-      .credibilidade, .casos, .porque, .depoimento, .form-section { padding: 60px 24px; }
-      .cred-inner { flex-direction: column; gap: 36px; }
+      .hero-content h1 { font-size: 1.9rem; margin-bottom: 18px; }
+      .hero-content p { font-size: 0.95rem; margin-bottom: 28px; }
+      .hero-cta { padding: 14px 28px; font-size: 11px; }
+      .credibilidade, .casos, .porque, .depoimento, .form-section { padding: 48px 20px; }
+      .cred-inner { flex-direction: column; gap: 28px; }
+      .cred-texto h2 { font-size: 1.4rem; }
+      .cred-numeros { gap: 24px; }
+      .cred-num strong { font-size: 1.6rem; }
+      .casos h2, .porque-texto h2, .form-texto h2 { font-size: 1.4rem; }
+      .casos > .casos-inner > p { margin-bottom: 32px; font-size: 0.95rem; }
       .casos-grid { grid-template-columns: 1fr; }
-      .porque-grid { grid-template-columns: 1fr; }
+      .caso-overlay { padding: 24px; }
+      .porque-grid { grid-template-columns: 1fr; gap: 32px; }
       .porque-img { aspect-ratio: 4/3; }
-      .form-inner { grid-template-columns: 1fr; gap: 40px; }
-      .lp-footer { flex-direction: column; text-align: center; padding: 24px; }
+      .diferencial { padding: 16px; }
+      .depoimento blockquote { font-size: 1rem; }
+      .form-inner { grid-template-columns: 1fr; gap: 32px; }
+      form { gap: 12px; }
+      form input, form select, form textarea { padding: 10px 14px; font-size: 0.9rem; }
+      .lp-footer { flex-direction: column; text-align: center; padding: 24px; gap: 12px; }
+      .whatsapp-float { width: 54px; height: 54px; bottom: 18px; right: 18px; }
+      .whatsapp-float svg { width: 28px; height: 28px; }
+      .projeto-modal-logo { width: 64px; height: 64px; }
     }
   </style>
 </head>
 <body>
 
   <header class="lp-header">
-    <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" />
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
     <a href="#form" class="cta-header">Quero um projeto</a>
   </header>
 
@@ -250,7 +314,7 @@
     <div class="hero-content">
       <span class="hero-tag">Arquitetura Comercial — São José dos Campos</span>
       <h1>O espaço do seu negócio pode ser <em>tão especial quanto o que você vende</em></h1>
-      <p>Criamos os projetos da Sapore Gelato e da Portuga Bake Shop — duas das marcas mais queridas de SJC. O seu negócio pode ser o próximo a ter um espaço que encanta clientes e fortalece sua marca.</p>
+      <p>Criamos os projetos da Sapore Gelato e da Portuga Bake Shop. O seu negócio pode ser o próximo a ter um espaço que encanta clientes e fortalece a marca.</p>
       <a href="#form" class="hero-cta">Quero um projeto para meu negócio</a>
     </div>
   </section>
@@ -261,7 +325,7 @@
       <div class="cred-texto">
         <span class="section-tag">Quem somos</span>
         <h2>Mais de 6 anos criando espaços que marcam em São José dos Campos</h2>
-        <p>A Assis Carrer é um escritório de arquitetura com sede em SJC especializado em projetos residenciais e comerciais — do conceito à entrega, com equipe própria de execução.</p>
+        <p>Escritório de arquitetura em SJC, especializado em projetos residenciais e comerciais — do conceito à entrega, com equipe própria de execução.</p>
       </div>
       <div class="cred-numeros">
         <div class="cred-num">
@@ -285,7 +349,7 @@
     <div class="casos-inner">
       <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;">Projetos que você conhece</span>
       <h2>Já transformamos negócios de SJC</h2>
-      <p>Você provavelmente já entrou em um espaço projetado por nós sem saber. Veja alguns dos projetos que assinamos.</p>
+      <p>Você provavelmente já entrou em um espaço projetado por nós sem saber.</p>
       <div class="casos-grid">
         <div class="caso-card">
           <img src="images/lp/comercial-sapore.jpg" alt="Sapore Gelato Caffè" />
@@ -365,7 +429,7 @@
       <div class="form-texto">
         <span class="section-tag">Vamos criar algo único?</span>
         <h2>Fale com a gente sobre o seu negócio</h2>
-        <p>Preencha o formulário e uma das nossas arquitetas entra em contato para entender o seu projeto e apresentar as possibilidades.</p>
+        <p>Preencha e uma das nossas arquitetas entra em contato pra entender seu projeto.</p>
         <div class="garantias">
           <div class="garantia">
             <div class="garantia-icon">✓</div>
@@ -428,7 +492,7 @@
   </section>
 
   <footer class="lp-footer">
-    <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" />
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
     <p>© 2025 Assis Carrer Arquitetura — São José dos Campos, SP</p>
   </footer>
 
@@ -440,7 +504,34 @@
       window.location.href = `mailto:arquitetura@assiscarrer.com?subject=${encodeURIComponent('Lead LP Comercial — ' + d.nome)}&body=${body}`;
       document.getElementById('ok2').classList.add('show');
     });
+
+    // Lightbox para casos
+    const pm = document.getElementById('projetoModal');
+    const pmImg = document.getElementById('projetoModalImg');
+    const pmClose = document.getElementById('projetoModalClose');
+    document.querySelectorAll('.caso-card').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (!img) return;
+        pmImg.src = img.currentSrc || img.src;
+        pmImg.alt = img.alt || '';
+        pm.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closePM() { pm.classList.remove('open'); document.body.style.overflow = ''; }
+    pmClose.addEventListener('click', closePM);
+    pm.addEventListener('click', e => { if (e.target === pm) closePM(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && pm.classList.contains('open')) closePM(); });
   </script>
+
+  <div class="projeto-modal" id="projetoModal" aria-hidden="true" role="dialog">
+    <button class="projeto-modal-close" id="projetoModalClose" aria-label="Fechar">×</button>
+    <div class="projeto-modal-content">
+      <img class="projeto-modal-img" id="projetoModalImg" alt="" />
+      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" />
+    </div>
+  </div>
 
   <a
     class="whatsapp-float"
