@@ -973,9 +973,8 @@ p {
   .portfolio-info p { font-size: 0.9rem; display: none; }
   .portfolio-tag { font-size: 11px; }
 
-  .processo-steps { flex-direction: column; gap: 32px; }
-  .processo-line { width: 40px; height: 1px; margin: 0; }
-  .processo-step { padding: 0; }
+  .processo-steps { grid-template-columns: 1fr; }
+  .processo-step { padding: 36px 24px; }
 
   .contato-grid { grid-template-columns: 1fr; }
   .contato-form { grid-template-columns: 1fr; }
