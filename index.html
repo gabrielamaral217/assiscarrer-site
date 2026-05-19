@@ -94,12 +94,14 @@
         <div class="equipe-text">
           <div class="equipe-cards">
             <div class="equipe-card">
+              <span class="equipe-spec">Residencial</span>
               <h4>Flávia Assis</h4>
-              <p>Arquiteta e urbanista, especialista em residenciais. Une estética e técnica para interiores que traduzem cada cliente.</p>
+              <p>Arquiteta e urbanista. Une estética e técnica para interiores que traduzem cada cliente.</p>
             </div>
             <div class="equipe-card">
+              <span class="equipe-spec">Comercial &amp; Corporativo</span>
               <h4>Beatriz Carrer</h4>
-              <p>Arquiteta com foco em comerciais e corporativos. Cria ambientes funcionais que comunicam a essência de cada negócio.</p>
+              <p>Cria ambientes funcionais que comunicam a essência de cada negócio.</p>
             </div>
           </div>
           <p class="equipe-quote">"Cada projeto é único porque cada cliente é único — ouvi-los é o começo de tudo."</p>
@@ -302,6 +304,7 @@
           <p>Acompanhamento técnico ou execução completa pelo nosso time — prazo e qualidade garantidos.</p>
         </div>
       </div>
+      <p class="processo-hint">← arraste para o lado →</p>
     </div>
   </section>
 
@@ -412,6 +415,23 @@
       </ul>
     </div>
   </footer>
+
+  <div class="projeto-modal" id="projetoModal" aria-hidden="true" role="dialog">
+    <button class="projeto-modal-close" id="projetoModalClose" aria-label="Fechar">×</button>
+    <div class="projeto-modal-content">
+      <img class="projeto-modal-img" id="projetoModalImg" alt="" />
+      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" />
+    </div>
+  </div>
+
+  <div class="servico-modal" id="servicoModal" aria-hidden="true" role="dialog">
+    <div class="servico-modal-content">
+      <button class="servico-modal-close" id="servicoModalClose" aria-label="Fechar">×</button>
+      <div class="servico-modal-icon" id="servicoModalIcon"></div>
+      <h3 id="servicoModalTitle"></h3>
+      <p id="servicoModalText"></p>
+    </div>
+  </div>
 
   <a
     class="whatsapp-float"

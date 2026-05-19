@@ -56,3 +56,72 @@ document.querySelectorAll(
   el.classList.add('reveal');
   observer.observe(el);
 });
+
+// Servico modal (mobile only)
+const servicoModal = document.getElementById('servicoModal');
+const servicoModalClose = document.getElementById('servicoModalClose');
+const servicoModalIcon = document.getElementById('servicoModalIcon');
+const servicoModalTitle = document.getElementById('servicoModalTitle');
+const servicoModalText = document.getElementById('servicoModalText');
+
+function openServicoModal(card) {
+  const icon = card.querySelector('.servico-icon');
+  const title = card.querySelector('h3');
+  const text = card.querySelector('p');
+  servicoModalIcon.innerHTML = icon ? icon.innerHTML : '';
+  servicoModalTitle.textContent = title ? title.textContent : '';
+  servicoModalText.textContent = text ? text.textContent : '';
+  servicoModal.classList.add('open');
+  servicoModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+function closeServicoModal() {
+  servicoModal.classList.remove('open');
+  servicoModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.servico-card').forEach(card => {
+  card.addEventListener('click', () => {
+    if (window.innerWidth > 768) return;
+    openServicoModal(card);
+  });
+});
+servicoModalClose.addEventListener('click', closeServicoModal);
+servicoModal.addEventListener('click', (e) => {
+  if (e.target === servicoModal) closeServicoModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && servicoModal.classList.contains('open')) closeServicoModal();
+});
+
+// Projeto lightbox
+const projetoModal = document.getElementById('projetoModal');
+const projetoModalImg = document.getElementById('projetoModalImg');
+const projetoModalClose = document.getElementById('projetoModalClose');
+
+function openProjetoModal(item) {
+  const img = item.querySelector('img');
+  if (!img) return;
+  projetoModalImg.src = img.currentSrc || img.src;
+  projetoModalImg.alt = img.alt || '';
+  projetoModal.classList.add('open');
+  projetoModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+function closeProjetoModal() {
+  projetoModal.classList.remove('open');
+  projetoModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.portfolio-item').forEach(item => {
+  item.addEventListener('click', () => openProjetoModal(item));
+});
+projetoModalClose.addEventListener('click', closeProjetoModal);
+projetoModal.addEventListener('click', (e) => {
+  if (e.target === projetoModal) closeProjetoModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && projetoModal.classList.contains('open')) closeProjetoModal();
+});
