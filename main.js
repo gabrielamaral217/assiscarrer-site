@@ -51,7 +51,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.servico-card, .portfolio-item, .processo-step, .sobre-text, .sobre-imagem, .contato-info, .contato-form'
+  '.servico-card, .portfolio-item, .processo-step, .sobre-text, .sobre-imagem, .contato-info, .contato-form, .equipe-header, .equipe-imagem, .equipe-text, .contato-bloco, .section-header'
 ).forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
