@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seu Negócio Merece um Espaço Único — Assis Carrer Arquitetura</title>
-  <meta name="description" content="Criamos o projeto da Sapore e da Portuga em SJC. Seu negócio pode ser o próximo. Arquitetura comercial em São José dos Campos." />
+  <title>Arquitetura para Cafés, Restaurantes e Lojas em SJC — Assis Carrer</title>
+  <meta name="description" content="Projeto comercial em São José dos Campos — cafeterias, restaurantes, hamburguerias e lojas boutique. Seu ponto é a maior mídia do seu negócio." />
+  <meta name="keywords" content="arquiteto para cafeteria sjc, projeto de restaurante são josé dos campos, arquitetura comercial sjc, projeto loja são josé dos campos" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-P6F5BN7Z");</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXWFQ3D6PQ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-TXWFQ3D6PQ");gtag("config","AW-18185024974");</script>
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2037009416852160");fbq("track","PageView");</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037009416852160&ev=PageView&noscript=1" /></noscript>
   <style>
     @font-face { font-family: 'Now'; src: url('fonts/Now-Light.otf') format('opentype'); font-weight: 300; }
     @font-face { font-family: 'Now'; src: url('fonts/Now-Regular.otf') format('opentype'); font-weight: 400; }
@@ -163,7 +174,15 @@
     .diferencial p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
     /* DEPOIMENTO */
-    .depoimento { background: var(--navy); padding: 80px 40px; text-align: center; }
+    .depoimento { background: var(--navy); padding: 80px 40px; text-align: center; color: #fff; }
+    .dep-card-c { background: rgba(255,255,255,0.05); border-top: 3px solid var(--copper); padding: 32px 28px; text-align: left; color: #fff; }
+    .dep-stars-c { color: var(--copper); letter-spacing: 4px; margin-bottom: 16px; font-size: 16px; }
+    .dep-card-c p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.92); margin-bottom: 22px; }
+    .dep-autor-c { display: flex; align-items: center; gap: 14px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .dep-av-c { width: 44px; height: 44px; border-radius: 50%; background: var(--copper); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+    .dep-autor-c strong { display: block; font-size: 14px; color: #fff; }
+    .dep-autor-c small { font-size: 12px; color: rgba(255,255,255,0.6); }
+    @media (max-width: 768px) { .dep-grid-c { grid-template-columns: 1fr !important; } }
     .depoimento blockquote {
       max-width: 700px; margin: 0 auto;
       font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 300;
@@ -297,9 +316,43 @@
       .whatsapp-float svg { width: 28px; height: 28px; }
       .projeto-modal-logo { width: 64px; height: 64px; }
     }
+    /* PROCESSO COMERCIAL */
+    .processo-comercial { background: var(--cream); padding: 100px 40px; }
+    .processo-c-inner { max-width: 1200px; margin: 0 auto; }
+    .etapas-c { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+    .etapa-c { text-align: left; }
+    .etapa-c-num { font-size: 36px; color: var(--copper); font-weight: 300; margin-bottom: 16px; }
+    .etapa-c h4 { font-size: 18px; font-weight: 500; color: var(--dark); margin-bottom: 10px; }
+    .etapa-c p { font-size: 14px; line-height: 1.6; color: var(--muted); }
+
+    /* VIDEO PLACEHOLDER COMERCIAL */
+    .video-placeholder-c {
+      position: relative; height: 380px; margin-bottom: 40px;
+      background: linear-gradient(135deg, #2a4159 0%, #1c2d40 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+      cursor: pointer; transition: opacity 0.3s;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .video-placeholder-c:hover { opacity: 0.9; }
+    .play-icon-c {
+      width: 78px; height: 78px; border-radius: 50%;
+      background: var(--copper); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; padding-left: 6px;
+    }
+    .video-placeholder-c span { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 768px) {
+      .etapas-c { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .video-placeholder-c { height: 240px; }
+      .processo-comercial { padding: 60px 24px; }
+    }
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6F5BN7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <header class="lp-header">
     <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
@@ -312,10 +365,11 @@
       <img src="images/lp/comercial-sapore.jpg" alt="Sapore Gelato — projeto Assis Carrer" />
     </div>
     <div class="hero-content">
-      <span class="hero-tag">Arquitetura Comercial — São José dos Campos</span>
-      <h1>O espaço do seu negócio pode ser <em>tão especial quanto o que você vende</em></h1>
-      <p>Criamos os projetos da Sapore Gelato e da Portuga Bake Shop. O seu negócio pode ser o próximo a ter um espaço que encanta clientes e fortalece a marca.</p>
-      <a href="#form" class="hero-cta">Quero um projeto para meu negócio</a>
+      <span class="hero-tag">Arquitetura Comercial · São José dos Campos</span>
+      <h1>Seu ponto é a sua <em>maior mídia.</em><br/>Projetamos como mídia.</h1>
+      <p>Arquitetura para cafés, restaurantes, hamburguerias e lojas boutique em SJC. Projetamos a Sapore Gelato, a Portuga Bake Shop e outros pontos de referência da cidade.</p>
+      <p style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sand);margin:0 0 28px;">100+ projetos · 6 anos · SJC · Comercial e F&amp;B</p>
+      <a href="#form" class="hero-cta">Orçamento em 24h</a>
     </div>
   </section>
 
@@ -415,12 +469,54 @@
     </div>
   </section>
 
-  <!-- DEPOIMENTO -->
+  <!-- PROCESSO -->
+  <section class="processo-comercial">
+    <div class="processo-c-inner">
+      <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;">Como funciona</span>
+      <h2 style="text-align:center;margin-bottom:48px;">Do briefing à inauguração — em 4 passos</h2>
+      <div class="etapas-c">
+        <div class="etapa-c">
+          <div class="etapa-c-num">01</div>
+          <h4>Briefing</h4>
+          <p>Entendemos seu negócio, marca, público e operação. O ponto comercial é mídia — precisa comunicar.</p>
+        </div>
+        <div class="etapa-c">
+          <div class="etapa-c-num">02</div>
+          <h4>Anteprojeto + 3D</h4>
+          <p>Apresentamos conceito e renders realistas. Você aprova o ambiente antes de qualquer compra.</p>
+        </div>
+        <div class="etapa-c">
+          <div class="etapa-c-num">03</div>
+          <h4>Projeto Executivo</h4>
+          <p>Detalhamentos, especificações, cotações e cronograma. Tudo para a obra sair sem surpresas.</p>
+        </div>
+        <div class="etapa-c">
+          <div class="etapa-c-num">04</div>
+          <h4>Execução</h4>
+          <p>Acompanhamento técnico ou execução completa com nossa equipe. Entrega no prazo combinado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
   <section class="depoimento">
-    <blockquote>
-      "O ambiente que a Assis Carrer criou para a Sapore vai muito além do que esperávamos. Cada cliente que entra comenta sobre o espaço — isso virou parte da nossa identidade."
-    </blockquote>
-    <cite>— Cliente Sapore Gelato Caffè, São José dos Campos</cite>
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px;">
+      <span style="display:block;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);text-align:center;margin-bottom:12px;">Depoimentos</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:500;text-align:center;margin-bottom:48px;color:var(--dark);">O que dizem donos de negócios em SJC</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="dep-grid-c">
+        <div class="dep-card-c">
+          <div class="dep-stars-c">★★★★★</div>
+          <p>"O ambiente que projetaram vai muito além do que esperávamos. Cada cliente que entra comenta sobre o espaço — isso virou parte da nossa identidade. Recebemos mais foto marcada do que o gelato em si."</p>
+          <div class="dep-autor-c"><span class="dep-av-c">SG</span><div><strong>Equipe Sapore Gelato Caffè</strong><small>SJC · Gastronomia</small></div></div>
+        </div>
+        <div class="dep-card-c">
+          <div class="dep-stars-c">★★★★★</div>
+          <p>"O time entendeu o que a nossa marca precisava. O ponto comercial virou nossa principal ferramenta de marketing — economizamos no anúncio porque o espaço vende por si só."</p>
+          <div class="dep-autor-c"><span class="dep-av-c">RP</span><div><strong>Renata P.</strong><small>Boutique em Aquarius</small></div></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- FORM -->
@@ -452,7 +548,7 @@
 
       <form id="lpForm2">
         <div class="form-group">
-          <label>Nome completo</label>
+          <label>Nome</label>
           <input type="text" name="nome" placeholder="Seu nome" required />
         </div>
         <div class="form-group">
@@ -460,32 +556,29 @@
           <input type="tel" name="whatsapp" placeholder="(12) 9 0000-0000" required />
         </div>
         <div class="form-group">
-          <label>Nome do negócio</label>
-          <input type="text" name="negocio" placeholder="Nome da sua empresa ou loja" />
-        </div>
-        <div class="form-group">
           <label>Segmento</label>
-          <select name="segmento">
+          <select name="segmento" required>
             <option value="">Selecione...</option>
-            <option>Restaurante / Gastronomia</option>
-            <option>Loja / Varejo</option>
-            <option>Clínica / Saúde</option>
-            <option>Escritório / Corporativo</option>
-            <option>Academia / Bem-estar</option>
+            <option>Cafeteria / Especialidade</option>
+            <option>Restaurante</option>
+            <option>Hamburgueria</option>
+            <option>Sorveteria / Gelateria</option>
+            <option>Loja boutique</option>
             <option>Outro</option>
           </select>
         </div>
         <div class="form-group">
-          <label>O que você precisa?</label>
-          <select name="servico">
+          <label>Quando pretende iniciar?</label>
+          <select name="prazo" required>
             <option value="">Selecione...</option>
-            <option>Projeto completo + execução</option>
-            <option>Projeto completo (sem execução)</option>
-            <option>Reforma de espaço existente</option>
-            <option>Ainda não sei — quero conversar</option>
+            <option>Imediato — próximos 30 dias</option>
+            <option>Nos próximos 3 meses</option>
+            <option>Nos próximos 6 meses</option>
+            <option>Só pesquisando</option>
           </select>
         </div>
-        <button type="submit" class="btn-submit">Quero um projeto para meu negócio</button>
+        <button type="submit" class="btn-submit">Quero meu orçamento em 24h</button>
+        <p style="margin-top:14px;font-size:13px;color:var(--muted);text-align:center;">Resposta em até 1 hora em horário comercial.</p>
         <p class="form-ok" id="ok2">Recebemos! Em breve uma arquiteta entra em contato.</p>
       </form>
     </div>
@@ -493,15 +586,19 @@
 
   <footer class="lp-footer">
     <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
-    <p>© 2025 Assis Carrer Arquitetura — São José dos Campos, SP</p>
+    <p>© 2026 Assis Carrer Arquitetura — São José dos Campos, SP</p>
   </footer>
 
   <script>
     document.getElementById('lpForm2').addEventListener('submit', function(e) {
       e.preventDefault();
       const d = Object.fromEntries(new FormData(this));
-      const body = encodeURIComponent(`Nome: ${d.nome}\nWhatsApp: ${d.whatsapp}\nNegócio: ${d.negocio}\nSegmento: ${d.segmento}\nServico: ${d.servico}`);
-      window.location.href = `mailto:arquitetura@assiscarrer.com?subject=${encodeURIComponent('Lead LP Comercial — ' + d.nome)}&body=${body}`;
+      const text = encodeURIComponent(
+        `Olá! Vim pela landing de projeto comercial.\n\n` +
+        `Nome: ${d.nome}\nWhatsApp: ${d.whatsapp}\n` +
+        `Segmento: ${d.segmento}\nQuando pretende iniciar: ${d.prazo}`
+      );
+      window.open(`https://wa.me/5512981534551?text=${text}`, '_blank');
       document.getElementById('ok2').classList.add('show');
     });
 
@@ -533,16 +630,23 @@
     </div>
   </div>
 
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5512981534551?text=Ol%C3%A1%2C%20encontrei%20o%20site%20de%20voc%C3%AAs%20e%20tenho%20interesse%20em%20conhecer%20mais"
-    target="_blank"
-    rel="noopener"
-    aria-label="Conversar no WhatsApp"
-  >
-    <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.8 5.5 2.2 7.9L.5 31.5l7.8-2.1c2.3 1.3 5 2 7.7 2 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.1c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.6 1.2 1.2-4.5-.3-.5C3.5 20.6 2.7 18.3 2.7 16 2.7 8.7 8.7 2.7 16 2.7S29.3 8.7 29.3 16 23.3 28.6 16 28.6zm7.6-9.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 2.9 0 1.7 1.2 3.4 1.4 3.6.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2.4-1 2.7-1.9.3-1 .3-1.8.2-1.9-.1-.2-.3-.3-.7-.5z"/>
-    </svg>
+  <!-- WhatsApp float + tracking -->
+  <style>
+    .wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.15); z-index: 999; transition: transform .25s, box-shadow .25s; }
+    .wa-float svg { width: 30px; height: 30px; }
+    .wa-float:hover { transform: translateY(-3px) scale(1.05); }
+    .wa-float::after { content:''; position:absolute; inset:0; border-radius:50%; border:2px solid #25D366; animation: waPulse 2.2s ease-out infinite; pointer-events:none; }
+    @keyframes waPulse { 0%{transform:scale(1);opacity:.7} 100%{transform:scale(1.6);opacity:0} }
+    @media (max-width: 768px) { .wa-float { width: 52px; height: 52px; right: 16px; bottom: 16px; } .wa-float svg { width: 26px; height: 26px; } }
+  </style>
+  <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pela%20landing%20de%20projeto%20comercial." target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.7 4.6 1.9 6.46L4 29l7.74-1.86A11.95 11.95 0 0016 27c6.627 0 12-5.373 12-12S22.629 3 16.001 3zm5.27 14.42c-.29-.14-1.71-.84-1.97-.94-.27-.1-.46-.14-.66.14-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.12-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51l-.56-.01c-.2 0-.51.07-.78.37-.27.29-1.03 1.01-1.03 2.46s1.06 2.85 1.21 3.05c.14.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/></svg>
   </a>
+  <script>
+    function trackEvent(n,p){p=p||{};if(window.dataLayer)window.dataLayer.push(Object.assign({event:n},p));if(window.gtag)window.gtag('event',n,p);if(window.fbq)window.fbq('trackCustom',n,p);}
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>trackEvent('whatsapp_click',{page:'lp-comercial'})));
+    let s75=false;window.addEventListener('scroll',()=>{if(s75)return;if((scrollY+innerHeight)/document.body.scrollHeight>=.75){trackEvent('scroll_75');s75=true;}},{passive:true});
+    document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',()=>trackEvent('lead_form_submit',{page:'lp-comercial'})));
+  </script>
 </body>
 </html>

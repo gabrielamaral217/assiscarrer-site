@@ -1280,3 +1280,111 @@ p {
     height: 28px;
   }
 }
+
+/* ===== HERO CTAs + PROOF ===== */
+.hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-top: 8px;
+}
+.btn-ghost {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #fff; border: 1px solid rgba(255,255,255,0.4);
+  background: transparent;
+  transition: all 0.3s;
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+.hero-proof {
+  margin-top: 28px;
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ===== FORM DISCLAIMER ===== */
+.form-disclaimer {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  font-size: 13px; color: var(--muted, #6b6b6b);
+  text-align: center;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa-float {
+  position: fixed;
+  right: 22px; bottom: 22px;
+  width: 58px; height: 58px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.wa-float svg { width: 30px; height: 30px; }
+.wa-float:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(37,211,102,0.5), 0 4px 12px rgba(0,0,0,0.2);
+}
+.wa-float::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: waPulse 2.2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@media (max-width: 768px) {
+  .wa-float { width: 52px; height: 52px; right: 16px; bottom: 16px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
+
+/* ===== DEPOIMENTOS ===== */
+.depoimentos { padding: 100px 0; background: var(--cream, #F5F0EB); }
+.depoimentos .section-header { text-align: center; margin-bottom: 56px; }
+.depoimentos-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px; max-width: 1200px; margin: 0 auto;
+}
+.depoimento-card {
+  background: #fff; padding: 36px 32px;
+  display: flex; flex-direction: column; gap: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  border-top: 3px solid var(--copper, #A96D3E);
+}
+.depoimento-stars {
+  color: var(--copper, #A96D3E); font-size: 16px; letter-spacing: 4px;
+}
+.depoimento-card blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; line-height: 1.55; font-style: italic;
+  color: var(--dark, #1C2D40); flex: 1; margin: 0;
+}
+.depoimento-autor {
+  display: flex; align-items: center; gap: 14px;
+  padding-top: 18px; border-top: 1px solid rgba(0,0,0,0.08);
+}
+.depoimento-avatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--dark, #1C2D40); color: var(--sand, #C79872);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.depoimento-autor strong {
+  display: block; font-size: 14px; font-weight: 500;
+  color: var(--dark, #1C2D40); margin-bottom: 2px;
+}
+.depoimento-autor span {
+  font-size: 12px; color: var(--muted, #6b6b6b);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 900px) {
+  .depoimentos-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 24px; }
+  .depoimento-card { padding: 28px 24px; }
+}

@@ -20,25 +20,53 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Contact form — mailto fallback (no backend needed)
+// Tracking helpers — disparam quando os pixels estiverem ativos
+function trackEvent(name, params) {
+  params = params || {};
+  if (window.dataLayer) window.dataLayer.push(Object.assign({ event: name }, params));
+  if (window.gtag)      window.gtag('event', name, params);
+  if (window.fbq)       window.fbq('trackCustom', name, params);
+}
+
+// Contact form — envia lead para WhatsApp + dispara lead_form_submit
+const WA_NUMBER = '5512981534551';
 document.getElementById('contatoForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const nome     = this.nome.value;
-  const email    = this.email.value;
-  const telefone = this.telefone.value;
+  const nome     = this.nome.value.trim();
+  const telefone = this.telefone.value.trim();
   const tipo     = this.tipo.value;
-  const mensagem = this.mensagem.value;
+  const prazo    = this.prazo.value;
+  const mensagem = this.mensagem.value.trim();
 
-  const subject = encodeURIComponent(`Contato via site — ${tipo || 'Projeto'}`);
-  const body = encodeURIComponent(
-    `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nTipo de projeto: ${tipo}\n\n${mensagem}`
+  trackEvent('lead_form_submit', { tipo_projeto: tipo, prazo: prazo });
+
+  const text = encodeURIComponent(
+    `Olá! Quero um orçamento.\n\n` +
+    `Nome: ${nome}\n` +
+    `WhatsApp: ${telefone}\n` +
+    `Tipo de projeto: ${tipo}\n` +
+    `Quando pretende iniciar: ${prazo}` +
+    (mensagem ? `\n\nMensagem: ${mensagem}` : '')
   );
-  window.location.href = `mailto:arquitetura@assiscarrer.com?subject=${subject}&body=${body}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
 
   const success = document.getElementById('formSuccess');
   success.classList.add('show');
   setTimeout(() => success.classList.remove('show'), 5000);
 });
+
+// Track WhatsApp clicks (float + qualquer link wa.me)
+document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
+  a.addEventListener('click', () => trackEvent('whatsapp_click', { source: a.id || 'link' }));
+});
+
+// scroll_75 — disparado uma vez quando passa de 75% da página
+let scroll75Fired = false;
+window.addEventListener('scroll', () => {
+  if (scroll75Fired) return;
+  const pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+  if (pct >= 0.75) { trackEvent('scroll_75'); scroll75Fired = true; }
+}, { passive: true });
 
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {

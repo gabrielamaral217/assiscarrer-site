@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquitetura Comercial em São José dos Campos — Cafés, Restaurantes e Lojas | Assis Carrer</title>
+  <meta name="description" content="Projeto comercial em SJC — cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique. Projetamos a Sapore Gelato e a Portuga Bake Shop. Seu ponto é a sua maior mídia." />
+  <meta name="keywords" content="arquiteto para cafeteria sjc, projeto de restaurante são josé dos campos, arquitetura comercial sjc, projeto loja são josé dos campos, arquiteto comercial sjc" />
+  <meta property="og:title" content="Arquitetura Comercial em São José dos Campos — Assis Carrer" />
+  <meta property="og:description" content="Cafés, restaurantes, hamburguerias e lojas boutique. Projetamos a Sapore Gelato e a Portuga Bake Shop." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-P6F5BN7Z");</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXWFQ3D6PQ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-TXWFQ3D6PQ");gtag("config","AW-18185024974");</script>
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2037009416852160");fbq("track","PageView");</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037009416852160&ev=PageView&noscript=1" /></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* COMERCIAL — específicos */
+    .com-hero {
+      min-height: 75vh;
+      position: relative; overflow: hidden;
+      display: flex; align-items: flex-end;
+      padding: 140px 0 80px;
+      color: #fff;
+    }
+    .com-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('images/lp/comercial-sapore.jpg') center/cover no-repeat;
+      z-index: 0;
+    }
+    .com-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(28,45,64,0.94) 0%, rgba(28,45,64,0.65) 55%, rgba(28,45,64,0.3) 100%);
+      z-index: 1;
+    }
+    .com-hero .container { position: relative; z-index: 2; max-width: 1100px; }
+    .com-hero .section-tag { color: var(--copper, #A96D3E); }
+    .com-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5.2vw, 4.4rem); font-weight: 500;
+      line-height: 1.08; margin: 20px 0 28px; color: #fff;
+    }
+    .com-hero h1 em { font-style: italic; color: var(--sand, #C79872); }
+    .com-hero p {
+      font-size: 1.15rem; line-height: 1.7; max-width: 720px;
+      color: rgba(255,255,255,0.88); margin-bottom: 28px;
+    }
+    .com-hero .proof {
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--sand, #C79872); margin-bottom: 36px;
+    }
+    .com-hero .btn-row { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    /* MANIFESTO */
+    .com-manifesto { padding: 100px 0; background: #fff; }
+    .com-manifesto .container { max-width: 900px; text-align: center; }
+    .com-manifesto h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 500;
+      margin-bottom: 28px; line-height: 1.2;
+    }
+    .com-manifesto h2 em { font-style: italic; color: var(--copper, #A96D3E); }
+    .com-manifesto p { font-size: 1.08rem; line-height: 1.8; color: var(--text, #2a2a2a); }
+    .com-manifesto p + p { margin-top: 18px; }
+
+    /* SEGMENTOS */
+    .com-segmento { padding: 100px 0; }
+    .com-segmento.gastro { background: var(--cream, #F5F0EB); }
+    .com-segmento.lojas { background: #fff; }
+    .seg-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      max-width: 1200px; margin: 0 auto; padding: 0 40px; align-items: center;
+    }
+    .seg-img img { width: 100%; height: 520px; object-fit: cover; display: block; }
+    .seg-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 500;
+      line-height: 1.15; margin: 16px 0 24px;
+    }
+    .seg-text h2 em { font-style: italic; color: var(--copper, #A96D3E); }
+    .seg-text > p {
+      font-size: 1.02rem; line-height: 1.8; color: var(--text, #2a2a2a);
+      margin-bottom: 16px;
+    }
+    .seg-tipos {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
+    }
+    .seg-tipos span {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 8px 16px; background: var(--copper, #A96D3E); color: #fff;
+    }
+    .com-segmento.lojas .seg-tipos span { background: var(--dark, #1C2D40); }
+    .com-segmento.lojas .seg-grid { direction: rtl; }
+    .com-segmento.lojas .seg-grid > * { direction: ltr; }
+
+    /* CASES DESTAQUE */
+    .com-cases { padding: 100px 0; background: var(--dark, #1C2D40); color: #fff; }
+    .com-cases .container { max-width: 1200px; }
+    .com-cases .section-header { text-align: center; margin-bottom: 56px; }
+    .com-cases .section-tag { color: var(--sand, #C79872); }
+    .com-cases h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 500;
+      color: #fff; margin-top: 14px;
+    }
+    .cases-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .case-item { background: #fff; color: var(--text, #2a2a2a); overflow: hidden; }
+    .case-item img { width: 100%; height: 280px; object-fit: cover; display: block; }
+    .case-body { padding: 22px 24px 26px; }
+    .case-body .case-tag {
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--copper, #A96D3E);
+    }
+    .case-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 500; margin: 8px 0 10px;
+      color: var(--dark, #1C2D40);
+    }
+    .case-body p { font-size: 14px; line-height: 1.6; color: var(--muted, #5a5a5a); }
+
+    /* DIFERENCIAIS */
+    .com-diff { padding: 100px 0; background: var(--cream, #F5F0EB); }
+    .com-diff .container { max-width: 1100px; text-align: center; }
+    .com-diff h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500;
+      margin-bottom: 56px;
+    }
+    .diff-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+      text-align: left;
+    }
+    .diff-item .diff-icon {
+      width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+      background: var(--dark, #1C2D40); color: var(--sand, #C79872);
+      font-size: 22px; margin-bottom: 20px;
+    }
+    .diff-item h3 {
+      font-size: 1.15rem; font-weight: 500; color: var(--dark, #1C2D40);
+      margin-bottom: 12px; line-height: 1.3;
+    }
+    .diff-item p { font-size: 14px; line-height: 1.7; color: var(--muted, #5a5a5a); }
+
+    /* PROCESSO RESUMIDO */
+    .com-processo { padding: 100px 0; background: #fff; }
+    .com-processo .container { max-width: 1100px; text-align: center; }
+    .com-processo h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .com-processo > .container > p {
+      color: var(--muted, #5a5a5a); margin-bottom: 56px;
+    }
+    .processo-mini {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+      text-align: left;
+    }
+    .pm-item .pm-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; color: var(--copper, #A96D3E); line-height: 1;
+      margin-bottom: 14px;
+    }
+    .pm-item h4 {
+      font-size: 1rem; font-weight: 500; color: var(--dark, #1C2D40);
+      margin-bottom: 10px;
+    }
+    .pm-item p { font-size: 14px; line-height: 1.6; color: var(--muted, #5a5a5a); }
+    .com-processo .btn { margin-top: 50px; }
+
+    /* DEPOIMENTO */
+    .com-depoimento {
+      padding: 100px 0; background: var(--cream, #F5F0EB);
+      text-align: center;
+    }
+    .com-depoimento .container { max-width: 820px; }
+    .com-depoimento blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-style: italic;
+      line-height: 1.5; color: var(--dark, #1C2D40); margin-bottom: 24px;
+    }
+    .com-depoimento cite {
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--copper, #A96D3E); font-style: normal;
+    }
+
+    /* CTA FINAL */
+    .com-cta {
+      background: var(--dark, #1C2D40); color: #fff;
+      padding: 100px 0; text-align: center;
+    }
+    .com-cta .container { max-width: 720px; }
+    .com-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 500;
+      color: #fff; margin-bottom: 20px;
+    }
+    .com-cta p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.78);
+      margin-bottom: 36px;
+    }
+    .com-cta .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .com-cta .btn-primary { background: var(--copper, #A96D3E); color: #fff; }
+    .com-cta .btn-outline { color: #fff; border-color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 768px) {
+      .com-hero { padding: 120px 0 60px; }
+      .com-manifesto, .com-segmento, .com-cases, .com-diff, .com-processo, .com-depoimento, .com-cta { padding: 60px 0; }
+      .seg-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
+      .seg-img img { height: 320px; }
+      .com-segmento.lojas .seg-grid { direction: ltr; }
+      .cases-row { grid-template-columns: 1fr; gap: 20px; padding: 0 24px; }
+      .case-item img { height: 240px; }
+      .diff-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
+      .processo-mini { grid-template-columns: 1fr 1fr; gap: 24px; padding: 0 24px; }
+      .pm-item .pm-num { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6F5BN7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="logo-light" />
+        <img src="images/logo/logo-horizontal-crop.png" alt="Assis Carrer Arquitetura" class="logo-dark" />
+      </a>
+      <button class="nav-toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="residencial.html">Residencial</a></li>
+        <li><a href="comercial.html" class="active">Comercial</a></li>
+        <li><a href="processo.html">Processo</a></li>
+        <li><a href="index.html#portfolio">Portfólio</a></li>
+        <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="com-hero">
+    <div class="container">
+      <span class="section-tag">Arquitetura Comercial · São José dos Campos</span>
+      <h1>Seu ponto é a sua <em>maior mídia.</em><br/>Projetamos como mídia.</h1>
+      <p>Arquitetura comercial em SJC para cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique. Projetamos a Sapore Gelato, a Portuga Bake Shop e outros pontos de referência da cidade.</p>
+      <p class="proof">100+ projetos · 6 anos · SJC · Comercial e F&amp;B</p>
+      <div class="btn-row">
+        <a href="index.html#contato" class="btn btn-primary" style="background:var(--copper);color:#fff;">Orçamento em 24h</a>
+        <a href="#cases" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Ver projetos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="com-manifesto">
+    <div class="container">
+      <span class="section-tag">Por que projeto comercial importa</span>
+      <h2>Antes de provar seu produto, o cliente já <em>experimentou seu espaço</em></h2>
+      <p>Em SJC, o cliente entra na cafeteria e abre o Instagram. Tira foto da mesa, do balcão, do letreiro. Marca o local. <strong>Seu ponto vira mídia gratuita</strong> — ou vira só mais um.</p>
+      <p>Trabalhamos com donos de cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique que entenderam isso: o espaço não é cenário, é estratégia. É o que faz o cliente voltar, marcar amigos e virar embaixador da marca sem você pedir.</p>
+    </div>
+  </section>
+
+  <!-- GASTRONOMIA -->
+  <section class="com-segmento gastro" id="gastronomia">
+    <div class="seg-grid">
+      <div class="seg-img">
+        <img src="images/lp/comercial-sapore.jpg" alt="Projeto de cafeteria em São José dos Campos — Sapore Gelato" />
+      </div>
+      <div class="seg-text">
+        <span class="section-tag">Gastronomia · F&amp;B</span>
+        <h2>Arquitetura para <em>cafés, restaurantes e hamburguerias</em> em SJC</h2>
+        <p>Especialty coffee, hamburgueria autoral, gelateria, restaurante, dark kitchen — projetamos todos os formatos de F&amp;B. Cuidamos do fluxo operacional (cozinha, balcão, salão), da identidade visual integrada à arquitetura e do ponto fotogênico que vira marketing orgânico.</p>
+        <p>Os projetos da <strong>Sapore Gelato Caffè</strong> e da <strong>Portuga Bake Shop</strong> são alguns dos nossos cases mais reconhecidos — você provavelmente já entrou neles sem saber que projetamos.</p>
+        <div class="seg-tipos">
+          <span>Cafeteria / Especialidade</span>
+          <span>Restaurante</span>
+          <span>Hamburgueria</span>
+          <span>Sorveteria / Gelateria</span>
+          <span>Padaria autoral</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOJAS E BOUTIQUES -->
+  <section class="com-segmento lojas" id="lojas">
+    <div class="seg-grid">
+      <div class="seg-img">
+        <img src="images/portfolio/proj-cm-brigadeiros.jpg" alt="Projeto de loja boutique em São José dos Campos" />
+      </div>
+      <div class="seg-text">
+        <span class="section-tag">Lojas &amp; Boutiques</span>
+        <h2>Projeto de <em>loja boutique</em> e varejo autoral em São José dos Campos</h2>
+        <p>O setor boutique cresce em SJC — óticas independentes, lojas de roupa autoral, estúdios de tatuagem, pet shops premium, clínicas de estética. Cada uma com uma identidade que merece um espaço à altura.</p>
+        <p>Projetamos vitrines que convertem, fluxos de loja que aumentam ticket médio, áreas de prova e atendimento que diferenciam a experiência. Da CM Brigadeiros (kiosk shopping) a lojas de rua em Aquarius e Urbanova.</p>
+        <div class="seg-tipos">
+          <span>Loja boutique</span>
+          <span>Óticas</span>
+          <span>Estúdios</span>
+          <span>Clínicas de estética</span>
+          <span>Kiosks em shopping</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="com-cases" id="cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projetos que você conhece</span>
+        <h2>Pontos de referência em SJC que assinamos</h2>
+      </div>
+      <div class="cases-row">
+        <div class="case-item">
+          <img src="images/lp/comercial-sapore.jpg" alt="Sapore Gelato Caffè — projeto Assis Carrer" />
+          <div class="case-body">
+            <span class="case-tag">Gastronomia · Gelateria</span>
+            <h3>Sapore Gelato Caffè</h3>
+            <p>Loja com identidade visual integrada à arquitetura. Um dos estabelecimentos mais visitados e fotografados de SJC.</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <img src="images/lp/comercial-portuga.jpg" alt="Portuga Bake Shop — projeto Assis Carrer" />
+          <div class="case-body">
+            <span class="case-tag">Gastronomia · Padaria</span>
+            <h3>Portuga Bake Shop</h3>
+            <p>Ambiente com personalidade forte, materiais nobres e atmosfera que convida o cliente a ficar.</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <img src="images/portfolio/proj-sapore.jpg" alt="Sapore — restaurante" />
+          <div class="case-body">
+            <span class="case-tag">Gastronomia · Restaurante</span>
+            <h3>Sapore Restaurante</h3>
+            <p>Teto de madeira aparente, jardim vertical e iluminação pendente. Ambiente acolhedor que prolonga a permanência.</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <img src="images/portfolio/proj-cm-brigadeiros.jpg" alt="CM Brigadeiros — kiosk em shopping" />
+          <div class="case-body">
+            <span class="case-tag">Varejo · Kiosk</span>
+            <h3>CM Brigadeiros</h3>
+            <p>Kiosk em shopping com identidade visual forte — paleta rose, detalhes em dourado e operação otimizada.</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <img src="images/lp/comercial-cozinha.jpg" alt="Cozinha profissional comercial" />
+          <div class="case-body">
+            <span class="case-tag">Gastronomia · Cozinha</span>
+            <h3>Cozinha profissional</h3>
+            <p>Fluxo operacional para restaurante com alto volume. Pontos de produção, refrigeração e expedição integrados.</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <img src="images/portfolio/proj-fachada-render.jpg" alt="Fachada comercial — projeto 3D" />
+          <div class="case-body">
+            <span class="case-tag">Gastronomia · Fachada</span>
+            <h3>Fachada comercial — render 3D</h3>
+            <p>Estudo de fachada para ponto comercial autoral. Letreiro, iluminação noturna e materialidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="com-diff">
+    <div class="container">
+      <h2>O que entregamos diferente</h2>
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-icon">◈</div>
+          <h3>Identidade visual integrada à arquitetura</h3>
+          <p>Marca, materialidade, paleta e iluminação caminham juntas. O espaço comunica o posicionamento do negócio em cada detalhe.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">◆</div>
+          <h3>Fluxo operacional pensado para o dia a dia</h3>
+          <p>Cozinha, balcão, salão, estoque e atendimento alinhados com a operação real — não só com a foto bonita.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">◇</div>
+          <h3>Ponto fotogênico = marketing orgânico</h3>
+          <p>Áreas pensadas para virar conteúdo: o cliente fotografa, marca e divulga. Seu espaço trabalha como mídia 24h.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">▣</div>
+          <h3>Execução com equipe própria ou acompanhamento</h3>
+          <p>Você escolhe: equipe Assis Carrer chave na mão ou acompanhamento técnico da sua equipe. Prazo e qualidade garantidos.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">◉</div>
+          <h3>Custo aprovado antes da obra</h3>
+          <p>Renders, especificações e cotações antes de qualquer compra. Sem surpresa no orçamento.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon">◍</div>
+          <h3>Cases reconhecíveis em SJC</h3>
+          <p>Sapore, Portuga, CM e outros. Prova social que o cliente já viu funcionando — vai inaugurar em escritório com lastro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="com-processo">
+    <div class="container">
+      <span class="section-tag">Como funciona</span>
+      <h2>Do briefing à inauguração — em 4 passos</h2>
+      <p>Processo claro, prazos definidos, custos aprovados antes da obra.</p>
+      <div class="processo-mini">
+        <div class="pm-item">
+          <div class="pm-num">01</div>
+          <h4>Briefing</h4>
+          <p>Entendemos o negócio, a marca, o público e a operação. Visita técnica e diagnóstico do ponto.</p>
+        </div>
+        <div class="pm-item">
+          <div class="pm-num">02</div>
+          <h4>Anteprojeto + 3D</h4>
+          <p>Layout, materiais, identidade visual e renders. Você aprova antes de qualquer compra.</p>
+        </div>
+        <div class="pm-item">
+          <div class="pm-num">03</div>
+          <h4>Projeto Executivo</h4>
+          <p>Documentação técnica, cotações, cronograma e aprovações. Tudo pronto para a obra rodar.</p>
+        </div>
+        <div class="pm-item">
+          <div class="pm-num">04</div>
+          <h4>Execução</h4>
+          <p>Equipe própria ou acompanhamento técnico. Entrega no prazo com book fotográfico de inauguração.</p>
+        </div>
+      </div>
+      <a href="processo.html" class="btn btn-outline">Ver processo completo</a>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTO -->
+  <section class="com-depoimento">
+    <div class="container">
+      <span class="section-tag" style="display:block;margin-bottom:20px;">Depoimento</span>
+      <blockquote>
+        "O ambiente que a Assis Carrer criou para a Sapore vai muito além do que esperávamos. Cada cliente que entra comenta sobre o espaço — isso virou parte da nossa identidade."
+      </blockquote>
+      <cite>— Cliente Sapore Gelato Caffè · São José dos Campos</cite>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="com-cta">
+    <div class="container">
+      <h2>Pronto para inaugurar o próximo ponto que vira referência?</h2>
+      <p>Cafeteria, restaurante, loja boutique, kiosk. Conte sobre o negócio — respondemos em até 1 hora em horário comercial com uma estimativa inicial.</p>
+      <div class="btn-row">
+        <a href="index.html#contato" class="btn btn-primary">Orçamento em 24h</a>
+        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20um%20projeto%20comercial%20em%20SJC." target="_blank" rel="noopener" class="btn btn-outline">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html">
+        <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="footer-logo" />
+      </a>
+      <p class="footer-copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
+      <ul class="footer-nav">
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="residencial.html">Residencial</a></li>
+        <li><a href="comercial.html">Comercial</a></li>
+        <li><a href="processo.html">Processo</a></li>
+        <li><a href="index.html#portfolio">Portfólio</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20um%20projeto%20comercial%20em%20SJC." target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.7 4.6 1.9 6.46L4 29l7.74-1.86A11.95 11.95 0 0016 27c6.627 0 12-5.373 12-12S22.629 3 16.001 3zm5.27 14.42c-.29-.14-1.71-.84-1.97-.94-.27-.1-.46-.14-.66.14-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.12-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51l-.56-.01c-.2 0-.51.07-.78.37-.27.29-1.03 1.01-1.03 2.46s1.06 2.85 1.21 3.05c.14.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/>
+    </svg>
+  </a>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    function trackEvent(n,p){p=p||{};if(window.dataLayer)window.dataLayer.push(Object.assign({event:n},p));if(window.gtag)window.gtag('event',n,p);if(window.fbq)window.fbq('trackCustom',n,p);}
+    document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>trackEvent('whatsapp_click',{page:'comercial'})));
+    let s75=false;window.addEventListener('scroll',()=>{if(s75)return;if((scrollY+innerHeight)/document.body.scrollHeight>=.75){trackEvent('scroll_75',{page:'comercial'});s75=true;}},{passive:true});
+  </script>
+</body>
+</html>
