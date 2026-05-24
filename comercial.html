@@ -520,6 +520,7 @@
     });
 
     function trackEvent(n,p){p=p||{};if(window.dataLayer)window.dataLayer.push(Object.assign({event:n},p));if(window.gtag)window.gtag('event',n,p);if(window.fbq)window.fbq('trackCustom',n,p);}
+    function trackConversion(){if(window.gtag)window.gtag('event','conversion',{send_to:'AW-18185024974/HI92CLzb3LIcEM7rpd9D',value:2500.0,currency:'BRL'});if(window.fbq)window.fbq('track','Lead',{value:2500,currency:'BRL'});}
     document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>trackEvent('whatsapp_click',{page:'comercial'})));
     let s75=false;window.addEventListener('scroll',()=>{if(s75)return;if((scrollY+innerHeight)/document.body.scrollHeight>=.75){trackEvent('scroll_75',{page:'comercial'});s75=true;}},{passive:true});
   </script>

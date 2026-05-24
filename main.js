@@ -28,6 +28,14 @@ function trackEvent(name, params) {
   if (window.fbq)       window.fbq('trackCustom', name, params);
 }
 
+// Google Ads conversion — disparado no envio do formulário (lead qualificado)
+const GADS_CONVERSION = { send_to: 'AW-18185024974/HI92CLzb3LIcEM7rpd9D', value: 2500.0, currency: 'BRL' };
+function trackConversion() {
+  if (window.gtag) window.gtag('event', 'conversion', GADS_CONVERSION);
+  // Meta Pixel: também marca como Lead (evento padrão do Meta)
+  if (window.fbq)  window.fbq('track', 'Lead', { value: 2500, currency: 'BRL' });
+}
+
 // Contact form — envia lead para WhatsApp + dispara lead_form_submit
 const WA_NUMBER = '5512981534551';
 document.getElementById('contatoForm').addEventListener('submit', function(e) {
@@ -39,6 +47,7 @@ document.getElementById('contatoForm').addEventListener('submit', function(e) {
   const mensagem = this.mensagem.value.trim();
 
   trackEvent('lead_form_submit', { tipo_projeto: tipo, prazo: prazo });
+  trackConversion();
 
   const text = encodeURIComponent(
     `Olá! Quero um orçamento.\n\n` +
