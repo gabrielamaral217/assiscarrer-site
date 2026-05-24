@@ -167,6 +167,12 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-24 · Hero crop mais agressivo (teto persistia)
+- **O quê:** primeiro ajuste (scale 1.55) não foi suficiente — teto ainda dominava em mobile e desktop. Agora:
+  - Mobile: `transform: scale(2.1) translateY(18%)` + `object-position: 50% 100%` + `transform-origin: center bottom`
+  - Desktop: `transform: scale(1.25) translateY(8%)` + `object-position: 50% 100%` + `transform-origin: center bottom`
+- **Por quê:** a foto Celebration Life é landscape com teto + linear LED ocupando ~40% superior. Sem scale agressivo + translateY o teto sempre aparecia no enquadramento vertical mobile.
+
 ### 2026-05-24 · Fix mobile: WhatsApp float fora da viewport + hero foco no chão
 - **O quê:**
   - Adicionado `overflow-x: hidden` + `width: 100%; max-width: 100vw` no `html` e `body` — corrige bug do mobile onde algum elemento (provavelmente uma imagem ou seção larga) criava scroll horizontal e jogava o `.wa-float` pra fora do viewport
