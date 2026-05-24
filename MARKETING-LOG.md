@@ -34,7 +34,7 @@
 | Site reposicionado | ✅ | 6 páginas: index, residencial, comercial, processo, lp-apartamento, lp-comercial |
 | Dark mode | ✅ | `prefers-color-scheme: dark` em todas as páginas |
 | GTM | ✅ | `GTM-P6F5BN7Z` |
-| GA4 | ✅ | `G-TXWFQ3D6PQ` |
+| GA4 | ✅ | `G-DDECLK9VYV` (conta arquitetura@) |
 | Meta Pixel | ✅ | `2037009416852160` |
 | Google Ads tag | ✅ | `AW-18186496405` (conta arquitetura@assiscarrer.com) |
 | Conversão Lead Form | ✅ | Rótulo `F0xNCI3x6bIcEJXT_99D` · valor R$ 2.500 BRL |
@@ -57,7 +57,8 @@
 |---------|-------|-----|
 | Google Ads ATIVO | `arquitetura@assiscarrer.com` | `346-764-6872` |
 | Google Ads legado | `gabrielamaral217@gmail.com` | `745-620-3056` — não usar |
-| GA4 propriedade | `assiscarrer` | `G-TXWFQ3D6PQ` · número `538797588` |
+| GA4 propriedade ATIVA | `www.assiscarrer-arquitetura.com` (conta arquitetura@) | `G-DDECLK9VYV` |
+| GA4 propriedade legada | `assiscarrer` (conta gabrielamaral217@) | `G-TXWFQ3D6PQ` — não usar, fica órfã |
 | GTM container | site assiscarrer-arquitetura | `GTM-P6F5BN7Z` |
 | Meta Business | (Business Manager Assis Carrer) | Pixel `2037009416852160` |
 | GitHub repo | gabrielamaral217/assiscarrer-site | branch `main` (GitHub Pages) |
@@ -166,6 +167,11 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-05-24 · Migração GA4: G-TXWFQ3D6PQ → G-DDECLK9VYV
+- **O quê:** descoberto que o Google Ads (conta arquitetura@) criou automaticamente uma NOVA propriedade GA4 (`G-DDECLK9VYV`) durante o signup da campanha. O site ainda estava com a GA4 antiga (`G-TXWFQ3D6PQ` da conta gabrielamaral217@), e por isso a nova estava vazia.
+- **Solução:** substituídas 12 ocorrências em 6 páginas. main.js não tinha refs ao ID GA4 (usa só lead_form_submit que é evento custom).
+- **Resultado:** Tracking 100% consolidado na conta arquitetura@assiscarrer.com — Google Ads, GA4, conversão Lead Form Submit, tudo no mesmo lugar.
 
 ### 2026-05-24 · Hero crop mais agressivo (teto persistia)
 - **O quê:** primeiro ajuste (scale 1.55) não foi suficiente — teto ainda dominava em mobile e desktop. Agora:
