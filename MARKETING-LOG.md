@@ -168,6 +168,13 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-24 · Search Console verificada + sitemap.xml + robots.txt
+- **Search Console:** propriedade URL prefix `https://www.assiscarrer-arquitetura.com/` verificada via arquivo HTML (`googleb6efdc18273f3563.html` no root — NÃO REMOVER, Google revalida).
+- **sitemap.xml:** declarado com 4 URLs (home, residencial, comercial, processo). Submetido com sucesso — Google descobriu as 4. Status no painel: Sitemaps → "Sucesso".
+- **robots.txt:** Allow all + Disallow LPs de paid (`lp-apartamento.html`, `lp-comercial.html`) e `proposta-assis-carrer.html`. Declara sitemap. Motivo de bloquear LPs: evitar competição com pages principais no orgânico — LPs servem só pra paid.
+- **Indexação manual solicitada:** home (`/`) já na fila prioritária. Faltam residencial/comercial/processo (limite 10/dia, então pode fazer aos poucos).
+- **Bug pre-existente detectado:** `/refund-policy` aparece como 404 desde 11/15/25 (template de e-commerce antigo). Validate Fix clicado — Google vai dropar do índice.
+
 ### 2026-05-24 · SEO snippet do Google: título + og:image + Schema Organization
 - **Problema:** Google exibindo nos resultados "Assis Carrer Arquitetura | Design de interiores" (título antigo em cache) + imagem genérica de padrão ao lado (porque não tínhamos `og:image`).
 - **Mudanças no `index.html`:**
