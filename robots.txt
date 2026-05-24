@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Landing pages de tráfego pago — não indexar pra não competir com pages principais no orgânico
+Disallow: /lp-apartamento.html
+Disallow: /lp-comercial.html
+
+# Propostas privadas
+Disallow: /proposta-assis-carrer.html
+
+Sitemap: https://www.assiscarrer-arquitetura.com/sitemap.xml
