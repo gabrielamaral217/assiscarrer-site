@@ -22,6 +22,7 @@
     @font-face { font-family: 'Now'; src: url('fonts/Now-Medium.otf') format('opentype'); font-weight: 500; }
 
     :root {
+      color-scheme: light dark;
       --navy:   #254467;
       --copper: #A96D3E;
       --dark:   #1C2D40;
@@ -30,6 +31,31 @@
       --white:  #ffffff;
       --text:   #2a2a2a;
       --muted:  #6b6b6b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --white: #16191f;
+        --cream: #1a1d23;
+        --text:  #e8e8e8;
+        --muted: #a8a8a8;
+      }
+      body { background: #0d0f13; }
+      h1, h2, h3, h4 { color: var(--text) !important; }
+      input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+        background: #1f232a !important;
+        color: #e8e8e8 !important;
+        border-color: rgba(255,255,255,0.18) !important;
+      }
+      input::placeholder, textarea::placeholder { color: #707580 !important; }
+      select option { background: #1f232a; color: #e8e8e8; }
+      .casos, .porque, .form-section { background: #0d0f13 !important; }
+      .caso-card { background: #16191f !important; }
+      .diferencial h4 { color: var(--sand) !important; }
+      .porque-texto p { color: var(--muted) !important; }
+      .garantia { color: rgba(255,255,255,0.9) !important; }
+      .garantia-icon { border-color: var(--copper) !important; color: var(--copper) !important; }
+      .form-ok { background: rgba(199,152,114,0.15) !important; color: var(--sand) !important; }
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

@@ -26,6 +26,8 @@
    TOKENS
    ============================================ */
 :root {
+  color-scheme: light dark;
+
   --navy:   #254467;
   --copper: #A96D3E;
   --dark:   #1C2D40;
@@ -35,6 +37,14 @@
   --text:   #141414;
   --text-muted: #444444;
 
+  /* Tokens de superfície que mudam em dark */
+  --surface:        #ffffff;   /* fundo branco de cards */
+  --surface-soft:   #F5F0EB;   /* fundo cream de seções alternadas */
+  --surface-dark:   #1C2D40;   /* fundo escuro de seções dark */
+  --border-soft:    rgba(0,0,0,0.08);
+  --navbar-bg:      rgba(255,255,255,0.97);
+  --shadow-soft:    0 1px 0 rgba(0,0,0,0.08);
+
   --font-display: 'Cormorant Garamond', serif;
   --font-body:    'Now', sans-serif;
 
@@ -43,6 +53,101 @@
   --radius: 2px;
 
   --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   DARK MODE — quando o sistema/navegador está em dark
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text:        #e8e8e8;
+    --text-muted:  #a8a8a8;
+    --white:       #16191f;   /* cards / inputs / "branco" */
+    --cream:       #1a1d23;   /* fundo cream de seções */
+    --surface:        #16191f;
+    --surface-soft:   #1a1d23;
+    --surface-dark:   #0d0f13; /* fundo dark mais profundo */
+    --border-soft:    rgba(255,255,255,0.10);
+    --navbar-bg:      rgba(13,15,19,0.92);
+    --shadow-soft:    0 1px 0 rgba(255,255,255,0.06);
+    /* Acentos copper/sand/navy mantidos — destacam em dark */
+  }
+
+  body { background: #0d0f13; }
+
+  /* Inputs / selects / textarea: bg dark + text light */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    background: #1f232a !important;
+    color: #e8e8e8 !important;
+    border-color: rgba(255,255,255,0.15) !important;
+  }
+  input::placeholder,
+  textarea::placeholder { color: #707580 !important; }
+  select option { background: #1f232a; color: #e8e8e8; }
+
+  /* Navbar opaco em dark fica escuro com sombra sutil */
+  #navbar.scrolled {
+    background: rgba(13,15,19,0.92) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.08) !important;
+  }
+  #navbar.scrolled .nav-links li a { color: #c8c8c8 !important; }
+  #navbar.scrolled .nav-links li a:hover { color: #fff !important; }
+  #navbar.scrolled .nav-toggle span { background: #e8e8e8 !important; }
+  #navbar.scrolled .nav-cta {
+    border-color: var(--sand) !important;
+    color: var(--sand) !important;
+  }
+  #navbar.scrolled .nav-cta:hover {
+    background: var(--sand) !important;
+    color: #0d0f13 !important;
+  }
+
+  /* Logos: a versão "dark" (preta) é invisível em dark mode — esconde, mantém negativa */
+  #navbar.scrolled .logo-light { display: block !important; opacity: 1 !important; filter: none !important; }
+  #navbar.scrolled .logo-dark  { display: none !important; }
+
+  /* Clientes (logos pretos) — inverter pra ficarem visíveis */
+  .clientes .cliente-item img { filter: invert(0.92) brightness(1.1); }
+
+  /* Botão primary continua com bg navy mas com sand como hover */
+  .btn-primary:hover { box-shadow: 0 10px 24px rgba(0,0,0,0.4); }
+
+  /* Headings — força clarear em dark mode (sobrescreve navy/dark hardcoded) */
+  h1, h2, h3, h4, h5, h6 { color: var(--text) !important; }
+  .equipe-quote,
+  .equipe-card p,
+  .equipe-intro,
+  .servico-card p,
+  .processo-step p,
+  .pm-item p,
+  .case-body p,
+  .seg-text > p,
+  .contato-info ul li,
+  .contato-info ul li span,
+  .form-group label,
+  .footer-copy { color: var(--text-muted) !important; }
+
+  /* Acentos: numéros e step-nums em copper (legível em dark) */
+  .numero-item strong,
+  .cred-num strong,
+  .step-num,
+  .pm-item .pm-num { color: var(--copper) !important; }
+
+  /* Tag chips: bg dark com texto light */
+  .seg-bairros span,
+  .seg-tipos span { color: #fff !important; }
+
+  /* Botões primários: navy bg + texto light (mantém legível) */
+  .btn-primary { background: var(--copper) !important; border-color: var(--copper) !important; color: #fff !important; }
+  .btn-primary:hover { background: var(--sand) !important; border-color: var(--sand) !important; }
+
+  /* Badge sobre o quadrado azul no Sobre */
+  .sobre-badge { background: var(--navy); }
 }
 
 /* ============================================
