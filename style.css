@@ -411,7 +411,9 @@ p {
 }
 .hero-content h1 em {
   font-style: normal;
-  color: var(--sand);
+  color: #f0c896;
+  font-weight: 500;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8);
 }
 .hero-sub {
   color: rgba(255,255,255,0.92);
@@ -1403,7 +1405,23 @@ p {
 .hero-proof {
   margin-top: 28px;
   font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.95);
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+}
+
+/* Reforço de legibilidade pra <em> em headlines sobre fotos (residencial / comercial / processo) */
+.res-hero h1 em,
+.com-hero h1 em,
+.processo-hero h1 em {
+  font-weight: 500 !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8);
+}
+.res-hero .proof,
+.com-hero .proof {
+  color: #f0c896 !important;
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
 }
 
 /* ===== FORM DISCLAIMER ===== */

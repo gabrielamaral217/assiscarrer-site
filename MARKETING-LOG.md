@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-05-24** · Commit base: `4dfd369`
+> Última atualização: **2026-05-24** · Commit base: pós `47636b2`
 
 ---
 
@@ -166,6 +166,14 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-05-24 · Fix contraste: headlines em itálico sobre imagens
+- **O quê:** Hero `<em>` (Sua casa em **identidade**, Seu ponto é a **maior mídia**, etc) tinha cor sand muito apagada sobre o overlay das fotos. Aplicado em todas as 4 páginas com background image (index, residencial, comercial, processo, lp-comercial):
+  - Cor: `var(--sand)` → `#f0c896` (mais claro, mais vivo)
+  - Peso: normal → `font-weight: 500`
+  - Sombra: `text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8)`
+- Mesma melhoria aplicada nas linhas `.hero-proof` / `.res-hero .proof` / `.com-hero .proof` ("100+ PROJETOS · 7 ANOS · AQUARIUS..." etc).
+- **Por quê:** copper escuro sobre fotos com tons médios virava quase invisível em mobile.
 
 ### 2026-05-24 · Migração tracking pra conta arquitetura@
 - **Commit:** `4dfd369`
