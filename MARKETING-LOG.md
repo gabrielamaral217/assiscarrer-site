@@ -167,6 +167,12 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-24 · Fix mobile: WhatsApp float fora da viewport + hero foco no chão
+- **O quê:**
+  - Adicionado `overflow-x: hidden` + `width: 100%; max-width: 100vw` no `html` e `body` — corrige bug do mobile onde algum elemento (provavelmente uma imagem ou seção larga) criava scroll horizontal e jogava o `.wa-float` pra fora do viewport
+  - Hero da home: `object-position` ajustado e media query mobile com `transform: scale(1.55)` + `object-position: 50% 85%` pra mostrar o sofá curvo + ilha canelada dominando (em vez do teto)
+- **Por quê:** user testou no celular, WhatsApp aparecia "fora da coluna". Hero mostrava muito teto + pouca sala.
+
 ### 2026-05-24 · Fix contraste: headlines em itálico sobre imagens
 - **O quê:** Hero `<em>` (Sua casa em **identidade**, Seu ponto é a **maior mídia**, etc) tinha cor sand muito apagada sobre o overlay das fotos. Aplicado em todas as 4 páginas com background image (index, residencial, comercial, processo, lp-comercial):
   - Cor: `var(--sand)` → `#f0c896` (mais claro, mais vivo)
