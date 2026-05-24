@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta — Assis Carrer Arquitetura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --paper: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-light: #8a8a8a;
+    --accent: #2d3a2e;
+    --accent-soft: #5a6b5c;
+    --gold: #a08862;
+    --line: #e0dcd4;
+    --highlight: #f0ebe0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .display { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+  /* CONTAINER A4 */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 25mm 22mm;
+    background: var(--paper);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+  }
+
+  .page:last-child { page-break-after: auto; }
+
+  /* CABEÇALHO DAS PÁGINAS INTERNAS */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 35px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .page-header .logo-mini {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  .page-footer {
+    position: absolute;
+    bottom: 15mm;
+    left: 22mm;
+    right: 22mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* PÁGINA 1 - CAPA */
+  .cover {
+    background: var(--accent);
+    color: #f7f4ef;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 297mm;
+  }
+
+  .cover-inner {
+    padding: 30mm 22mm;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cover-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    font-style: italic;
+  }
+
+  .cover-logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    margin-top: 8px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    color: var(--gold);
+  }
+
+  .cover-meta {
+    text-align: right;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    line-height: 2;
+    color: rgba(247, 244, 239, 0.7);
+  }
+
+  .cover-center {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .cover-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 30px;
+  }
+
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    line-height: 1.05;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    margin-bottom: 25px;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .cover-client {
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(247, 244, 239, 0.85);
+    border-top: 1px solid rgba(160, 136, 98, 0.4);
+    padding-top: 20px;
+    margin-top: 50px;
+    max-width: 400px;
+  }
+
+  .cover-client strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: #f7f4ef;
+    margin-top: 8px;
+    font-weight: 400;
+  }
+
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 60px;
+  }
+
+  .cover-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: rgba(247, 244, 239, 0.6);
+  }
+
+  .cover-tagline {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: right;
+  }
+
+  /* TIPOGRAFIA INTERNA */
+  .section-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+
+  h2.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+
+  h2.section-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+
+  p {
+    color: var(--ink-soft);
+    font-size: 13px;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--accent);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* CARTA DE APRESENTAÇÃO */
+  .letter {
+    max-width: 540px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .letter .greeting {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 25px;
+  }
+
+  .letter p {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+
+  .signature {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid var(--line);
+  }
+
+  .signature-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  .signature-role {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 6px;
+  }
+
+  /* DIAGNÓSTICO */
+  .insights {
+    margin-top: 30px;
+  }
+
+  .insight-item {
+    display: flex;
+    gap: 25px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: flex-start;
+  }
+
+  .insight-item:last-child { border-bottom: none; }
+
+  .insight-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: var(--gold);
+    font-style: italic;
+    line-height: 1;
+    min-width: 50px;
+    font-weight: 400;
+  }
+
+  .insight-content h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .insight-content p {
+    font-size: 12.5px;
+    margin: 0;
+  }
+
+  /* CONCEITO */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 25px;
+  }
+
+  .concept-block {
+    padding: 25px;
+    background: var(--highlight);
+    border-left: 2px solid var(--gold);
+  }
+
+  .concept-block h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--accent);
+  }
+
+  .concept-block p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* CASES */
+  .cases {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .case-card {
+    border: 1px solid var(--line);
+    padding: 22px;
+    background: #fdfcf9;
+  }
+
+  .case-card .case-tag {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .case-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .case-card p {
+    font-size: 12px;
+    margin-bottom: 12px;
+    line-height: 1.65;
+  }
+
+  .case-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--accent);
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    margin-top: 14px;
+  }
+
+  .case-quote .attribution {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 8px;
+  }
+
+  /* ESCOPO */
+  .scope-section {
+    margin-top: 25px;
+  }
+
+  .scope-section h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .scope-section h4::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .scope-list {
+    list-style: none;
+    padding-left: 36px;
+  }
+
+  .scope-list li {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    padding: 6px 0;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+
+  .scope-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  .scope-list.excluded li::before {
+    content: '×';
+    color: var(--ink-light);
+  }
+
+  .scope-list.excluded li {
+    color: var(--ink-light);
+  }
+
+  /* CRONOGRAMA */
+  .timeline {
+    margin-top: 30px;
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--line);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 28px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--gold);
+  }
+
+  .timeline-week {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .timeline-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .timeline-item p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* INVESTIMENTO - 3 OPÇÕES */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .price-card {
+    border: 1px solid var(--line);
+    padding: 22px 18px;
+    background: #fdfcf9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-card.featured {
+    background: var(--accent);
+    color: #f7f4ef;
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(45, 58, 46, 0.15);
+  }
+
+  .price-card.featured .price-name,
+  .price-card.featured .price-value,
+  .price-card.featured li {
+    color: #f7f4ef;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--paper);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .price-tag {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .price-card.featured .price-tag {
+    color: var(--gold);
+  }
+
+  .price-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  .price-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .price-value .currency {
+    font-size: 16px;
+    vertical-align: top;
+    margin-right: 4px;
+    color: var(--gold);
+  }
+
+  .price-installment {
+    font-size: 10px;
+    color: var(--ink-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .price-card.featured .price-installment {
+    color: rgba(247, 244, 239, 0.7);
+    border-bottom-color: rgba(247, 244, 239, 0.15);
+  }
+
+  .price-features {
+    list-style: none;
+    flex-grow: 1;
+  }
+
+  .price-features li {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    padding: 6px 0;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .price-features li::before {
+    content: '◦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .price-features li.absent {
+    color: var(--ink-light);
+    opacity: 0.5;
+  }
+
+  .price-features li.absent::before {
+    content: '—';
+    color: var(--ink-light);
+  }
+
+  /* PAGAMENTO */
+  .payment-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .payment-step {
+    text-align: center;
+    padding: 18px 12px;
+    background: var(--highlight);
+    border-top: 2px solid var(--gold);
+  }
+
+  .payment-percent {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .payment-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* GARANTIAS */
+  .guarantees {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .guarantee-item {
+    padding: 18px;
+    border: 1px solid var(--line);
+    background: #fdfcf9;
+  }
+
+  .guarantee-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+
+  .guarantee-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .guarantee-item p {
+    font-size: 11.5px;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* CTA FINAL */
+  .final-cta {
+    background: var(--accent);
+    color: #f7f4ef;
+    padding: 45px 35px;
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+  }
+
+  .final-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #f7f4ef;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+
+  .final-cta h3 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .final-cta p {
+    color: rgba(247, 244, 239, 0.85);
+    font-size: 13px;
+    max-width: 420px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    padding: 14px 28px;
+    background: var(--gold);
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gold);
+  }
+
+  .cta-btn:hover {
+    background: transparent;
+    color: var(--gold);
+  }
+
+  .cta-btn.secondary {
+    background: transparent;
+    color: #f7f4ef;
+    border-color: rgba(247, 244, 239, 0.3);
+  }
+
+  .cta-btn.secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .validity-note {
+    margin-top: 25px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* CONTROLES DE NAVEGAÇÃO MOBILE */
+  .controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #f7f4ef;
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    z-index: 100;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .controls button {
+    background: transparent;
+    border: 1px solid rgba(247, 244, 239, 0.3);
+    color: #f7f4ef;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+
+  .controls button:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .page-indicator {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  /* MOBILE - VISUALIZAÇÃO DINÂMICA */
+  @media (max-width: 800px) {
+    body { padding: 0; }
+
+    .page {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      padding: 30px 22px;
+      box-shadow: none;
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .cover { padding: 0; min-height: 100vh; }
+    .cover-inner { padding: 40px 24px; }
+    .cover-title { font-size: 48px; }
+    .cover-logo { font-size: 22px; }
+
+    h2.section-title { font-size: 32px; }
+
+    .concept-grid,
+    .cases,
+    .guarantees,
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .price-card.featured { transform: none; }
+
+    .payment-flow {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .page-footer {
+      position: static;
+      margin-top: 30px;
+    }
+
+    .controls { display: flex; }
+  }
+
+  @media (min-width: 801px) {
+    .controls { display: none; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* IMPRESSÃO A4 */
+  @media print {
+    body { background: white; padding: 0; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      display: block !important;
+      page-break-after: always;
+    }
+    .controls { display: none !important; }
+    @page { size: A4; margin: 0; }
+  }
+
+  /* DECORAÇÕES */
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    margin: 20px 0;
+    letter-spacing: 0.5em;
+  }
+</style>
+</head>
+<body>
+
+<!-- PÁGINA 1 - CAPA -->
+<div class="page cover active" data-page="1">
+  <div class="cover-inner">
+    <div class="cover-top">
+      <div class="cover-logo">
+        ac
+        <span>Assis Carrer Arquitetura</span>
+      </div>
+      <div class="cover-meta">
+        Proposta nº 2026/001<br>
+        São José dos Campos<br>
+        Maio · 2026
+      </div>
+    </div>
+
+    <div class="cover-center">
+      <div class="cover-eyebrow">Proposta de Projeto</div>
+      <h1 class="cover-title">
+        Espaços que<br>
+        <em>contam histórias</em>
+      </h1>
+
+      <div class="cover-client">
+        Preparada com cuidado para
+        <strong>Família Silva · Residência Urbanova</strong>
+      </div>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-number">001 · 012</div>
+      <div class="cover-tagline">do projeto à entrega</div>
+    </div>
+  </div>
+</div>
+
+<!-- PÁGINA 2 - CARTA -->
+<div class="page" data-page="2">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Carta · 02</div>
+  </div>
+
+  <div class="letter">
+    <div class="section-eyebrow">Uma palavra antes de começar</div>
+    <div class="greeting">Olá, Mariana e Rafael.</div>
+
+    <p>Foi muito bom conhecer vocês na terça e ouvir sobre o apartamento novo no Urbanova. Ficou claro pra gente que vocês não querem só uma reforma — querem uma casa que funcione para a chegada da Lis em março, com cozinha integrada para receber, espaço para o trabalho remoto do Rafael e ainda assim manter a leveza que vocês amaram quando viram o imóvel.</p>
+
+    <p>Essa proposta foi escrita pensando exatamente nisso. Não é um orçamento padrão que mandamos para todo mundo. Cada decisão aqui — do escopo às etapas, dos materiais sugeridos ao cronograma — considera o que vocês contaram sobre rotina, prioridades e o orçamento que mencionaram.</p>
+
+    <p>Nos próximos dias, leiam com calma. Marquem o que gostam, o que não está claro, o que querem ajustar. Estamos à disposição para uma segunda conversa sem compromisso — porque a gente acredita que um bom projeto começa por um bom encontro entre arquiteto e cliente.</p>
+
+    <p class="lead">"Cada projeto é único porque cada cliente é único — ouvi-los é o começo de tudo."</p>
+
+    <div class="signature">
+      <div class="signature-names">Flávia Assis · Beatriz Carrer</div>
+      <div class="signature-role">Arquitetas e fundadoras</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Assis Carrer Arquitetura</span>
+    <span>02 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 3 - DIAGNÓSTICO -->
+<div class="page" data-page="3">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Diagnóstico · 03</div>
+  </div>
+
+  <div class="section-eyebrow">O que entendemos de vocês</div>
+  <h2 class="section-title">Antes de projetar,<br><em>escutamos</em>.</h2>
+
+  <p style="max-width: 480px; margin-bottom: 10px;">
+    Nossa primeira conversa não foi sobre plantas ou orçamento — foi sobre vocês. Aqui está o que captamos das suas falas, prioridades e do que vocês querem que esse espaço se torne.
+  </p>
+
+  <div class="insights">
+    <div class="insight-item">
+      <div class="insight-number">01</div>
+      <div class="insight-content">
+        <h4>Uma casa que cresce com a família</h4>
+        <p>Com a Lis chegando em março, vocês precisam de um projeto que funcione hoje para um casal e amanhã para uma família de três — sem precisar reformar de novo em dois anos.</p>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-number">02</div>
+      <div class="insight-content">
+        <h4>Integração com leveza</h4>
+        <p>Vocês querem cozinha, sala e varanda conversando, mas sem perder o "respiro" de cada ambiente. Mencionaram receber amigos com frequência e cozinhar juntos como rotina importante.</p>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-number">03</div>
+      <div class="insight-content">
+        <h4>Home office sem aparecer</h4>
+        <p>O Rafael trabalha remoto 4x na semana e precisa de um canto sério — mas não quer uma "sala de trabalho" visível. Solução de marcenaria integrada deve resolver isso.</p>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-number">04</div>
+      <div class="insight-content">
+        <h4>Investimento previsível</h4>
+        <p>Vocês foram claros sobre o orçamento e sobre o medo de "obra que estoura". Nossa proposta prevê cronograma, marcos de pagamento e teto de investimento desde o primeiro dia.</p>
+      </div>
+    </div>
+
+    <div class="insight-item">
+      <div class="insight-number">05</div>
+      <div class="insight-content">
+        <h4>Estética: contemporâneo afetivo</h4>
+        <p>Materialidade natural, paleta neutra com toques de verde profundo, madeira clara, luz indireta. Referências que vocês mostraram dialogam com nosso projeto da Casa Urbanova de 2024.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Diagnóstico do Cliente</span>
+    <span>03 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 4 - CONCEITO -->
+<div class="page" data-page="4">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Conceito · 04</div>
+  </div>
+
+  <div class="section-eyebrow">Nossa proposta de solução</div>
+  <h2 class="section-title">Um conceito,<br><em>quatro pilares</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Não chegamos a essa conversa com a planta pronta — mas chegamos com uma direção. Aqui estão os quatro pilares que vão guiar cada decisão do projeto, do conceito ao executivo.
+  </p>
+
+  <div class="concept-grid">
+    <div class="concept-block">
+      <h4>Integração modulada</h4>
+      <p>Cozinha, sala e varanda integradas por painéis pivotantes em madeira — abertos no dia a dia, fechados em momentos específicos (home office, criança dormindo, jantar mais íntimo).</p>
+    </div>
+
+    <div class="concept-block">
+      <h4>Marcenaria que esconde</h4>
+      <p>Home office embutido em um painel ripado, fechado por porta de correr camuflada. Quando aberto, vira escritório. Quando fechado, some na parede.</p>
+    </div>
+
+    <div class="concept-block">
+      <h4>Quarto da Lis adaptável</h4>
+      <p>Mobiliário projetado para crescer com ela: berço que vira cama, prateleiras moduláveis, paleta neutra que não envelhece. Investimento que dura.</p>
+    </div>
+
+    <div class="concept-block">
+      <h4>Materialidade quente</h4>
+      <p>Carvalho natural, microcimento off-white, verde sage como acento, latão envelhecido em detalhes. Conversa direta com o que vocês mostraram como referência.</p>
+    </div>
+  </div>
+
+  <div class="ornament">· · ·</div>
+
+  <p style="text-align: center; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--accent-soft); max-width: 480px; margin: 0 auto;">
+    "Um bom projeto não é o que tem mais ideias — é o que tem as ideias certas."
+  </p>
+
+  <div class="page-footer">
+    <span>Direção Conceitual</span>
+    <span>04 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 5 - CASES -->
+<div class="page" data-page="5">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Referências · 05</div>
+  </div>
+
+  <div class="section-eyebrow">Quem já confiou em nós</div>
+  <h2 class="section-title">Projetos que<br><em>dialogam com o seu</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Selecionamos três projetos do nosso portfólio que conversam diretamente com o que vocês querem — em escala, estética ou desafio. Não é o portfólio completo. É o que faz sentido pra vocês.
+  </p>
+
+  <div class="cases">
+    <div class="case-card">
+      <div class="case-tag">Residencial · 2024</div>
+      <h4>Casa Urbanova</h4>
+      <p>Residência contemporânea com volumes em madeira ripada, integração total entre área social e quintal, e marcenaria sob medida em todos os ambientes. 240m², entregue em 11 meses.</p>
+      <div class="case-quote">
+        "A Flávia e a Bia entenderam a gente desde a primeira conversa. A casa ficou exatamente como a gente imaginava — e em alguns pontos, melhor."
+        <span class="attribution">— Carla M., proprietária</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-tag">Residencial · 2023</div>
+      <h4>Apartamento Aquarius 142</h4>
+      <p>Reforma completa de 105m² para casal jovem. Integração de cozinha-sala, home office camuflado em marcenaria, paleta neutra com acentos verdes. Projeto premiado.</p>
+      <div class="case-quote">
+        "A gente tinha medo de obra. Saiu no prazo, no orçamento e ainda virou referência pros amigos que vieram visitar."
+        <span class="attribution">— Pedro e Júlia, proprietários</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-tag">Comercial · 2024</div>
+      <h4>Sapore Restaurante</h4>
+      <p>Projeto comercial de 180m² em SJC. Materialidade quente, jardim vertical, iluminação cênica. Cliente reportou aumento de 38% no ticket médio após reinauguração.</p>
+      <div class="case-quote">
+        "Não foi só projeto. Foi reposicionamento. O Sapore virou outro restaurante depois do que elas fizeram."
+        <span class="attribution">— Rodrigo F., sócio-proprietário</span>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-tag">Comercial · 2023</div>
+      <h4>CM Brigadeiros · Shopping Vale Sul</h4>
+      <p>Kiosk de 22m² com identidade visual marcante. Paleta rose, detalhes em dourado, vitrine que vira ponto fotográfico no shopping. Inaugurado em 45 dias.</p>
+      <div class="case-quote">
+        "Elas pensaram em coisas que a gente nem imaginava — como a vitrine virar 'instagramável'. Resultado em vendas é claro."
+        <span class="attribution">— Camila M., fundadora</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Cases Selecionados</span>
+    <span>05 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 6 - ESCOPO -->
+<div class="page" data-page="6">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Escopo · 06</div>
+  </div>
+
+  <div class="section-eyebrow">O que está incluso</div>
+  <h2 class="section-title">Escopo do<br><em>projeto contratado</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Transparência é parte do projeto. Aqui está exatamente o que vocês recebem — e o que não está incluso, para evitar qualquer dúvida no caminho.
+  </p>
+
+  <div class="scope-section">
+    <h4>Fase 01 · Briefing e Estudo Preliminar</h4>
+    <ul class="scope-list">
+      <li>Reunião de briefing aprofundada (até 3 horas) presencial ou online</li>
+      <li>Levantamento técnico e medição do imóvel no local</li>
+      <li>Estudo preliminar com 2 propostas de layout em planta</li>
+      <li>Apresentação e ajustes (até 2 rodadas de revisão)</li>
+    </ul>
+  </div>
+
+  <div class="scope-section">
+    <h4>Fase 02 · Anteprojeto e 3D</h4>
+    <ul class="scope-list">
+      <li>Anteprojeto arquitetônico completo (plantas, cortes, layout final)</li>
+      <li>Renders 3D realistas dos ambientes principais (sala, cozinha, suíte, quarto Lis)</li>
+      <li>Paleta de materiais e moodboard detalhado</li>
+      <li>Reunião de apresentação e ajustes (até 2 rodadas)</li>
+    </ul>
+  </div>
+
+  <div class="scope-section">
+    <h4>Fase 03 · Projeto Executivo</h4>
+    <ul class="scope-list">
+      <li>Projetos executivos: marcenaria, elétrica, hidráulica, forros, pisos</li>
+      <li>Detalhamentos técnicos para marceneiros e empreiteiros</li>
+      <li>Memorial descritivo e especificações de acabamento</li>
+      <li>Lista de compras com fornecedores indicados</li>
+      <li>ART (Anotação de Responsabilidade Técnica) inclusa</li>
+    </ul>
+  </div>
+
+  <div class="scope-section">
+    <h4>Fase 04 · Acompanhamento de Obra</h4>
+    <ul class="scope-list">
+      <li>Visitas técnicas quinzenais durante toda a obra (até 6 meses)</li>
+      <li>Atendimento prioritário via WhatsApp em até 4h úteis</li>
+      <li>Mediação com fornecedores e marceneiros</li>
+      <li>Relatório fotográfico semanal do andamento</li>
+    </ul>
+  </div>
+
+  <div class="scope-section" style="margin-top: 30px; padding: 20px; background: #faf7f0; border-left: 2px solid var(--ink-light);">
+    <h4 style="color: var(--ink-light); font-size: 18px;">Não incluso (contratação separada)</h4>
+    <ul class="scope-list excluded">
+      <li>Execução da obra e mão de obra (orçamento à parte)</li>
+      <li>Materiais e mobiliário (lista de compras inclusa, compra com vocês)</li>
+      <li>Projetos complementares de engenharia (estrutural, climatização)</li>
+      <li>Paisagismo da varanda (pode ser incluído como adicional)</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">
+    <span>Escopo Detalhado</span>
+    <span>06 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 7 - CRONOGRAMA -->
+<div class="page" data-page="7">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Cronograma · 07</div>
+  </div>
+
+  <div class="section-eyebrow">Previsibilidade desde o dia um</div>
+  <h2 class="section-title">Cronograma<br><em>do projeto</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Trabalhamos com marcos claros e prazos honestos. Caso a aprovação saia nesta semana, conseguimos começar dia 03 de junho. Veja o caminho até a entrega.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-week">Semana 01 — 03 de junho</div>
+      <h4>Briefing aprofundado e levantamento</h4>
+      <p>Reunião de imersão (3h), medição técnica no apartamento, alinhamento de referências e prioridades.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-week">Semanas 02 a 04</div>
+      <h4>Estudo preliminar</h4>
+      <p>Duas opções de layout em planta, apresentação, ajustes. Aprovação do partido geral.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-week">Semanas 05 a 09</div>
+      <h4>Anteprojeto e 3D realista</h4>
+      <p>Renders dos 4 ambientes principais, paleta final, moodboard. Apresentação presencial. Ajustes finos.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-week">Semanas 10 a 16</div>
+      <h4>Projeto executivo completo</h4>
+      <p>Marcenaria, elétrica, hidráulica, detalhamentos, memorial, lista de compras, ART.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-week">Semana 17 em diante</div>
+      <h4>Acompanhamento de obra</h4>
+      <p>Visitas quinzenais, mediação com fornecedores, atendimento contínuo até a entrega final das chaves.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 35px; padding: 18px; background: var(--highlight); text-align: center;">
+    <span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--accent);">
+      Entrega do projeto completo · 16 semanas após aprovação
+    </span>
+  </div>
+
+  <div class="page-footer">
+    <span>Cronograma</span>
+    <span>07 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 8 - INVESTIMENTO -->
+<div class="page" data-page="8">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Investimento · 08</div>
+  </div>
+
+  <div class="section-eyebrow">Três caminhos possíveis</div>
+  <h2 class="section-title">Escolha o<br><em>nível de cuidado</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Não acreditamos em proposta única. Cada cliente tem um momento, um orçamento e uma necessidade. Por isso, apresentamos três caminhos — todos com qualidade Assis Carrer, com diferentes níveis de profundidade.
+  </p>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tag">Opção A</div>
+      <div class="price-name">Essencial</div>
+      <div class="price-value"><span class="currency">R$</span>14.800</div>
+      <div class="price-installment">ou 6x de R$ 2.466 sem juros</div>
+      <ul class="price-features">
+        <li>Briefing e levantamento técnico</li>
+        <li>Anteprojeto com layout final</li>
+        <li>2 renders 3D dos ambientes principais</li>
+        <li>Projeto executivo de marcenaria</li>
+        <li>Lista de compras simplificada</li>
+        <li class="absent">Acompanhamento de obra</li>
+        <li class="absent">Detalhamentos completos</li>
+        <li class="absent">Atendimento WhatsApp prioritário</li>
+      </ul>
+    </div>
+
+    <div class="price-card featured">
+      <div class="featured-badge">Recomendada</div>
+      <div class="price-tag">Opção B</div>
+      <div class="price-name">Completa</div>
+      <div class="price-value"><span class="currency">R$</span>24.500</div>
+      <div class="price-installment">ou 10x de R$ 2.450 sem juros</div>
+      <ul class="price-features">
+        <li>Tudo da opção Essencial</li>
+        <li>4 renders 3D realistas</li>
+        <li>Projeto executivo completo (todas disciplinas)</li>
+        <li>Detalhamentos técnicos de marcenaria</li>
+        <li>Memorial descritivo e ART</li>
+        <li>Acompanhamento de obra (6 meses)</li>
+        <li>Visitas técnicas quinzenais</li>
+        <li>WhatsApp prioritário 4h úteis</li>
+      </ul>
+    </div>
+
+    <div class="price-card">
+      <div class="price-tag">Opção C</div>
+      <div class="price-name">Premium</div>
+      <div class="price-value"><span class="currency">R$</span>38.900</div>
+      <div class="price-installment">ou 12x de R$ 3.241 sem juros</div>
+      <ul class="price-features">
+        <li>Tudo da opção Completa</li>
+        <li>Tour virtual 360º imersivo</li>
+        <li>Paisagismo da varanda incluso</li>
+        <li>Projeto de iluminação cênica</li>
+        <li>Curadoria e compra de mobiliário</li>
+        <li>Gerenciamento completo da obra</li>
+        <li>Visitas semanais no canteiro</li>
+        <li>Atendimento WhatsApp 2h úteis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 30px; text-align: center; font-size: 11px; color: var(--ink-light); letter-spacing: 0.1em;">
+    Valores referentes a projeto de aproximadamente 105m² · Validade da proposta: 15 dias
+  </div>
+
+  <div class="page-footer">
+    <span>Investimento</span>
+    <span>08 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 9 - PAGAMENTO -->
+<div class="page" data-page="9">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Pagamento · 09</div>
+  </div>
+
+  <div class="section-eyebrow">Forma de pagamento</div>
+  <h2 class="section-title">Pagamento<br><em>por marcos</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Trabalhamos com pagamento atrelado a entregas concretas. Você só paga a próxima parcela quando a anterior foi entregue e aprovada. Sem surpresa, sem antecipação.
+  </p>
+
+  <div class="payment-flow">
+    <div class="payment-step">
+      <div class="payment-percent">30%</div>
+      <div class="payment-label">Na assinatura do contrato</div>
+    </div>
+
+    <div class="payment-step">
+      <div class="payment-percent">30%</div>
+      <div class="payment-label">Entrega do anteprojeto</div>
+    </div>
+
+    <div class="payment-step">
+      <div class="payment-percent">30%</div>
+      <div class="payment-label">Entrega do executivo</div>
+    </div>
+
+    <div class="payment-step">
+      <div class="payment-percent">10%</div>
+      <div class="payment-label">Início da obra</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px; padding: 25px; background: var(--highlight); border-left: 2px solid var(--gold);">
+    <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--accent); margin-bottom: 12px;">
+      Formas de pagamento aceitas
+    </h4>
+    <ul style="list-style: none;">
+      <li style="padding: 6px 0; font-size: 13px; color: var(--ink-soft);">— PIX (1% de desconto à vista)</li>
+      <li style="padding: 6px 0; font-size: 13px; color: var(--ink-soft);">— Transferência bancária</li>
+      <li style="padding: 6px 0; font-size: 13px; color: var(--ink-soft);">— Boleto parcelado (até 12x sem juros)</li>
+      <li style="padding: 6px 0; font-size: 13px; color: var(--ink-soft);">— Cartão de crédito (até 12x, taxa da operadora)</li>
+    </ul>
+  </div>
+
+  <div class="ornament" style="margin-top: 50px;">· · ·</div>
+
+  <p style="text-align: center; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--accent-soft); max-width: 480px; margin: 0 auto;">
+    "Transparência financeira é parte do projeto.<br>Você sempre sabe o que está pagando e por quê."
+  </p>
+
+  <div class="page-footer">
+    <span>Forma de Pagamento</span>
+    <span>09 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 10 - GARANTIAS -->
+<div class="page" data-page="10">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Garantias · 10</div>
+  </div>
+
+  <div class="section-eyebrow">Nosso compromisso com vocês</div>
+  <h2 class="section-title">Cinco<br><em>garantias firmes</em>.</h2>
+
+  <p style="max-width: 500px;">
+    Contratar um projeto envolve confiança. Para que vocês durmam tranquilos antes mesmo de começar, deixamos aqui nossos compromissos por escrito.
+  </p>
+
+  <div class="guarantees">
+    <div class="guarantee-item">
+      <div class="guarantee-icon">i.</div>
+      <h4>Aprovação do conceito ou devolução</h4>
+      <p>Se vocês não aprovarem o conceito inicial após a primeira apresentação, devolvemos 100% do valor pago até o momento. Sem perguntas.</p>
+    </div>
+
+    <div class="guarantee-item">
+      <div class="guarantee-icon">ii.</div>
+      <h4>Revisões ilimitadas no executivo</h4>
+      <p>Marcenaria precisa estar perfeita. Por isso, oferecemos revisões ilimitadas dos detalhamentos executivos até a aprovação final.</p>
+    </div>
+
+    <div class="guarantee-item">
+      <div class="guarantee-icon">iii.</div>
+      <h4>Resposta em 4h úteis</h4>
+      <p>Durante toda a obra, garantimos resposta a dúvidas em até 4 horas úteis pelo WhatsApp dedicado. Sem espera, sem desencontro.</p>
+    </div>
+
+    <div class="guarantee-item">
+      <div class="guarantee-icon">iv.</div>
+      <h4>Visita técnica em 48h</h4>
+      <p>Qualquer imprevisto na obra que exija nossa presença é atendido em até 48 horas no canteiro. Compromisso registrado em contrato.</p>
+    </div>
+
+    <div class="guarantee-item" style="grid-column: span 2;">
+      <div class="guarantee-icon">v.</div>
+      <h4>Pós-entrega de 6 meses</h4>
+      <p>Após a entrega das chaves, mantemos suporte gratuito por 6 meses para ajustes, dúvidas de manutenção e mediação com fornecedores. Vocês não ficam sozinhos depois que a obra acaba.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Garantias</span>
+    <span>10 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 11 - SOBRE NÓS -->
+<div class="page" data-page="11">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Sobre · 11</div>
+  </div>
+
+  <div class="section-eyebrow">Quem está por trás</div>
+  <h2 class="section-title">Duas arquitetas,<br><em>uma visão</em>.</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 30px;">
+    <div>
+      <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 600;">
+        Residencial
+      </div>
+      <h3 style="font-size: 28px;">Flávia Assis</h3>
+      <p style="font-size: 12.5px; line-height: 1.7;">
+        Arquiteta e urbanista formada pela FAU-USP, com especialização em interiores residenciais. Une estética e técnica para criar ambientes que traduzem a essência de cada cliente.
+      </p>
+      <p style="font-size: 12.5px; line-height: 1.7;">
+        Liderou mais de 60 projetos residenciais nos últimos 7 anos em SJC e região, com foco em integração de espaços e marcenaria sob medida.
+      </p>
+    </div>
+
+    <div>
+      <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 600;">
+        Comercial & Corporativo
+      </div>
+      <h3 style="font-size: 28px;">Beatriz Carrer</h3>
+      <p style="font-size: 12.5px; line-height: 1.7;">
+        Arquiteta formada pela Mackenzie, com pós em arquitetura comercial. Cria ambientes funcionais que comunicam a essência de cada negócio.
+      </p>
+      <p style="font-size: 12.5px; line-height: 1.7;">
+        Responsável por projetos referência em SJC como Sapore, CM Brigadeiros, Sapore Açaí e Artesane. Especialista em transformar identidade de marca em espaço físico.
+      </p>
+    </div>
+  </div>
+
+  <div class="ornament" style="margin: 50px 0 30px;">· · ·</div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; text-align: center;">
+    <div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--accent); font-weight: 500; line-height: 1;">+100</div>
+      <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-light); margin-top: 8px;">Projetos entregues</div>
+    </div>
+    <div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--accent); font-weight: 500; line-height: 1;">+7 anos</div>
+      <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-light); margin-top: 8px;">No mercado de SJC</div>
+    </div>
+    <div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--accent); font-weight: 500; line-height: 1;">100%</div>
+      <div style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-light); margin-top: 8px;">Entregues no prazo</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 45px; padding: 25px; background: var(--highlight); border-left: 2px solid var(--gold); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--accent); line-height: 1.5;">
+    "Acreditamos que arquitetura vai além da construção: cada espaço conta uma história e reflete quem vive nele."
+  </div>
+
+  <div class="page-footer">
+    <span>Sobre o escritório</span>
+    <span>11 · 12</span>
+  </div>
+</div>
+
+<!-- PÁGINA 12 - CTA FINAL -->
+<div class="page" data-page="12">
+  <div class="page-header">
+    <div class="logo-mini">ac</div>
+    <div>Próximos passos · 12</div>
+  </div>
+
+  <div class="section-eyebrow">Vamos começar?</div>
+  <h2 class="section-title">Próximos<br><em>passos</em>.</h2>
+
+  <p style="max-width: 500px; margin-bottom: 35px;">
+    Se essa proposta faz sentido para vocês, o caminho daqui é simples. Em 24 horas após a confirmação, enviamos contrato e link de pagamento. Em 7 dias, começamos.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-week">Passo 01</div>
+      <h4>Confirmação</h4>
+      <p>Basta responder este e-mail ou enviar "aceito" no WhatsApp. Nos diga qual das três opções vocês escolheram.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-week">Passo 02 — em 24h</div>
+      <h4>Contrato e pagamento</h4>
+      <p>Enviamos o contrato detalhado para assinatura digital e o link de pagamento da primeira parcela (30%).</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-week">Passo 03 — em 7 dias</div>
+      <h4>Reunião de imersão</h4>
+      <p>Agendamos a primeira reunião de briefing aprofundado e visita técnica ao apartamento. A jornada começa.</p>
+    </div>
+  </div>
+
+  <div class="final-cta">
+    <div class="section-eyebrow" style="color: var(--gold);">Estamos prontas</div>
+    <h3>Pronto para <em>começar</em>?</h3>
+    <p>
+      Qualquer dúvida sobre a proposta, escopo, valores ou cronograma, estamos à disposição. Marquem uma segunda conversa sem compromisso ou confirmem direto.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="https://wa.me/5512981534551?text=Olá!%20Recebi%20a%20proposta%20e%20gostaria%20de%20conversar" class="cta-btn">
+        Falar no WhatsApp
+      </a>
+      <a href="mailto:arquitetura@assiscarrer.com" class="cta-btn secondary">
+        Responder por e-mail
+      </a>
+    </div>
+
+    <div class="validity-note">
+      Validade da proposta · 15 dias a partir de 22.05.2026
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Assis Carrer Arquitetura · arquitetura@assiscarrer.com · (12) 98153-4551</span>
+    <span>12 · 12</span>
+  </div>
+</div>
+
+<!-- CONTROLES MOBILE -->
+<div class="controls">
+  <button onclick="navigatePage(-1)">‹ Anterior</button>
+  <div class="page-indicator" id="indicator">01 · 12</div>
+  <button onclick="navigatePage(1)">Próxima ›</button>
+</div>
+
+<script>
+  let currentPage = 1;
+  const totalPages = 12;
+
+  function navigatePage(direction) {
+    const pages = document.querySelectorAll('.page');
+    pages[currentPage - 1].classList.remove('active');
+
+    currentPage += direction;
+    if (currentPage < 1) currentPage = totalPages;
+    if (currentPage > totalPages) currentPage = 1;
+
+    pages[currentPage - 1].classList.add('active');
+    document.getElementById('indicator').textContent =
+      String(currentPage).padStart(2, '0') + ' · ' + totalPages;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Atalhos de teclado para navegação no desktop também
+  document.addEventListener('keydown', (e) => {
+    if (window.innerWidth <= 800) {
+      if (e.key === 'ArrowRight') navigatePage(1);
+      if (e.key === 'ArrowLeft') navigatePage(-1);
+    }
+  });
+
+  // Em desktop, todas as páginas visíveis (scroll natural)
+  function checkLayout() {
+    if (window.innerWidth > 800) {
+      document.querySelectorAll('.page').forEach(p => p.classList.add('active'));
+    } else {
+      document.querySelectorAll('.page').forEach((p, i) => {
+        if (i + 1 !== currentPage) p.classList.remove('active');
+      });
+    }
+  }
+
+  window.addEventListener('resize', checkLayout);
+  checkLayout();
+</script>
+
+</body>
+</html>
