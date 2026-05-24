@@ -29,7 +29,7 @@ function trackEvent(name, params) {
 }
 
 // Google Ads conversion — disparado no envio do formulário (lead qualificado)
-const GADS_CONVERSION = { send_to: 'AW-18185024974/HI92CLzb3LIcEM7rpd9D', value: 2500.0, currency: 'BRL' };
+const GADS_CONVERSION = { send_to: 'AW-18186496405/F0xNCI3x6bIcEJXT_99D', value: 2500.0, currency: 'BRL' };
 function trackConversion() {
   if (window.gtag) window.gtag('event', 'conversion', GADS_CONVERSION);
   // Meta Pixel: também marca como Lead (evento padrão do Meta)
