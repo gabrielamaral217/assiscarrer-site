@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-05-24** · Commit base: pós `47636b2`
+> Última atualização: **2026-05-24** · Commit base: pós SEO snippet update
 
 ---
 
@@ -167,6 +167,16 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-05-24 · SEO snippet do Google: título + og:image + Schema Organization
+- **Problema:** Google exibindo nos resultados "Assis Carrer Arquitetura | Design de interiores" (título antigo em cache) + imagem genérica de padrão ao lado (porque não tínhamos `og:image`).
+- **Mudanças no `index.html`:**
+  - `<title>` → `Assis Carrer | Escritório de Arquitetura em São José dos Campos`
+  - `<meta name="description">` → começa com "Escritório de arquitetura em São José dos Campos..."
+  - Adicionados: `link rel="canonical"`, `og:url`, `og:image` (case-believe-jantar.jpg), `og:image:width/height/alt`, twitter card completo
+  - Adicionado bloco `application/ld+json` com `LocalBusiness` (logo, telefone, endereço SJC, áreas atendidas, Instagram)
+- **Efeito esperado:** próximo crawl do Google (dias a semanas) deve atualizar o snippet com o título novo + usar o logo declarado no Schema + a foto Believe como thumb. Pode-se acelerar via Search Console → Inspecionar URL → Solicitar indexação.
+- **Por que demora:** Google decide independentemente quando recrawlear e pode até reescrever o título de novo se achar que content interno bate melhor. Schema.org Organization é o caminho mais confiável pra fixar logo + nome corretos.
 
 ### 2026-05-24 · Migração GA4: G-TXWFQ3D6PQ → G-DDECLK9VYV
 - **O quê:** descoberto que o Google Ads (conta arquitetura@) criou automaticamente uma NOVA propriedade GA4 (`G-DDECLK9VYV`) durante o signup da campanha. O site ainda estava com a GA4 antiga (`G-TXWFQ3D6PQ` da conta gabrielamaral217@), e por isso a nova estava vazia.
