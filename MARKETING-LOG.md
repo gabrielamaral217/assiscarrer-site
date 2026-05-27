@@ -168,6 +168,19 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-27 · Google Ads: URL final trocada home → lp-apartamento.html
+- **Problema descoberto na review:** GA4 mostrou que tráfego do canal "Cross-network" (Google Ads) tinha tempo médio de **4 segundos** vs Organic Search com **3min 54s**. Usuário paga, cai na home genérica, não vê oferta direta e sai.
+- **Investigação no painel Google Ads:**
+  - URL final declarada no grupo de recursos: `https://www.assiscarrer-arquitetura.com/` (home)
+  - Expansão de URL final: ATIVADA (mas sem volume ainda pra explorar)
+  - **Qualidade do anúncio: "Ruim"** (faltam descrições adicionais, sitelinks)
+- **Ação:** URL final alterada de `/` para `/lp-apartamento.html` (residencial = maior volume em SJC: Aquarius, Urbanova).
+- **Status:** grupo de recursos "Em análise" (Google revisa em até 24h).
+- **Próximos fixes pendentes na campanha:**
+  - Adicionar 4 sitelinks (Apartamentos, Comercial, Processo, Falar agora)
+  - Adicionar +2 descrições pra fechar qualidade "Excelente" (atual: 2/4)
+  - Acompanhar amanhã se o tempo médio do canal Cross-network melhora.
+
 ### 2026-05-27 · Review de resultados + fix de tracking (WhatsApp como conversão)
 - **Google Ads (24-27 mai, 4 dias):** 2.829 impressões · 120 cliques · CTR 4,24% (alto, média Pmax é 1-2%) · CPC R$ 0,76 · Custo R$ 91,63 · Pontuação otimização 91,8% · **Conversões: 0** apesar de leads reais chegando no WhatsApp.
 - **Diagnóstico:** Em Conversões → Páginas da Web da ação "Enviar formulário de lead (1)" → "Você ainda não tem dados". Causa raiz: `trackConversion()` só era chamado no submit do formulário; cliques no botão flutuante de WhatsApp e nos CTAs `wa.me` disparavam só evento custom `whatsapp_click` (não convertia).
