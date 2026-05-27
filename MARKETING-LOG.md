@@ -168,6 +168,16 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-27 · Google Ads: 4 sitelinks + 4 imagens novas
+- **4 sitelinks criados** no grupo de recursos:
+  1. **Apartamentos** · "Reforma e projeto autoral" · "Aquarius, Urbanova e região" → `/residencial.html`
+  2. **Comercial** · "Cafés, lojas e consultórios" · "Pontos comerciais em SJC" → `/comercial.html`
+  3. **Como funciona** · "Do briefing à entrega das chaves" · "Processo claro em 4 passos" → `/processo.html`
+  4. **Falar agora** · "Orçamento por WhatsApp" · "Resposta em até 24 horas" → `/lp-apartamento.html`
+- **4 imagens novas** uploadadas (full-res do `images/portfolio/`): case-believe-jantar, case-celebration-sala, case-enjoy-aquarius-sala, case-portal-victoria-sala. Total agora: 10/20 (era 6/20). Crops 1:1 e 4:5 feitos pelo Google.
+- **Resultado:** Pontuação otimização 91,8% → **92,2%**; Qualidade do anúncio "Ruim" → **"Médio"**; Imagens ✓ e Descrições ✓ marcadas.
+- **Próxima pendência (subiu o threshold do Google):** adicionar +7 títulos pra fechar qualidade "Excelente".
+
 ### 2026-05-27 · Google Ads: +2 descrições no grupo de recursos
 - **Antes:** 2 descrições, qualidade "Ruim".
 - **Depois:** 4 descrições, qualidade do anúncio agora deve subir pra "Excelente" (Google: +6% conversões médias).
