@@ -64,9 +64,12 @@ document.getElementById('contatoForm').addEventListener('submit', function(e) {
   setTimeout(() => success.classList.remove('show'), 5000);
 });
 
-// Track WhatsApp clicks (float + qualquer link wa.me)
+// Track WhatsApp clicks (float + qualquer link wa.me) — conta como conversão de lead
 document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
-  a.addEventListener('click', () => trackEvent('whatsapp_click', { source: a.id || 'link' }));
+  a.addEventListener('click', () => {
+    trackEvent('whatsapp_click', { source: a.id || 'link' });
+    trackConversion();
+  });
 });
 
 // scroll_75 — disparado uma vez quando passa de 75% da página
