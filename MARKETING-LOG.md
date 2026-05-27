@@ -168,6 +168,14 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-27 · Google Ads: +2 descrições no grupo de recursos
+- **Antes:** 2 descrições, qualidade "Ruim".
+- **Depois:** 4 descrições, qualidade do anúncio agora deve subir pra "Excelente" (Google: +6% conversões médias).
+- **Descrições novas:**
+  1. "Qualidade no projeto, investimento na medida da sua realidade. Atendimento em SJC." (82/90)
+  2. "Projeto autoral que valoriza seu imóvel. Apartamento, casa ou comercial em SJC." (79/90)
+- **Ainda pendente pra qualidade Excelente:** Sitelinks (0), mais 1 imagem horizontal + 1 quadrada + 2 verticais (4:5).
+
 ### 2026-05-27 · Google Ads: URL final trocada home → lp-apartamento.html
 - **Problema descoberto na review:** GA4 mostrou que tráfego do canal "Cross-network" (Google Ads) tinha tempo médio de **4 segundos** vs Organic Search com **3min 54s**. Usuário paga, cai na home genérica, não vê oferta direta e sai.
 - **Investigação no painel Google Ads:**
