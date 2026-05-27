@@ -168,6 +168,14 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-27 · Review de resultados + fix de tracking (WhatsApp como conversão)
+- **Google Ads (24-27 mai, 4 dias):** 2.829 impressões · 120 cliques · CTR 4,24% (alto, média Pmax é 1-2%) · CPC R$ 0,76 · Custo R$ 91,63 · Pontuação otimização 91,8% · **Conversões: 0** apesar de leads reais chegando no WhatsApp.
+- **Diagnóstico:** Em Conversões → Páginas da Web da ação "Enviar formulário de lead (1)" → "Você ainda não tem dados". Causa raiz: `trackConversion()` só era chamado no submit do formulário; cliques no botão flutuante de WhatsApp e nos CTAs `wa.me` disparavam só evento custom `whatsapp_click` (não convertia).
+- **Fix em `main.js` (commit `76d9d24`):** handler de clique em `a[href*="wa.me"]` agora chama `trackConversion()` em paralelo com `trackEvent('whatsapp_click', ...)`. Mesmo `send_to` (`AW-18186496405/F0xNCI3x6bIcEJXT_99D`) e mesmo valor R$ 2.500.
+- **Pendências detectadas no painel de Conversões:**
+  - Meta "Solicitar cotação" com status **Configuração incorreta** (auto-criada pelo Google, sem label no site) — deletar pra não poluir relatórios.
+  - Existem 2 conversões com nome "Enviar formulário de lead": uma vem do GA4 (auto-importada), outra é a manual com nosso label. A do GA4 conta `lead_form_submit`; a manual conta `gtag('event', 'conversion', ...)`. Pode fragmentar atribuição — avaliar desativar a do GA4.
+
 ### 2026-05-24 · Search Console verificada + sitemap.xml + robots.txt
 - **Search Console:** propriedade URL prefix `https://www.assiscarrer-arquitetura.com/` verificada via arquivo HTML (`googleb6efdc18273f3563.html` no root — NÃO REMOVER, Google revalida).
 - **sitemap.xml:** declarado com 4 URLs (home, residencial, comercial, processo). Submetido com sucesso — Google descobriu as 4. Status no painel: Sitemaps → "Sucesso".
