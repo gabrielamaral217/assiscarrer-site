@@ -168,6 +168,85 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-30 · Review #2 de resultados (3 dias após fixes do dia 27)
+**Validação geral: TODOS os fixes funcionaram.**
+
+**Google Ads (24-29 mai · 6 dias acumulados):**
+- 8.077 impressões (era 2.829 em 4 dias → 3x mais)
+- 290 cliques (era 120 → 2,4x mais)
+- CTR: 3,59% (caiu de 4,24% mas ainda acima da média Pmax)
+- CPC médio: **R$ 0,52** (era R$ 0,76 → MELHOROU 32%)
+- Custo: R$ 152,11 (de R$ 880 → restam R$ 728)
+- **Conversões: 2** (era 0 → fix do tracking WhatsApp validado)
+- Valor atribuído: R$ 5.000
+- ROAS projetado: **32,8x**
+- Pontuação otimização: 92,2% → 92%
+- Posição leilão: **3º lugar** (atrás de getninjas 18,46% e robertafelix 14,62%; você = 10,85% impr share)
+
+**Distribuição Pmax (onde os anúncios aparecem):**
+| Canal | Impressões | Cliques | Conversões | Observação |
+|---|---|---|---|---|
+| Rede de Display | 6.626 (82%) | 217 (75%) | 1 | Volume alto, qualidade média |
+| YouTube | 983 | 30 | 0 | Branding |
+| Pesquisa Google | 271 | 21 | 0 | Direto = alto intent |
+| Maps | 120 | 1 | 0 | Local SEO sinergia |
+| Parceiros pesquisa | 77 | 21 | 1 | Conversão eficiente |
+
+**Termos de pesquisa acionados (Pesquisa Google):**
+- ✅ "arquitetos em são josé dos campos" — 2 cliques · CTR 33%
+- ✅ "projeto para ampliação de casas" — 2 cliques · CTR 40%
+- ✅ "ambientes corporativos modernos" — 1 clique
+- ✅ "arquitetos em taubate" — CTR 100%
+- ⚠️ "telhado para frente" — 3 cliques, IRRELEVANTE (adicionar negativa)
+- ⚠️ "arquitetos são paulo" — geo errada (adicionar negativa)
+
+**GA4 (28 dias):**
+- 230 usuários ativos (era 45 → 5x mais)
+- 226 novos usuários
+- 250 sessões
+- Tempo médio engajamento: **1 min 31s** (era 43s)
+- Mobile: 94,8% · Desktop: 5,2%
+
+**Distribuição geográfica (validação SEO local):**
+| Cidade | Usuários | % |
+|---|---|---|
+| São José dos Campos | 75 | 33% |
+| São Paulo | 39 | 17% |
+| Jacareí | 29 | 12,6% |
+| Taubaté | 26 | 11% |
+| Caçapava | 14 | 6% |
+| Campinas | 10 | 4% |
+
+→ **As 4 cidades-alvo da campanha (SJC, Jacareí, Taubaté, Caçapava) somam 63% dos usuários.** Perfeito.
+
+**Eventos GA4 mais disparados (28 dias):**
+- session_start: 254
+- page_view: 252
+- **scroll_75: 52** (20% chega ao fim da página → ótima retenção)
+- **whatsapp_click: 29** (LEADS REAIS no botão de WhatsApp)
+- first_visit: 9 (conversões qualificadas)
+
+**Páginas de destino (validação do fix URL):**
+- /lp-apartamento.html: **124 sessões** (49,6%), tempo médio **1 min 34s** (ERA 4s antes do fix!)
+- / (home): 110 sessões, 1 min 7s
+- /residencial.html: 1 sessão, **36 min 41s** engajamento (caso isolado de alto interesse)
+- /comercial, /processo: ~1 sessão cada
+
+**Aquisição de tráfego (canais):**
+| Canal | Sessões | % | Tempo médio |
+|---|---|---|---|
+| Cross-network (Google Ads) | 220 | 88% | 1 min 27s |
+| Organic Search | 10 | 4% | **3 min 32s** (alta qualidade) |
+| Direct | 6 | 2,4% | 3s (baixa, possível bot) |
+| Unassigned | 29 | 11,6% | 53s |
+
+**Insights principais:**
+1. **A campanha está performando muito acima da média de mercado.** ROAS projetado de 32x e CPC R$ 0,52 são números excepcionais.
+2. **Fix da URL final validado:** tempo médio na LP de 4s → 1min 34s (22x melhora).
+3. **WhatsApp é o canal de conversão dominante:** 29 cliques no botão em 28 dias.
+4. **Organic Search começando a aparecer:** 10 sessões com tempo médio de 3min 32s — sinal que o SEO básico (Search Console + sitemap) está ativando.
+5. **Bot/spam** na "Unassigned" (29 sessões, 53s média) — origem `trends.glance.com`, `atlas.taboolanews.com`, etc. → tráfego de display irrelevante, considerar exclusões.
+
 ### 2026-05-27 · Google Ads: 4 sitelinks + 4 imagens novas
 - **4 sitelinks criados** no grupo de recursos:
   1. **Apartamentos** · "Reforma e projeto autoral" · "Aquarius, Urbanova e região" → `/residencial.html`
