@@ -168,6 +168,23 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-05-30 · Caminho A escolhido + fix WhatsApp pre-fill + campanha reviews iniciada
+- **Decisão arquitetural:** descoberto que Performance Max NÃO permite desativar Display Network individualmente (design da Google). Tentativas de criar exclusões de URL falharam:
+  - Lista "exclusao" criada em Bibliotecas Compartilhadas mas como "palavras-chave negativas" (errado, domínios não funcionam como keywords)
+  - Conteúdo → Exclusões com opções acinzentadas (Pmax bloqueia)
+- **Caminho A escolhido:** aceitar Pmax como está + focar em conversão real (WhatsApp/reviews/IG).
+- **Fix #1 deployado (commit `908612d`):** texto pré-preenchido do WhatsApp encurtado em todos os botões flutuantes e CTAs.
+  - **Antes:** mensagens longas e específicas por página ("Quero um projeto residencial em SJC.", "Vim pela landing...", etc).
+  - **Depois:** "Olá! Quero conversar sobre um projeto." (padronizado em 6 páginas).
+  - **Hipótese:** drop de 29 cliques → 2 mensagens era em parte texto pré-preenchido longo assustando o user.
+- **Fix #2 iniciado pelo usuário:** campanha de reviews GMN começou. Meta original: 10 reviews em 7 dias.
+- **Palavras-chave negativas adicionadas (essas funcionam):** `capital`, `são paulo`, `telhado`, `são paulo capital`, `sp capital`.
+- **Pendências do Caminho A pra próxima sessão:**
+  - WhatsApp Business auto-resposta (saudação + ausência + respostas rápidas)
+  - Atualizar bio Instagram + criar 6 destaques fixos
+  - Subir 20+ fotos no GMN
+  - Confirmar identidade no Google Ads (deadline 27/06)
+
 ### 2026-05-30 · Review #2 de resultados (3 dias após fixes do dia 27)
 **Validação geral: TODOS os fixes funcionaram.**
 
