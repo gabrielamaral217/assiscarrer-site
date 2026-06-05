@@ -168,6 +168,69 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-06-04 · Review #3 — Tráfego 5x mas ALERTA: conversões pararam
+**Snapshot 12 dias (24 mai - 4 jun):**
+
+| Métrica | Review #1 (27/05) | Review #2 (30/05) | Review #3 (04/06) | Δ #2→#3 |
+|---|---|---|---|---|
+| Impressões | 2.829 | 8.077 | **14.387** | +78% |
+| Cliques | 120 | 290 | **546** | +88% |
+| CPC | R$ 0,76 | R$ 0,52 | R$ 0,56 | +8% |
+| Custo | R$ 91,63 | R$ 152,11 | R$ 307,50 | +102% |
+| **Conversões (agregado)** | 0 | 2 | **2** | **0 novas em 7 dias** |
+| Conversões últimos 7d | n/a | n/a | **0 (-100%)** | 🚨 |
+| Pontuação otimização | 91,8% | 92% | **88,9%** | -3,1pp |
+| Posição leilão | n/a | 10,85% (3º) | **<10%** | 🚨 caiu da 3ª posição |
+
+**🚨 Alertas críticos:**
+1. **0 conversões nos últimos 7 dias** (28/mai - 3/jun) apesar de 256 cliques no período → fix do tracking WhatsApp DEPLOYADO 27/05 não está convertendo o esperado.
+2. **Status acompanhamento conversões mostra "Tag inativa: 1" + "Não verificado: 1" + "Não há conversões recentes: 3"** — alguma tag está com problema.
+3. **Caiu da 3ª posição no leilão pra <10%** — concorrentes (getninjas, ngbarquitetura, robertafelix) também caíram (<10% todos), provavelmente Pmax aumentou competitividade interna do mercado.
+4. **GMN: 694 impressões, 0 cliques de chamada, 0 rotas, 1 visita ao site** — perfil está sendo visto MAS não está convertendo.
+
+**Distribuição Pmax (12 dias):**
+| Canal | Impr | Cliques | Conv | Custo |
+|---|---|---|---|---|
+| **Rede de Display** | 10.882 (76%) | 386 (71%) | 1 | R$ 135 |
+| YouTube | 2.130 | 48 | 0 | R$ 12 |
+| Pesquisa Google | **527** | 35 | **0** 🚨 | R$ 70 |
+| Discover | 439 | 13 | 0 | R$ 17 |
+| Maps | 234 | 3 | 0 | R$ 0,26 |
+| Parceiros Pesquisa | 175 | 61 | 1 | R$ 73 |
+
+→ **Pesquisa Google com 35 cliques e 0 conversões** é o mais preocupante (tráfego de alta intenção, deveria converter).
+→ **96% das conversões vieram do mobile** (smartphones têm 2 conv R$ 5.000 vs 0 em desktop/tablets/TV).
+
+**GA4 (28 dias):**
+- Usuários ativos: **291** (era 230 → +27%)
+- Sessões: 424 starts → 422 page_views
+- **scroll_75: 83** (era 52 → +59% engajamento na página)
+- **whatsapp_click: 45** (era 29 → +55%)
+- Mobile: 95,7% · Desktop: 4,3%
+
+**Cidades (top 5):**
+| Cidade | Usuários | vs review #2 |
+|---|---|---|
+| SJC | 134 | +78% |
+| Taubaté | 50 | +92% |
+| São Paulo | 49 | +26% |
+| Jacareí | 48 | +66% |
+| Caçapava | 24 | +71% |
+
+→ SJC+Jacareí+Taubaté+Caçapava = **256 usuários (65%)**. Cobertura geográfica perfeita.
+
+**Aquisição por canal:**
+- Cross-network (Google Ads): 303 sessões
+- **Paid Search caiu -100%** ⚠️ — Pmax migrou tudo pra Display (problema)
+- Organic Search: ↑100% (SEO subindo) ✅
+- Direct: 4
+
+**Hipóteses para 0 conversões em 7 dias:**
+1. Pmax migrou 76% das impressões pra Display Network → tráfego ruim
+2. Tag de conversão WhatsApp click pode ter problema (apareceu "Tag inativa") — investigar
+3. 45 whatsapp_clicks no GA4 mas drop pra mensagens reais provavelmente continua alto
+4. Conversões dependem da janela de atribuição — pode estar atribuindo mal
+
 ### 2026-05-30 · Caminho A escolhido + fix WhatsApp pre-fill + campanha reviews iniciada
 - **Decisão arquitetural:** descoberto que Performance Max NÃO permite desativar Display Network individualmente (design da Google). Tentativas de criar exclusões de URL falharam:
   - Lista "exclusao" criada em Bibliotecas Compartilhadas mas como "palavras-chave negativas" (errado, domínios não funcionam como keywords)
