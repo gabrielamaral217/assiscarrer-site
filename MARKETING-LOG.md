@@ -168,6 +168,27 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-06-04 · BUG CRÍTICO ENCONTRADO E CORRIGIDO + limpeza metas Google Ads
+**Investigação no painel Google Ads:**
+- Aba Páginas da Web da "Enviar formulário de lead (1)" mostrava apenas `https://www.assiscarrer-arquitetura.com` (home) com status "Não há conversões recentes".
+- Lembrei que dia 27/05 trocamos a URL final da campanha pra `lp-apartamento.html` mas o fix `trackConversion()` no clique WhatsApp foi feito apenas no `main.js`.
+- **As 5 páginas (residencial, comercial, processo, lp-apartamento, lp-comercial) têm JS INLINE PRÓPRIO no final do body, NÃO usam main.js.** Logo, o fix não chegou nelas.
+- Como a campanha mandava 100% do tráfego pago pra `lp-apartamento.html`, **NENHUM clique no WhatsApp ali estava sendo registrado como conversão no Google Ads**, só como evento custom `whatsapp_click`.
+
+**Fix deployado (commit `451b742`):**
+- Adicionado `trackConversion()` no handler de clique `a[href*="wa.me"]` em todas as 5 páginas.
+- Função `trackConversion()` já existia inline em todas as páginas (definida com mesmo label `F0xNCI3x6bIcEJXT_99D`), só não estava sendo chamada no whatsapp_click.
+
+**Limpeza adicional no painel Google Ads (auto via Chrome MCP):**
+- Meta "Solicitar cotação" desativada como Padrão da conta (estava com Configuração incorreta, US$1 valor padrão).
+- Meta "Download" desativada como Padrão da conta (mesmo problema).
+- Restou apenas "Enviar formulário de lead" como meta principal ativa.
+
+**Expectativa:**
+- Próximos cliques no WhatsApp em LPs e páginas internas vão registrar conversão.
+- Esperar 24-72h pra aparecer no painel Google Ads.
+- Re-medir na review #4 com janela curta (3-7 dias) pra ver se voltou a converter.
+
 ### 2026-06-04 · Review #3 — Tráfego 5x mas ALERTA: conversões pararam
 **Snapshot 12 dias (24 mai - 4 jun):**
 
