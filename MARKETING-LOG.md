@@ -168,6 +168,116 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-06-13 · Review #4 — 13 CONVERSÕES! Fix validado, ROAS 60x atribuído
+**TL;DR:** O fix do bug crítico (commit 451b742, deployado 04/06) **funcionou**. De 2 conversões em 11 dias passamos pra **13 conversões em 20 dias**. Significa que nos últimos 9 dias o tracking capturou **11 conversões novas**.
+
+**Google Ads acumulado (24 mai - 13 jun · 20 dias):**
+
+| Métrica | Review #3 (04/06) | **Review #4 (13/06)** | Δ |
+|---|---|---|---|
+| Impressões | 14.387 | **24.336** | +69% |
+| Cliques | 546 | **901** | +65% |
+| CTR | 3,80% | 3,70% | -0,1pp |
+| CPC | R$ 0,56 | R$ 0,60 | +7% |
+| Custo | R$ 307 | **R$ 536** | +75% |
+| **Conversões** | **2** | **13** | **+550%** 🚀 |
+| Valor atribuído | R$ 5.000 | **R$ 32.500** | +550% |
+| **Custo/conv** | R$ 153 | **R$ 38,76** | **-75%** |
+| Pontuação otim. | 88,9% | 79,3% | -9,6pp (sinal: subir orçamento) |
+| Posição leilão | <10% | **10,03%** | voltamos pro top 3 |
+| Status | Qualificada | **Limitada pelo orçamento** | sinal pra escalar |
+
+**ROAS atribuído:** R$ 32.500 / R$ 536 = **60x**. Mesmo descontando que valor é declarado (R$ 2.500/lead) e taxa de fechamento real ≈ 10-15%, ainda fica em **6-9x ROAS real** considerando ticket médio R$ 20k.
+
+**Distribuição Pmax por canal (% parcela de custo):**
+| Canal | Custo | % |
+|---|---|---|
+| Discover | R$ 172,22 | 32,11% |
+| Rede de Display | R$ 166,85 | 31,11% |
+| Pesquisa Google | R$ 100,32 | 18,70% |
+| Parceiros pesquisa | R$ 75,70 | 14,11% |
+| YouTube | R$ 20,26 | 3,78% |
+| Maps | R$ 1,00 | 0,19% |
+
+**Dispositivos:**
+- Smartphones: 866 cliques, **13 conversões**, custo/conv R$ 38,76
+- Computadores: 33 cliques, 0 conv
+- Tablets: 2 cliques, 0 conv
+
+**Sitelinks performance (validação do fix do dia 27/05):**
+| Sitelink | Cliques | CTR | Custo |
+|---|---|---|---|
+| Como funciona | 98 | 8,13% | R$ 80,04 |
+| Falar agora (→ LP) | 87 | **9,09%** | R$ 66,22 |
+| Apartamentos | 83 | 7,44% | R$ 48,96 |
+| Comercial | 74 | 7,47% | R$ 48,13 |
+| Ligar para [tel] | 0 | 0% | R$ 0 (não engaja) |
+
+→ Total sitelinks: 100+ cliques · CTR médio 8,25% (acima da média do anúncio principal).
+
+**Termos de pesquisa (top 10 acionados):**
+- casas arquiteto · projeto para ampliação de casas · arquitetos de interiores sp · apartamento completo decorado · arquitetos em são josé dos campos · arquitetos em taubate · domarquitetura · fachadas de casas terreas de luxo · modelos de casa terrea · reformas comerciais
+- Total: **2,13% taxa de conversão**, 2 conversões diretas de "Pesquisa Google"
+
+**Concorrência (leilão):**
+| Concorrente | Parcela impressões | Δ vs review #3 |
+|---|---|---|
+| getninjas.com.br | 15,42% | +0,5pp |
+| **Você** | **10,03%** | **voltou pro 3º** |
+| google.com | <10% | — |
+| robertafelix.com | <10% | manteve |
+
+**GA4 (28 dias):**
+- Usuários ativos: **718** (era 291 → +147%)
+- Novos usuários: **724** (era 226 → +220%)
+- Sessões: 809
+- Mobile: 100%
+- Tempo médio engajamento: 45s
+- **Organic Search: 5min 12s** (qualidade alta, tráfego subindo)
+
+**Cidades top:**
+| Cidade | Usuários | Δ vs #3 |
+|---|---|---|
+| SJC | 272 | +103% |
+| SP | 98 | +100% |
+| Jacareí | 70 | +46% |
+| Taubaté | 70 | +40% |
+| Caçapava | 30 | +25% |
+| Campinas | 25 | +127% |
+
+**Páginas mais vistas:**
+- /lp-apartamento.html: **781 views** (79,8%) — Pmax mandando pra LP
+- /: 149 views
+- /residencial.html: 19 views, **4min 09s** engajamento ⭐
+- /processo.html: 13 views
+- /comercial.html: 8 views
+
+**Eventos GA4 (28 dias):**
+- page_view: 979
+- session_start: 817
+- first_visit: 310
+- user_engagement: 310
+- scroll_75: 201
+- scroll: 156
+- click: 107
+
+**GMN (✅ MELHORIA VISÍVEL):**
+- **4 avaliações no Google** (era 2 → dobrou!)
+- Comentários reais visíveis: "Atenderam todos meus pedidos e o projeto ficou do jeito que eu sonhava!", "Recomendo para quem busca excelência e humanidade no trabalho de arquitetura", "Atendeu todas as expectativas..."
+- Campanha de reviews do dia 30/05 deu resultado.
+
+**Análise de canais GA4 — referrers indesejados continuam:**
+- syndicatedsearch.goog: 63 sessões
+- trends.glance.com: 51 sessões
+- atlas.taboolanews.com: 25 sessões
+- 1weatherapp.com: 25 sessões
+→ Display Network ainda traz ruído, mas não impede conversões (13 leads reais chegando).
+
+**Próximas decisões críticas:**
+1. **🔥 SUBIR ORÇAMENTO** — status "Limitada pelo orçamento" + pontuação otim caiu pra 79,3%. Com custo/conv R$ 38,76 e ROAS 60x atribuído, dobrar pra R$ 50/dia faz sentido. Cuidado: monitorar 7 dias antes de subir mais.
+2. **Confirmar identidade no Google Ads** — deadline 27/06 (14 dias).
+3. **Pedir mais reviews GMN** — meta 10 não cumprida (4/10). Próximo lote.
+
 ### 2026-06-04 · BUG CRÍTICO ENCONTRADO E CORRIGIDO + limpeza metas Google Ads
 **Investigação no painel Google Ads:**
 - Aba Páginas da Web da "Enviar formulário de lead (1)" mostrava apenas `https://www.assiscarrer-arquitetura.com` (home) com status "Não há conversões recentes".
