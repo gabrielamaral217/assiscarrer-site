@@ -168,6 +168,49 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-06-21 · Pivot estratégico: Pmax pausada · Search puro criado
+**Diagnóstico do mês (1 mês completo de Pmax):**
+- 49 "conversões" registradas, **R$ 747 gastos**, **0 clientes fechados**
+- 88% das conversões vieram de Rede de Display (banner aleatório em trends.glance.com, taboolanews.com, 1weatherapp.com)
+- Pesquisa Google: 69 cliques, 0 conversões registradas
+- Mensagens WhatsApp recebidas: pessoas mandavam "oi" e sumiam (lead frio de display)
+- Conclusão: Pmax otimizou pra cliques baratos em banner curioso, não pra intenção real
+
+**Ação tomada:**
+- **Pmax "Arquiteto São José dos Campos" PAUSADA** (não excluída — histórico preservado)
+- **Nova campanha criada:** `Search · Residencial+Comercial SJC`
+  - Tipo: Pesquisa pura (sem Display, Discover, YouTube)
+  - Lance: Maximizar cliques · CPC máx R$ 3,00
+  - Orçamento: R$ 25/dia (mesmo da Pmax)
+  - Locais: SJC + Taubaté + Jacareí + Caçapava
+  - Conversão alvo: Enviar formulário de lead
+- **Foco em 1 vertical (Residencial)** pra acelerar aprendizado do algoritmo. Comercial fica pra fase 2.
+
+**Grupo de anúncios "Residencial" (único por enquanto):**
+- 8 keywords correspondência por frase:
+  - "arquiteto sjc"
+  - "arquiteto são josé dos campos"
+  - "arquiteto para apartamento"
+  - "arquiteto residencial sjc" (baixo volume)
+  - "arquiteto urbanova" (baixo volume)
+  - "arquiteto aquarius" (baixo volume)
+  - "reforma apartamento sjc"
+  - "projeto arquitetônico sjc"
+- 1 anúncio responsivo qualificado → URL `/lp-apartamento.html`
+- Sitelinks reaproveitados: Apartamentos · Comercial · Como funciona · Falar agora
+- Frases de destaque: Atendimento personalizado, Orçamento em 24h, 100+ projetos, etc.
+
+**Ajustes finos pendentes:**
+- Remover idioma "English" (Google adicionou automaticamente)
+- Adicionar palavras-chave negativas (gratis, curso, estudante, sketchup, autocad, "são paulo", etc.)
+- Criar Grupo "Comercial" só depois de validar Residencial (7-14 dias)
+
+**Expectativa próximos 7 dias:**
+- Volume vai cair (de ~50 cliques/dia pra ~10) — esperado
+- Qualidade vai subir absurdamente (gente buscando ativamente "arquiteto sjc")
+- Meta: 3-7 mensagens WhatsApp/semana com **taxa de resposta real** (não curiosos de display)
+- Próxima review: 28/jun com foco em "mensagens reais" e não "cliques no botão"
+
 ### 2026-06-13 · Review #4 — 13 CONVERSÕES! Fix validado, ROAS 60x atribuído
 **TL;DR:** O fix do bug crítico (commit 451b742, deployado 04/06) **funcionou**. De 2 conversões em 11 dias passamos pra **13 conversões em 20 dias**. Significa que nos últimos 9 dias o tracking capturou **11 conversões novas**.
 
