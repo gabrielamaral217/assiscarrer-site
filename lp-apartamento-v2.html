@@ -314,37 +314,29 @@
       max-width: 36ch;
       margin-bottom: 40px;
     }
-    .v2-process ol { list-style: none; display: grid; gap: 32px; }
+    .v2-process ol { list-style: none; display: grid; gap: 0; margin-top: 24px; }
     .v2-process li {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: 16px 22px;
+      gap: 22px;
       align-items: baseline;
-      padding-bottom: 28px;
+      padding: 28px 0;
       border-bottom: 1px solid var(--line);
     }
-    .v2-process li:last-child { border-bottom: none; padding-bottom: 0; }
+    .v2-process li:last-child { border-bottom: none; }
     .v2-process .step-num {
       font-family: var(--display);
       font-style: italic; font-weight: 500;
       font-size: 1.6rem;
       color: var(--copper);
-      grid-row: span 2;
-      align-self: start;
     }
     .v2-process .step-title {
       font-family: var(--display);
       font-weight: 500;
-      font-size: 1.35rem;
+      font-size: clamp(1.6rem, 6vw, 2rem);
       color: var(--ink);
-      line-height: 1.2;
-    }
-    .v2-process .step-body {
-      font-family: var(--sans);
-      font-size: 0.93rem;
-      color: var(--muted);
-      line-height: 1.65;
-      grid-column: 2;
+      line-height: 1;
+      letter-spacing: -0.005em;
     }
 
     /* ===== Voz dos clientes ===== */
@@ -466,22 +458,20 @@
       <a href="#" class="logo">
         <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
       </a>
-      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="header-cta">Orçamento 24h</a>
+      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="header-cta">Orçamento 24h</a>
     </header>
     <picture>
       <source type="image/webp" srcset="images/portfolio/opt/hero-residencial-integrado.webp" />
       <img src="images/portfolio/opt/hero-residencial-integrado.jpg" alt="Apartamento residencial integrado em São José dos Campos" width="1400" height="926" loading="eager" fetchpriority="high" decoding="async" />
     </picture>
     <div class="v2-hero-content">
-      <p class="eyebrow">Assis Carrer Arquitetura</p>
-      <h1>Seu apartamento<br>em SJC, com <em>identidade</em>.</h1>
-      <p class="hero-sub">Projeto autoral, do briefing à entrega das chaves. Para quem quer um lar à própria altura.</p>
+      <h1>Seu apartamento<br>em SJC,<br>com <em>identidade</em>.</h1>
       <div class="hero-tag-row">
         <span>Aquarius</span>
         <span>Urbanova</span>
         <span>Floradas</span>
       </div>
-      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn-primary" style="margin-top:24px">
+      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="btn-primary" style="margin-top:20px">
         Orçamento em 24h
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -507,84 +497,62 @@
   <!-- 3. CASES -->
   <section class="v2-cases">
     <h2 class="reveal">Casos recentes.</h2>
-    <p class="cases-sub reveal">Cada apartamento conta uma história. Veja como traduzimos a sua.</p>
     <div class="v2-cases-carousel">
       <article class="case">
         <picture>
           <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
-          <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Sala integrada Cobertura Celebration Life" loading="lazy" decoding="async" />
+          <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Cobertura Celebration Life" loading="lazy" decoding="async" />
         </picture>
         <div class="case-meta">
-          <span class="case-client">Família Andrade</span>
           <span class="case-title">Celebration Life</span>
-          <span class="case-where">Cobertura · Vista da cidade</span>
+          <span class="case-where">Cobertura</span>
         </div>
       </article>
 
       <article class="case">
         <picture>
           <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
-          <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Sala integrada Enjoy Aquarius" loading="lazy" decoding="async" />
+          <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Enjoy Aquarius" loading="lazy" decoding="async" />
         </picture>
         <div class="case-meta">
-          <span class="case-client">Camila & Pedro</span>
           <span class="case-title">Enjoy Aquarius</span>
-          <span class="case-where">Integrado · Nude com arcos</span>
+          <span class="case-where">Integrado</span>
         </div>
       </article>
 
       <article class="case">
         <picture>
           <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
-          <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Sala de jantar Apartamento Believe" loading="lazy" decoding="async" />
+          <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Believe" loading="lazy" decoding="async" />
         </picture>
         <div class="case-meta">
-          <span class="case-client">Mariana & Lucas</span>
           <span class="case-title">Believe</span>
-          <span class="case-where">Sala de jantar · Pedra portuguesa</span>
+          <span class="case-where">Sala de jantar</span>
         </div>
       </article>
 
       <article class="case">
         <picture>
           <source type="image/webp" srcset="images/portfolio/opt/case-living-masculino.webp" />
-          <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living masculino em SJC" loading="lazy" decoding="async" />
+          <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living masculino" loading="lazy" decoding="async" />
         </picture>
         <div class="case-meta">
-          <span class="case-client">Apartamento autoral</span>
           <span class="case-title">Living masculino</span>
-          <span class="case-where">Painel TV · Tons profundos</span>
+          <span class="case-where">Painel TV</span>
         </div>
       </article>
     </div>
-    <div class="cases-hint">Deslize para explorar →</div>
+    <div class="cases-hint">Deslize →</div>
   </section>
 
   <!-- 4. PROCESSO -->
   <section class="v2-process">
     <h2 class="reveal">Como trabalhamos.</h2>
-    <p class="process-sub reveal">Quatro etapas. Tudo claro do começo ao fim.</p>
     <ol>
-      <li class="reveal">
-        <span class="step-num">01</span>
-        <span class="step-title">Briefing</span>
-        <span class="step-body">Entendemos como você vive — rotinas, gostos, restrições — e o orçamento real do seu projeto.</span>
-      </li>
-      <li class="reveal">
-        <span class="step-num">02</span>
-        <span class="step-title">Projeto</span>
-        <span class="step-body">Plantas, layout, paleta, marcenaria e cada acabamento. Você aprova antes de qualquer obra começar.</span>
-      </li>
-      <li class="reveal">
-        <span class="step-num">03</span>
-        <span class="step-title">Acompanhamento de obra</span>
-        <span class="step-body">A gente acompanha o canteiro, conversa direto com os fornecedores e cuida pra tudo sair como combinado.</span>
-      </li>
-      <li class="reveal">
-        <span class="step-num">04</span>
-        <span class="step-title">Entrega das chaves</span>
-        <span class="step-body">Apartamento pronto, decoração no lugar. Você só precisa entrar.</span>
-      </li>
+      <li class="reveal"><span class="step-num">01</span><span class="step-title">Briefing</span></li>
+      <li class="reveal"><span class="step-num">02</span><span class="step-title">Projeto</span></li>
+      <li class="reveal"><span class="step-num">03</span><span class="step-title">Obra</span></li>
+      <li class="reveal"><span class="step-num">04</span><span class="step-title">Chaves</span></li>
     </ol>
   </section>
 
@@ -592,25 +560,25 @@
   <section class="v2-voice reveal">
     <span class="quote-mark">"</span>
     <blockquote>
-      Atenderam todos os meus pedidos e o projeto ficou do jeito que eu sonhava.
+      Ficou exatamente do jeito que eu sonhava.
     </blockquote>
-    <span class="quote-by">— Família atendida em 2025</span>
+    <span class="quote-by">— Cliente 2025</span>
   </section>
 
   <!-- 6. FECHAMENTO -->
   <section class="v2-close">
     <h2 class="reveal">Vamos<br>conversar?</h2>
-    <p class="reveal">Conta pra gente o que você está pensando. As arquitetas Flavia e Beatriz respondem em até 24h.</p>
-    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn-primary reveal">
+    <p class="reveal">Resposta em até 24h.</p>
+    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="btn-primary reveal">
       Falar pelo WhatsApp
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
-    <p class="secondary">São José dos Campos · Taubaté · Jacareí · Caçapava</p>
+    <p class="secondary">SJC · Taubaté · Jacareí · Caçapava</p>
   </section>
 
   <!-- Sticky bottom CTA — mobile-only -->
   <div class="sticky-cta" id="stickyCta">
-    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">
+    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
       Orçamento agora
     </a>

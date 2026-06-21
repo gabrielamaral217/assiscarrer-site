@@ -93,29 +93,8 @@
     }, 100);
   }
 
-  // Stamp visitor identifier onto every wa.me link so you can match messages later.
-  // We append " [AB-A-3f8a1c2b]" to the text param.
-  function stampWaLinks() {
-    var tag = ' [AB-' + variant + '-' + visitorId + ']';
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
-      if (a.dataset.abStamped === '1') return;
-      try {
-        var u = new URL(a.href);
-        var text = u.searchParams.get('text') || '';
-        if (text.indexOf('[AB-') === -1) {
-          u.searchParams.set('text', text + tag);
-          a.href = u.toString();
-        }
-        a.dataset.abStamped = '1';
-      } catch (e) { /* ignore malformed urls */ }
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', stampWaLinks);
-  } else {
-    stampWaLinks();
-  }
-  // Re-stamp if SPA-like links are added later
-  var mo = new MutationObserver(stampWaLinks);
-  mo.observe(document.documentElement, { childList: true, subtree: true });
+  // We no longer stamp a visible code into the wa.me text — that read as spammy.
+  // Instead, the two LP variants ship distinct pre-fill phrases (set in each HTML),
+  // so the variant can be inferred from the message text alone with no foreign markers.
+  // The GA4 ab_variant event above remains the authoritative server-side signal.
 })();
