@@ -1,3 +1,5 @@
 .DS_Store
 images/insta/
 .claude/
+node_modules/
+package-lock.json
