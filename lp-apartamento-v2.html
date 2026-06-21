@@ -3,56 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#1C2D40" />
-  <title>Projeto Arquitetônico para Apartamentos em São José dos Campos — Assis Carrer</title>
-  <meta name="description" content="Reforma e projeto de apartamento em SJC — Aquarius, Urbanova, Floradas. 100+ projetos entregues em 7 anos. Orçamento em 24h." />
-  <meta name="keywords" content="reforma apartamento sjc, arquiteto aquarius, arquiteto urbanova, projeto arquitetônico são josé dos campos" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <title>Apartamento em São José dos Campos — Assis Carrer Arquitetura</title>
+  <meta name="description" content="Projeto e reforma de apartamento em SJC — Aquarius, Urbanova, Floradas. Sem surpresas, com identidade." />
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P6F5BN7Z');</script>
-  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDECLK9VYV"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DDECLK9VYV');gtag('config','AW-18186496405');</script>
-  <!-- Meta Pixel -->
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2037009416852160');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037009416852160&ev=PageView&noscript=1" /></noscript>
 
-  <!-- Preload hero pra LCP rápido -->
   <link rel="preload" as="image" href="images/portfolio/opt/hero-residencial-integrado.webp" type="image/webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
 
   <style>
-    /* =========================
-       v2 — Mobile-first scroll-driven, sofisticada e calma
-       Estética: Apple/Airbnb premium. Cormorant Garamond + system-ui.
-       ========================= */
-
+    /* ==========================================
+       v2 — Apple-inspired mobile-first LP
+       Sticky topbar + h2 gradient + scroll-snap horizontal carousels
+       ========================================== */
     :root {
       color-scheme: light dark;
-      --bg:      #FAFAF8;
-      --ink:     #1C2D40;
-      --ink-soft:#3a4856;
-      --muted:   #76828d;
-      --line:    #e6e2dc;
-      --copper:  #A96D3E;
-      --copper-soft: #C79872;
-      --cream:   #F1ECE3;
-      /* tipografia fluida */
-      --display: 'Cormorant Garamond', 'Georgia', serif;
-      --sans:    -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
+      --bg:       #f5f5f7;
+      --bg-card:  #ffffff;
+      --ink:      #1d1d1f;
+      --ink-soft: #424245;
+      --muted:    #86868b;
+      --hairline: rgba(0,0,0,0.08);
+      --copper:   #A96D3E;
+      /* gradients estilo Apple */
+      --grad-warm: linear-gradient(90deg, #c89b6e 0%, #d5a370 30%, #b9805a 70%, #8c5f3e 100%);
+      --grad-cool: linear-gradient(90deg, #6a7d92 0%, #8a98ac 40%, #adb9c9 100%);
+      --grad-purple: linear-gradient(90deg, #9b8bbf 0%, #b8a9d4 50%, #c4b5e0 100%);
+      --display:  'Cormorant Garamond', 'Times New Roman', serif;
+      --sans:     -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', system-ui, sans-serif;
+      --safe-top:    env(safe-area-inset-top, 0px);
       --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --topbar-h: 56px;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg:      #11151a;
-        --ink:     #f0ece4;
-        --ink-soft:#cfc8bd;
-        --muted:   #8a8579;
-        --line:    #28303a;
-        --cream:   #1a1f26;
+        --bg:       #0e0e10;
+        --bg-card:  #161618;
+        --ink:      #f5f5f7;
+        --ink-soft: #d2d2d7;
+        --muted:    #86868b;
+        --hairline: rgba(255,255,255,0.08);
+        --grad-warm: linear-gradient(90deg, #c89b6e 0%, #d5a370 30%, #b9805a 70%, #8c5f3e 100%);
       }
     }
 
@@ -66,382 +66,324 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
       font-family: var(--sans);
       font-weight: 400;
       color: var(--ink);
       background: var(--bg);
-      line-height: 1.6;
+      line-height: 1.45;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
       overflow-x: hidden;
+      padding-top: calc(var(--topbar-h) + var(--safe-top));
     }
-    img, picture { display: block; max-width: 100%; }
+    img, picture, video { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: 0; background: 0; color: inherit; }
 
-    /* ===== Header transparente — só visível enquanto está no hero, depois somem ===== */
-    .v2-header {
-      position: absolute; top: 0; left: 0; right: 0;
-      z-index: 50;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 22px;
-      background: linear-gradient(to bottom, rgba(28,45,64,0.45), rgba(28,45,64,0));
-      pointer-events: none;
+    /* ==========================================
+       Sticky topbar — sempre no topo (estilo Apple)
+       ========================================== */
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: calc(var(--safe-top) + 8px) 16px 8px 16px;
+      background: rgba(245,245,247,0.72);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--hairline);
     }
-    .v2-header > * { pointer-events: auto; }
-    .v2-header .logo img { height: 24px; width: auto; filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4)); }
-    .v2-header .header-cta {
-      font-family: var(--sans);
-      font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-      color: #fff;
-      padding: 9px 14px;
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: 999px;
-      backdrop-filter: blur(6px);
-      white-space: nowrap;
-      transition: background 0.3s, border-color 0.3s;
+    .topbar-inner {
+      max-width: 980px; margin: 0 auto;
+      display: flex; align-items: center; gap: 12px;
+      height: 40px;
     }
-    .v2-header .header-cta:active { background: rgba(255,255,255,0.18); }
-
-    /* ===== Hero fullscreen ===== */
-    .v2-hero {
-      position: relative;
-      min-height: 100svh;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      color: #fff;
-      overflow: hidden;
-      isolation: isolate; /* contém o header absoluto dentro do hero */
+    .topbar .product {
+      flex: 1;
+      font-size: 17px; font-weight: 500; letter-spacing: -0.01em;
+      color: var(--ink);
     }
-    .v2-hero picture, .v2-hero img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
-      z-index: 0;
+    .topbar .topbar-cta {
+      font-size: 13px; font-weight: 400;
+      padding: 7px 14px;
+      border-radius: 980px;
+      transition: opacity 0.2s;
     }
-    .v2-hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(28,45,64,0.25) 0%, rgba(28,45,64,0) 30%, rgba(28,45,64,0.55) 70%, rgba(28,45,64,0.85) 100%);
-      z-index: 1;
+    .topbar .topbar-cta.ghost {
+      color: var(--ink);
+      border: 1px solid var(--hairline);
+      background: rgba(255,255,255,0.5);
     }
-    .v2-hero-content {
-      position: relative; z-index: 2;
-      grid-row: 2;
-      padding: 0 24px calc(120px + var(--safe-bottom)) 24px;
-      display: flex; flex-direction: column; gap: 16px;
-    }
-    .v2-hero .eyebrow {
-      font-family: var(--sans);
-      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--copper-soft);
-      font-weight: 500;
-    }
-    .v2-hero h1 {
-      font-family: var(--display);
-      font-weight: 500;
-      font-size: clamp(2.4rem, 9.5vw, 3.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      color: #fff;
-    }
-    .v2-hero h1 em {
-      font-style: italic;
-      color: var(--copper-soft);
-      font-weight: 500;
-    }
-    .v2-hero .hero-sub {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      line-height: 1.55;
-      color: rgba(255,255,255,0.82);
-      max-width: 28ch;
-      margin-top: 8px;
-    }
-    .v2-hero .hero-tag-row {
-      display: flex; flex-wrap: wrap; gap: 6px 14px;
-      font-family: var(--sans);
-      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-      color: rgba(255,255,255,0.62);
-      margin-top: 8px;
-    }
-    .v2-hero .hero-tag-row span::before {
-      content: '·';
-      margin-right: 14px;
-      color: rgba(255,255,255,0.45);
-    }
-    .v2-hero .hero-tag-row span:first-child::before { content: none; margin: 0; }
-
-    /* ===== Botão primário (chip serifado) ===== */
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 10px;
-      align-self: start;
-      font-family: var(--sans);
-      font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    .topbar .topbar-cta.primary {
       color: #fff;
       background: var(--copper);
-      padding: 16px 28px;
-      border-radius: 999px;
-      transition: background 0.3s, transform 0.2s;
-      box-shadow: 0 8px 24px rgba(169,109,62,0.35);
     }
-    .btn-primary:active { transform: scale(0.97); background: #C28658; }
-    .btn-primary svg { width: 14px; height: 14px; }
+    .topbar .topbar-cta:active { opacity: 0.7; }
 
-    /* ===== Scroll-reveal: pure CSS preferred, IO fallback ===== */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms ease, transform 700ms ease; }
-    .reveal.is-visible { opacity: 1; transform: none; }
-    @supports (animation-timeline: view()) {
-      .reveal { opacity: 0; transform: translateY(24px); animation: fadeUp linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; transition: none; }
-      @keyframes fadeUp {
-        0% { opacity: 0; transform: translateY(24px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
+    @media (prefers-color-scheme: dark) {
+      .topbar { background: rgba(14,14,16,0.7); }
+      .topbar .topbar-cta.ghost { background: rgba(40,40,42,0.5); }
     }
 
-    /* ===== Seção Números ===== */
-    .v2-numbers {
-      padding: clamp(72px, 14vh, 120px) 24px;
-      display: grid; gap: clamp(48px, 8vh, 80px);
-      text-align: center;
-      background: var(--bg);
-    }
-    .v2-numbers .num {
-      display: grid; gap: 6px;
-    }
-    .v2-numbers strong {
-      font-family: var(--display);
-      font-weight: 500; font-style: italic;
-      font-size: clamp(4rem, 22vw, 7rem);
-      line-height: 0.9;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-    }
-    .v2-numbers .num-label {
-      font-family: var(--sans);
-      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* ===== Cases — horizontal scroll-snap ===== */
-    .v2-cases {
-      padding: clamp(72px, 14vh, 120px) 0 60px 0;
-      background: var(--cream);
-    }
-    .v2-cases h2 {
-      font-family: var(--display);
-      font-weight: 500;
-      font-size: clamp(2rem, 7vw, 2.6rem);
-      color: var(--ink);
-      letter-spacing: -0.01em;
-      margin: 0 24px 8px 24px;
-    }
-    .v2-cases .cases-sub {
-      font-family: var(--sans);
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0 24px 32px 24px;
-      max-width: 36ch;
-    }
-    .v2-cases-carousel {
-      display: grid; grid-auto-flow: column;
-      grid-auto-columns: 78%;
-      gap: 14px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-padding-inline: 24px;
-      padding: 0 24px 8px 24px;
-      scrollbar-width: none;
-    }
-    .v2-cases-carousel::-webkit-scrollbar { display: none; }
-    .case {
-      scroll-snap-align: start;
-      display: grid; gap: 14px;
-    }
-    .case picture, .case img {
-      width: 100%; aspect-ratio: 3/4; object-fit: cover;
-      border-radius: 4px;
-    }
-    .case .case-meta {
-      display: grid; gap: 4px;
-      padding: 0 4px;
-    }
-    .case .case-meta .case-client {
-      font-family: var(--sans);
-      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--copper);
-    }
-    .case .case-meta .case-title {
-      font-family: var(--display);
-      font-weight: 500;
-      font-size: 1.4rem;
-      line-height: 1.1;
-      color: var(--ink);
-    }
-    .case .case-meta .case-where {
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .cases-hint {
-      display: flex; align-items: center; gap: 8px;
-      font-family: var(--sans);
-      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--muted);
-      margin: 24px 24px 0 24px;
-    }
-    .cases-hint::before { content: ''; flex: 0 0 32px; height: 1px; background: currentColor; opacity: 0.4; }
-
-    /* ===== Processo ===== */
-    .v2-process {
-      padding: clamp(80px, 14vh, 120px) 24px;
-      display: grid; gap: 12px;
-    }
-    .v2-process h2 {
-      font-family: var(--display);
-      font-weight: 500;
-      font-size: clamp(2rem, 7vw, 2.6rem);
-      color: var(--ink);
-      letter-spacing: -0.01em;
-      margin-bottom: 12px;
-    }
-    .v2-process .process-sub {
-      color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 36ch;
-      margin-bottom: 40px;
-    }
-    .v2-process ol { list-style: none; display: grid; gap: 0; margin-top: 24px; }
-    .v2-process li {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 22px;
-      align-items: baseline;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .v2-process li:last-child { border-bottom: none; }
-    .v2-process .step-num {
-      font-family: var(--display);
-      font-style: italic; font-weight: 500;
-      font-size: 1.6rem;
-      color: var(--copper);
-    }
-    .v2-process .step-title {
-      font-family: var(--display);
-      font-weight: 500;
-      font-size: clamp(1.6rem, 6vw, 2rem);
-      color: var(--ink);
-      line-height: 1;
-      letter-spacing: -0.005em;
-    }
-
-    /* ===== Voz dos clientes ===== */
-    .v2-voice {
-      background: var(--ink);
-      color: #fff;
-      padding: clamp(72px, 14vh, 110px) 24px;
+    /* ==========================================
+       Hero — foto grande + título + 1 CTA
+       ========================================== */
+    .hero {
+      position: relative;
+      padding: 16px 16px 28px 16px;
       text-align: center;
     }
-    .v2-voice .quote-mark {
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 4rem;
-      line-height: 0.5;
-      color: var(--copper-soft);
-      display: block;
+    .hero h1 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(2rem, 8vw, 2.6rem);
+      line-height: 1.07;
+      letter-spacing: -0.022em;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .hero .hero-tagline {
+      font-size: 17px; line-height: 1.4;
+      color: var(--ink-soft);
+      max-width: 28ch; margin: 0 auto 20px auto;
+    }
+    .hero .hero-actions {
+      display: inline-flex; gap: 12px;
+      align-items: center;
       margin-bottom: 28px;
     }
-    .v2-voice blockquote {
-      font-family: var(--display);
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.4rem, 5.5vw, 1.9rem);
-      line-height: 1.35;
-      letter-spacing: -0.005em;
-      color: rgba(255,255,255,0.92);
-      max-width: 22ch;
-      margin: 0 auto 28px auto;
+    .hero-actions .link {
+      color: #06c; font-size: 15px;
+      display: inline-flex; align-items: center; gap: 4px;
     }
-    .v2-voice .quote-by {
-      font-family: var(--sans);
-      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+    .hero-actions .link::after { content: '›'; font-size: 18px; line-height: 0.8; }
+    .hero-shot {
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 30px 60px -20px rgba(28,45,64,0.18);
     }
+    .hero-shot img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* ===== Fechamento (CTA grande) ===== */
-    .v2-close {
-      padding: clamp(80px, 16vh, 140px) 24px calc(160px + var(--safe-bottom)) 24px;
-      text-align: center;
-      display: grid; gap: 18px;
-      justify-items: center;
+    /* ==========================================
+       Section title (estilo Apple: serif curto)
+       ========================================== */
+    .section-title {
+      padding: 80px 16px 8px 16px;
     }
-    .v2-close h2 {
-      font-family: var(--display);
-      font-weight: 500;
-      font-style: italic;
-      font-size: clamp(2.4rem, 9vw, 3.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.015em;
+    .section-title h2 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.018em;
       color: var(--ink);
-      max-width: 14ch;
     }
-    .v2-close p {
-      font-family: var(--sans);
-      color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 32ch;
+    .section-title h2 .grad-warm { background: var(--grad-warm); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .section-title h2 .grad-cool { background: var(--grad-cool); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .section-title h2 .grad-purple { background: var(--grad-purple); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+    /* ==========================================
+       Carrossel horizontal scroll-snap
+       ========================================== */
+    .h-carousel {
+      padding: 20px 0 0 0;
+      display: grid; grid-auto-flow: column;
+      grid-auto-columns: 82%;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: 16px;
+      padding-inline: 16px 16px;
+      scrollbar-width: none;
     }
-    .v2-close .btn-primary { margin-top: 14px; }
-    .v2-close .secondary {
-      font-family: var(--sans);
-      font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    .h-carousel::-webkit-scrollbar { display: none; }
+
+    .card {
+      scroll-snap-align: start;
+      background: var(--bg-card);
+      border-radius: 22px;
+      padding: 24px 22px;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card.tall { min-height: 480px; }
+    .card-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
       color: var(--muted);
-      margin-top: 22px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.4rem, 5.6vw, 1.7rem);
+      line-height: 1.12;
+      letter-spacing: -0.018em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 14px; line-height: 1.42;
+      color: var(--ink-soft);
+      max-width: 26ch;
+    }
+    .card-shot {
+      margin-top: auto;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .card-shot img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Card tinted (Apple-style colored cards) */
+    .card.tint-warm {
+      background: linear-gradient(140deg, #f4e4d4 0%, #ead7c0 100%);
+      color: #5a3e26;
+    }
+    .card.tint-warm .card-title, .card.tint-warm .card-eyebrow, .card.tint-warm .card-desc { color: #5a3e26; }
+    .card.tint-cool {
+      background: linear-gradient(140deg, #e8edf3 0%, #d9e0eb 100%);
+      color: #2a3848;
+    }
+    .card.tint-cool .card-title, .card.tint-cool .card-eyebrow, .card.tint-cool .card-desc { color: #2a3848; }
+    .card.tint-dark {
+      background: linear-gradient(140deg, #2c3340 0%, #1c2230 100%);
+      color: #e9eaed;
+    }
+    .card.tint-dark .card-title, .card.tint-dark .card-eyebrow, .card.tint-dark .card-desc { color: #e9eaed; }
+
+    /* ==========================================
+       Big stats — números gigantes em gradient
+       ========================================== */
+    .stats {
+      padding: 80px 16px 60px 16px;
+      text-align: center;
+    }
+    .stats h2 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.7rem, 6vw, 2.2rem);
+      letter-spacing: -0.018em;
+      margin-bottom: 40px;
+    }
+    .stats-list {
+      display: grid; gap: 48px;
+      max-width: 480px; margin: 0 auto;
+    }
+    .stat .stat-num {
+      display: block;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(3.6rem, 16vw, 5.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      background: var(--grad-warm);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 6px;
+    }
+    .stat .stat-num.cool { background: var(--grad-cool); -webkit-background-clip: text; }
+    .stat .stat-num.purple { background: var(--grad-purple); -webkit-background-clip: text; }
+    .stat .stat-label {
+      font-size: 15px; color: var(--ink-soft);
+      max-width: 22ch; margin: 0 auto;
     }
 
-    /* ===== Sticky bottom CTA ===== */
-    .sticky-cta {
-      position: fixed; left: 0; right: 0;
-      bottom: 0;
-      padding: 14px 16px calc(14px + var(--safe-bottom)) 16px;
-      background: rgba(250,250,248,0.86);
-      backdrop-filter: blur(14px) saturate(140%);
-      border-top: 1px solid rgba(28,45,64,0.08);
-      z-index: 40;
-      display: grid;
-      gap: 10px;
-      transition: transform 0.4s ease;
+    /* ==========================================
+       Big feature card (vertical hero card)
+       ========================================== */
+    .feature {
+      margin: 20px 16px;
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 36px 28px 32px 28px;
+      position: relative;
+      overflow: hidden;
     }
-    .sticky-cta.is-hidden { transform: translateY(110%); }
-    .sticky-cta a {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      width: 100%;
+    .feature.tint-warm { background: linear-gradient(160deg, #f4e4d4 0%, #ead7c0 100%); }
+    .feature.tint-dark { background: linear-gradient(160deg, #2c3340 0%, #1c2230 100%); color: #e9eaed; }
+    .feature.tint-dark .feature-eyebrow { color: rgba(255,255,255,0.55); }
+    .feature.tint-dark .feature-desc { color: rgba(255,255,255,0.7); }
+    .feature-eyebrow {
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.02em; color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .feature-title {
       font-family: var(--sans);
-      font-size: 14px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 600;
+      font-size: clamp(1.6rem, 6.5vw, 2.1rem);
+      line-height: 1.12;
+      letter-spacing: -0.018em;
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      font-size: 15px; line-height: 1.5;
+      color: var(--ink-soft);
+      max-width: 36ch;
+      margin-bottom: 24px;
+    }
+    .feature-shot {
+      border-radius: 16px; overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .feature-shot img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ==========================================
+       CTA section
+       ========================================== */
+    .cta-section {
+      text-align: center;
+      padding: 80px 24px calc(80px + var(--safe-bottom)) 24px;
+    }
+    .cta-section h2 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.8rem, 7vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .cta-section p {
+      font-size: 17px; color: var(--ink-soft);
+      max-width: 28ch; margin: 0 auto 24px auto;
+    }
+    .btn-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--sans);
+      font-size: 16px; font-weight: 500;
       color: #fff;
-      background: #25D366;
-      padding: 16px 18px;
-      border-radius: 999px;
-      box-shadow: 0 6px 18px rgba(37,211,102,0.4);
+      background: var(--copper);
+      padding: 14px 24px;
+      border-radius: 980px;
+      transition: opacity 0.2s, transform 0.15s;
     }
-    .sticky-cta a svg { width: 18px; height: 18px; }
-    @media (prefers-color-scheme: dark) {
-      .sticky-cta { background: rgba(17,21,26,0.88); border-top-color: rgba(255,255,255,0.06); }
+    .btn-pill svg { width: 16px; height: 16px; }
+    .btn-pill:active { opacity: 0.85; transform: scale(0.97); }
+    .btn-pill.whatsapp { background: #25D366; }
+
+    /* ==========================================
+       Reveal animations (scroll-driven)
+       ========================================== */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 700ms ease, transform 700ms ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    @supports (animation-timeline: view()) {
+      .reveal { animation: fadeUp linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; transition: none; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
     }
 
-    /* ===== Desktop bonus: respira mais ===== */
+    /* Desktop */
     @media (min-width: 720px) {
-      .v2-hero-content { padding-left: 6vw; padding-right: 6vw; max-width: 720px; }
-      .v2-numbers { grid-template-columns: repeat(3, 1fr); }
-      .v2-process, .v2-cases h2, .v2-cases .cases-sub { max-width: 720px; margin-left: auto; margin-right: auto; }
-      .v2-close { max-width: 640px; margin: 0 auto; }
-      .sticky-cta { display: none; } /* desktop não precisa */
+      .hero, .section-title, .stats { max-width: 760px; margin-left: auto; margin-right: auto; }
+      .feature { max-width: 760px; margin-left: auto; margin-right: auto; }
+      .h-carousel { padding-inline: max(16px, calc((100% - 760px) / 2)); }
+      .h-carousel { grid-auto-columns: 360px; }
     }
   </style>
 
@@ -451,142 +393,195 @@
   <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6F5BN7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- 1. HERO (com header dentro pra evitar sobreposição em seções seguintes) -->
-  <section class="v2-hero">
-    <!-- Header transparente — só visível no hero -->
-    <header class="v2-header">
-      <a href="#" class="logo">
-        <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
-      </a>
-      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="header-cta">Orçamento 24h</a>
-    </header>
-    <picture>
-      <source type="image/webp" srcset="images/portfolio/opt/hero-residencial-integrado.webp" />
-      <img src="images/portfolio/opt/hero-residencial-integrado.jpg" alt="Apartamento residencial integrado em São José dos Campos" width="1400" height="926" loading="eager" fetchpriority="high" decoding="async" />
-    </picture>
-    <div class="v2-hero-content">
-      <h1>Seu apartamento<br>em SJC,<br>com <em>identidade</em>.</h1>
-      <div class="hero-tag-row">
-        <span>Aquarius</span>
-        <span>Urbanova</span>
-        <span>Floradas</span>
-      </div>
-      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="btn-primary" style="margin-top:20px">
-        Orçamento em 24h
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
+  <!-- ==========================================
+       Sticky topbar (sempre no topo)
+       ========================================== -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="product">Apartamento</span>
+      <a href="#destaques" class="topbar-cta ghost">Explorar</a>
+      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="topbar-cta primary">Orçamento</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO
+       ========================================== -->
+  <section class="hero">
+    <h1>Apartamento.<br>Refeito do seu jeito.</h1>
+    <p class="hero-tagline">Projeto autoral pra quem mora em SJC.</p>
+    <div class="hero-actions">
+      <a href="#destaques" class="link">Explorar</a>
+      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="link">Orçamento</a>
+    </div>
+    <div class="hero-shot">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/hero-residencial-integrado.webp" />
+        <img src="images/portfolio/opt/hero-residencial-integrado.jpg" alt="Apartamento integrado em São José dos Campos" width="1400" height="926" loading="eager" fetchpriority="high" decoding="async" />
+      </picture>
     </div>
   </section>
 
-  <!-- 2. NÚMEROS -->
-  <section class="v2-numbers">
-    <div class="num reveal">
-      <strong>100+</strong>
-      <span class="num-label">Projetos Entregues</span>
-    </div>
-    <div class="num reveal">
-      <strong>7</strong>
-      <span class="num-label">Anos em São José</span>
-    </div>
-    <div class="num reveal">
-      <strong>4</strong>
-      <span class="num-label">Cidades Atendidas</span>
-    </div>
-  </section>
-
-  <!-- 3. CASES -->
-  <section class="v2-cases">
-    <h2 class="reveal">Casos recentes.</h2>
-    <div class="v2-cases-carousel">
-      <article class="case">
-        <picture>
-          <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
-          <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Cobertura Celebration Life" loading="lazy" decoding="async" />
-        </picture>
-        <div class="case-meta">
-          <span class="case-title">Celebration Life</span>
-          <span class="case-where">Cobertura</span>
-        </div>
-      </article>
-
-      <article class="case">
-        <picture>
-          <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
-          <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Enjoy Aquarius" loading="lazy" decoding="async" />
-        </picture>
-        <div class="case-meta">
-          <span class="case-title">Enjoy Aquarius</span>
-          <span class="case-where">Integrado</span>
-        </div>
-      </article>
-
-      <article class="case">
-        <picture>
-          <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
-          <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Believe" loading="lazy" decoding="async" />
-        </picture>
-        <div class="case-meta">
-          <span class="case-title">Believe</span>
-          <span class="case-where">Sala de jantar</span>
-        </div>
-      </article>
-
-      <article class="case">
-        <picture>
-          <source type="image/webp" srcset="images/portfolio/opt/case-living-masculino.webp" />
-          <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living masculino" loading="lazy" decoding="async" />
-        </picture>
-        <div class="case-meta">
-          <span class="case-title">Living masculino</span>
-          <span class="case-where">Painel TV</span>
-        </div>
-      </article>
-    </div>
-    <div class="cases-hint">Deslize →</div>
-  </section>
-
-  <!-- 4. PROCESSO -->
-  <section class="v2-process">
-    <h2 class="reveal">Como trabalhamos.</h2>
-    <ol>
-      <li class="reveal"><span class="step-num">01</span><span class="step-title">Briefing</span></li>
-      <li class="reveal"><span class="step-num">02</span><span class="step-title">Projeto</span></li>
-      <li class="reveal"><span class="step-num">03</span><span class="step-title">Obra</span></li>
-      <li class="reveal"><span class="step-num">04</span><span class="step-title">Chaves</span></li>
-    </ol>
-  </section>
-
-  <!-- 5. VOZ DOS CLIENTES -->
-  <section class="v2-voice reveal">
-    <span class="quote-mark">"</span>
-    <blockquote>
-      Ficou exatamente do jeito que eu sonhava.
-    </blockquote>
-    <span class="quote-by">— Cliente 2025</span>
-  </section>
-
-  <!-- 6. FECHAMENTO -->
-  <section class="v2-close">
-    <h2 class="reveal">Vamos<br>conversar?</h2>
-    <p class="reveal">Resposta em até 24h.</p>
-    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="btn-primary reveal">
-      Falar pelo WhatsApp
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-    </a>
-    <p class="secondary">SJC · Taubaté · Jacareí · Caçapava</p>
-  </section>
-
-  <!-- Sticky bottom CTA — mobile-only -->
-  <div class="sticky-cta" id="stickyCta">
-    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
-      Orçamento agora
-    </a>
+  <!-- ==========================================
+       SECTION 1: COMECE PELOS DESTAQUES (carrossel)
+       ========================================== -->
+  <div id="destaques" class="section-title reveal">
+    <h2><span class="grad-warm">Comece pelos destaques.</span></h2>
   </div>
 
-  <!-- Tracking + IO fallback -->
+  <div class="h-carousel">
+    <article class="card tint-warm">
+      <span class="card-eyebrow">Projeto</span>
+      <h3 class="card-title">Cada centímetro<br>com propósito.</h3>
+      <p class="card-desc">Plantas, layout, marcenaria e paleta — você aprova antes da obra começar.</p>
+      <div class="card-shot" style="margin-top:24px">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
+          <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Sala com projeto autoral" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+    </article>
+
+    <article class="card tint-cool">
+      <span class="card-eyebrow">Obra</span>
+      <h3 class="card-title">Sem surpresas<br>no canteiro.</h3>
+      <p class="card-desc">A gente acompanha tudo. Você só precisa esperar.</p>
+      <div class="card-shot" style="margin-top:24px">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
+          <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Obra acompanhada" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+    </article>
+
+    <article class="card tint-dark">
+      <span class="card-eyebrow">Entrega</span>
+      <h3 class="card-title">Pronto pra<br>entrar.</h3>
+      <p class="card-desc">Apartamento finalizado, decoração no lugar, chaves na sua mão.</p>
+      <div class="card-shot" style="margin-top:24px">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
+          <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Apartamento finalizado" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+    </article>
+  </div>
+
+  <!-- ==========================================
+       SECTION 2: STATS (números gigantes)
+       ========================================== -->
+  <section class="stats">
+    <h2 class="reveal">Uma trajetória<br>que conta.</h2>
+    <div class="stats-list">
+      <div class="stat reveal">
+        <span class="stat-num">100+</span>
+        <span class="stat-label">apartamentos entregues</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num cool">7</span>
+        <span class="stat-label">anos atuando em São José dos Campos</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat-num purple">4</span>
+        <span class="stat-label">cidades do Vale do Paraíba atendidas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3: FEATURE BIG CARD
+       ========================================== -->
+  <section class="feature tint-warm reveal">
+    <span class="feature-eyebrow">Briefing</span>
+    <h2 class="feature-title">Entendemos como você vive.<br>Antes de qualquer linha.</h2>
+    <p class="feature-desc">Rotina, gostos, restrições, orçamento real. Tudo importa pra fazer um projeto que combine.</p>
+    <div class="feature-shot">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/case-living-masculino.webp" />
+        <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living planejado com paleta autoral" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+  </section>
+
+  <section class="feature tint-dark reveal">
+    <span class="feature-eyebrow">Acompanhamento</span>
+    <h2 class="feature-title">A gente fala com o pedreiro.<br>Não você.</h2>
+    <p class="feature-desc">Conversamos direto com os fornecedores e ajustamos o que precisa. Sem ruído.</p>
+    <div class="feature-shot">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
+        <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Obra acompanhada de perto" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4: LAR. LAR. LAR. (carrossel curto de detalhes)
+       ========================================== -->
+  <div class="section-title reveal">
+    <h2><span class="grad-cool">Lar.</span> <span class="grad-purple">Detalhe.</span> <span class="grad-warm">Casa.</span></h2>
+  </div>
+
+  <div class="h-carousel">
+    <article class="card tall" style="padding:0; overflow:hidden">
+      <picture style="aspect-ratio:3/4">
+        <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
+        <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Celebration Life" style="width:100%;height:100%;object-fit:cover" loading="lazy" decoding="async" />
+      </picture>
+      <div style="padding:18px 20px 22px 20px">
+        <strong style="font-weight:600;letter-spacing:-0.01em">Celebration Life.</strong>
+        <span style="color:var(--ink-soft);font-size:14px"> Vista da cidade, paleta calma.</span>
+      </div>
+    </article>
+
+    <article class="card tall" style="padding:0; overflow:hidden">
+      <picture style="aspect-ratio:3/4">
+        <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
+        <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Enjoy Aquarius" style="width:100%;height:100%;object-fit:cover" loading="lazy" decoding="async" />
+      </picture>
+      <div style="padding:18px 20px 22px 20px">
+        <strong style="font-weight:600;letter-spacing:-0.01em">Enjoy Aquarius.</strong>
+        <span style="color:var(--ink-soft);font-size:14px"> Integrado, com arcos.</span>
+      </div>
+    </article>
+
+    <article class="card tall" style="padding:0; overflow:hidden">
+      <picture style="aspect-ratio:3/4">
+        <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
+        <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Believe" style="width:100%;height:100%;object-fit:cover" loading="lazy" decoding="async" />
+      </picture>
+      <div style="padding:18px 20px 22px 20px">
+        <strong style="font-weight:600;letter-spacing:-0.01em">Believe.</strong>
+        <span style="color:var(--ink-soft);font-size:14px"> Sala de jantar atemporal.</span>
+      </div>
+    </article>
+
+    <article class="card tall" style="padding:0; overflow:hidden">
+      <picture style="aspect-ratio:3/4">
+        <source type="image/webp" srcset="images/portfolio/opt/case-living-masculino.webp" />
+        <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living masculino" style="width:100%;height:100%;object-fit:cover" loading="lazy" decoding="async" />
+      </picture>
+      <div style="padding:18px 20px 22px 20px">
+        <strong style="font-weight:600;letter-spacing:-0.01em">Living masculino.</strong>
+        <span style="color:var(--ink-soft);font-size:14px"> Painel TV, tons profundos.</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- ==========================================
+       CTA FINAL
+       ========================================== -->
+  <section class="cta-section">
+    <h2 class="reveal">Vamos<br>conversar?</h2>
+    <p class="reveal">As arquitetas Flavia e Beatriz<br>respondem em até 24h.</p>
+    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="btn-pill whatsapp reveal">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+      Falar pelo WhatsApp
+    </a>
+  </section>
+
+  <!-- Tracking + reveal fallback -->
   <script>
-    // GA4 event helpers (same shape as the rest of the site)
     function trackEvent(n, p) {
       p = p || {};
       if (window.dataLayer) window.dataLayer.push(Object.assign({event: n}, p));
@@ -597,16 +592,12 @@
       if (window.gtag) window.gtag('event', 'conversion', {send_to: 'AW-18186496405/F0xNCI3x6bIcEJXT_99D', value: 2500.0, currency: 'BRL'});
       if (window.fbq) window.fbq('track', 'Lead', {value: 2500, currency: 'BRL'});
     }
-
-    // WhatsApp click = conversion (same as v1, kept consistent for A/B fairness)
     document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
       a.addEventListener('click', function () {
         trackEvent('whatsapp_click', {page: 'lp-apartamento-v2'});
         trackConversion();
       });
     });
-
-    // Scroll milestones
     var s75 = false;
     window.addEventListener('scroll', function () {
       if (s75) return;
@@ -616,26 +607,13 @@
       }
     }, {passive: true});
 
-    // IntersectionObserver fallback for .reveal (when CSS animation-timeline isn't supported)
     if (!CSS.supports('animation-timeline: view()')) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-visible');
-            io.unobserve(e.target);
-          }
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
         });
-      }, {threshold: 0.18, rootMargin: '0px 0px -10% 0px'});
+      }, {threshold: 0.16, rootMargin: '0px 0px -8% 0px'});
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    }
-
-    // Hide sticky CTA when the final CTA is visible (avoid duplicate cognitive load)
-    var sticky = document.getElementById('stickyCta');
-    var finalCta = document.querySelector('.v2-close .btn-primary');
-    if (sticky && finalCta && 'IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        sticky.classList.toggle('is-hidden', entries[0].isIntersecting);
-      }, {threshold: 0.5}).observe(finalCta);
     }
   </script>
 </body>
