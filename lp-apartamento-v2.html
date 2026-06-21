@@ -2,691 +2,673 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projeto Arquitetônico para Casais em São José dos Campos — Assis Carrer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1C2D40" />
+  <title>Projeto Arquitetônico para Apartamentos em São José dos Campos — Assis Carrer</title>
   <meta name="description" content="Reforma e projeto de apartamento em SJC — Aquarius, Urbanova, Floradas. 100+ projetos entregues em 7 anos. Orçamento em 24h." />
   <meta name="keywords" content="reforma apartamento sjc, arquiteto aquarius, arquiteto urbanova, projeto arquitetônico são josé dos campos" />
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-P6F5BN7Z");</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google Analytics 4 (gtag.js) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P6F5BN7Z');</script>
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDECLK9VYV"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DDECLK9VYV");gtag("config","AW-18186496405");</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DDECLK9VYV');gtag('config','AW-18186496405');</script>
   <!-- Meta Pixel -->
-  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2037009416852160");fbq("track","PageView");</script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2037009416852160');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037009416852160&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Preload hero pra LCP rápido -->
+  <link rel="preload" as="image" href="images/portfolio/opt/hero-residencial-integrado.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
   <style>
-    @font-face { font-family: 'Now'; src: url('fonts/Now-Light.otf') format('opentype'); font-weight: 300; }
-    @font-face { font-family: 'Now'; src: url('fonts/Now-Regular.otf') format('opentype'); font-weight: 400; }
-    @font-face { font-family: 'Now'; src: url('fonts/Now-Medium.otf') format('opentype'); font-weight: 500; }
+    /* =========================
+       v2 — Mobile-first scroll-driven, sofisticada e calma
+       Estética: Apple/Airbnb premium. Cormorant Garamond + system-ui.
+       ========================= */
 
     :root {
       color-scheme: light dark;
-      --navy:   #254467;
-      --copper: #A96D3E;
-      --dark:   #1C2D40;
-      --sand:   #C79872;
-      --cream:  #F5F0EB;
-      --white:  #ffffff;
-      --text:   #2a2a2a;
-      --muted:  #6b6b6b;
+      --bg:      #FAFAF8;
+      --ink:     #1C2D40;
+      --ink-soft:#3a4856;
+      --muted:   #76828d;
+      --line:    #e6e2dc;
+      --copper:  #A96D3E;
+      --copper-soft: #C79872;
+      --cream:   #F1ECE3;
+      /* tipografia fluida */
+      --display: 'Cormorant Garamond', 'Georgia', serif;
+      --sans:    -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --white: #16191f;
-        --cream: #1a1d23;
-        --text:  #e8e8e8;
-        --muted: #a8a8a8;
+        --bg:      #11151a;
+        --ink:     #f0ece4;
+        --ink-soft:#cfc8bd;
+        --muted:   #8a8579;
+        --line:    #28303a;
+        --cream:   #1a1f26;
       }
-      body { background: #0d0f13; }
-      h1, h2, h3, h4 { color: var(--text) !important; }
-      input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-        background: #1f232a !important;
-        color: #e8e8e8 !important;
-        border-color: rgba(255,255,255,0.18) !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
       }
-      input::placeholder, textarea::placeholder { color: #707580 !important; }
-      select option { background: #1f232a; color: #e8e8e8; }
-      .dor-item { background: #16191f !important; }
-      .dor-item h3 { color: var(--sand) !important; }
-      .dor-item p { color: var(--muted) !important; }
-      .dor-num { color: rgba(199,152,114,0.18) !important; }
-      .case-card { background: #16191f !important; }
-      .case-card .case-meta h3 { color: var(--text) !important; }
-      .processo-lp .etapa { background: #16191f !important; }
-      .etapa h4 { color: var(--sand) !important; }
-      .etapa-num { color: rgba(199,152,114,0.18) !important; }
-      .garantia { color: rgba(255,255,255,0.9) !important; }
-      .garantia-icon { border-color: var(--copper) !important; color: var(--copper) !important; }
-      .form-ok { background: rgba(199,152,114,0.15) !important; color: var(--sand) !important; }
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Now', sans-serif; font-weight: 300; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
-    img { display: block; width: 100%; object-fit: cover; }
-    a { text-decoration: none; color: inherit; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-weight: 400;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    img, picture { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
 
-    /* HEADER */
-    .lp-header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 20px 40px;
+    /* ===== Header transparente — só visível enquanto está no hero, depois somem ===== */
+    .v2-header {
+      position: absolute; top: 0; left: 0; right: 0;
+      z-index: 50;
       display: flex; align-items: center; justify-content: space-between;
-      background: rgba(28,45,64,0.15);
-      backdrop-filter: blur(8px);
+      padding: 16px 22px;
+      background: linear-gradient(to bottom, rgba(28,45,64,0.45), rgba(28,45,64,0));
+      pointer-events: none;
     }
-    .lp-header img { height: 40px; width: auto; filter: drop-shadow(0 1px 4px rgba(0,0,0,0.35)); }
-    .lp-header a.cta-header {
-      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--white); border: 1px solid rgba(255,255,255,0.5);
-      padding: 10px 24px; transition: all 0.3s;
+    .v2-header > * { pointer-events: auto; }
+    .v2-header .logo img { height: 24px; width: auto; filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4)); }
+    .v2-header .header-cta {
+      font-family: var(--sans);
+      font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #fff;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+      white-space: nowrap;
+      transition: background 0.3s, border-color 0.3s;
     }
-    .lp-header a.cta-header:hover { background: var(--white); color: var(--navy); }
+    .v2-header .header-cta:active { background: rgba(255,255,255,0.18); }
 
-    /* HERO */
-    .hero {
-      height: 100vh; min-height: 600px;
-      display: grid; grid-template-columns: 1fr 1fr;
-      position: relative; overflow: hidden;
+    /* ===== Hero fullscreen ===== */
+    .v2-hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      color: #fff;
+      overflow: hidden;
+      isolation: isolate; /* contém o header absoluto dentro do hero */
     }
-    .hero-left {
-      background: var(--dark);
-      display: flex; flex-direction: column; justify-content: center;
-      padding: clamp(80px, 10vw, 140px) clamp(40px, 5vw, 80px);
+    .v2-hero picture, .v2-hero img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      z-index: 0;
+    }
+    .v2-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(28,45,64,0.25) 0%, rgba(28,45,64,0) 30%, rgba(28,45,64,0.55) 70%, rgba(28,45,64,0.85) 100%);
+      z-index: 1;
+    }
+    .v2-hero-content {
       position: relative; z-index: 2;
+      grid-row: 2;
+      padding: 0 24px calc(120px + var(--safe-bottom)) 24px;
+      display: flex; flex-direction: column; gap: 16px;
     }
-    .hero-tag {
-      font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--sand); margin-bottom: 24px;
-    }
-    .hero-left h1 {
-      font-family: 'Now', sans-serif; font-weight: 500;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      line-height: 1.2; color: var(--white);
-      margin-bottom: 24px;
-    }
-    .hero-left h1 em { font-style: normal; color: #f0c896; font-weight: 500; }
-    .hero-left p {
-      font-size: 1rem; line-height: 1.75;
-      color: rgba(255,255,255,0.65); max-width: 420px; margin-bottom: 40px;
-    }
-    .hero-right { position: relative; }
-    .hero-right img { height: 100%; object-position: center; filter: brightness(1.04) contrast(1.02) saturate(1.08); }
-    .hero-right::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to right, var(--dark) 0%, transparent 30%);
-    }
-
-    /* DORES */
-    .dores { background: var(--cream); padding: 80px 40px; }
-    .dores-inner { max-width: 1100px; margin: 0 auto; }
-    .section-tag {
+    .v2-hero .eyebrow {
+      font-family: var(--sans);
       font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--copper); display: block; margin-bottom: 16px;
+      color: var(--copper-soft);
+      font-weight: 500;
     }
-    .dores h2 {
-      font-family: 'Now', sans-serif; font-weight: 500;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      color: var(--dark); margin-bottom: 16px; line-height: 1.25;
+    .v2-hero h1 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(2.4rem, 9.5vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: #fff;
     }
-    .dores > .dores-inner > p {
-      font-size: 1rem; color: var(--muted); max-width: 600px;
-      line-height: 1.75; margin-bottom: 56px;
+    .v2-hero h1 em {
+      font-style: italic;
+      color: var(--copper-soft);
+      font-weight: 500;
     }
-    .dores-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    .v2-hero .hero-sub {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.82);
+      max-width: 28ch;
+      margin-top: 8px;
     }
-    .dor-item {
-      background: var(--white); padding: 36px 28px;
-      border-bottom: 2px solid transparent; transition: border-color 0.3s;
+    .v2-hero .hero-tag-row {
+      display: flex; flex-wrap: wrap; gap: 6px 14px;
+      font-family: var(--sans);
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.62);
+      margin-top: 8px;
     }
-    .dor-item:hover { border-color: var(--copper); }
-    .dor-num {
-      font-size: 2.5rem; font-weight: 300;
-      color: rgba(37,68,103,0.1); line-height: 1; margin-bottom: 16px;
+    .v2-hero .hero-tag-row span::before {
+      content: '·';
+      margin-right: 14px;
+      color: rgba(255,255,255,0.45);
     }
-    .dor-item h3 { font-size: 1rem; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
-    .dor-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    .v2-hero .hero-tag-row span:first-child::before { content: none; margin: 0; }
 
-    /* TRANSFORMAÇÃO */
-    .transformacao { padding: 0; }
-    .transformacao-grid {
-      display: grid; grid-template-columns: 1fr 1fr; min-height: 600px;
+    /* ===== Botão primário (chip serifado) ===== */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      align-self: start;
+      font-family: var(--sans);
+      font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #fff;
+      background: var(--copper);
+      padding: 16px 28px;
+      border-radius: 999px;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 8px 24px rgba(169,109,62,0.35);
     }
-    .transf-img { overflow: hidden; }
-    .transf-img img { height: 100%; transition: transform 0.7s ease; }
-    .transf-img:hover img { transform: scale(1.04); }
-    .transf-text {
-      background: var(--navy);
-      padding: clamp(60px, 8vw, 100px) clamp(40px, 5vw, 80px);
-      display: flex; flex-direction: column; justify-content: center;
-    }
-    .transf-text .section-tag { color: var(--sand); }
-    .transf-text h2 {
-      font-family: 'Now', sans-serif; font-weight: 500;
-      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-      color: var(--white); margin-bottom: 24px; line-height: 1.25;
-    }
-    .transf-text p { color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 16px; }
-    .beneficios { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
-    .beneficios li {
-      display: flex; align-items: flex-start; gap: 12px;
-      color: rgba(255,255,255,0.8); font-size: 0.95rem;
-    }
-    .beneficios li::before {
-      content: ''; width: 18px; height: 1px; background: var(--copper);
-      flex-shrink: 0; margin-top: 11px;
+    .btn-primary:active { transform: scale(0.97); background: #C28658; }
+    .btn-primary svg { width: 14px; height: 14px; }
+
+    /* ===== Scroll-reveal: pure CSS preferred, IO fallback ===== */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms ease, transform 700ms ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    @supports (animation-timeline: view()) {
+      .reveal { opacity: 0; transform: translateY(24px); animation: fadeUp linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; transition: none; }
+      @keyframes fadeUp {
+        0% { opacity: 0; transform: translateY(24px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
     }
 
-    /* GALERIA */
-    .galeria { display: grid; grid-template-columns: repeat(3, 1fr); height: 400px; gap: 2px; }
-    .galeria-item { overflow: hidden; }
-    .galeria-item img { height: 100%; transition: transform 0.6s ease; }
-    .galeria-item:hover img { transform: scale(1.06); }
+    /* ===== Seção Números ===== */
+    .v2-numbers {
+      padding: clamp(72px, 14vh, 120px) 24px;
+      display: grid; gap: clamp(48px, 8vh, 80px);
+      text-align: center;
+      background: var(--bg);
+    }
+    .v2-numbers .num {
+      display: grid; gap: 6px;
+    }
+    .v2-numbers strong {
+      font-family: var(--display);
+      font-weight: 500; font-style: italic;
+      font-size: clamp(4rem, 22vw, 7rem);
+      line-height: 0.9;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .v2-numbers .num-label {
+      font-family: var(--sans);
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted);
+    }
 
-    /* PROCESSO LP */
-    .processo-lp { background: var(--cream); padding: 80px 40px; }
-    .processo-lp .inner { max-width: 1100px; margin: 0 auto; }
-    .processo-lp h2 {
-      font-family: 'Now', sans-serif; font-weight: 500;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--dark); margin-bottom: 48px; text-align: center;
+    /* ===== Cases — horizontal scroll-snap ===== */
+    .v2-cases {
+      padding: clamp(72px, 14vh, 120px) 0 60px 0;
+      background: var(--cream);
     }
-    .etapas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-    .etapa { text-align: center; }
-    .etapa-num {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--navy); color: var(--white);
-      font-size: 14px; font-weight: 500; letter-spacing: 0.1em;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
+    .v2-cases h2 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(2rem, 7vw, 2.6rem);
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      margin: 0 24px 8px 24px;
     }
-    .etapa h4 { font-weight: 500; font-size: 0.95rem; color: var(--navy); margin-bottom: 10px; }
-    .etapa p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+    .v2-cases .cases-sub {
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 24px 32px 24px;
+      max-width: 36ch;
+    }
+    .v2-cases-carousel {
+      display: grid; grid-auto-flow: column;
+      grid-auto-columns: 78%;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: 24px;
+      padding: 0 24px 8px 24px;
+      scrollbar-width: none;
+    }
+    .v2-cases-carousel::-webkit-scrollbar { display: none; }
+    .case {
+      scroll-snap-align: start;
+      display: grid; gap: 14px;
+    }
+    .case picture, .case img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border-radius: 4px;
+    }
+    .case .case-meta {
+      display: grid; gap: 4px;
+      padding: 0 4px;
+    }
+    .case .case-meta .case-client {
+      font-family: var(--sans);
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--copper);
+    }
+    .case .case-meta .case-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+    .case .case-meta .case-where {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .cases-hint {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--sans);
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted);
+      margin: 24px 24px 0 24px;
+    }
+    .cases-hint::before { content: ''; flex: 0 0 32px; height: 1px; background: currentColor; opacity: 0.4; }
 
-    /* FORM */
-    .form-section {
-      background: var(--dark); padding: 80px 40px;
+    /* ===== Processo ===== */
+    .v2-process {
+      padding: clamp(80px, 14vh, 120px) 24px;
+      display: grid; gap: 12px;
     }
-    .form-inner {
-      max-width: 900px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+    .v2-process h2 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(2rem, 7vw, 2.6rem);
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
     }
-    .form-texto .section-tag { color: var(--sand); }
-    .form-texto h2 {
-      font-family: 'Now', sans-serif; font-weight: 500;
-      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-      color: var(--white); margin-bottom: 20px; line-height: 1.25;
+    .v2-process .process-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 36ch;
+      margin-bottom: 40px;
     }
-    .form-texto p { color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 32px; }
-    .garantias { display: flex; flex-direction: column; gap: 12px; }
-    .garantia {
-      display: flex; align-items: center; gap: 12px;
-      color: rgba(255,255,255,0.7); font-size: 0.9rem;
+    .v2-process ol { list-style: none; display: grid; gap: 32px; }
+    .v2-process li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px 22px;
+      align-items: baseline;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
     }
-    .garantia-icon {
-      width: 32px; height: 32px; border: 1px solid var(--copper);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--copper); flex-shrink: 0; font-size: 14px;
+    .v2-process li:last-child { border-bottom: none; padding-bottom: 0; }
+    .v2-process .step-num {
+      font-family: var(--display);
+      font-style: italic; font-weight: 500;
+      font-size: 1.6rem;
+      color: var(--copper);
+      grid-row: span 2;
+      align-self: start;
     }
-    form { display: flex; flex-direction: column; gap: 16px; }
-    form input, form select, form textarea {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
-      padding: 14px 16px; font-family: 'Now', sans-serif; font-size: 0.95rem;
-      color: var(--white); outline: none; transition: border-color 0.3s;
-      border-radius: 0; -webkit-appearance: none;
+    .v2-process .step-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 1.35rem;
+      color: var(--ink);
+      line-height: 1.2;
     }
-    form input::placeholder, form textarea::placeholder { color: rgba(255,255,255,0.3); }
-    form input:focus, form select:focus, form textarea:focus { border-color: var(--copper); }
-    form select option { background: var(--dark); color: var(--white); }
-    form textarea { resize: vertical; min-height: 100px; }
-    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .btn-submit {
-      background: var(--copper); border: none; color: var(--white);
-      padding: 16px; font-family: 'Now', sans-serif; font-size: 12px;
-      letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
-      transition: background 0.3s; margin-top: 8px;
+    .v2-process .step-body {
+      font-family: var(--sans);
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.65;
+      grid-column: 2;
     }
-    .btn-submit:hover { background: var(--sand); }
-    .form-ok { display: none; color: var(--sand); font-size: 0.9rem; text-align: center; padding: 12px; border: 1px solid var(--copper); }
-    .form-ok.show { display: block; }
 
-    /* FOOTER LP */
-    .lp-footer {
-      background: #111; padding: 32px 40px;
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    /* ===== Voz dos clientes ===== */
+    .v2-voice {
+      background: var(--ink);
+      color: #fff;
+      padding: clamp(72px, 14vh, 110px) 24px;
+      text-align: center;
     }
-    .lp-footer img { height: 28px; width: auto; }
-    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .v2-voice .quote-mark {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 4rem;
+      line-height: 0.5;
+      color: var(--copper-soft);
+      display: block;
+      margin-bottom: 28px;
+    }
+    .v2-voice blockquote {
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 5.5vw, 1.9rem);
+      line-height: 1.35;
+      letter-spacing: -0.005em;
+      color: rgba(255,255,255,0.92);
+      max-width: 22ch;
+      margin: 0 auto 28px auto;
+    }
+    .v2-voice .quote-by {
+      font-family: var(--sans);
+      font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
 
-    /* WHATSAPP FLOATING BUTTON */
-    .whatsapp-float {
-      position: fixed; bottom: 24px; right: 24px;
-      width: 60px; height: 60px; border-radius: 50%;
-      background: #25D366; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 20px rgba(37,211,102,0.4), 0 2px 6px rgba(0,0,0,0.15);
-      z-index: 9999; transition: transform 0.2s ease;
+    /* ===== Fechamento (CTA grande) ===== */
+    .v2-close {
+      padding: clamp(80px, 16vh, 140px) 24px calc(160px + var(--safe-bottom)) 24px;
+      text-align: center;
+      display: grid; gap: 18px;
+      justify-items: center;
     }
-    .whatsapp-float:hover { transform: scale(1.08); }
-    .whatsapp-float svg { width: 32px; height: 32px; }
+    .v2-close h2 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(2.4rem, 9vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      max-width: 14ch;
+    }
+    .v2-close p {
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 32ch;
+    }
+    .v2-close .btn-primary { margin-top: 14px; }
+    .v2-close .secondary {
+      font-family: var(--sans);
+      font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 22px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+    }
 
-    /* PROJETO LIGHTBOX */
-    .projeto-modal {
-      position: fixed; inset: 0;
-      background: rgba(15,31,53,0.94); backdrop-filter: blur(6px);
-      z-index: 10001; display: none;
-      align-items: center; justify-content: center;
-      padding: 24px; opacity: 0; transition: opacity 0.3s ease;
+    /* ===== Sticky bottom CTA ===== */
+    .sticky-cta {
+      position: fixed; left: 0; right: 0;
+      bottom: 0;
+      padding: 14px 16px calc(14px + var(--safe-bottom)) 16px;
+      background: rgba(250,250,248,0.86);
+      backdrop-filter: blur(14px) saturate(140%);
+      border-top: 1px solid rgba(28,45,64,0.08);
+      z-index: 40;
+      display: grid;
+      gap: 10px;
+      transition: transform 0.4s ease;
     }
-    .projeto-modal.open { display: flex; opacity: 1; }
-    .projeto-modal-content {
-      position: relative; max-width: 92vw; max-height: 88vh;
-      display: flex; align-items: center; justify-content: center;
-      transform: scale(0.97); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+    .sticky-cta.is-hidden { transform: translateY(110%); }
+    .sticky-cta a {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%;
+      font-family: var(--sans);
+      font-size: 14px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #fff;
+      background: #25D366;
+      padding: 16px 18px;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(37,211,102,0.4);
     }
-    .projeto-modal.open .projeto-modal-content { transform: scale(1); }
-    .projeto-modal-img {
-      max-width: 100%; max-height: 88vh; object-fit: contain;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    .sticky-cta a svg { width: 18px; height: 18px; }
+    @media (prefers-color-scheme: dark) {
+      .sticky-cta { background: rgba(17,21,26,0.88); border-top-color: rgba(255,255,255,0.06); }
     }
-    .projeto-modal-logo {
-      position: absolute; width: 110px; height: 110px;
-      opacity: 0.75; pointer-events: none;
-      filter: brightness(0) invert(1) drop-shadow(0 4px 16px rgba(0,0,0,0.8));
-    }
-    .projeto-modal-close {
-      position: absolute; top: 12px; right: 16px;
-      background: none; border: none; color: #fff;
-      font-size: 2.4rem; line-height: 1; cursor: pointer;
-      padding: 8px 16px; z-index: 2; opacity: 0.85;
-    }
-    .galeria-item { cursor: pointer; }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      html { font-size: 16px; }
-      .lp-header { padding: 12px 16px; gap: 12px; }
-      .lp-header img { height: 28px; }
-      .lp-header a.cta-header { padding: 8px 14px; font-size: 10px; white-space: nowrap; letter-spacing: 0.12em; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { height: 42vh; }
-      .hero-left { padding: 80px 24px 40px; }
-      .hero-left h1 { font-size: 1.7rem; margin-bottom: 16px; }
-      .hero-left p { font-size: 0.95rem; margin-bottom: 28px; }
-      .dores { padding: 48px 20px; }
-      .dores h2 { font-size: 1.5rem; }
-      .dores > .dores-inner > p { margin-bottom: 32px; font-size: 0.95rem; }
-      .dores-grid { grid-template-columns: 1fr; gap: 2px; }
-      .dor-item { padding: 28px 22px; }
-      .transformacao-grid { grid-template-columns: 1fr; }
-      .transf-img { height: 240px; }
-      .transf-text { padding: 48px 24px; }
-      .transf-text h2 { font-size: 1.4rem; }
-      .galeria { grid-template-columns: 1fr 1fr; height: auto; }
-      .galeria-item { height: 180px; }
-      .cases-grid { grid-template-columns: 1fr; }
-      .video-placeholder { height: 240px; }
-      .etapas { grid-template-columns: 1fr 1fr; gap: 24px; }
-      .processo-lp h2 { font-size: 1.4rem; margin-bottom: 32px; }
-      .form-inner { grid-template-columns: 1fr; gap: 32px; }
-      .form-texto h2 { font-size: 1.4rem; }
-      .processo-lp, .form-section { padding: 48px 20px; }
-      form { gap: 12px; }
-      form input, form select, form textarea { padding: 10px 14px; font-size: 0.9rem; }
-      .lp-footer { flex-direction: column; text-align: center; padding: 24px; gap: 12px; }
-      .whatsapp-float { width: 54px; height: 54px; bottom: 18px; right: 18px; }
-      .whatsapp-float svg { width: 28px; height: 28px; }
-      .projeto-modal-logo { width: 64px; height: 64px; }
-    }
-    /* CASES LP */
-    .cases-lp { background: var(--cream); padding: 100px 40px; }
-    .cases-inner { max-width: 1200px; margin: 0 auto; }
-    .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
-    .case-card { background: #fff; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.06); }
-    .case-card img { height: 280px; }
-    .case-meta { padding: 22px 24px 26px; }
-    .case-bairro { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper); }
-    .case-meta h3 { font-size: 18px; font-weight: 500; margin-top: 8px; color: var(--dark); }
-
-    /* DEPOIMENTO LP */
-    .depoimento-lp { background: var(--dark); color: #fff; padding: 100px 40px; }
-    .depoimento-inner { max-width: 820px; margin: 0 auto; text-align: center; }
-    .video-placeholder {
-      position: relative; height: 380px; margin-bottom: 40px;
-      background: linear-gradient(135deg, #2a4159 0%, #1c2d40 100%);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
-      cursor: pointer; transition: opacity 0.3s;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .video-placeholder:hover { opacity: 0.9; }
-    .play-icon {
-      width: 78px; height: 78px; border-radius: 50%;
-      background: var(--copper); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px; padding-left: 6px;
-    }
-    .video-placeholder span { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
-    .depoimento-lp blockquote { font-size: 22px; line-height: 1.6; font-style: italic; color: rgba(255,255,255,0.92); margin-bottom: 20px; }
-    .depoimento-lp cite { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand); font-style: normal; }
-    .dep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 980px; margin: 0 auto; }
-    .dep-card { background: rgba(255,255,255,0.04); border-top: 3px solid var(--copper); padding: 32px 28px; }
-    .dep-stars { color: var(--copper); letter-spacing: 4px; margin-bottom: 16px; font-size: 16px; }
-    .dep-card p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.92); margin-bottom: 22px; }
-    .dep-autor { display: flex; align-items: center; gap: 14px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .dep-av { width: 44px; height: 44px; border-radius: 50%; background: var(--copper); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
-    .dep-autor strong { display: block; font-size: 14px; color: #fff; }
-    .dep-autor small { font-size: 12px; color: rgba(255,255,255,0.6); }
-    @media (max-width: 768px) { .dep-grid { grid-template-columns: 1fr; } }
-
-    @media (max-width: 768px) {
-      .cases-lp, .depoimento-lp { padding: 60px 24px; }
-      .cases-grid { grid-template-columns: 1fr; gap: 20px; }
-      .case-card img { height: 220px; }
-      .video-placeholder { height: 240px; }
-      .depoimento-lp blockquote { font-size: 18px; }
+    /* ===== Desktop bonus: respira mais ===== */
+    @media (min-width: 720px) {
+      .v2-hero-content { padding-left: 6vw; padding-right: 6vw; max-width: 720px; }
+      .v2-numbers { grid-template-columns: repeat(3, 1fr); }
+      .v2-process, .v2-cases h2, .v2-cases .cases-sub { max-width: 720px; margin-left: auto; margin-right: auto; }
+      .v2-close { max-width: 640px; margin: 0 auto; }
+      .sticky-cta { display: none; } /* desktop não precisa */
     }
   </style>
+
   <script src="ab-test.js"></script>
 </head>
 <body data-variant="B">
-  <!-- Google Tag Manager (noscript) -->
+  <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6F5BN7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <header class="lp-header">
-    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
-    <a href="#form" class="cta-header">Orçamento em 24h</a>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <p class="hero-tag">Projeto de Interiores · São José dos Campos</p>
-      <h1>Seu apê pequeno pode ser <em>exatamente o lar que você imaginou</em></h1>
-      <p>Apartamentos compactos têm potencial enorme. A gente transforma cada centímetro em funcionalidade, conforto e estilo.</p>
-      <p style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sand);margin-bottom:28px;">100+ projetos · 7 anos · Aquarius · Urbanova · Floradas</p>
-      <a href="#form" style="display:inline-block;background:var(--copper);color:#fff;padding:16px 36px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;transition:background 0.3s;" onmouseover="this.style.background='#C79872'" onmouseout="this.style.background='#A96D3E'">Orçamento em 24h</a>
-    </div>
-    <div class="hero-right">
-      <picture>
-        <source type="image/webp" srcset="images/portfolio/opt/hero-residencial-integrado.webp" />
-        <img src="images/portfolio/opt/hero-residencial-integrado.jpg" alt="Apartamento integrado em São José dos Campos — sala, jantar e cozinha contínuos" width="1400" height="926" loading="eager" fetchpriority="high" decoding="async" />
-      </picture>
-    </div>
-  </section>
-
-  <!-- DORES -->
-  <section class="dores">
-    <div class="dores-inner">
-      <span class="section-tag">Você se identifica?</span>
-      <h2>Os desafios de quem está montando o primeiro apê</h2>
-      <p>Conquistou seu apê — agora vem a dúvida: como fazer tudo caber com personalidade?</p>
-      <div class="dores-grid">
-        <div class="dor-item">
-          <div class="dor-num">01</div>
-          <h3>Espaço que não rende</h3>
-          <p>Cada metro quadrado conta — mas sem planejamento, o espaço se perde e os ambientes parecem improvisados.</p>
-        </div>
-        <div class="dor-item">
-          <div class="dor-num">02</div>
-          <h3>Sem saber por onde começar</h3>
-          <p>Móvel, revestimento, iluminação... são tantas decisões ao mesmo tempo que paralisa qualquer um.</p>
-        </div>
-        <div class="dor-item">
-          <div class="dor-num">03</div>
-          <h3>Medo de gastar errado</h3>
-          <p>Comprar peça por peça sem projeto certo gera retrabalho, desperdício e um resultado que nunca parece completo.</p>
-        </div>
+  <!-- 1. HERO (com header dentro pra evitar sobreposição em seções seguintes) -->
+  <section class="v2-hero">
+    <!-- Header transparente — só visível no hero -->
+    <header class="v2-header">
+      <a href="#" class="logo">
+        <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+      </a>
+      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="header-cta">Orçamento 24h</a>
+    </header>
+    <picture>
+      <source type="image/webp" srcset="images/portfolio/opt/hero-residencial-integrado.webp" />
+      <img src="images/portfolio/opt/hero-residencial-integrado.jpg" alt="Apartamento residencial integrado em São José dos Campos" width="1400" height="926" loading="eager" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="v2-hero-content">
+      <p class="eyebrow">Assis Carrer Arquitetura</p>
+      <h1>Seu apartamento<br>em SJC, com <em>identidade</em>.</h1>
+      <p class="hero-sub">Projeto autoral, do briefing à entrega das chaves. Para quem quer um lar à própria altura.</p>
+      <div class="hero-tag-row">
+        <span>Aquarius</span>
+        <span>Urbanova</span>
+        <span>Floradas</span>
       </div>
+      <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn-primary" style="margin-top:24px">
+        Orçamento em 24h
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </section>
 
-  <!-- TRANSFORMAÇÃO -->
-  <section class="transformacao">
-    <div class="transformacao-grid">
-      <div class="transf-img">
+  <!-- 2. NÚMEROS -->
+  <section class="v2-numbers">
+    <div class="num reveal">
+      <strong>100+</strong>
+      <span class="num-label">Projetos Entregues</span>
+    </div>
+    <div class="num reveal">
+      <strong>7</strong>
+      <span class="num-label">Anos em São José</span>
+    </div>
+    <div class="num reveal">
+      <strong>4</strong>
+      <span class="num-label">Cidades Atendidas</span>
+    </div>
+  </section>
+
+  <!-- 3. CASES -->
+  <section class="v2-cases">
+    <h2 class="reveal">Casos recentes.</h2>
+    <p class="cases-sub reveal">Cada apartamento conta uma história. Veja como traduzimos a sua.</p>
+    <div class="v2-cases-carousel">
+      <article class="case">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
+          <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Sala integrada Cobertura Celebration Life" loading="lazy" decoding="async" />
+        </picture>
+        <div class="case-meta">
+          <span class="case-client">Família Andrade</span>
+          <span class="case-title">Celebration Life</span>
+          <span class="case-where">Cobertura · Vista da cidade</span>
+        </div>
+      </article>
+
+      <article class="case">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
+          <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Sala integrada Enjoy Aquarius" loading="lazy" decoding="async" />
+        </picture>
+        <div class="case-meta">
+          <span class="case-client">Camila & Pedro</span>
+          <span class="case-title">Enjoy Aquarius</span>
+          <span class="case-where">Integrado · Nude com arcos</span>
+        </div>
+      </article>
+
+      <article class="case">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
+          <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Sala de jantar Apartamento Believe" loading="lazy" decoding="async" />
+        </picture>
+        <div class="case-meta">
+          <span class="case-client">Mariana & Lucas</span>
+          <span class="case-title">Believe</span>
+          <span class="case-where">Sala de jantar · Pedra portuguesa</span>
+        </div>
+      </article>
+
+      <article class="case">
         <picture>
           <source type="image/webp" srcset="images/portfolio/opt/case-living-masculino.webp" />
-          <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living masculino com painel TV em SJC — projeto Assis Carrer" width="1200" height="1600" loading="lazy" decoding="async" />
+          <img src="images/portfolio/opt/case-living-masculino.jpg" alt="Living masculino em SJC" loading="lazy" decoding="async" />
         </picture>
-      </div>
-      <div class="transf-text">
-        <span class="section-tag">Nossa solução</span>
-        <h2>Um projeto completo que faz tudo fazer sentido — do primeiro rascunho à entrega</h2>
-        <p>Projeto de interiores personalizado do início ao fim — cada detalhe pensado para o seu espaço, estilo e rotina.</p>
-        <ul class="beneficios">
-          <li>Levantamento completo do espaço e briefing detalhado</li>
-          <li>Visualização 3D realista antes de comprar qualquer coisa</li>
-          <li>Especificação de materiais, móveis e iluminação</li>
-          <li>Projeto executivo para compras e execução sem surpresas</li>
-          <li>Possibilidade de execução completa com nosso time</li>
-        </ul>
-      </div>
+        <div class="case-meta">
+          <span class="case-client">Apartamento autoral</span>
+          <span class="case-title">Living masculino</span>
+          <span class="case-where">Painel TV · Tons profundos</span>
+        </div>
+      </article>
     </div>
+    <div class="cases-hint">Deslize para explorar →</div>
   </section>
 
-  <!-- CASES -->
-  <section class="cases-lp">
-    <div class="cases-inner">
-      <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;">Projetos reais em SJC</span>
-      <h2 style="text-align:center;margin-bottom:48px;">Apartamentos que já entregamos</h2>
-      <div class="cases-grid">
-        <div class="case-card">
-          <picture>
-            <source type="image/webp" srcset="images/portfolio/opt/case-celebration-sala.webp" />
-            <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Cobertura Celebration Life em SJC — sala integrada com vista da cidade" width="1400" height="927" loading="lazy" decoding="async" />
-          </picture>
-          <div class="case-meta">
-            <span class="case-bairro">Celebration Life · Cobertura</span>
-            <h3>Família Andrade — alto padrão</h3>
-          </div>
-        </div>
-        <div class="case-card">
-          <picture>
-            <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
-            <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Apartamento Enjoy Aquarius em SJC — sala integrada nude com arcos" width="1400" height="933" loading="lazy" decoding="async" />
-          </picture>
-          <div class="case-meta">
-            <span class="case-bairro">Enjoy Aquarius · Apartamento</span>
-            <h3>Camila &amp; Pedro — autoral</h3>
-          </div>
-        </div>
-        <div class="case-card">
-          <picture>
-            <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
-            <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Apartamento Believe em SJC — sala de jantar com pedra portuguesa" width="1400" height="933" loading="lazy" decoding="async" />
-          </picture>
-          <div class="case-meta">
-            <span class="case-bairro">Believe · Apartamento</span>
-            <h3>Mariana &amp; Lucas — aconchegante</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- 4. PROCESSO -->
+  <section class="v2-process">
+    <h2 class="reveal">Como trabalhamos.</h2>
+    <p class="process-sub reveal">Quatro etapas. Tudo claro do começo ao fim.</p>
+    <ol>
+      <li class="reveal">
+        <span class="step-num">01</span>
+        <span class="step-title">Briefing</span>
+        <span class="step-body">Entendemos como você vive — rotinas, gostos, restrições — e o orçamento real do seu projeto.</span>
+      </li>
+      <li class="reveal">
+        <span class="step-num">02</span>
+        <span class="step-title">Projeto</span>
+        <span class="step-body">Plantas, layout, paleta, marcenaria e cada acabamento. Você aprova antes de qualquer obra começar.</span>
+      </li>
+      <li class="reveal">
+        <span class="step-num">03</span>
+        <span class="step-title">Acompanhamento de obra</span>
+        <span class="step-body">A gente acompanha o canteiro, conversa direto com os fornecedores e cuida pra tudo sair como combinado.</span>
+      </li>
+      <li class="reveal">
+        <span class="step-num">04</span>
+        <span class="step-title">Entrega das chaves</span>
+        <span class="step-body">Apartamento pronto, decoração no lugar. Você só precisa entrar.</span>
+      </li>
+    </ol>
   </section>
 
-  <!-- PROCESSO -->
-  <section class="processo-lp">
-    <div class="inner">
-      <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;">Como funciona</span>
-      <h2>Do seu apê atual ao espaço dos seus sonhos</h2>
-      <div class="etapas">
-        <div class="etapa">
-          <div class="etapa-num">01</div>
-          <h4>Briefing</h4>
-          <p>Conversamos sobre seu estilo de vida, necessidades e o que você sonha para o espaço.</p>
-        </div>
-        <div class="etapa">
-          <div class="etapa-num">02</div>
-          <h4>Levantamento e 3D</h4>
-          <p>Medimos o espaço e criamos imagens realistas para você ver o resultado antes da obra.</p>
-        </div>
-        <div class="etapa">
-          <div class="etapa-num">03</div>
-          <h4>Projeto Executivo</h4>
-          <p>Documentação técnica completa para compras, contratações e execução sem imprevistos.</p>
-        </div>
-        <div class="etapa">
-          <div class="etapa-num">04</div>
-          <h4>Execução</h4>
-          <p>Com ou sem nossa equipe — você escolhe. Garantimos o resultado que foi projetado.</p>
-        </div>
-      </div>
-    </div>
+  <!-- 5. VOZ DOS CLIENTES -->
+  <section class="v2-voice reveal">
+    <span class="quote-mark">"</span>
+    <blockquote>
+      Atenderam todos os meus pedidos e o projeto ficou do jeito que eu sonhava.
+    </blockquote>
+    <span class="quote-by">— Família atendida em 2025</span>
   </section>
 
-  <!-- DEPOIMENTOS -->
-  <section class="depoimento-lp">
-    <div class="depoimento-inner">
-      <span style="display:block;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--sand);text-align:center;margin-bottom:12px;">Depoimentos</span>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:500;color:#fff;text-align:center;margin-bottom:48px;">O que dizem clientes residenciais em SJC</h2>
-      <div class="dep-grid">
-        <div class="dep-card">
-          <div class="dep-stars">★★★★★</div>
-          <p>"A gente tinha medo de estourar o orçamento e ficar com cara de padrão construtora. O processo foi claro do começo ao fim — ficou exatamente como nos renders."</p>
-          <div class="dep-autor"><span class="dep-av">MR</span><div><strong>Mariana &amp; Rafael</strong><small>Apto Jd. Aquarius · 72m²</small></div></div>
-        </div>
-        <div class="dep-card">
-          <div class="dep-stars">★★★★★</div>
-          <p>"Reformamos a casa toda com eles. Previsibilidade total — sabíamos o que ia acontecer em cada semana e nada estourou o orçamento. Chave na mão no prazo."</p>
-          <div class="dep-autor"><span class="dep-av">CM</span><div><strong>Carla M.</strong><small>Casa em Urbanova · reforma</small></div></div>
-        </div>
-      </div>
-    </div>
+  <!-- 6. FECHAMENTO -->
+  <section class="v2-close">
+    <h2 class="reveal">Vamos<br>conversar?</h2>
+    <p class="reveal">Conta pra gente o que você está pensando. As arquitetas Flavia e Beatriz respondem em até 24h.</p>
+    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn-primary reveal">
+      Falar pelo WhatsApp
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <p class="secondary">São José dos Campos · Taubaté · Jacareí · Caçapava</p>
   </section>
 
-  <!-- FORM -->
-  <section class="form-section" id="form">
-    <div class="form-inner">
-      <div class="form-texto">
-        <span class="section-tag">Vamos começar?</span>
-        <h2>Conte para a gente sobre seu apartamento</h2>
-        <p>Preencha e uma das nossas arquitetas entra em contato pra uma conversa sem compromisso.</p>
-        <div class="garantias">
-          <div class="garantia">
-            <div class="garantia-icon">✓</div>
-            <span>Atendimento presencial em São José dos Campos</span>
-          </div>
-          <div class="garantia">
-            <div class="garantia-icon">✓</div>
-            <span>+100 projetos entregues com qualidade</span>
-          </div>
-          <div class="garantia">
-            <div class="garantia-icon">✓</div>
-            <span>+7 anos transformando espaços em SJC</span>
-          </div>
-          <div class="garantia">
-            <div class="garantia-icon">✓</div>
-            <span>Resposta em até 24 horas úteis</span>
-          </div>
-        </div>
-      </div>
-
-      <form id="lpForm1">
-        <div class="form-group">
-          <label>Nome</label>
-          <input type="text" name="nome" placeholder="Seu nome" required />
-        </div>
-        <div class="form-group">
-          <label>WhatsApp</label>
-          <input type="tel" name="whatsapp" placeholder="(12) 9 0000-0000" required />
-        </div>
-        <div class="form-group">
-          <label>Tipo de projeto</label>
-          <select name="tipo" required>
-            <option value="">Selecione...</option>
-            <option>Apartamento — projeto novo</option>
-            <option>Apartamento — reforma</option>
-            <option>Casa — projeto novo</option>
-            <option>Casa — reforma</option>
-            <option>Outro</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Quando pretende iniciar?</label>
-          <select name="prazo" required>
-            <option value="">Selecione...</option>
-            <option>Imediato — próximos 30 dias</option>
-            <option>Nos próximos 3 meses</option>
-            <option>Nos próximos 6 meses</option>
-            <option>Só pesquisando</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-submit">Quero meu orçamento em 24h</button>
-        <p style="margin-top:14px;font-size:13px;color:var(--muted);text-align:center;">Resposta em até 1 hora em horário comercial.</p>
-        <p class="form-ok" id="ok1">Recebemos! Em breve uma arquiteta entra em contato.</p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="lp-footer">
-    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
-    <p>© 2026 Assis Carrer Arquitetura — São José dos Campos, SP</p>
-  </footer>
-
-  <script>
-    document.getElementById('lpForm1').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const d = Object.fromEntries(new FormData(this));
-      const text = encodeURIComponent(
-        `Olá! Vim pela landing de projeto residencial.\n\n` +
-        `Nome: ${d.nome}\nWhatsApp: ${d.whatsapp}\n` +
-        `Tipo de projeto: ${d.tipo}\nQuando pretende iniciar: ${d.prazo}`
-      );
-      window.open(`https://wa.me/5512981534551?text=${text}`, '_blank');
-      document.getElementById('ok1').classList.add('show');
-    });
-
-    // Lightbox para galeria
-    const pm = document.getElementById('projetoModal');
-    const pmImg = document.getElementById('projetoModalImg');
-    const pmClose = document.getElementById('projetoModalClose');
-    document.querySelectorAll('.galeria-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const img = item.querySelector('img');
-        if (!img) return;
-        pmImg.src = img.currentSrc || img.src;
-        pmImg.alt = img.alt || '';
-        pm.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    function closePM() { pm.classList.remove('open'); document.body.style.overflow = ''; }
-    pmClose.addEventListener('click', closePM);
-    pm.addEventListener('click', e => { if (e.target === pm) closePM(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && pm.classList.contains('open')) closePM(); });
-  </script>
-
-  <div class="projeto-modal" id="projetoModal" aria-hidden="true" role="dialog">
-    <button class="projeto-modal-close" id="projetoModalClose" aria-label="Fechar">×</button>
-    <div class="projeto-modal-content">
-      <img class="projeto-modal-img" id="projetoModalImg" alt="" />
-      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" />
-    </div>
+  <!-- Sticky bottom CTA — mobile-only -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+      Orçamento agora
+    </a>
   </div>
 
-  <!-- WhatsApp float + tracking -->
-  <style>
-    .wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.15); z-index: 999; transition: transform .25s, box-shadow .25s; }
-    .wa-float svg { width: 30px; height: 30px; }
-    .wa-float:hover { transform: translateY(-3px) scale(1.05); }
-    .wa-float::after { content:''; position:absolute; inset:0; border-radius:50%; border:2px solid #25D366; animation: waPulse 2.2s ease-out infinite; pointer-events:none; }
-    @keyframes waPulse { 0%{transform:scale(1);opacity:.7} 100%{transform:scale(1.6);opacity:0} }
-    @media (max-width: 768px) { .wa-float { width: 52px; height: 52px; right: 16px; bottom: 16px; } .wa-float svg { width: 26px; height: 26px; } }
-  </style>
-  <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Falar no WhatsApp">
-    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.7 4.6 1.9 6.46L4 29l7.74-1.86A11.95 11.95 0 0016 27c6.627 0 12-5.373 12-12S22.629 3 16.001 3zm5.27 14.42c-.29-.14-1.71-.84-1.97-.94-.27-.1-.46-.14-.66.14-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.12-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51l-.56-.01c-.2 0-.51.07-.78.37-.27.29-1.03 1.01-1.03 2.46s1.06 2.85 1.21 3.05c.14.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/></svg>
-  </a>
+  <!-- Tracking + IO fallback -->
   <script>
-    function trackEvent(n,p){p=p||{};if(window.dataLayer)window.dataLayer.push(Object.assign({event:n},p));if(window.gtag)window.gtag('event',n,p);if(window.fbq)window.fbq('trackCustom',n,p);}
-    function trackConversion(){if(window.gtag)window.gtag('event','conversion',{send_to:'AW-18186496405/F0xNCI3x6bIcEJXT_99D',value:2500.0,currency:'BRL'});if(window.fbq)window.fbq('track','Lead',{value:2500,currency:'BRL'});}
-    document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>{trackEvent('whatsapp_click',{page:'lp-apartamento'});trackConversion();}));
-    let s75=false;window.addEventListener('scroll',()=>{if(s75)return;if((scrollY+innerHeight)/document.body.scrollHeight>=.75){trackEvent('scroll_75');s75=true;}},{passive:true});
-    document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',()=>{trackConversion();trackEvent('lead_form_submit',{page:'lp-apartamento'});}));
+    // GA4 event helpers (same shape as the rest of the site)
+    function trackEvent(n, p) {
+      p = p || {};
+      if (window.dataLayer) window.dataLayer.push(Object.assign({event: n}, p));
+      if (window.gtag) window.gtag('event', n, p);
+      if (window.fbq) window.fbq('trackCustom', n, p);
+    }
+    function trackConversion() {
+      if (window.gtag) window.gtag('event', 'conversion', {send_to: 'AW-18186496405/F0xNCI3x6bIcEJXT_99D', value: 2500.0, currency: 'BRL'});
+      if (window.fbq) window.fbq('track', 'Lead', {value: 2500, currency: 'BRL'});
+    }
+
+    // WhatsApp click = conversion (same as v1, kept consistent for A/B fairness)
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        trackEvent('whatsapp_click', {page: 'lp-apartamento-v2'});
+        trackConversion();
+      });
+    });
+
+    // Scroll milestones
+    var s75 = false;
+    window.addEventListener('scroll', function () {
+      if (s75) return;
+      if ((window.scrollY + window.innerHeight) / document.body.scrollHeight >= 0.75) {
+        trackEvent('scroll_75', {page: 'lp-apartamento-v2'});
+        s75 = true;
+      }
+    }, {passive: true});
+
+    // IntersectionObserver fallback for .reveal (when CSS animation-timeline isn't supported)
+    if (!CSS.supports('animation-timeline: view()')) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.18, rootMargin: '0px 0px -10% 0px'});
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    }
+
+    // Hide sticky CTA when the final CTA is visible (avoid duplicate cognitive load)
+    var sticky = document.getElementById('stickyCta');
+    var finalCta = document.querySelector('.v2-close .btn-primary');
+    if (sticky && finalCta && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        sticky.classList.toggle('is-hidden', entries[0].isIntersecting);
+      }, {threshold: 0.5}).observe(finalCta);
+    }
   </script>
 </body>
 </html>
