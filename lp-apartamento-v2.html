@@ -517,6 +517,137 @@
     }
 
     /* ==========================================
+       Reviews — prova social (Google reviews 5★)
+       ========================================== */
+    .reviews {
+      padding: 60px 16px 20px 16px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .reviews .reviews-title {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.6rem, 6vw, 2.1rem);
+      letter-spacing: -0.018em;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .reviews .reviews-meta {
+      font-size: 14px; color: var(--muted);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 28px;
+    }
+    .reviews .stars {
+      color: #f5a623;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    .reviews-grid {
+      display: grid; gap: 14px;
+    }
+    .review {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 22px 22px 20px 22px;
+      box-shadow: 0 6px 20px -10px rgba(28,45,64,0.10);
+    }
+    .review .stars {
+      display: block; margin-bottom: 10px;
+    }
+    .review .review-text {
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .review .review-author {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .review .review-author::before {
+      content: '';
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--copper);
+    }
+    @media (prefers-color-scheme: dark) {
+      .review {
+        background: #16171a;
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+      }
+    }
+
+    /* ==========================================
+       Instagram — siga
+       ========================================== */
+    .instagram {
+      margin: 60px 16px 20px 16px;
+      max-width: 760px;
+      padding: 32px 24px 28px 24px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fef6ee 0%, #f0e3d4 100%);
+      text-align: center;
+    }
+    @media (min-width: 720px) {
+      .instagram { margin-left: auto; margin-right: auto; }
+    }
+    .instagram h2 {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: clamp(1.4rem, 5.5vw, 1.7rem);
+      letter-spacing: -0.018em;
+      color: #5a3e26;
+      margin-bottom: 4px;
+    }
+    .instagram .handle {
+      font-size: 14px;
+      color: var(--copper);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .instagram-grid a {
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+    }
+    .instagram-grid img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .instagram-grid a:active img { transform: scale(0.96); }
+    .instagram-follow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .instagram-follow svg { width: 16px; height: 16px; }
+    @media (prefers-color-scheme: dark) {
+      .instagram {
+        background: linear-gradient(135deg, #2a1f17 0%, #1f1612 100%);
+        box-shadow: inset 0 0 0 1px rgba(211,153,99,0.18);
+      }
+      .instagram h2 { color: #f5e2c9; }
+      .instagram .handle { color: var(--copper); }
+    }
+
+    /* ==========================================
        CTA section
        ========================================== */
     .cta-section {
@@ -592,8 +723,8 @@
        HERO
        ========================================== -->
   <section class="hero">
-    <h1>Seu lar.<br>Do seu jeito.</h1>
-    <p class="hero-tagline">Projeto autoral para quem busca algo único.</p>
+    <h1>Seu lar.<br>Sua história.</h1>
+    <p class="hero-tagline">Cada detalhe pensado pra como você quer viver.</p>
     <div class="hero-actions">
       <a href="#destaques" class="link">Explorar</a>
       <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="link">Orçamento</a>
@@ -780,6 +911,72 @@
       </div>
     </article>
   </div>
+
+  <!-- ==========================================
+       SECTION 5: REVIEWS — prova social
+       ========================================== -->
+  <section class="reviews reveal">
+    <h2 class="reviews-title">O que os clientes dizem.</h2>
+    <p class="reviews-meta">
+      <span class="stars">★★★★★</span>
+      <span>4,9 no Google · Assis Carrer Arquitetura</span>
+    </p>
+    <div class="reviews-grid">
+      <article class="review">
+        <span class="stars">★★★★★</span>
+        <p class="review-text">"Atenderam todos meus pedidos e o projeto ficou do jeito que eu sonhava."</p>
+        <p class="review-author">Cliente atendido em 2025</p>
+      </article>
+      <article class="review">
+        <span class="stars">★★★★★</span>
+        <p class="review-text">"Recomendo pra quem busca excelência e humanidade no trabalho de arquitetura."</p>
+        <p class="review-author">Cliente atendido em 2025</p>
+      </article>
+      <article class="review">
+        <span class="stars">★★★★★</span>
+        <p class="review-text">"Atenderam todas as expectativas que tinha para o meu projeto."</p>
+        <p class="review-author">Cliente atendido em 2025</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6: INSTAGRAM
+       ========================================== -->
+  <section class="instagram reveal">
+    <h2>O dia a dia do projeto.</h2>
+    <p class="handle">@assiscarrer.arq · 7k seguidores</p>
+    <div class="instagram-grid">
+      <a href="https://www.instagram.com/assiscarrer.arq/" target="_blank" rel="noopener" aria-label="Foto 1 do Instagram">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-lavabo-rose.webp" />
+          <img src="images/portfolio/opt/case-lavabo-rose.jpg" alt="Lavabo Assis Carrer" loading="lazy" />
+        </picture>
+      </a>
+      <a href="https://www.instagram.com/assiscarrer.arq/" target="_blank" rel="noopener" aria-label="Foto 2 do Instagram">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-quarto-casal.webp" />
+          <img src="images/portfolio/opt/case-quarto-casal.jpg" alt="Quarto Assis Carrer" loading="lazy" />
+        </picture>
+      </a>
+      <a href="https://www.instagram.com/assiscarrer.arq/" target="_blank" rel="noopener" aria-label="Foto 3 do Instagram">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-varanda-gourmet.webp" />
+          <img src="images/portfolio/opt/case-varanda-gourmet.jpg" alt="Varanda gourmet Assis Carrer" loading="lazy" />
+        </picture>
+      </a>
+      <a href="https://www.instagram.com/assiscarrer.arq/" target="_blank" rel="noopener" aria-label="Foto 4 do Instagram">
+        <picture>
+          <source type="image/webp" srcset="images/portfolio/opt/case-real-ville.webp" />
+          <img src="images/portfolio/opt/case-real-ville.jpg" alt="Real Ville Assis Carrer" loading="lazy" />
+        </picture>
+      </a>
+    </div>
+    <a href="https://www.instagram.com/assiscarrer.arq/" target="_blank" rel="noopener" class="instagram-follow">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Seguir no Instagram
+    </a>
+  </section>
 
   <!-- ==========================================
        CTA FINAL
