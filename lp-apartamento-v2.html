@@ -280,7 +280,21 @@
       overflow: hidden;
       aspect-ratio: 4/3;
     }
-    .card-shot img { width: 100%; height: 100%; object-fit: cover; }
+    .card-shot img, .card-shot picture { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Carrossel "Lar. Detalhe. Casa.": foto com 4 cantos arredondados,
+       depois pequeno gap visual antes do texto */
+    .card.tall { padding: 14px 14px 18px 14px !important; }
+    .card.tall > picture {
+      display: block;
+      border-radius: 14px;
+      overflow: hidden;
+      width: 100%;
+    }
+    .card.tall > picture img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .card.tall > div {
+      padding: 14px 6px 0 6px !important;
+    }
 
     /* Card tinted (Apple-style colored cards) — light mode */
     .card.tint-warm {
@@ -459,6 +473,8 @@
     .arquitetas-shot {
       aspect-ratio: 4/5;
       overflow: hidden;
+      border-radius: 16px;
+      margin: 14px 14px 0 14px;
     }
     .arquitetas-shot img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .arquitetas-body {
@@ -665,8 +681,8 @@
     <p class="feature-desc">Rotina, gostos, restrições, orçamento real. Tudo importa pra fazer um projeto que combine.</p>
     <div class="feature-shot">
       <picture>
-        <source type="image/webp" srcset="images/portfolio/opt/case-believe-jantar.webp" />
-        <img src="images/portfolio/opt/case-believe-jantar.jpg" alt="Sala de jantar com identidade autoral" loading="lazy" decoding="async" />
+        <source type="image/webp" srcset="images/portfolio/opt/case-enjoy-aquarius-sala.webp" />
+        <img src="images/portfolio/opt/case-enjoy-aquarius-sala.jpg" alt="Sala integrada Enjoy Aquarius — projeto autoral" loading="lazy" decoding="async" />
       </picture>
     </div>
   </section>
