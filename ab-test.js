@@ -55,6 +55,17 @@
   // Expose globally for the page to use (e.g., custom analytics)
   window.AB = { variant: variant, visitorId: visitorId };
 
+  // Bypass: ?preview=1 OR ?preview=v1/v2 evita o redirect e renderiza a URL
+  // pedida tal como está. Útil pra ver a variant "errada" sem mexer no cookie.
+  // Tráfego com preview é marcado pra ignorar nos relatórios.
+  var qs = new URLSearchParams(location.search);
+  var preview = qs.get('preview');
+  if (preview) {
+    window.AB.preview = preview;
+    if (window.gtag) window.gtag('event', 'ab_preview', { variant: variant, preview: preview });
+    return; // não redireciona
+  }
+
   // Redirect if user landed on the wrong slug for their variant
   var targetPath = VARIANTS[variant];
   var currentPath = canon(location.pathname);
