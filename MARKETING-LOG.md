@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-05-24** · Commit base: pós SEO snippet update
+> Última atualização: **2026-06-24** · Refino dark mode + UX da LP v2 (variante B do teste A/B)
 
 ---
 
@@ -46,6 +46,7 @@
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
+| Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) |
 
 ---
 
@@ -167,6 +168,19 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-06-24 · Refino dark mode + UX da LP v2 (variante B)
+**Contexto:** ~100% do tráfego é mobile. LP v2 (`lp-apartamento-v2.html`) é a variante B do teste A/B — microsite estilo Apple (scroll-driven, carrosséis horizontais, sticky topbar). Feedback do cliente apontou problemas visuais, principalmente no dark mode.
+
+**Ajustes feitos:**
+- **Reveal animation acelerada** (`animation-range: entry 0% cover 30%` → `cover 16%`, translateY 20px → 14px). Era a causa raiz das queixas "texto escuro / botão desativado": elementos ficavam muito tempo em baixa opacidade enquanto o usuário rolava, e gradiente/botão pareciam quebrados a meio caminho.
+- **Gradiente warm do dark mode clareado** (não termina mais em marrom escuro `#966442`) → títulos longos ("Comece pelos destaques.", "Casa.") legíveis ponta a ponta.
+- **Botão WhatsApp reforçado** (light + dark): gradiente verde + sombra/glow. Antes era verde chapado `#25D366` e, esmaecido pelo reveal, parecia desativado.
+- **Bordas "liquid glass" nas células do dark mode** (carrosséis + Instagram): highlight superior + borda colorida + glow externo suave, dando profundidade translúcida iOS.
+- **Removida a stat "4 cidades do Vale do Paraíba"** (a pedido do cliente). Stats agora: 100+ apartamentos · 7 anos.
+- Verificado: logo do header troca corretamente no dark (versão negativo/branca) — queixa anterior era cache.
+
+**Estado anterior (mesma sessão, já commitado):** hero "Seu lar. Sua história.", seção Reviews (Google 4,9★), seção Instagram, seção das arquitetas (Flavia e Beatriz — sócias, não mãe/filha), imagens otimizadas via sharp (-91%, LCP ~3,7s), 4 cantos arredondados em todas as fotos.
 
 ### 2026-06-21 · Pivot estratégico: Pmax pausada · Search puro criado
 **Diagnóstico do mês (1 mês completo de Pmax):**

@@ -62,8 +62,9 @@
         --muted:    #8a8a8e;
         --hairline: rgba(255,255,255,0.10);
         --copper:   #d39963;          /* mais luminoso em dark */
-        /* Gradients mais saturados — funcionam melhor sobre escuro */
-        --grad-warm:   linear-gradient(90deg, #f0b87f 0%, #e0a36e 35%, #c08653 70%, #966442 100%);
+        /* Gradients mais saturados — funcionam melhor sobre escuro.
+           warm fica luminoso ponta a ponta (não escurece no fim, pra texto longo continuar legível) */
+        --grad-warm:   linear-gradient(90deg, #f6c994 0%, #efb87e 50%, #e6ad79 100%);
         --grad-cool:   linear-gradient(90deg, #9eb5cf 0%, #b5c8dc 50%, #c9d7e6 100%);
         --grad-purple: linear-gradient(90deg, #c0aee0 0%, #d4c4ea 50%, #e3d6f0 100%);
       }
@@ -315,46 +316,58 @@
 
     /* Dark mode: tints ganham personalidade própria, não invertem */
     @media (prefers-color-scheme: dark) {
-      /* tint-warm: espresso quente com brilho copper */
+      /* tint-warm: espresso quente com brilho copper — borda liquid glass */
       .card.tint-warm {
         background:
           radial-gradient(120% 100% at 0% 0%, rgba(211,153,99,0.18) 0%, transparent 55%),
           linear-gradient(140deg, #2a1f17 0%, #1d1612 100%);
         color: #f0d9bf;
-        box-shadow: inset 0 0 0 1px rgba(211,153,99,0.18);
+        box-shadow:
+          inset 0 1px 0 0 rgba(255,224,184,0.22),
+          inset 0 0 0 1px rgba(211,153,99,0.32),
+          0 0 30px -6px rgba(211,153,99,0.20);
       }
       .card.tint-warm .card-title { color: #f5e2c9; }
       .card.tint-warm .card-eyebrow { color: #d39963; }
       .card.tint-warm .card-desc { color: rgba(240,217,191,0.78); }
 
-      /* tint-cool: noite azulada, vibe Apple Pro */
+      /* tint-cool: noite azulada, vibe Apple Pro — borda liquid glass */
       .card.tint-cool {
         background:
           radial-gradient(120% 100% at 0% 0%, rgba(158,181,207,0.14) 0%, transparent 55%),
           linear-gradient(140deg, #1a2230 0%, #131a26 100%);
         color: #d8e3f0;
-        box-shadow: inset 0 0 0 1px rgba(158,181,207,0.12);
+        box-shadow:
+          inset 0 1px 0 0 rgba(210,226,246,0.20),
+          inset 0 0 0 1px rgba(158,181,207,0.26),
+          0 0 30px -6px rgba(158,181,207,0.18);
       }
       .card.tint-cool .card-title { color: #e6edf6; }
       .card.tint-cool .card-eyebrow { color: #9eb5cf; }
       .card.tint-cool .card-desc { color: rgba(216,227,240,0.78); }
 
-      /* tint-dark: mais escuro ainda que bg-card, com leve glow violeta */
+      /* tint-dark: mais escuro ainda que bg-card, com leve glow violeta — borda liquid glass */
       .card.tint-dark {
         background:
           radial-gradient(120% 100% at 100% 100%, rgba(180,160,220,0.10) 0%, transparent 55%),
           linear-gradient(140deg, #0e0f14 0%, #050609 100%);
         color: #e9eaed;
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+        box-shadow:
+          inset 0 1px 0 0 rgba(214,204,236,0.16),
+          inset 0 0 0 1px rgba(180,160,220,0.20),
+          0 0 30px -6px rgba(180,160,220,0.14);
       }
       .card.tint-dark .card-title { color: #f5f5f7; }
       .card.tint-dark .card-eyebrow { color: #b8aac8; }
       .card.tint-dark .card-desc { color: rgba(233,234,237,0.78); }
 
-      /* Card neutro (sem tint) ganha sutil contorno */
+      /* Card neutro (sem tint) ganha borda liquid glass clarinha */
       .card:not(.tint-warm):not(.tint-cool):not(.tint-dark) {
         background: #16171a;
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+        box-shadow:
+          inset 0 1px 0 0 rgba(255,255,255,0.10),
+          inset 0 0 0 1px rgba(255,255,255,0.08),
+          0 0 24px -8px rgba(255,255,255,0.06);
       }
     }
 
@@ -678,16 +691,26 @@
     }
     .btn-pill svg { width: 16px; height: 16px; }
     .btn-pill:active { opacity: 0.85; transform: scale(0.97); }
-    .btn-pill.whatsapp { background: #25D366; }
+    .btn-pill.whatsapp {
+      background: linear-gradient(180deg, #2ee06f 0%, #1faf53 100%);
+      box-shadow: 0 8px 24px -8px rgba(37,211,102,0.55);
+    }
+    @media (prefers-color-scheme: dark) {
+      .btn-pill.whatsapp {
+        background: linear-gradient(180deg, #36e87b 0%, #20c25e 100%);
+        box-shadow: 0 0 0 1px rgba(54,232,123,0.35), 0 12px 32px -8px rgba(37,211,102,0.5);
+      }
+    }
 
     /* ==========================================
        Reveal animations (scroll-driven)
        ========================================== */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 700ms ease, transform 700ms ease; }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 600ms ease; }
     .reveal.is-visible { opacity: 1; transform: none; }
     @supports (animation-timeline: view()) {
-      .reveal { animation: fadeUp linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; transition: none; }
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+      /* completa cedo (cover 16%) pra texto/botão não ficarem muito tempo esmaecidos enquanto rola */
+      .reveal { animation: fadeUp linear both; animation-timeline: view(); animation-range: entry 0% cover 16%; transition: none; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     }
 
     /* Desktop */
@@ -795,10 +818,6 @@
       <div class="stat reveal">
         <span class="stat-num cool">7</span>
         <span class="stat-label">anos atuando em São José dos Campos</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-num purple">4</span>
-        <span class="stat-label">cidades do Vale do Paraíba atendidas</span>
       </div>
     </div>
   </section>
