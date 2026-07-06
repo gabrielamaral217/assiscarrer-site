@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-06-24** · Refino dark mode + UX da LP v2 (variante B do teste A/B)
+> Última atualização: **2026-07-06** · Review campanha Search (14 dias) · Otimização hero index.html · Keywords expandidas · FAQ preço removido do processo.html
 
 ---
 
@@ -39,7 +39,7 @@
 | Google Ads tag | ✅ | `AW-18186496405` (conta arquitetura@assiscarrer.com) |
 | Conversão Lead Form | ✅ | Rótulo `F0xNCI3x6bIcEJXT_99D` · valor R$ 2.500 BRL |
 | Eventos custom | ✅ | `lead_form_submit`, `whatsapp_click`, `scroll_75` |
-| Campanha Google Ads | ✅ | "Arquiteto São José dos Campos" · Performance Max · R$ 25/dia |
+| Campanha Google Ads | ✅ | "Search · Residencial+Comercial SJC" · Search puro · R$ 25/dia · 6 conv. a R$27/lead (14 dias) |
 | Crédito Google Ads | ✅ | R$ 880 vinculado (cobre ~35 dias) |
 | Google Meu Negócio | ✅ | Categoria + descrição + 12 serviços + atributos + WhatsApp |
 | Reviews GMN | 🟡 | 2/10 (faltam 8 pra meta semana 1) |
@@ -168,6 +168,56 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-07-06 · Review Search (14 dias) · Otimizações site · Análise keywords
+**Campanha Search "Search · Residencial+Comercial SJC" — 22 jun a 5 jul 2026:**
+
+| Métrica | Valor |
+|---|---|
+| Impressões | 899 |
+| Cliques | 70 |
+| CTR | **7.79%** (benchmark: 3-5%) |
+| CPC médio | R$ 2.35 |
+| Custo total | R$ 164.16 |
+| Conversões | **6** |
+| Custo/conversão | **R$ 27.36** |
+| Taxa de conversão | 8.57% |
+
+**Dispositivos:**
+- Smartphones: 49 cliques · R$119.75 · **6 conversões (12.24%)** ← 100% das convs
+- Computadores: 21 cliques · R$44.41 · **0 conversões (0%)**
+
+**Keywords ativas (com gasto):**
+- `"arquiteto são josé dos campos"` → 45 cliques · R$104.54 · CTR 7.99%
+- `"arquiteto sjc"` → 25 cliques · R$59.62 · CTR 7.55%
+- `"arquiteto para apartamento"`, `"arquiteto residencial sjc"`, `"reforma apartamento sjc"` → **R$0 · 0 cliques** (sem volume local suficiente em phrase match)
+
+**Termos reais que ativaram os anúncios:** arquitetura sjc · arquiteto sjc · arquiteto sao jose dos campos · arquitetos sjc · arquiteta sao jose dos campos · escritorios de arquitetura sjc · arquiteta sjc
+
+**Concorrência (leilão):**
+- Você: 47.39% parcela de impressões · 30.51% posição 1
+- robertafelix.com: 16.47% · **46.34% posição 1** (supera você em 39.76% dos casos — principal concorrente)
+- alebrandiniarquitetura.com.br: 10.84%
+
+**Página de destino:** 62 dos 70 cliques vão para a homepage (assiscarrer-arquitetura.com/). `residencial.html` aparece com 39 impressões automáticas pelo Google mas 0 cliques.
+
+**GA4 (últimos 30 dias):**
+- 544 usuários ativos · 532 novos · 34s engajamento médio
+- google/cpc: **488 usuários (89.7%)** — campanha é o único motor de tráfego
+- Páginas: LP apartamento 618 views (60.3% rejeição) · Homepage 192 views (36.7% rejeição)
+- Cidades: SJC 236 · SP 100 · Jacareí 51 · Taubaté 40
+
+**Mudanças no site (mesma sessão):**
+- `processo.html`: removida FAQ "Quanto custa um projeto de arquitetura com vocês?"
+- `index.html`: hero otimizado 6.6MB → 128KB WebP (-98%) com `<picture>` + preload. LCP esperado: de ~7s para ~2-3s.
+- Imagens geradas: `images/portfolio/opt/hero-celebration-life-vista.webp` e `.jpg`
+- Favicon: adicionado em todas as 8 páginas (`favicon-32.png` + `apple-touch-icon.png`)
+
+**Recomendações keywords (pendente aplicar no Ads):**
+- Adicionar: `"arquiteta são josé dos campos"` (já aparece nos termos reais — sem controle de lance)
+- Adicionar: `"escritório de arquitetura sjc"` (aparece nos termos reais — intenção diferente)
+- Substituir as 3 keywords zeradas por: `"projeto arquitetônico sjc"`, `"projeto de interiores sjc"`, `"arquitetura comercial sjc"`
+- Considerar: `"arquiteto jacareí"` e `"arquiteto taubaté"` (volume menor, CPC mais barato)
 
 ### 2026-06-24 · Refino dark mode + UX da LP v2 (variante B)
 **Contexto:** ~100% do tráfego é mobile. LP v2 (`lp-apartamento-v2.html`) é a variante B do teste A/B — microsite estilo Apple (scroll-driven, carrosséis horizontais, sticky topbar). Feedback do cliente apontou problemas visuais, principalmente no dark mode.
