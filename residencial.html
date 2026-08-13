@@ -5,10 +5,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arquiteto Residencial em São José dos Campos — Apartamentos e Casas | Assis Carrer</title>
-  <meta name="description" content="Projeto arquitetônico residencial em São José dos Campos — apartamentos no Aquarius, casas em Urbanova, reformas em Floradas. 100+ projetos entregues em 7 anos." />
+  <title>Arquiteto Residencial em São José dos Campos: Apartamentos e Casas | Assis Carrer</title>
+  <meta name="description" content="Projeto arquitetônico residencial em São José dos Campos: apartamentos no Aquarius, casas em Urbanova, reformas em Floradas. 100+ projetos entregues em 7 anos." />
   <meta name="keywords" content="arquiteto sjc, arquiteto são josé dos campos, arquiteto aquarius, arquiteto urbanova, reforma apartamento sjc, projeto de casa em são josé dos campos, arquiteto floradas" />
-  <meta property="og:title" content="Arquiteto Residencial em São José dos Campos — Assis Carrer" />
+  <meta property="og:title" content="Arquiteto Residencial em São José dos Campos | Assis Carrer" />
   <meta property="og:description" content="Apartamentos e casas com identidade. 100+ projetos entregues no Aquarius, Urbanova e Floradas." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
@@ -72,12 +72,12 @@
       font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500;
       margin-bottom: 24px; line-height: 1.25;
     }
-    .res-intro p { font-size: 1.05rem; line-height: 1.8; color: var(--muted, #5a5a5a); }
+    .res-intro p { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted, #5a5a5a); }
     .res-intro p + p { margin-top: 18px; }
 
     /* SEGMENTOS — apartamentos / casas */
     .res-segmento { padding: 100px 0; }
-    .res-segmento.apartamentos { background: #fff; }
+    .res-segmento.apartamentos { background: var(--white, #fff); }
     .res-segmento.casas { background: var(--cream, #F5F0EB); }
     .seg-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
@@ -118,7 +118,7 @@
     .cases-row {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
-    .case-item { background: #fff; color: var(--text, #2a2a2a); overflow: hidden; }
+    .case-item { background: var(--white, #fff); color: var(--text, #2a2a2a); overflow: hidden; }
     .case-item img { width: 100%; height: 280px; object-fit: cover; display: block; }
     .case-body { padding: 22px 24px 26px; }
     .case-body .case-bairro {
@@ -128,12 +128,12 @@
     .case-body h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.5rem; font-weight: 500; margin: 8px 0 10px;
-      color: var(--dark, #1C2D40);
+      color: var(--text, #1C2D40);
     }
-    .case-body p { font-size: 14px; line-height: 1.6; color: var(--muted, #5a5a5a); }
+    .case-body p { font-size: 14px; line-height: 1.6; color: var(--text-muted, #5a5a5a); }
 
     /* PROCESSO RESUMIDO */
-    .res-processo { padding: 100px 0; background: #fff; }
+    .res-processo { padding: 100px 0; background: var(--white, #fff); }
     .res-processo .container { max-width: 1100px; text-align: center; }
     .res-processo h2 {
       font-family: 'Cormorant Garamond', serif;
@@ -141,7 +141,7 @@
       margin-bottom: 14px;
     }
     .res-processo > .container > p {
-      color: var(--muted, #5a5a5a); margin-bottom: 56px;
+      color: var(--text-muted, #5a5a5a); margin-bottom: 56px;
     }
     .processo-mini {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
@@ -153,10 +153,10 @@
       margin-bottom: 14px;
     }
     .pm-item h4 {
-      font-size: 1rem; font-weight: 500; color: var(--dark, #1C2D40);
+      font-size: 1rem; font-weight: 500; color: var(--text, #1C2D40);
       margin-bottom: 10px;
     }
-    .pm-item p { font-size: 14px; line-height: 1.6; color: var(--muted, #5a5a5a); }
+    .pm-item p { font-size: 14px; line-height: 1.6; color: var(--text-muted, #5a5a5a); }
     .res-processo .btn { margin-top: 50px; }
 
     /* DEPOIMENTO */
@@ -168,7 +168,7 @@
     .res-depoimento blockquote {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-style: italic;
-      line-height: 1.5; color: var(--dark, #1C2D40); margin-bottom: 24px;
+      line-height: 1.5; color: var(--text, #1C2D40); margin-bottom: 24px;
     }
     .res-depoimento cite {
       font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -223,12 +223,13 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#sobre">Sobre</a></li>
-        <li><a href="residencial.html" class="active">Residencial</a></li>
-        <li><a href="comercial.html">Comercial</a></li>
-        <li><a href="processo.html">Processo</a></li>
-        <li><a href="index.html#portfolio">Portfólio</a></li>
-        <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+        <li><a href="index.html#sobre" data-i18n="res.nav.sobre">Sobre</a></li>
+        <li><a href="residencial.html" class="active" data-i18n="res.nav.residencial">Residencial</a></li>
+        <li><a href="comercial.html" data-i18n="res.nav.comercial">Comercial</a></li>
+        <li><a href="processo.html" data-i18n="res.nav.processo">Processo</a></li>
+        <li><a href="index.html#portfolio" data-i18n="res.nav.portfolio">Portfólio</a></li>
+        <li><button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch language">EN</button></li>
+        <li><a href="index.html#contato" class="nav-cta" data-i18n="res.nav.contato">Contato</a></li>
       </ul>
     </div>
   </nav>
@@ -236,13 +237,13 @@
   <!-- HERO -->
   <section class="res-hero">
     <div class="container">
-      <span class="section-tag">Arquitetura Residencial · São José dos Campos</span>
-      <h1>Sua casa em SJC com <em>identidade, sem padrão construtora.</em></h1>
-      <p>Projeto arquitetônico para casais, famílias e primeiros imóveis em São José dos Campos. Apartamentos no Aquarius e Floradas, casas em Urbanova, reformas em todos os cantos da cidade.</p>
-      <p class="proof">100+ projetos · 7 anos · Aquarius · Urbanova · Floradas · Esplanada</p>
+      <span class="section-tag" data-i18n="res.hero.tag">Arquitetura Residencial · São José dos Campos</span>
+      <h1 data-i18n="res.hero.h1">Sua casa em SJC com <em>identidade, sem padrão construtora.</em></h1>
+      <p data-i18n="res.hero.p">Projeto arquitetônico para casais, famílias e primeiros imóveis em São José dos Campos. Apartamentos no Aquarius e Floradas, casas em Urbanova, reformas em todos os cantos da cidade.</p>
+      <p class="proof" data-i18n="res.hero.proof">100+ projetos · 7 anos · Aquarius · Urbanova · Floradas · Esplanada</p>
       <div class="btn-row">
-        <a href="index.html#contato" class="btn btn-primary">Orçamento em 24h</a>
-        <a href="#cases" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Ver projetos</a>
+        <a href="index.html#contato" class="btn btn-primary" data-i18n="res.cta.budget24h">Orçamento em 24h</a>
+        <a href="#cases" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);" data-i18n="res.hero.cta.projects">Ver projetos</a>
       </div>
     </div>
   </section>
@@ -250,10 +251,10 @@
   <!-- INTRO -->
   <section class="res-intro">
     <div class="container">
-      <span class="section-tag">Para quem é</span>
-      <h2>Casais e famílias que querem fugir do padrão construtora — sem estourar o orçamento</h2>
-      <p>Você comprou um apartamento na planta no Aquarius. Ou está reformando a casa de família em Urbanova. Ou pegou as chaves do primeiro imóvel em Floradas e quer que ele tenha cara de você — não cara de showroom.</p>
-      <p>É exatamente para isso que existimos. Mais de 100 projetos residenciais entregues em 7 anos, todos em SJC, com processo claro: você aprova materiais, layout e custos em renders realistas <strong>antes</strong> da obra começar. Sem improviso. Sem surpresa no fim.</p>
+      <span class="section-tag" data-i18n="res.intro.tag">Para quem é</span>
+      <h2 data-i18n="res.intro.h2">Casais e famílias que querem fugir do padrão construtora, sem estourar o orçamento</h2>
+      <p data-i18n="res.intro.p1">Você comprou um apartamento na planta no Aquarius. Ou está reformando a casa de família em Urbanova. Ou pegou as chaves do primeiro imóvel em Floradas e quer que ele tenha cara de você, não cara de showroom.</p>
+      <p data-i18n="res.intro.p2">É exatamente para isso que existimos. Mais de 100 projetos residenciais entregues em 7 anos, todos em SJC, com processo claro: você aprova materiais, layout e custos em renders realistas <strong>antes</strong> da obra começar. Sem improviso. Sem surpresa no fim.</p>
     </div>
   </section>
 
@@ -261,13 +262,13 @@
   <section class="res-segmento apartamentos" id="apartamentos">
     <div class="seg-grid">
       <div class="seg-img">
-        <img src="images/portfolio/hero-apto-integrado-3amb.jpg" alt="Apartamento integrado em São José dos Campos — sala, jantar e cozinha contínuos" />
+        <img src="images/portfolio/hero-apto-integrado-3amb.jpg" alt="Apartamento integrado em São José dos Campos: sala, jantar e cozinha contínuos" />
       </div>
       <div class="seg-text">
-        <span class="section-tag">Apartamentos</span>
-        <h2>Projeto de <em>apartamento em SJC</em> — do planta ao habite-se</h2>
-        <p>Atendemos desde apartamentos compactos de 50m² em Floradas até coberturas de alto padrão no Aquarius. Reforma de imóvel usado, projeto novo na planta, ou projeto de interiores completo — cada metro quadrado pensado para a sua rotina.</p>
-        <p>Cuidamos da marcenaria sob medida, iluminação técnica, integração de ambientes, layout funcional e especificação de revestimentos. Resultado: um apartamento que parece feito pra você, porque foi.</p>
+        <span class="section-tag" data-i18n="res.apto.tag">Apartamentos</span>
+        <h2 data-i18n="res.apto.h2">Projeto de <em>apartamento em SJC</em>, do planta ao habite-se</h2>
+        <p data-i18n="res.apto.p1">Atendemos desde apartamentos compactos de 50m² em Floradas até coberturas de alto padrão no Aquarius. Reforma de imóvel usado, projeto novo na planta, ou projeto de interiores completo. Cada metro quadrado pensado para a sua rotina.</p>
+        <p data-i18n="res.apto.p2">Cuidamos da marcenaria sob medida, iluminação técnica, integração de ambientes, layout funcional e especificação de revestimentos. Resultado: um apartamento que parece feito pra você, porque foi.</p>
         <div class="seg-bairros">
           <span>Jd. Aquarius</span>
           <span>Floradas</span>
@@ -286,10 +287,10 @@
         <img src="images/portfolio/case-living-pe-direito.jpg" alt="Sala de estar com pé-direito alto em casa de SJC" />
       </div>
       <div class="seg-text">
-        <span class="section-tag">Casas</span>
-        <h2>Projeto de <em>casa em São José dos Campos</em> — do terreno à entrega</h2>
-        <p>Casas em terreno em Urbanova, Esplanada e Vila Ema. Projeto arquitetônico completo: implantação, plantas, fachadas, cortes, projeto estrutural articulado com calculista, complementares e aprovação na prefeitura.</p>
-        <p>Também atuamos em reformas estruturais de casas antigas — abrir vãos, integrar ambientes, modernizar fachada — sem perder a identidade do imóvel. Acompanhamos a obra do início ao fim ou validamos o trabalho da sua equipe.</p>
+        <span class="section-tag" data-i18n="res.casa.tag">Casas</span>
+        <h2 data-i18n="res.casa.h2">Projeto de <em>casa em São José dos Campos</em>, do terreno à entrega</h2>
+        <p data-i18n="res.casa.p1">Casas em terreno em Urbanova, Esplanada e Vila Ema. Projeto arquitetônico completo: implantação, plantas, fachadas, cortes, projeto estrutural articulado com calculista, complementares e aprovação na prefeitura.</p>
+        <p data-i18n="res.casa.p2">Também atuamos em reformas estruturais de casas antigas: abrir vãos, integrar ambientes, modernizar fachada, sem perder a identidade do imóvel. Acompanhamos a obra do início ao fim ou validamos o trabalho da sua equipe.</p>
         <div class="seg-bairros">
           <span>Urbanova</span>
           <span>Esplanada do Sol</span>
@@ -304,56 +305,56 @@
   <section class="res-cases" id="cases">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Projetos reais em SJC</span>
-        <h2>Alguns dos apartamentos e casas que entregamos</h2>
+        <span class="section-tag" data-i18n="res.cases.tag">Projetos reais em SJC</span>
+        <h2 data-i18n="res.cases.h2">Alguns dos apartamentos e casas que entregamos</h2>
       </div>
       <div class="cases-row">
         <div class="case-item">
-          <img src="images/portfolio/case-celebration-sala.jpg" alt="Cobertura Celebration Life em SJC — sala integrada com ilha canelada e vista da cidade" />
+          <img src="images/portfolio/case-celebration-sala.jpg" alt="Cobertura Celebration Life em SJC: sala integrada com ilha canelada e vista da cidade" />
           <div class="case-body">
-            <span class="case-bairro">Celebration Life · Cobertura</span>
-            <h3>Família Andrade — alto padrão</h3>
-            <p>Cobertura premium com pendente luminoso em "S", ilha canelada em mármore Calacatta e varanda gourmet com vista city ao crepúsculo.</p>
+            <span class="case-bairro" data-i18n="res.case1.bairro">Celebration Life · Cobertura</span>
+            <h3 data-i18n="res.case1.h3">Família Andrade, alto padrão</h3>
+            <p data-i18n="res.case1.p">Cobertura premium com pendente luminoso em "S", ilha canelada em mármore Calacatta e varanda gourmet com vista city ao crepúsculo.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-enjoy-aquarius-sala.jpg" alt="Apartamento Enjoy Aquarius em SJC — sala integrada com paleta nude e arcos" />
+          <img src="images/portfolio/case-enjoy-aquarius-sala.jpg" alt="Apartamento Enjoy Aquarius em SJC: sala integrada com paleta nude e arcos" />
           <div class="case-body">
-            <span class="case-bairro">Enjoy Aquarius · Apartamento</span>
-            <h3>Camila &amp; Pedro — projeto autoral</h3>
-            <p>Apartamento no Aquarius com paleta nude, arcos de nicho assinatura, cozinha verde-oliva e lavabo rosé com pendentes dourados.</p>
+            <span class="case-bairro" data-i18n="res.case2.bairro">Enjoy Aquarius · Apartamento</span>
+            <h3 data-i18n="res.case2.h3">Camila &amp; Pedro, projeto autoral</h3>
+            <p data-i18n="res.case2.p">Apartamento no Aquarius com paleta nude, arcos de nicho assinatura, cozinha verde-oliva e lavabo rosé com pendentes dourados.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-believe-jantar.jpg" alt="Apartamento Believe em SJC — sala de jantar com parede de pedra portuguesa" />
+          <img src="images/portfolio/case-believe-jantar.jpg" alt="Apartamento Believe em SJC: sala de jantar com parede de pedra portuguesa" />
           <div class="case-body">
-            <span class="case-bairro">Believe · Apartamento</span>
-            <h3>Mariana &amp; Lucas — autoral aconchegante</h3>
-            <p>Apartamento com sala de jantar em pedra portuguesa, ripado madeira, cozinha moody e lavabo statement em cuba de pedra natural.</p>
+            <span class="case-bairro" data-i18n="res.case3.bairro">Believe · Apartamento</span>
+            <h3 data-i18n="res.case3.h3">Mariana &amp; Lucas, autoral aconchegante</h3>
+            <p data-i18n="res.case3.p">Apartamento com sala de jantar em pedra portuguesa, ripado madeira, cozinha moody e lavabo statement em cuba de pedra natural.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-real-ville-hall.jpg" alt="Casa Real Ville em SJC — hall com trio de espelhos orgânicos" />
+          <img src="images/portfolio/case-real-ville-hall.jpg" alt="Casa Real Ville em SJC: hall com trio de espelhos orgânicos" />
           <div class="case-body">
-            <span class="case-bairro">Real Ville · Casa em condomínio</span>
-            <h3>Família Costa — elegância clássica</h3>
-            <p>Casa em condomínio com hall de três espelhos orgânicos sobre aparador em mármore, jantar azul-marinho com pendentes globos dourados.</p>
+            <span class="case-bairro" data-i18n="res.case4.bairro">Real Ville · Casa em condomínio</span>
+            <h3 data-i18n="res.case4.h3">Família Costa, elegância clássica</h3>
+            <p data-i18n="res.case4.p">Casa em condomínio com hall de três espelhos orgânicos sobre aparador em mármore, jantar azul-marinho com pendentes globos dourados.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-portal-victoria-sala.jpg" alt="Apartamento Portal Victoria em SJC — sala integrada com cozinha americana" />
+          <img src="images/portfolio/case-portal-victoria-sala.jpg" alt="Apartamento Portal Victoria em SJC: sala integrada com cozinha americana" />
           <div class="case-body">
-            <span class="case-bairro">Portal Victoria · Apartamento</span>
-            <h3>Beatriz &amp; Rafael — apartamento compacto</h3>
-            <p>Apartamento entry-level inteligente: banco-mesa de jantar encostado em espelho, cozinha cinza compacta com pendentes vidro fumê, marcenaria sob medida.</p>
+            <span class="case-bairro" data-i18n="res.case5.bairro">Portal Victoria · Apartamento</span>
+            <h3 data-i18n="res.case5.h3">Beatriz &amp; Rafael, apartamento compacto</h3>
+            <p data-i18n="res.case5.p">Apartamento entry-level inteligente: banco-mesa de jantar encostado em espelho, cozinha cinza compacta com pendentes vidro fumê, marcenaria sob medida.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-sala-jantar-azul.jpg" alt="Apartamento em Floradas SJC — sala de jantar com parede azul e ripado madeira" />
+          <img src="images/portfolio/case-sala-jantar-azul.jpg" alt="Apartamento em Floradas SJC: sala de jantar com parede azul e ripado madeira" />
           <div class="case-body">
-            <span class="case-bairro">Floradas · Apartamento</span>
-            <h3>Apartamento jovem em Floradas</h3>
-            <p>Layout integrado com sala de jantar em parede azul ripada, paleta clara, foco em receber. Primeiro imóvel entregue chave-na-mão.</p>
+            <span class="case-bairro" data-i18n="res.case6.bairro">Floradas · Apartamento</span>
+            <h3 data-i18n="res.case6.h3">Apartamento jovem em Floradas</h3>
+            <p data-i18n="res.case6.p">Layout integrado com sala de jantar em parede azul ripada, paleta clara, foco em receber. Primeiro imóvel entregue chave-na-mão.</p>
           </div>
         </div>
       </div>
@@ -363,54 +364,54 @@
   <!-- PROCESSO RESUMIDO -->
   <section class="res-processo">
     <div class="container">
-      <span class="section-tag">Como funciona</span>
-      <h2>Do briefing à entrega das chaves, em 4 passos</h2>
-      <p>Processo claro, prazos definidos, custos aprovados antes da obra.</p>
+      <span class="section-tag" data-i18n="res.proc.tag">Como funciona</span>
+      <h2 data-i18n="res.proc.h2">Do briefing à entrega das chaves, em 4 passos</h2>
+      <p data-i18n="res.proc.sub">Processo claro, prazos definidos, custos aprovados antes da obra.</p>
       <div class="processo-mini">
         <div class="pm-item">
           <div class="pm-num">01</div>
-          <h4>Briefing</h4>
-          <p>Entendemos seu estilo de vida, orçamento e prazo. Visita técnica e diagnóstico do imóvel.</p>
+          <h4 data-i18n="res.proc1.h4">Briefing</h4>
+          <p data-i18n="res.proc1.p">Entendemos seu estilo de vida, orçamento e prazo. Visita técnica e diagnóstico do imóvel.</p>
         </div>
         <div class="pm-item">
           <div class="pm-num">02</div>
-          <h4>Anteprojeto + 3D</h4>
-          <p>Layout, paleta e renders realistas. Você aprova o resultado antes de qualquer compra.</p>
+          <h4 data-i18n="res.proc2.h4">Anteprojeto + 3D</h4>
+          <p data-i18n="res.proc2.p">Layout, paleta e renders realistas. Você aprova o resultado antes de qualquer compra.</p>
         </div>
         <div class="pm-item">
           <div class="pm-num">03</div>
-          <h4>Projeto Executivo</h4>
-          <p>Documentação técnica completa para a obra acontecer sem improviso.</p>
+          <h4 data-i18n="res.proc3.h4">Projeto Executivo</h4>
+          <p data-i18n="res.proc3.p">Documentação técnica completa para a obra acontecer sem improviso.</p>
         </div>
         <div class="pm-item">
           <div class="pm-num">04</div>
-          <h4>Execução</h4>
-          <p>Com nossa equipe ou acompanhamento técnico. Entrega das chaves com book fotográfico.</p>
+          <h4 data-i18n="res.proc4.h4">Execução</h4>
+          <p data-i18n="res.proc4.p">Com nossa equipe ou acompanhamento técnico. Entrega das chaves com book fotográfico.</p>
         </div>
       </div>
-      <a href="processo.html" class="btn btn-outline">Ver processo completo</a>
+      <a href="processo.html" class="btn btn-outline" data-i18n="res.cta.seeprocess">Ver processo completo</a>
     </div>
   </section>
 
   <!-- DEPOIMENTO -->
   <section class="res-depoimento">
     <div class="container">
-      <span class="section-tag" style="display:block;margin-bottom:20px;">Depoimento</span>
-      <blockquote>
-        "A gente tinha medo de estourar o orçamento e ficar com cara de padrão construtora. O processo deles foi claro do começo ao fim — ficou exatamente como nos renders."
+      <span class="section-tag" style="display:block;margin-bottom:20px;" data-i18n="res.dep.tag">Depoimento</span>
+      <blockquote data-i18n="res.dep.q">
+        "A gente tinha medo de estourar o orçamento e ficar com cara de padrão construtora. O processo deles foi claro do começo ao fim, ficou exatamente como nos renders."
       </blockquote>
-      <cite>— Clientes Apartamento Aquarius · São José dos Campos</cite>
+      <cite data-i18n="res.dep.cite">Clientes Apartamento Aquarius · São José dos Campos</cite>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="res-cta">
     <div class="container">
-      <h2>Pronto para projetar a sua?</h2>
-      <p>Conte sobre o imóvel — apartamento, casa, em obra ou planta. Respondemos em até 1 hora em horário comercial com uma estimativa inicial.</p>
+      <h2 data-i18n="res.cta.h2">Pronto para projetar a sua?</h2>
+      <p data-i18n="res.cta.p">Conte sobre o imóvel: apartamento, casa, em obra ou planta. Respondemos em até 1 hora em horário comercial com uma estimativa inicial.</p>
       <div class="btn-row">
-        <a href="index.html#contato" class="btn btn-primary">Orçamento em 24h</a>
-        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline">Falar no WhatsApp</a>
+        <a href="index.html#contato" class="btn btn-primary" data-i18n="res.cta.budget24h">Orçamento em 24h</a>
+        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline" data-i18n="res.cta.whatsapp">Falar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -421,13 +422,13 @@
       <a href="index.html">
         <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="footer-logo" />
       </a>
-      <p class="footer-copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
+      <p class="footer-copy" data-i18n="res.footer.copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
       <ul class="footer-nav">
-        <li><a href="index.html#sobre">Sobre</a></li>
-        <li><a href="residencial.html">Residencial</a></li>
-        <li><a href="processo.html">Processo</a></li>
-        <li><a href="index.html#portfolio">Portfólio</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html#sobre" data-i18n="res.nav.sobre">Sobre</a></li>
+        <li><a href="residencial.html" data-i18n="res.nav.residencial">Residencial</a></li>
+        <li><a href="processo.html" data-i18n="res.nav.processo">Processo</a></li>
+        <li><a href="index.html#portfolio" data-i18n="res.nav.portfolio">Portfólio</a></li>
+        <li><a href="index.html#contato" data-i18n="res.nav.contato">Contato</a></li>
       </ul>
     </div>
   </footer>
@@ -440,18 +441,88 @@
   </a>
 
   <script>
+    window.AC_EN = {
+      "res.nav.sobre": "About",
+      "res.nav.residencial": "Residential",
+      "res.nav.comercial": "Commercial",
+      "res.nav.processo": "Process",
+      "res.nav.portfolio": "Portfolio",
+      "res.nav.contato": "Contact",
+      "res.hero.tag": "Residential Architecture · São José dos Campos",
+      "res.hero.h1": "Your home in SJC with <em>identity, not the developer-standard look.</em>",
+      "res.hero.p": "Architectural design for couples, families and first homes in São José dos Campos. Apartments in Aquarius and Floradas, houses in Urbanova, renovations across every corner of the city.",
+      "res.hero.proof": "100+ projects · 7 years · Aquarius · Urbanova · Floradas · Esplanada",
+      "res.cta.budget24h": "Get a Quote in 24h",
+      "res.hero.cta.projects": "View Projects",
+      "res.intro.tag": "Who It's For",
+      "res.intro.h2": "Couples and families who want to escape the cookie-cutter developer look, without blowing the budget",
+      "res.intro.p1": "Maybe you bought an off-plan apartment in Aquarius. Maybe you're renovating the family home in Urbanova. Or you just picked up the keys to your first place in Floradas and want it to feel like you, not like a showroom.",
+      "res.intro.p2": "That's exactly why we exist. Over 100 residential projects delivered in 7 years, all in SJC, with a clear process: you approve materials, layout and costs in realistic renders <strong>before</strong> construction begins. No improvising. No surprises at the end.",
+      "res.apto.tag": "Apartments",
+      "res.apto.h2": "Project for <em>an apartment in SJC</em>, from blueprint to move-in day",
+      "res.apto.p1": "We work on everything from compact 50m² apartments in Floradas to high-end penthouses in Aquarius. Renovating a resale unit, designing a new off-plan home, or a complete interior design project: every square meter planned around your routine.",
+      "res.apto.p2": "We handle custom cabinetry, technical lighting, room integration, functional layout and finish specification. The result: an apartment that feels made for you, because it was.",
+      "res.casa.tag": "Houses",
+      "res.casa.h2": "Project for <em>a house in São José dos Campos</em>, from lot to handover",
+      "res.casa.p1": "Ground-up houses on lots in Urbanova, Esplanada and Vila Ema. A complete architectural project: site layout, floor plans, elevations, sections, structural design coordinated with the engineer, complementary projects and city approval.",
+      "res.casa.p2": "We also handle structural renovations of older houses: opening up spans, merging rooms, updating the façade, all without losing the property's character. We oversee construction from start to finish, or review the work of your own team.",
+      "res.cases.tag": "Real Projects in SJC",
+      "res.cases.h2": "Some of the apartments and houses we've delivered",
+      "res.case1.bairro": "Celebration Life · Penthouse",
+      "res.case1.h3": "Andrade Family, High-End Living",
+      "res.case1.p": "A premium penthouse with an S-shaped light pendant, a fluted Calacatta marble island, and a gourmet balcony with skyline views at dusk.",
+      "res.case2.bairro": "Enjoy Aquarius · Apartment",
+      "res.case2.h3": "Camila &amp; Pedro, Signature Design",
+      "res.case2.p": "An apartment in Aquarius with a nude palette, signature arched niches, an olive-green kitchen, and a rosé powder room with gold pendant lights.",
+      "res.case3.bairro": "Believe · Apartment",
+      "res.case3.h3": "Mariana &amp; Lucas, Warm and Signature",
+      "res.case3.p": "An apartment with a Portuguese-stone dining room, wood slats, a moody kitchen, and a statement powder room with a natural stone basin.",
+      "res.case4.bairro": "Real Ville · Gated-Community House",
+      "res.case4.h3": "Costa Family, Classic Elegance",
+      "res.case4.p": "A gated-community house with an entry hall of three organic mirrors over a marble console, and a navy dining room with gold globe pendant lights.",
+      "res.case5.bairro": "Portal Victoria · Apartment",
+      "res.case5.h3": "Beatriz &amp; Rafael, Smart Compact Apartment",
+      "res.case5.p": "A smart entry-level apartment: a bench-and-table dining nook set against a mirrored wall, a compact grey kitchen with smoked-glass pendants, and custom cabinetry throughout.",
+      "res.case6.bairro": "Floradas · Apartment",
+      "res.case6.h3": "A Young Couple's Apartment in Floradas",
+      "res.case6.p": "An open layout with a dining room set against a ribbed blue wall, a light palette, and entertaining in mind. A first home delivered turnkey.",
+      "res.proc.tag": "How It Works",
+      "res.proc.h2": "From Briefing to Handover, in 4 Steps",
+      "res.proc.sub": "A clear process, defined timelines, and costs approved before construction begins.",
+      "res.proc1.h4": "Briefing",
+      "res.proc1.p": "We get to know your lifestyle, budget and timeline, with a technical site visit and property assessment.",
+      "res.proc2.h4": "Preliminary Design + 3D",
+      "res.proc2.p": "Layout, palette and realistic renders. You approve the result before making a single purchase.",
+      "res.proc3.h4": "Executive Design",
+      "res.proc3.p": "Complete technical documentation so construction happens without improvising.",
+      "res.proc4.h4": "Execution",
+      "res.proc4.p": "With our own team or technical oversight. Keys delivered along with a professional photo book.",
+      "res.cta.seeprocess": "See the Full Process",
+      "res.dep.tag": "Testimonial",
+      "res.dep.q": "&quot;We were afraid of blowing the budget and ending up with a generic developer look. Their process was clear from start to finish, and it turned out exactly like the renders.&quot;",
+      "res.dep.cite": "Clients, Apartment in Aquarius · São José dos Campos",
+      "res.cta.h2": "Ready to design yours?",
+      "res.cta.p": "Tell us about your property: apartment, house, under construction or still on paper. We reply within 1 business hour with an initial estimate.",
+      "res.cta.whatsapp": "Chat on WhatsApp",
+      "res.footer.copy": "&copy; 2026 Assis Carrer Arquitetura. All rights reserved."
+    };
+  </script>
+  <script src="i18n.js"></script>
+  <script>
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', navLinks.classList.contains('open'));
     });
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navLinks.classList.remove('open');
         document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
       });
     });
 
