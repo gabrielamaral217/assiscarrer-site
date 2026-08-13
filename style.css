@@ -1162,7 +1162,7 @@ p {
     border-color: var(--copper) !important;
     color: var(--copper) !important;
     font-size: 0.95rem;
-    padding: 8px 20px;
+    padding: 14px 20px;
   }
   .nav-links .lang-toggle:hover { background: var(--copper) !important; color: #fff !important; }
   .nav-toggle { display: flex; z-index: 101; padding: 10px; margin: -10px; }

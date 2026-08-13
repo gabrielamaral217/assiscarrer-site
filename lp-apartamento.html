@@ -721,36 +721,38 @@
   </script>
   <script src="i18n.js"></script>
   <script>
-    document.getElementById('lpForm1').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const d = Object.fromEntries(new FormData(this));
-      const text = encodeURIComponent(
-        `Olá! Vim pela landing de projeto residencial.\n\n` +
-        `Nome: ${d.nome}\nWhatsApp: ${d.whatsapp}\n` +
-        `Tipo de projeto: ${d.tipo}\nQuando pretende iniciar: ${d.prazo}`
-      );
-      window.open(`https://wa.me/5512981534551?text=${text}`, '_blank');
-      document.getElementById('ok1').classList.add('show');
-    });
-
-    // Lightbox para galeria
-    const pm = document.getElementById('projetoModal');
-    const pmImg = document.getElementById('projetoModalImg');
-    const pmClose = document.getElementById('projetoModalClose');
-    document.querySelectorAll('.galeria-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const img = item.querySelector('img');
-        if (!img) return;
-        pmImg.src = img.currentSrc || img.src;
-        pmImg.alt = img.alt || '';
-        pm.classList.add('open');
-        document.body.style.overflow = 'hidden';
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('lpForm1').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const d = Object.fromEntries(new FormData(this));
+        const text = encodeURIComponent(
+          `Olá! Vim pela landing de projeto residencial.\n\n` +
+          `Nome: ${d.nome}\nWhatsApp: ${d.whatsapp}\n` +
+          `Tipo de projeto: ${d.tipo}\nQuando pretende iniciar: ${d.prazo}`
+        );
+        window.open(`https://wa.me/5512981534551?text=${text}`, '_blank');
+        document.getElementById('ok1').classList.add('show');
       });
+
+      // Lightbox para galeria
+      const pm = document.getElementById('projetoModal');
+      const pmImg = document.getElementById('projetoModalImg');
+      const pmClose = document.getElementById('projetoModalClose');
+      document.querySelectorAll('.galeria-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const img = item.querySelector('img');
+          if (!img) return;
+          pmImg.src = img.currentSrc || img.src;
+          pmImg.alt = img.alt || '';
+          pm.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      function closePM() { pm.classList.remove('open'); document.body.style.overflow = ''; }
+      pmClose.addEventListener('click', closePM);
+      pm.addEventListener('click', e => { if (e.target === pm) closePM(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && pm.classList.contains('open')) closePM(); });
     });
-    function closePM() { pm.classList.remove('open'); document.body.style.overflow = ''; }
-    pmClose.addEventListener('click', closePM);
-    pm.addEventListener('click', e => { if (e.target === pm) closePM(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && pm.classList.contains('open')) closePM(); });
   </script>
 
   <div class="projeto-modal" id="projetoModal" aria-hidden="true" role="dialog">
