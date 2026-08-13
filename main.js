@@ -11,12 +11,14 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('open');
   navLinks.classList.toggle('open');
   document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  document.body.classList.toggle('nav-open', navLinks.classList.contains('open'));
 });
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navToggle.classList.remove('open');
     navLinks.classList.remove('open');
     document.body.style.overflow = '';
+    document.body.classList.remove('nav-open');
   });
 });
 
