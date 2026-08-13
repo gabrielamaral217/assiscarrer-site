@@ -5,10 +5,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Como Funciona — Processo de Projeto de Arquitetura em SJC | Assis Carrer</title>
-  <meta name="description" content="Entenda o processo da Assis Carrer Arquitetura em São José dos Campos — briefing, anteprojeto, executivo e execução. Prazos, entregáveis e o que está incluído em cada etapa." />
+  <title>Como Funciona o Processo de Projeto de Arquitetura em SJC | Assis Carrer</title>
+  <meta name="description" content="Entenda o processo da Assis Carrer Arquitetura em São José dos Campos, com briefing, anteprojeto, executivo e execução. Prazos, entregáveis e o que está incluído em cada etapa." />
   <meta name="keywords" content="processo de projeto arquitetônico, como funciona projeto de arquitetura, arquiteto sjc, projeto arquitetônico são josé dos campos" />
-  <meta property="og:title" content="Como Funciona — Processo Assis Carrer" />
+  <meta property="og:title" content="Como Funciona o Processo Assis Carrer" />
   <meta property="og:description" content="Briefing, anteprojeto, executivo e execução. Processo claro do início à entrega das chaves." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
@@ -57,11 +57,11 @@
       font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500;
       margin-bottom: 24px; line-height: 1.25;
     }
-    .processo-intro p { font-size: 1.05rem; line-height: 1.8; color: var(--muted, #5a5a5a); }
+    .processo-intro p { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted, #5a5a5a); }
     .processo-intro p + p { margin-top: 18px; }
 
     /* ETAPAS DETALHADAS */
-    .etapas-detalhe { padding: 100px 0; background: #fff; }
+    .etapas-detalhe { padding: 100px 0; background: var(--white, #fff); }
     .etapa-row {
       display: grid; grid-template-columns: 1fr 2fr; gap: 60px;
       max-width: 1100px; margin: 0 auto 80px; align-items: start;
@@ -75,7 +75,7 @@
     }
     .etapa-side .etapa-prazo {
       font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--muted, #6b6b6b); margin-bottom: 12px;
+      color: var(--text-muted, #6b6b6b); margin-bottom: 12px;
     }
     .etapa-side h3 {
       font-family: 'Cormorant Garamond', serif;
@@ -113,12 +113,12 @@
       text-align: center; margin-bottom: 48px;
     }
     .faq-item {
-      background: #fff; margin-bottom: 16px;
+      background: var(--white, #fff); margin-bottom: 16px;
       border-left: 3px solid var(--copper, #A96D3E);
     }
     .faq-item summary {
       padding: 22px 28px; cursor: pointer;
-      font-size: 1.05rem; font-weight: 500; color: var(--dark, #1C2D40);
+      font-size: 1.05rem; font-weight: 500; color: var(--text, #1C2D40);
       list-style: none; position: relative;
     }
     .faq-item summary::-webkit-details-marker { display: none; }
@@ -129,7 +129,7 @@
     .faq-item[open] summary::after { content: '−'; }
     .faq-item .faq-body {
       padding: 0 28px 24px; font-size: 0.98rem; line-height: 1.75;
-      color: var(--muted, #5a5a5a);
+      color: var(--text-muted, #5a5a5a);
     }
 
     /* CTA FINAL */
@@ -176,12 +176,13 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#sobre">Sobre</a></li>
-        <li><a href="residencial.html">Residencial</a></li>
-        <li><a href="comercial.html">Comercial</a></li>
-        <li><a href="processo.html" class="active">Processo</a></li>
-        <li><a href="index.html#portfolio">Portfólio</a></li>
-        <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+        <li><a href="index.html#sobre" data-i18n="proc.nav.sobre">Sobre</a></li>
+        <li><a href="residencial.html" data-i18n="proc.nav.residencial">Residencial</a></li>
+        <li><a href="comercial.html" data-i18n="proc.nav.comercial">Comercial</a></li>
+        <li><a href="processo.html" class="active" data-i18n="proc.nav.processo">Processo</a></li>
+        <li><a href="index.html#portfolio" data-i18n="proc.nav.portfolio">Portfólio</a></li>
+        <li><button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch language">EN</button></li>
+        <li><a href="index.html#contato" class="nav-cta" data-i18n="proc.nav.contato">Contato</a></li>
       </ul>
     </div>
   </nav>
@@ -189,19 +190,19 @@
   <!-- HERO -->
   <section class="processo-hero">
     <div class="container">
-      <span class="section-tag">Como trabalhamos</span>
-      <h1>Do briefing à <em>entrega das chaves</em>, sem surpresas.</h1>
-      <p>Contratar um projeto de arquitetura não precisa ser um salto no escuro. Aqui você vê exatamente o que acontece em cada etapa, quanto tempo leva e o que você recebe, antes mesmo de fechar conosco.</p>
+      <span class="section-tag" data-i18n="proc.hero.tag">Como trabalhamos</span>
+      <h1 data-i18n="proc.hero.h1">Do briefing à <em>entrega das chaves</em>, sem surpresas.</h1>
+      <p data-i18n="proc.hero.p">Contratar um projeto de arquitetura não precisa ser um salto no escuro. Aqui você vê exatamente o que acontece em cada etapa, quanto tempo leva e o que você recebe, antes mesmo de fechar conosco.</p>
     </div>
   </section>
 
   <!-- INTRO / DOR -->
   <section class="processo-intro">
     <div class="container">
-      <span class="section-tag">Por que isso importa</span>
-      <h2>Quem já contratou arquiteto tem sempre<br/>a mesma pergunta: vai estourar o orçamento?</h2>
-      <p>Sabemos disso porque ouvimos toda semana — casais comprando o primeiro apartamento no Aquarius, donos de cafeteria abrindo o segundo ponto, famílias reformando casa em Urbanova. A pergunta é sempre a mesma: <em>"e se der errado?"</em></p>
-      <p>Nosso processo foi desenhado para responder essa pergunta antes de você assinar qualquer coisa. Você aprova o conceito, os materiais e os custos em renders realistas <strong>antes da obra começar</strong>. Sem improviso, sem padrão construtora, sem surpresa no fim.</p>
+      <span class="section-tag" data-i18n="proc.intro.tag">Por que isso importa</span>
+      <h2 data-i18n="proc.intro.h2">Quem já contratou arquiteto tem sempre<br/>a mesma pergunta: vai estourar o orçamento?</h2>
+      <p data-i18n="proc.intro.p1">Sabemos disso porque ouvimos toda semana: casais comprando o primeiro apartamento no Aquarius, donos de cafeteria abrindo o segundo ponto, famílias reformando casa em Urbanova. A pergunta é sempre a mesma: <em>"e se der errado?"</em></p>
+      <p data-i18n="proc.intro.p2">Nosso processo foi desenhado para responder essa pergunta antes de você assinar qualquer coisa. Você aprova o conceito, os materiais e os custos em renders realistas <strong>antes da obra começar</strong>. Sem improviso, sem padrão construtora, sem surpresa no fim.</p>
     </div>
   </section>
 
@@ -211,19 +212,19 @@
     <div class="etapa-row">
       <div class="etapa-side">
         <div class="etapa-numero">01</div>
-        <div class="etapa-prazo">Semana 1 · 1 a 2 reuniões</div>
-        <h3>Briefing &amp; Diagnóstico</h3>
+        <div class="etapa-prazo" data-i18n="proc.etapa1.prazo">Semana 1 · 1 a 2 reuniões</div>
+        <h3 data-i18n="proc.etapa1.h3">Briefing &amp; Diagnóstico</h3>
       </div>
       <div class="etapa-conteudo">
-        <p>Começamos com uma conversa estruturada para entender quem você é, como vive (ou como seu negócio opera) e o que espera do espaço. Não é só "qual cor você gosta" — é estilo de vida, rotina, orçamento, prazos e referências visuais.</p>
-        <p>Visitamos o imóvel para levantamento técnico: medidas, condições da estrutura, instalações elétricas e hidráulicas, pontos de melhoria e restrições do condomínio quando aplicável.</p>
+        <p data-i18n="proc.etapa1.p1">Começamos com uma conversa estruturada para entender quem você é, como vive (ou como seu negócio opera) e o que espera do espaço. Não é só "qual cor você gosta": é estilo de vida, rotina, orçamento, prazos e referências visuais.</p>
+        <p data-i18n="proc.etapa1.p2">Visitamos o imóvel para levantamento técnico: medidas, condições da estrutura, instalações elétricas e hidráulicas, pontos de melhoria e restrições do condomínio quando aplicável.</p>
         <div class="etapa-entregaveis">
-          <h4>O que você recebe</h4>
+          <h4 data-i18n="proc.etapa1.h4">O que você recebe</h4>
           <ul>
-            <li>Briefing formal documentado</li>
-            <li>Levantamento cadastral do espaço (medidas e fotos)</li>
-            <li>Diagnóstico de viabilidade e estimativa preliminar de investimento</li>
-            <li>Cronograma do projeto</li>
+            <li data-i18n="proc.etapa1.li1">Briefing formal documentado</li>
+            <li data-i18n="proc.etapa1.li2">Levantamento cadastral do espaço (medidas e fotos)</li>
+            <li data-i18n="proc.etapa1.li3">Diagnóstico de viabilidade e estimativa preliminar de investimento</li>
+            <li data-i18n="proc.etapa1.li4">Cronograma do projeto</li>
           </ul>
         </div>
       </div>
@@ -232,19 +233,19 @@
     <div class="etapa-row">
       <div class="etapa-side">
         <div class="etapa-numero">02</div>
-        <div class="etapa-prazo">Semanas 2 a 4</div>
-        <h3>Anteprojeto &amp; Visualização 3D</h3>
+        <div class="etapa-prazo" data-i18n="proc.etapa2.prazo">Semanas 2 a 4</div>
+        <h3 data-i18n="proc.etapa2.h3">Anteprojeto &amp; Visualização 3D</h3>
       </div>
       <div class="etapa-conteudo">
-        <p>Aqui o espaço ganha forma. Apresentamos a proposta de layout, paleta de materiais, mobiliário, iluminação e revestimentos — tudo em renders 3D realistas. Você vê o resultado final <em>antes</em> de qualquer compra ou demolição.</p>
-        <p>Ajustamos juntos até estar do seu jeito. Em média, duas rodadas de refinamento até a aprovação. Esta é a etapa onde decisões grandes são tomadas — e onde o cliente economiza mais dinheiro, porque erros ficam só nos pixels.</p>
+        <p data-i18n="proc.etapa2.p1">Aqui o espaço ganha forma. Apresentamos a proposta de layout, paleta de materiais, mobiliário, iluminação e revestimentos, tudo em renders 3D realistas. Você vê o resultado final <em>antes</em> de qualquer compra ou demolição.</p>
+        <p data-i18n="proc.etapa2.p2">Ajustamos juntos até estar do seu jeito. Em média, duas rodadas de refinamento até a aprovação. Esta é a etapa onde decisões grandes são tomadas, e onde o cliente economiza mais dinheiro, porque erros ficam só nos pixels.</p>
         <div class="etapa-entregaveis">
-          <h4>O que você recebe</h4>
+          <h4 data-i18n="proc.etapa2.h4">O que você recebe</h4>
           <ul>
-            <li>Planta baixa humanizada com mobiliário</li>
-            <li>Renders 3D realistas dos ambientes principais</li>
-            <li>Paleta de materiais e referências de acabamento</li>
-            <li>Estimativa de investimento por ambiente</li>
+            <li data-i18n="proc.etapa2.li1">Planta baixa humanizada com mobiliário</li>
+            <li data-i18n="proc.etapa2.li2">Renders 3D realistas dos ambientes principais</li>
+            <li data-i18n="proc.etapa2.li3">Paleta de materiais e referências de acabamento</li>
+            <li data-i18n="proc.etapa2.li4">Estimativa de investimento por ambiente</li>
           </ul>
         </div>
       </div>
@@ -253,19 +254,19 @@
     <div class="etapa-row">
       <div class="etapa-side">
         <div class="etapa-numero">03</div>
-        <div class="etapa-prazo">Semanas 5 a 8</div>
-        <h3>Projeto Executivo</h3>
+        <div class="etapa-prazo" data-i18n="proc.etapa3.prazo">Semanas 5 a 8</div>
+        <h3 data-i18n="proc.etapa3.h3">Projeto Executivo</h3>
       </div>
       <div class="etapa-conteudo">
-        <p>Documentação técnica completa para a obra acontecer sem improvisos. Cada parede, ponto elétrico, ponto hidráulico, móvel sob medida e revestimento entra em planta detalhada — pronto para qualquer empreiteiro ou marceneiro executar.</p>
-        <p>É o que diferencia um projeto autoral de um "palpite bonito": com executivo na mão, o orçamento é fechado em valores reais, não estimativas vagas. Você compra certo na primeira vez.</p>
+        <p data-i18n="proc.etapa3.p1">Documentação técnica completa para a obra acontecer sem improvisos. Cada parede, ponto elétrico, ponto hidráulico, móvel sob medida e revestimento entra em planta detalhada, pronta para qualquer empreiteiro ou marceneiro executar.</p>
+        <p data-i18n="proc.etapa3.p2">É o que diferencia um projeto autoral de um "palpite bonito": com executivo na mão, o orçamento é fechado em valores reais, não estimativas vagas. Você compra certo na primeira vez.</p>
         <div class="etapa-entregaveis">
-          <h4>O que você recebe</h4>
+          <h4 data-i18n="proc.etapa3.h4">O que você recebe</h4>
           <ul>
-            <li>Plantas executivas (elétrica, hidráulica, marcenaria, forros, pisos)</li>
-            <li>Memorial descritivo e caderno de especificações</li>
-            <li>Detalhamentos de marcenaria, bancadas e pontos críticos</li>
-            <li>Lista de materiais e fornecedores recomendados em SJC</li>
+            <li data-i18n="proc.etapa3.li1">Plantas executivas (elétrica, hidráulica, marcenaria, forros, pisos)</li>
+            <li data-i18n="proc.etapa3.li2">Memorial descritivo e caderno de especificações</li>
+            <li data-i18n="proc.etapa3.li3">Detalhamentos de marcenaria, bancadas e pontos críticos</li>
+            <li data-i18n="proc.etapa3.li4">Lista de materiais e fornecedores recomendados em SJC</li>
           </ul>
         </div>
       </div>
@@ -274,19 +275,19 @@
     <div class="etapa-row">
       <div class="etapa-side">
         <div class="etapa-numero">04</div>
-        <div class="etapa-prazo">Variável · de 8 a 24 semanas</div>
-        <h3>Execução &amp; Acompanhamento</h3>
+        <div class="etapa-prazo" data-i18n="proc.etapa4.prazo">Variável · de 8 a 24 semanas</div>
+        <h3 data-i18n="proc.etapa4.h3">Execução &amp; Acompanhamento</h3>
       </div>
       <div class="etapa-conteudo">
-        <p>Você escolhe como executar: com nossa equipe própria (execução chave na mão) ou com equipe externa de sua confiança — neste caso, fazemos o acompanhamento técnico para garantir que o projeto seja respeitado em cada detalhe.</p>
-        <p>Visitas de obra semanais, ajustes pontuais quando a realidade exige, controle de qualidade e gestão dos fornecedores. Fechamos com entrega das chaves e book fotográfico profissional do espaço pronto.</p>
+        <p data-i18n="proc.etapa4.p1">Você escolhe como executar: com nossa equipe própria (execução chave na mão) ou com equipe externa de sua confiança. Nesse caso, fazemos o acompanhamento técnico para garantir que o projeto seja respeitado em cada detalhe.</p>
+        <p data-i18n="proc.etapa4.p2">Visitas de obra semanais, ajustes pontuais quando a realidade exige, controle de qualidade e gestão dos fornecedores. Fechamos com entrega das chaves e book fotográfico profissional do espaço pronto.</p>
         <div class="etapa-entregaveis">
-          <h4>O que você recebe</h4>
+          <h4 data-i18n="proc.etapa4.h4">O que você recebe</h4>
           <ul>
-            <li>Visitas técnicas semanais durante a obra</li>
-            <li>Gestão de fornecedores e cronograma físico-financeiro</li>
-            <li>Controle de qualidade e ajustes de obra</li>
-            <li>Entrega das chaves + book fotográfico profissional</li>
+            <li data-i18n="proc.etapa4.li1">Visitas técnicas semanais durante a obra</li>
+            <li data-i18n="proc.etapa4.li2">Gestão de fornecedores e cronograma físico-financeiro</li>
+            <li data-i18n="proc.etapa4.li3">Controle de qualidade e ajustes de obra</li>
+            <li data-i18n="proc.etapa4.li4">Entrega das chaves + book fotográfico profissional</li>
           </ul>
         </div>
       </div>
@@ -297,32 +298,32 @@
   <!-- FAQ -->
   <section class="faq">
     <div class="container">
-      <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;">Perguntas frequentes</span>
-      <h2>O que clientes em SJC costumam perguntar</h2>
+      <span class="section-tag" style="display:block;text-align:center;margin-bottom:12px;" data-i18n="proc.faq.tag">Perguntas frequentes</span>
+      <h2 data-i18n="proc.faq.h2">O que clientes em SJC costumam perguntar</h2>
 
       <details class="faq-item">
-        <summary>Quanto tempo leva do briefing à entrega das chaves?</summary>
-        <div class="faq-body">O projeto em si (etapas 1 a 3) leva de 6 a 8 semanas. A execução depende da complexidade: apartamento médio costuma levar de 3 a 5 meses, restaurante completo de 4 a 6 meses. Trabalhamos com cronograma físico-financeiro acordado no início.</div>
+        <summary data-i18n="proc.faq1.q">Quanto tempo leva do briefing à entrega das chaves?</summary>
+        <div class="faq-body" data-i18n="proc.faq1.a">O projeto em si (etapas 1 a 3) leva de 6 a 8 semanas. A execução depende da complexidade: apartamento médio costuma levar de 3 a 5 meses, restaurante completo de 4 a 6 meses. Trabalhamos com cronograma físico-financeiro acordado no início.</div>
       </details>
 
       <details class="faq-item">
-        <summary>Posso contratar só o projeto e executar a obra com outra equipe?</summary>
-        <div class="faq-body">Sim. Muitos clientes contratam projeto + acompanhamento técnico e tocam a obra com empreiteiro próprio. Garantimos que o projeto seja respeitado com visitas técnicas periódicas, sem precisar usar nossa equipe de execução.</div>
+        <summary data-i18n="proc.faq2.q">Posso contratar só o projeto e executar a obra com outra equipe?</summary>
+        <div class="faq-body" data-i18n="proc.faq2.a">Sim. Muitos clientes contratam projeto + acompanhamento técnico e tocam a obra com empreiteiro próprio. Garantimos que o projeto seja respeitado com visitas técnicas periódicas, sem precisar usar nossa equipe de execução.</div>
       </details>
 
       <details class="faq-item">
-        <summary>Vocês atendem fora de São José dos Campos?</summary>
-        <div class="faq-body">Sede em SJC, mas atendemos toda a região do Vale do Paraíba — Taubaté, Jacareí, Caçapava, Pindamonhangaba. Para projetos fora do raio de 50km, alinhamos logística e visitas presenciais no briefing inicial.</div>
+        <summary data-i18n="proc.faq3.q">Vocês atendem fora de São José dos Campos?</summary>
+        <div class="faq-body" data-i18n="proc.faq3.a">Sede em SJC, mas atendemos toda a região do Vale do Paraíba: Taubaté, Jacareí, Caçapava, Pindamonhangaba. Para projetos fora do raio de 50km, alinhamos logística e visitas presenciais no briefing inicial.</div>
       </details>
 
       <details class="faq-item">
-        <summary>O que diferencia um projeto autoral de uma "decoração de loja"?</summary>
-        <div class="faq-body">Loja de decoração vende móveis prontos para encaixar no que cabe. Projeto autoral parte do seu estilo de vida ou do seu negócio e desenha o espaço de fora pra dentro — incluindo pontos elétricos, marcenaria sob medida, integração entre ambientes e iluminação técnica. O resultado é um espaço que parece feito pra você, porque foi.</div>
+        <summary data-i18n="proc.faq4.q">O que diferencia um projeto autoral de uma "decoração de loja"?</summary>
+        <div class="faq-body" data-i18n="proc.faq4.a">Loja de decoração vende móveis prontos para encaixar no que cabe. Projeto autoral parte do seu estilo de vida ou do seu negócio e desenha o espaço de fora pra dentro, incluindo pontos elétricos, marcenaria sob medida, integração entre ambientes e iluminação técnica. O resultado é um espaço que parece feito pra você, porque foi.</div>
       </details>
 
       <details class="faq-item">
-        <summary>Cobram pela visita técnica inicial?</summary>
-        <div class="faq-body">Não. A primeira visita técnica e a conversa de diagnóstico são gratuitas para projetos qualificados (com orçamento mínimo e prazo definido). Saímos da reunião com uma estimativa clara, sem compromisso de fechamento.</div>
+        <summary data-i18n="proc.faq5.q">Cobram pela visita técnica inicial?</summary>
+        <div class="faq-body" data-i18n="proc.faq5.a">Não. A primeira visita técnica e a conversa de diagnóstico são gratuitas para projetos qualificados (com orçamento mínimo e prazo definido). Saímos da reunião com uma estimativa clara, sem compromisso de fechamento.</div>
       </details>
     </div>
   </section>
@@ -330,11 +331,11 @@
   <!-- CTA -->
   <section class="processo-cta">
     <div class="container">
-      <h2>Pronto para começar o seu?</h2>
-      <p>100+ projetos entregues em 7 anos. Mesmo processo, mesmo cuidado, sempre. Fale com a gente — orçamento em 24h.</p>
+      <h2 data-i18n="proc.cta.h2">Pronto para começar o seu?</h2>
+      <p data-i18n="proc.cta.p">100+ projetos entregues em 7 anos. Mesmo processo, mesmo cuidado, sempre. Fale com a gente e receba orçamento em 24h.</p>
       <div class="btn-row">
-        <a href="index.html#contato" class="btn btn-primary">Orçamento em 24h</a>
-        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline">Falar no WhatsApp</a>
+        <a href="index.html#contato" class="btn btn-primary" data-i18n="proc.cta.btn1">Orçamento em 24h</a>
+        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline" data-i18n="proc.cta.btn2">Falar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -345,13 +346,13 @@
       <a href="index.html">
         <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="footer-logo" />
       </a>
-      <p class="footer-copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
+      <p class="footer-copy" data-i18n="proc.footer.copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
       <ul class="footer-nav">
-        <li><a href="index.html#sobre">Sobre</a></li>
-        <li><a href="index.html#servicos">Serviços</a></li>
-        <li><a href="processo.html">Processo</a></li>
-        <li><a href="index.html#portfolio">Portfólio</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html#sobre" data-i18n="proc.nav.sobre">Sobre</a></li>
+        <li><a href="index.html#servicos" data-i18n="proc.footer.servicos">Serviços</a></li>
+        <li><a href="processo.html" data-i18n="proc.nav.processo">Processo</a></li>
+        <li><a href="index.html#portfolio" data-i18n="proc.nav.portfolio">Portfólio</a></li>
+        <li><a href="index.html#contato" data-i18n="proc.nav.contato">Contato</a></li>
       </ul>
     </div>
   </footer>
@@ -364,6 +365,79 @@
   </a>
 
   <script>
+    window.AC_EN = {
+      "proc.nav.sobre": "About",
+      "proc.nav.residencial": "Residential",
+      "proc.nav.comercial": "Commercial",
+      "proc.nav.processo": "Process",
+      "proc.nav.portfolio": "Portfolio",
+      "proc.nav.contato": "Contact",
+      "proc.hero.tag": "How We Work",
+      "proc.hero.h1": "From briefing to <em>handover</em>, no surprises.",
+      "proc.hero.p": "Hiring an architecture firm shouldn't feel like a leap in the dark. Here you can see exactly what happens at each stage, how long it takes, and what you receive, before you even sign with us.",
+      "proc.intro.tag": "Why This Matters",
+      "proc.intro.h2": "Anyone who has hired an architect before always<br/>asks the same question: will it blow the budget?",
+      "proc.intro.p1": "We hear it every week: couples buying their first apartment in Aquarius, caf&eacute; owners opening a second location, families renovating a house in Urbanova. The question is always the same: <em>&quot;what if it goes wrong?&quot;</em>",
+      "proc.intro.p2": "Our process was designed to answer that question before you sign anything. You approve the concept, materials and costs in realistic renders <strong>before construction begins</strong>. No improvising, no cookie-cutter results, no surprises at the end.",
+      "proc.etapa1.prazo": "Week 1 · 1 to 2 meetings",
+      "proc.etapa1.h3": "Briefing &amp; Diagnosis",
+      "proc.etapa1.p1": "We start with a structured conversation to understand who you are, how you live (or how your business operates) and what you expect from the space. It's not just &quot;what color do you like&quot;: it's lifestyle, routine, budget, timeline and visual references.",
+      "proc.etapa1.p2": "We visit the property for a technical survey: measurements, structural conditions, electrical and plumbing systems, improvement opportunities and any condo association restrictions that apply.",
+      "proc.etapa1.h4": "What You Receive",
+      "proc.etapa1.li1": "Formally documented briefing",
+      "proc.etapa1.li2": "Site survey of the space (measurements and photos)",
+      "proc.etapa1.li3": "Feasibility diagnosis and preliminary investment estimate",
+      "proc.etapa1.li4": "Project timeline",
+      "proc.etapa2.prazo": "Weeks 2 to 4",
+      "proc.etapa2.h3": "Concept Design &amp; 3D Visualization",
+      "proc.etapa2.p1": "This is where the space takes shape. We present the layout proposal, material palette, furniture, lighting and finishes, all in realistic 3D renders. You see the final result <em>before</em> any purchase or demolition.",
+      "proc.etapa2.p2": "We fine-tune it together until it feels right, on average two rounds of refinement before approval. This is the stage where the big decisions happen, and where clients save the most money, because mistakes stay confined to the pixels.",
+      "proc.etapa2.h4": "What You Receive",
+      "proc.etapa2.li1": "Humanized floor plan with furniture layout",
+      "proc.etapa2.li2": "Realistic 3D renders of the main spaces",
+      "proc.etapa2.li3": "Material palette and finish references",
+      "proc.etapa2.li4": "Investment estimate by room",
+      "proc.etapa3.prazo": "Weeks 5 to 8",
+      "proc.etapa3.h3": "Executive Design",
+      "proc.etapa3.p1": "Complete technical documentation so construction happens without improvising. Every wall, electrical point, plumbing point, custom furniture piece and finish goes into a detailed plan, ready for any contractor or cabinetmaker to execute.",
+      "proc.etapa3.p2": "This is what sets an original design apart from a &quot;pretty guess&quot;: with the executive drawings in hand, the budget is closed with real figures, not vague estimates. You buy it right the first time.",
+      "proc.etapa3.h4": "What You Receive",
+      "proc.etapa3.li1": "Executive plans (electrical, plumbing, cabinetry, ceilings, flooring)",
+      "proc.etapa3.li2": "Descriptive memorial and specification book",
+      "proc.etapa3.li3": "Cabinetry, countertop and critical-point detailing",
+      "proc.etapa3.li4": "Materials list and recommended suppliers in SJC",
+      "proc.etapa4.prazo": "Variable · 8 to 24 weeks",
+      "proc.etapa4.h3": "Construction &amp; Oversight",
+      "proc.etapa4.p1": "You choose how to execute: with our own team (full turnkey construction) or with an outside team you trust. In that case, we provide technical oversight to make sure the project is followed in every detail.",
+      "proc.etapa4.p2": "Weekly site visits, on-the-spot adjustments when reality demands it, quality control and supplier management. We wrap up with the handover of the keys and a professional photo book of the finished space.",
+      "proc.etapa4.h4": "What You Receive",
+      "proc.etapa4.li1": "Weekly technical site visits",
+      "proc.etapa4.li2": "Supplier management and physical-financial schedule",
+      "proc.etapa4.li3": "Quality control and on-site adjustments",
+      "proc.etapa4.li4": "Key handover + professional photo book",
+      "proc.faq.tag": "Frequently Asked Questions",
+      "proc.faq.h2": "What Clients in SJC Usually Ask",
+      "proc.faq1.q": "How long does it take from briefing to handover?",
+      "proc.faq1.a": "The design phase itself (stages 1 to 3) takes 6 to 8 weeks. Construction depends on complexity: a mid-size apartment usually takes 3 to 5 months, a full restaurant build-out 4 to 6 months. We work with a physical-financial schedule agreed on upfront.",
+      "proc.faq2.q": "Can I hire just the design and have another team build it?",
+      "proc.faq2.a": "Yes. Many clients hire the design plus technical oversight and run construction with their own contractor. We make sure the design is followed through periodic technical site visits, with no need to use our construction team.",
+      "proc.faq3.q": "Do you work outside S&atilde;o Jos&eacute; dos Campos?",
+      "proc.faq3.a": "We're based in SJC, but we serve the whole Vale do Para&iacute;ba region: Taubat&eacute;, Jacare&iacute;, Ca&ccedil;apava, Pindamonhangaba. For projects beyond a 50km radius, we work out logistics and in-person visits during the initial briefing.",
+      "proc.faq4.q": "What sets an original design apart from &quot;store-bought decorating&quot;?",
+      "proc.faq4.a": "A decor store sells ready-made furniture to fit whatever space you have. An original design starts from your lifestyle or your business and designs the space from the outside in, including electrical points, custom cabinetry, integration between rooms and technical lighting. The result is a space that feels made for you, because it was.",
+      "proc.faq5.q": "Do you charge for the initial site visit?",
+      "proc.faq5.a": "No. The first technical visit and diagnostic conversation are free for qualified projects (with a minimum budget and defined timeline). You leave the meeting with a clear estimate, with no obligation to move forward.",
+      "proc.cta.h2": "Ready to Start Yours?",
+      "proc.cta.p": "100+ projects delivered in 7 years. Same process, same care, always. Talk to us and get a quote in 24h.",
+      "proc.cta.btn1": "Get a Quote in 24h",
+      "proc.cta.btn2": "Chat on WhatsApp",
+      "proc.footer.copy": "&copy; 2026 Assis Carrer Arquitetura. All rights reserved.",
+      "proc.footer.servicos": "Services"
+    };
+  </script>
+  <script src="i18n.js"></script>
+
+  <script>
     // Mobile nav
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
@@ -371,12 +445,14 @@
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', navLinks.classList.contains('open'));
     });
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navLinks.classList.remove('open');
         document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
       });
     });
 
