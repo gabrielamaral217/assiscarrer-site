@@ -5,10 +5,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arquitetura Comercial em São José dos Campos — Consultórios, Cafés e Lojas | Assis Carrer</title>
-  <meta name="description" content="Projeto comercial em SJC — consultórios médicos no polo Aquarius, clínicas premium, cafeterias, restaurantes, hamburguerias e lojas boutique. Cases: Sapore Gelato, Portuga Bake Shop e consultórios entregues em SJC." />
+  <title>Arquitetura Comercial em São José dos Campos: Consultórios, Cafés e Lojas | Assis Carrer</title>
+  <meta name="description" content="Projeto comercial em SJC: consultórios médicos no polo Aquarius, clínicas premium, cafeterias, restaurantes, hamburguerias e lojas boutique. Cases: Sapore Gelato, Portuga Bake Shop e consultórios entregues em SJC." />
   <meta name="keywords" content="arquiteto para cafeteria sjc, projeto de restaurante são josé dos campos, arquitetura comercial sjc, projeto loja são josé dos campos, projeto consultório aquarius, arquiteto consultório sjc, clínica premium são josé dos campos" />
-  <meta property="og:title" content="Arquitetura Comercial em São José dos Campos — Assis Carrer" />
+  <meta property="og:title" content="Arquitetura Comercial em São José dos Campos | Assis Carrer" />
   <meta property="og:description" content="Cafés, restaurantes, hamburguerias e lojas boutique. Projetamos a Sapore Gelato e a Portuga Bake Shop." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
@@ -65,7 +65,7 @@
     .com-hero .btn-row { display: flex; gap: 16px; flex-wrap: wrap; }
 
     /* MANIFESTO */
-    .com-manifesto { padding: 100px 0; background: #fff; }
+    .com-manifesto { padding: 100px 0; background: var(--white, #fff); }
     .com-manifesto .container { max-width: 900px; text-align: center; }
     .com-manifesto h2 {
       font-family: 'Cormorant Garamond', serif;
@@ -79,7 +79,7 @@
     /* SEGMENTOS */
     .com-segmento { padding: 100px 0; }
     .com-segmento.gastro { background: var(--cream, #F5F0EB); }
-    .com-segmento.lojas { background: #fff; }
+    .com-segmento.lojas { background: var(--white, #fff); }
     .seg-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
       max-width: 1200px; margin: 0 auto; padding: 0 40px; align-items: center;
@@ -120,7 +120,7 @@
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
       max-width: 1000px; margin: 0 auto;
     }
-    .case-item { background: #fff; color: var(--text, #2a2a2a); overflow: hidden; }
+    .case-item { background: var(--white, #fff); color: var(--text, #2a2a2a); overflow: hidden; }
     .case-item img { width: 100%; height: 360px; object-fit: cover; display: block; }
     .case-body { padding: 22px 24px 26px; }
     .case-body .case-tag {
@@ -132,7 +132,7 @@
       font-size: 1.5rem; font-weight: 500; margin: 8px 0 10px;
       color: var(--dark, #1C2D40);
     }
-    .case-body p { font-size: 14px; line-height: 1.6; color: var(--muted, #5a5a5a); }
+    .case-body p { font-size: 14px; line-height: 1.6; color: var(--text-muted, #5a5a5a); }
 
     /* DIFERENCIAIS */
     .com-diff { padding: 100px 0; background: var(--cream, #F5F0EB); }
@@ -155,10 +155,10 @@
       font-size: 1.15rem; font-weight: 500; color: var(--dark, #1C2D40);
       margin-bottom: 12px; line-height: 1.3;
     }
-    .diff-item p { font-size: 14px; line-height: 1.7; color: var(--muted, #5a5a5a); }
+    .diff-item p { font-size: 14px; line-height: 1.7; color: var(--text-muted, #5a5a5a); }
 
     /* PROCESSO RESUMIDO */
-    .com-processo { padding: 100px 0; background: #fff; }
+    .com-processo { padding: 100px 0; background: var(--white, #fff); }
     .com-processo .container { max-width: 1100px; text-align: center; }
     .com-processo h2 {
       font-family: 'Cormorant Garamond', serif;
@@ -166,7 +166,7 @@
       margin-bottom: 14px;
     }
     .com-processo > .container > p {
-      color: var(--muted, #5a5a5a); margin-bottom: 56px;
+      color: var(--text-muted, #5a5a5a); margin-bottom: 56px;
     }
     .processo-mini {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
@@ -181,7 +181,7 @@
       font-size: 1rem; font-weight: 500; color: var(--dark, #1C2D40);
       margin-bottom: 10px;
     }
-    .pm-item p { font-size: 14px; line-height: 1.6; color: var(--muted, #5a5a5a); }
+    .pm-item p { font-size: 14px; line-height: 1.6; color: var(--text-muted, #5a5a5a); }
     .com-processo .btn { margin-top: 50px; }
 
     /* DEPOIMENTO */
@@ -193,7 +193,7 @@
     .com-depoimento blockquote {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-style: italic;
-      line-height: 1.5; color: var(--dark, #1C2D40); margin-bottom: 24px;
+      line-height: 1.5; color: var(--text, #1C2D40); margin-bottom: 24px;
     }
     .com-depoimento cite {
       font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -249,12 +249,13 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#sobre">Sobre</a></li>
-        <li><a href="residencial.html">Residencial</a></li>
-        <li><a href="comercial.html" class="active">Comercial</a></li>
-        <li><a href="processo.html">Processo</a></li>
-        <li><a href="index.html#portfolio">Portfólio</a></li>
-        <li><a href="index.html#contato" class="nav-cta">Contato</a></li>
+        <li><a href="index.html#sobre" data-i18n="com.nav.sobre">Sobre</a></li>
+        <li><a href="residencial.html" data-i18n="com.nav.residencial">Residencial</a></li>
+        <li><a href="comercial.html" class="active" data-i18n="com.nav.comercial">Comercial</a></li>
+        <li><a href="processo.html" data-i18n="com.nav.processo">Processo</a></li>
+        <li><a href="index.html#portfolio" data-i18n="com.nav.portfolio">Portfólio</a></li>
+        <li><button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch language">EN</button></li>
+        <li><a href="index.html#contato" class="nav-cta" data-i18n="com.nav.contato">Contato</a></li>
       </ul>
     </div>
   </nav>
@@ -262,13 +263,13 @@
   <!-- HERO -->
   <section class="com-hero">
     <div class="container">
-      <span class="section-tag">Arquitetura Comercial · São José dos Campos</span>
-      <h1>Seu ponto é a sua <em>maior mídia.</em><br/>Projetamos como mídia.</h1>
-      <p>Arquitetura comercial em SJC para cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique. Projetamos a Sapore Gelato, a Portuga Bake Shop e outros pontos de referência da cidade.</p>
-      <p class="proof">100+ projetos · 7 anos · SJC · Comercial e F&amp;B</p>
+      <span class="section-tag" data-i18n="com.hero.tag">Arquitetura Comercial · São José dos Campos</span>
+      <h1 data-i18n="com.hero.h1">Seu ponto é a sua <em>maior mídia.</em><br/>Projetamos como mídia.</h1>
+      <p data-i18n="com.hero.p">Arquitetura comercial em SJC para cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique. Projetamos a Sapore Gelato, a Portuga Bake Shop e outros pontos de referência da cidade.</p>
+      <p class="proof" data-i18n="com.hero.proof">100+ projetos · 7 anos · SJC · Comercial e F&amp;B</p>
       <div class="btn-row">
-        <a href="index.html#contato" class="btn btn-primary" style="background:var(--copper);color:#fff;">Orçamento em 24h</a>
-        <a href="#cases" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Ver projetos</a>
+        <a href="index.html#contato" class="btn btn-primary" style="background:var(--copper);color:#fff;" data-i18n="com.cta.budget24h">Orçamento em 24h</a>
+        <a href="#cases" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);" data-i18n="com.hero.cta.projects">Ver projetos</a>
       </div>
     </div>
   </section>
@@ -276,10 +277,10 @@
   <!-- MANIFESTO -->
   <section class="com-manifesto">
     <div class="container">
-      <span class="section-tag">Por que projeto comercial importa</span>
-      <h2>O cliente decide se entra ou não <em>antes de ler o cardápio</em></h2>
-      <p>Em SJC, o cliente entra na cafeteria e abre o Instagram. Tira foto da mesa, do balcão, do letreiro. Marca o local. <strong>Seu ponto vira mídia gratuita.</strong> Ou vira só mais um.</p>
-      <p>Trabalhamos com donos de cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique que entenderam isso: o espaço não é cenário, é estratégia. É o que faz o cliente voltar, marcar amigos e virar embaixador da marca sem você pedir.</p>
+      <span class="section-tag" data-i18n="com.manifesto.tag">Por que projeto comercial importa</span>
+      <h2 data-i18n="com.manifesto.h2">O cliente decide se entra ou não <em>antes de ler o cardápio</em></h2>
+      <p data-i18n="com.manifesto.p1">Em SJC, o cliente entra na cafeteria e abre o Instagram. Tira foto da mesa, do balcão, do letreiro. Marca o local. <strong>Seu ponto vira mídia gratuita.</strong> Ou vira só mais um.</p>
+      <p data-i18n="com.manifesto.p2">Trabalhamos com donos de cafeterias, restaurantes, hamburguerias, sorveterias e lojas boutique que entenderam isso: o espaço não é cenário, é estratégia. É o que faz o cliente voltar, marcar amigos e virar embaixador da marca sem você pedir.</p>
     </div>
   </section>
 
@@ -287,19 +288,19 @@
   <section class="com-segmento gastro" id="gastronomia">
     <div class="seg-grid">
       <div class="seg-img">
-        <img src="images/portfolio/case-sapore-greenwall.jpg" alt="Sapore Gelato Caffè em SJC — área de mesas com green wall e pendentes Edison" />
+        <img src="images/portfolio/case-sapore-greenwall.jpg" alt="Sapore Gelato Caffè em SJC, área de mesas com green wall e pendentes Edison" />
       </div>
       <div class="seg-text">
-        <span class="section-tag">Gastronomia · F&amp;B</span>
-        <h2>Arquitetura para <em>cafés, restaurantes e hamburguerias</em> em SJC</h2>
-        <p>Especialty coffee, hamburgueria autoral, gelateria, restaurante, dark kitchen — projetamos todos os formatos de F&amp;B. Cuidamos do fluxo operacional (cozinha, balcão, salão), da identidade visual integrada à arquitetura e do ponto fotogênico que vira marketing orgânico.</p>
-        <p>Os projetos da <strong>Sapore Gelato Caffè</strong> e da <strong>Portuga Bake Shop</strong> são alguns dos nossos cases mais reconhecidos — você provavelmente já entrou neles sem saber que projetamos.</p>
+        <span class="section-tag" data-i18n="com.gastro.tag">Gastronomia · F&amp;B</span>
+        <h2 data-i18n="com.gastro.h2">Arquitetura para <em>cafés, restaurantes e hamburguerias</em> em SJC</h2>
+        <p data-i18n="com.gastro.p1">Especialty coffee, hamburgueria autoral, gelateria, restaurante, dark kitchen: projetamos todos os formatos de F&amp;B. Cuidamos do fluxo operacional (cozinha, balcão, salão), da identidade visual integrada à arquitetura e do ponto fotogênico que vira marketing orgânico.</p>
+        <p data-i18n="com.gastro.p2">Os projetos da <strong>Sapore Gelato Caffè</strong> e da <strong>Portuga Bake Shop</strong> são alguns dos nossos cases mais reconhecidos. Você provavelmente já entrou neles sem saber que projetamos.</p>
         <div class="seg-tipos">
-          <span>Cafeteria / Especialidade</span>
-          <span>Restaurante</span>
-          <span>Hamburgueria</span>
-          <span>Sorveteria / Gelateria</span>
-          <span>Padaria autoral</span>
+          <span data-i18n="com.gastro.tipo1">Cafeteria / Especialidade</span>
+          <span data-i18n="com.gastro.tipo2">Restaurante</span>
+          <span data-i18n="com.gastro.tipo3">Hamburgueria</span>
+          <span data-i18n="com.gastro.tipo4">Sorveteria / Gelateria</span>
+          <span data-i18n="com.gastro.tipo5">Padaria autoral</span>
         </div>
       </div>
     </div>
@@ -312,17 +313,17 @@
         <img src="images/portfolio/proj-cm-brigadeiros.jpg" alt="Projeto de loja boutique em São José dos Campos" />
       </div>
       <div class="seg-text">
-        <span class="section-tag">Lojas, Consultórios &amp; Boutiques</span>
-        <h2>Projeto de <em>loja, consultório e clínica</em> em São José dos Campos</h2>
-        <p>O polo Aquarius/Urbanova concentra consultórios médicos, dentistas, fisioterapeutas, esteticistas e clínicas premium — um público que exige espaços com identidade tão refinada quanto o serviço. Também atendemos óticas independentes, lojas autorais, estúdios e kiosks.</p>
-        <p>Projetamos consultórios boutique, salas clínicas com fluxo otimizado, vitrines de varejo que convertem e áreas de atendimento que diferenciam a experiência. Da CM Brigadeiros (kiosk shopping) a consultórios médicos em torres comerciais do Aquarius.</p>
+        <span class="section-tag" data-i18n="com.lojas.tag">Lojas, Consultórios &amp; Boutiques</span>
+        <h2 data-i18n="com.lojas.h2">Projeto de <em>loja, consultório e clínica</em> em São José dos Campos</h2>
+        <p data-i18n="com.lojas.p1">O polo Aquarius/Urbanova concentra consultórios médicos, dentistas, fisioterapeutas, esteticistas e clínicas premium: um público que exige espaços com identidade tão refinada quanto o serviço. Também atendemos óticas independentes, lojas autorais, estúdios e kiosks.</p>
+        <p data-i18n="com.lojas.p2">Projetamos consultórios boutique, salas clínicas com fluxo otimizado, vitrines de varejo que convertem e áreas de atendimento que diferenciam a experiência. Da CM Brigadeiros (kiosk shopping) a consultórios médicos em torres comerciais do Aquarius.</p>
         <div class="seg-tipos">
-          <span>Consultórios médicos</span>
-          <span>Clínicas de estética</span>
-          <span>Loja boutique</span>
-          <span>Óticas</span>
-          <span>Estúdios</span>
-          <span>Kiosks em shopping</span>
+          <span data-i18n="com.lojas.tipo1">Consultórios médicos</span>
+          <span data-i18n="com.lojas.tipo2">Clínicas de estética</span>
+          <span data-i18n="com.lojas.tipo3">Loja boutique</span>
+          <span data-i18n="com.lojas.tipo4">Óticas</span>
+          <span data-i18n="com.lojas.tipo5">Estúdios</span>
+          <span data-i18n="com.lojas.tipo6">Kiosks em shopping</span>
         </div>
       </div>
     </div>
@@ -332,40 +333,40 @@
   <section class="com-cases" id="cases">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Projetos que você conhece</span>
-        <h2>Pontos de referência em SJC que assinamos</h2>
+        <span class="section-tag" data-i18n="com.cases.tag">Projetos que você conhece</span>
+        <h2 data-i18n="com.cases.h2">Pontos de referência em SJC que assinamos</h2>
       </div>
       <div class="cases-row">
         <div class="case-item">
-          <img src="images/portfolio/hero-sapore-balcao.jpg" alt="Sapore Gelato Caffè — balcão de gelato com painel verde e iluminação cênica" />
+          <img src="images/portfolio/hero-sapore-balcao.jpg" alt="Sapore Gelato Caffè, balcão de gelato com painel verde e iluminação cênica" />
           <div class="case-body">
-            <span class="case-tag">Gastronomia · Gelateria</span>
+            <span class="case-tag" data-i18n="com.case1.tag">Gastronomia · Gelateria</span>
             <h3>Sapore Gelato Caffè</h3>
-            <p>Loja com identidade visual integrada à arquitetura. Um dos estabelecimentos mais visitados e fotografados de SJC.</p>
+            <p data-i18n="com.case1.p">Loja com identidade visual integrada à arquitetura. Um dos estabelecimentos mais visitados e fotografados de SJC.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/proj-cm-brigadeiros.jpg" alt="CM Brigadeiros — kiosk em shopping" />
+          <img src="images/portfolio/proj-cm-brigadeiros.jpg" alt="CM Brigadeiros, kiosk em shopping" />
           <div class="case-body">
-            <span class="case-tag">Varejo · Kiosk</span>
+            <span class="case-tag" data-i18n="com.case2.tag">Varejo · Kiosk</span>
             <h3>CM Brigadeiros</h3>
-            <p>Kiosk em shopping com identidade visual forte — paleta rose, detalhes em dourado e operação otimizada.</p>
+            <p data-i18n="com.case2.p">Kiosk em shopping com identidade visual forte: paleta rose, detalhes em dourado e operação otimizada.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-consultorio-boutique.jpg" alt="Consultório boutique em SJC — paleta terracota com espelho orgânico iluminado" />
+          <img src="images/portfolio/case-consultorio-boutique.jpg" alt="Consultório boutique em SJC: paleta terracota com espelho orgânico iluminado" />
           <div class="case-body">
-            <span class="case-tag">Saúde · Consultório boutique</span>
-            <h3>Consultório boutique</h3>
-            <p>Paleta terracota com bloco de cor assimétrico, espelho orgânico iluminado e mobiliário aconchegante. Atmosfera intimista para terapia e bem-estar.</p>
+            <span class="case-tag" data-i18n="com.case3.tag">Saúde · Consultório boutique</span>
+            <h3 data-i18n="com.case3.h3">Consultório boutique</h3>
+            <p data-i18n="com.case3.p">Paleta terracota com bloco de cor assimétrico, espelho orgânico iluminado e mobiliário aconchegante. Atmosfera intimista para terapia e bem-estar.</p>
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-consultorio-premium.jpg" alt="Consultório clínico premium em SJC — madeira clara, mármore e pendente dourado escultural" />
+          <img src="images/portfolio/case-consultorio-premium.jpg" alt="Consultório clínico premium em SJC: madeira clara, mármore e pendente dourado escultural" />
           <div class="case-body">
-            <span class="case-tag">Saúde · Clínica premium</span>
-            <h3>Consultório clínico — Aquarius</h3>
-            <p>Madeira clara, mármore branco, pendente dourado escultural e parede curva assinatura. Estética luxury wellness para o polo médico de SJC.</p>
+            <span class="case-tag" data-i18n="com.case4.tag">Saúde · Clínica premium</span>
+            <h3 data-i18n="com.case4.h3">Consultório clínico em Aquarius</h3>
+            <p data-i18n="com.case4.p">Madeira clara, mármore branco, pendente dourado escultural e parede curva assinatura. Estética luxury wellness para o polo médico de SJC.</p>
           </div>
         </div>
       </div>
@@ -375,37 +376,37 @@
   <!-- DIFERENCIAIS -->
   <section class="com-diff">
     <div class="container">
-      <h2>O que entregamos diferente</h2>
+      <h2 data-i18n="com.diff.h2">O que entregamos diferente</h2>
       <div class="diff-grid">
         <div class="diff-item">
           <div class="diff-icon">◈</div>
-          <h3>Identidade visual integrada à arquitetura</h3>
-          <p>Marca, materialidade, paleta e iluminação caminham juntas. O espaço comunica o posicionamento do negócio em cada detalhe.</p>
+          <h3 data-i18n="com.diff1.h3">Identidade visual integrada à arquitetura</h3>
+          <p data-i18n="com.diff1.p">Marca, materialidade, paleta e iluminação caminham juntas. O espaço comunica o posicionamento do negócio em cada detalhe.</p>
         </div>
         <div class="diff-item">
           <div class="diff-icon">◆</div>
-          <h3>Fluxo operacional pensado para o dia a dia</h3>
-          <p>Cozinha, balcão, salão, estoque e atendimento alinhados com a operação real — não só com a foto bonita.</p>
+          <h3 data-i18n="com.diff2.h3">Fluxo operacional pensado para o dia a dia</h3>
+          <p data-i18n="com.diff2.p">Cozinha, balcão, salão, estoque e atendimento alinhados com a operação real, não só com a foto bonita.</p>
         </div>
         <div class="diff-item">
           <div class="diff-icon">◇</div>
-          <h3>Ponto fotogênico = marketing orgânico</h3>
-          <p>Áreas pensadas para virar conteúdo: o cliente fotografa, marca e divulga. Seu espaço trabalha como mídia 24h.</p>
+          <h3 data-i18n="com.diff3.h3">Ponto fotogênico = marketing orgânico</h3>
+          <p data-i18n="com.diff3.p">Áreas pensadas para virar conteúdo: o cliente fotografa, marca e divulga. Seu espaço trabalha como mídia 24h.</p>
         </div>
         <div class="diff-item">
           <div class="diff-icon">▣</div>
-          <h3>Execução com equipe própria ou acompanhamento</h3>
-          <p>Você escolhe: equipe Assis Carrer chave na mão ou acompanhamento técnico da sua equipe. Prazo e qualidade garantidos.</p>
+          <h3 data-i18n="com.diff4.h3">Execução com equipe própria ou acompanhamento</h3>
+          <p data-i18n="com.diff4.p">Você escolhe: equipe Assis Carrer chave na mão ou acompanhamento técnico da sua equipe. Prazo e qualidade garantidos.</p>
         </div>
         <div class="diff-item">
           <div class="diff-icon">◉</div>
-          <h3>Custo aprovado antes da obra</h3>
-          <p>Renders, especificações e cotações antes de qualquer compra. Sem surpresa no orçamento.</p>
+          <h3 data-i18n="com.diff5.h3">Custo aprovado antes da obra</h3>
+          <p data-i18n="com.diff5.p">Renders, especificações e cotações antes de qualquer compra. Sem surpresa no orçamento.</p>
         </div>
         <div class="diff-item">
           <div class="diff-icon">◍</div>
-          <h3>Cases reconhecíveis em SJC</h3>
-          <p>Sapore, Portuga, CM e outros. Prova social que o cliente já viu funcionando — vai inaugurar em escritório com lastro.</p>
+          <h3 data-i18n="com.diff6.h3">Cases reconhecíveis em SJC</h3>
+          <p data-i18n="com.diff6.p">Sapore, Portuga, CM e outros. Prova social que o cliente já viu funcionando: vai inaugurar em escritório com lastro.</p>
         </div>
       </div>
     </div>
@@ -414,54 +415,54 @@
   <!-- PROCESSO -->
   <section class="com-processo">
     <div class="container">
-      <span class="section-tag">Como funciona</span>
-      <h2>Do briefing à inauguração, em 4 passos</h2>
-      <p>Processo claro, prazos definidos, custos aprovados antes da obra.</p>
+      <span class="section-tag" data-i18n="com.proc.tag">Como funciona</span>
+      <h2 data-i18n="com.proc.h2">Do briefing à inauguração, em 4 passos</h2>
+      <p data-i18n="com.proc.sub">Processo claro, prazos definidos, custos aprovados antes da obra.</p>
       <div class="processo-mini">
         <div class="pm-item">
           <div class="pm-num">01</div>
-          <h4>Briefing</h4>
-          <p>Entendemos o negócio, a marca, o público e a operação. Visita técnica e diagnóstico do ponto.</p>
+          <h4 data-i18n="com.proc1.h4">Briefing</h4>
+          <p data-i18n="com.proc1.p">Entendemos o negócio, a marca, o público e a operação. Visita técnica e diagnóstico do ponto.</p>
         </div>
         <div class="pm-item">
           <div class="pm-num">02</div>
-          <h4>Anteprojeto + 3D</h4>
-          <p>Layout, materiais, identidade visual e renders. Você aprova antes de qualquer compra.</p>
+          <h4 data-i18n="com.proc2.h4">Anteprojeto + 3D</h4>
+          <p data-i18n="com.proc2.p">Layout, materiais, identidade visual e renders. Você aprova antes de qualquer compra.</p>
         </div>
         <div class="pm-item">
           <div class="pm-num">03</div>
-          <h4>Projeto Executivo</h4>
-          <p>Documentação técnica, cotações, cronograma e aprovações. Tudo pronto para a obra rodar.</p>
+          <h4 data-i18n="com.proc3.h4">Projeto Executivo</h4>
+          <p data-i18n="com.proc3.p">Documentação técnica, cotações, cronograma e aprovações. Tudo pronto para a obra rodar.</p>
         </div>
         <div class="pm-item">
           <div class="pm-num">04</div>
-          <h4>Execução</h4>
-          <p>Equipe própria ou acompanhamento técnico. Entrega no prazo com book fotográfico de inauguração.</p>
+          <h4 data-i18n="com.proc4.h4">Execução</h4>
+          <p data-i18n="com.proc4.p">Equipe própria ou acompanhamento técnico. Entrega no prazo com book fotográfico de inauguração.</p>
         </div>
       </div>
-      <a href="processo.html" class="btn btn-outline">Ver processo completo</a>
+      <a href="processo.html" class="btn btn-outline" data-i18n="com.cta.seeprocess">Ver processo completo</a>
     </div>
   </section>
 
   <!-- DEPOIMENTO -->
   <section class="com-depoimento">
     <div class="container">
-      <span class="section-tag" style="display:block;margin-bottom:20px;">Depoimento</span>
-      <blockquote>
-        "Já tinha trabalhado com arquiteto antes e a diferença foi grande. O ponto comercial virou parte da nossa marca — cliente entra, tira foto, marca a gente."
+      <span class="section-tag" style="display:block;margin-bottom:20px;" data-i18n="com.dep.tag">Depoimento</span>
+      <blockquote data-i18n="com.dep.q">
+        "Já tinha trabalhado com arquiteto antes e a diferença foi grande. O ponto comercial virou parte da nossa marca: cliente entra, tira foto, marca a gente."
       </blockquote>
-      <cite>— Carlos R. · Cafeteria em São José dos Campos</cite>
+      <cite data-i18n="com.dep.cite">Carlos R. · Cafeteria em São José dos Campos</cite>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="com-cta">
     <div class="container">
-      <h2>Pronto para inaugurar o próximo ponto que vira referência?</h2>
-      <p>Cafeteria, restaurante, loja boutique, kiosk. Conte sobre o negócio — respondemos em até 1 hora em horário comercial com uma estimativa inicial.</p>
+      <h2 data-i18n="com.cta.h2">Pronto para inaugurar o próximo ponto que vira referência?</h2>
+      <p data-i18n="com.cta.p">Cafeteria, restaurante, loja boutique, kiosk. Conte sobre o negócio: respondemos em até 1 hora em horário comercial com uma estimativa inicial.</p>
       <div class="btn-row">
-        <a href="index.html#contato" class="btn btn-primary">Orçamento em 24h</a>
-        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline">Falar no WhatsApp</a>
+        <a href="index.html#contato" class="btn btn-primary" data-i18n="com.cta.budget24h">Orçamento em 24h</a>
+        <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline" data-i18n="com.cta.whatsapp">Falar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -472,14 +473,14 @@
       <a href="index.html">
         <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="footer-logo" />
       </a>
-      <p class="footer-copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
+      <p class="footer-copy" data-i18n="com.footer.copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
       <ul class="footer-nav">
-        <li><a href="index.html#sobre">Sobre</a></li>
-        <li><a href="residencial.html">Residencial</a></li>
-        <li><a href="comercial.html">Comercial</a></li>
-        <li><a href="processo.html">Processo</a></li>
-        <li><a href="index.html#portfolio">Portfólio</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="index.html#sobre" data-i18n="com.nav.sobre">Sobre</a></li>
+        <li><a href="residencial.html" data-i18n="com.nav.residencial">Residencial</a></li>
+        <li><a href="comercial.html" data-i18n="com.nav.comercial">Comercial</a></li>
+        <li><a href="processo.html" data-i18n="com.nav.processo">Processo</a></li>
+        <li><a href="index.html#portfolio" data-i18n="com.nav.portfolio">Portfólio</a></li>
+        <li><a href="index.html#contato" data-i18n="com.nav.contato">Contato</a></li>
       </ul>
     </div>
   </footer>
@@ -492,18 +493,105 @@
   </a>
 
   <script>
+    window.AC_EN = {
+      "com.nav.sobre": "About",
+      "com.nav.residencial": "Residential",
+      "com.nav.comercial": "Commercial",
+      "com.nav.processo": "Process",
+      "com.nav.portfolio": "Portfolio",
+      "com.nav.contato": "Contact",
+      "com.hero.tag": "Commercial Architecture · São José dos Campos",
+      "com.hero.h1": "Your storefront is your <em>biggest media.</em><br/>We design it as media.",
+      "com.hero.p": "Commercial architecture in SJC for coffee shops, restaurants, burger joints, ice cream shops and boutique stores. We designed Sapore Gelato, Portuga Bake Shop and other landmark spots in the city.",
+      "com.hero.proof": "100+ projects · 7 years · SJC · Commercial &amp; F&amp;B",
+      "com.cta.budget24h": "Get a Quote in 24h",
+      "com.hero.cta.projects": "View Projects",
+      "com.manifesto.tag": "Why commercial design matters",
+      "com.manifesto.h2": "The customer decides whether to walk in <em>before reading the menu</em>",
+      "com.manifesto.p1": "In SJC, the customer walks into the coffee shop and opens Instagram. They photograph the table, the counter, the sign. They tag the location. <strong>Your storefront becomes free media.</strong> Or it becomes just another shop.",
+      "com.manifesto.p2": "We work with owners of coffee shops, restaurants, burger joints, ice cream shops and boutique stores who understand this: the space isn't a backdrop, it's a strategy. It's what brings customers back, gets them tagging friends and turns them into brand ambassadors without you asking.",
+      "com.gastro.tag": "Food &amp; Beverage",
+      "com.gastro.h2": "Architecture for <em>cafés, restaurants and burger joints</em> in SJC",
+      "com.gastro.p1": "Specialty coffee, signature burger joint, gelato shop, restaurant, dark kitchen: we design every F&amp;B format. We handle the operational flow (kitchen, counter, dining room), the visual identity integrated into the architecture and the photogenic spot that becomes organic marketing.",
+      "com.gastro.p2": "The projects for <strong>Sapore Gelato Caffè</strong> and <strong>Portuga Bake Shop</strong> are some of our best-known cases. You've probably walked into one without knowing we designed it.",
+      "com.gastro.tipo1": "Coffee Shop / Specialty",
+      "com.gastro.tipo2": "Restaurant",
+      "com.gastro.tipo3": "Burger Joint",
+      "com.gastro.tipo4": "Ice Cream / Gelato Shop",
+      "com.gastro.tipo5": "Signature Bakery",
+      "com.lojas.tag": "Shops, Practices &amp; Boutiques",
+      "com.lojas.h2": "Design for <em>shops, medical practices and clinics</em> in São José dos Campos",
+      "com.lojas.p1": "The Aquarius/Urbanova district is home to medical practices, dentists, physical therapists, aestheticians and premium clinics: an audience that expects spaces with an identity as refined as the service. We also work with independent optical shops, signature stores, studios and kiosks.",
+      "com.lojas.p2": "We design boutique practices, clinical rooms with optimized flow, retail displays that convert and reception areas that elevate the experience. From CM Brigadeiros (a mall kiosk) to medical practices in Aquarius office towers.",
+      "com.lojas.tipo1": "Medical Practices",
+      "com.lojas.tipo2": "Aesthetic Clinics",
+      "com.lojas.tipo3": "Boutique Store",
+      "com.lojas.tipo4": "Optical Shops",
+      "com.lojas.tipo5": "Studios",
+      "com.lojas.tipo6": "Mall Kiosks",
+      "com.cases.tag": "Projects you already know",
+      "com.cases.h2": "Landmark spots in SJC that we designed",
+      "com.case1.tag": "Food &amp; Beverage · Gelato Shop",
+      "com.case1.p": "A store with visual identity fully integrated into the architecture. One of the most visited and photographed spots in SJC.",
+      "com.case2.tag": "Retail · Kiosk",
+      "com.case2.p": "A mall kiosk with strong visual identity: a rosé palette, gold details and optimized operation.",
+      "com.case3.tag": "Health · Boutique Practice",
+      "com.case3.h3": "Boutique Practice",
+      "com.case3.p": "A terracotta palette with an asymmetric color block, an illuminated organic mirror and cozy furniture. An intimate atmosphere for therapy and wellness.",
+      "com.case4.tag": "Health · Premium Clinic",
+      "com.case4.h3": "Medical Practice in Aquarius",
+      "com.case4.p": "Light wood, white marble, a sculptural gold pendant light and a signature curved wall. A luxury wellness aesthetic for SJC's medical district.",
+      "com.diff.h2": "What we deliver differently",
+      "com.diff1.h3": "Visual identity integrated into the architecture",
+      "com.diff1.p": "Brand, materiality, palette and lighting move together. The space communicates the business's positioning in every detail.",
+      "com.diff2.h3": "Operational flow designed for the day to day",
+      "com.diff2.p": "Kitchen, counter, dining room, storage and service are aligned with real operations, not just the pretty photo.",
+      "com.diff3.h3": "A photogenic spot equals organic marketing",
+      "com.diff3.p": "Areas designed to become content: customers photograph, tag and share. Your space works as media 24 hours a day.",
+      "com.diff4.h3": "Execution with our own team or oversight",
+      "com.diff4.p": "You choose: turnkey delivery by the Assis Carrer team or technical oversight of your own team. Schedule and quality guaranteed.",
+      "com.diff5.h3": "Cost approved before construction",
+      "com.diff5.p": "Renders, specifications and quotes before any purchase. No surprises in the budget.",
+      "com.diff6.h3": "Recognizable cases across SJC",
+      "com.diff6.p": "Sapore, Portuga, CM and others. Social proof the customer has already seen working: you'll open with an office that has a track record.",
+      "com.proc.tag": "How it works",
+      "com.proc.h2": "From briefing to opening day, in 4 steps",
+      "com.proc.sub": "A clear process, defined timelines, costs approved before construction begins.",
+      "com.proc1.h4": "Briefing",
+      "com.proc1.p": "We get to know the business, the brand, the audience and the operation. Site visit and assessment of the location.",
+      "com.proc2.h4": "Preliminary Design + 3D",
+      "com.proc2.p": "Layout, materials, visual identity and renders. You approve before any purchase.",
+      "com.proc3.h4": "Executive Design",
+      "com.proc3.p": "Technical documentation, quotes, schedule and approvals. Everything ready for construction to begin.",
+      "com.proc4.h4": "Execution",
+      "com.proc4.p": "Our own team or technical oversight. On-time delivery with a photo book of the opening.",
+      "com.cta.seeprocess": "See the Full Process",
+      "com.dep.tag": "Testimonial",
+      "com.dep.q": "&quot;I'd worked with an architect before and the difference was huge. Our storefront became part of our brand: customers walk in, take a photo, tag us.&quot;",
+      "com.dep.cite": "Carlos R. · Coffee Shop in São José dos Campos",
+      "com.cta.h2": "Ready to open your next landmark location?",
+      "com.cta.p": "Coffee shop, restaurant, boutique store, kiosk. Tell us about the business: we respond within 1 hour during business hours with an initial estimate.",
+      "com.cta.whatsapp": "Chat on WhatsApp",
+      "com.footer.copy": "&copy; 2026 Assis Carrer Arquitetura. All rights reserved."
+    };
+  </script>
+  <script src="i18n.js"></script>
+
+  <script>
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', navLinks.classList.contains('open'));
     });
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navLinks.classList.remove('open');
         document.body.style.overflow = '';
+        document.body.classList.remove('nav-open');
       });
     });
 
