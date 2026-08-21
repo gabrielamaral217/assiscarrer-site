@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-08-21** · Revisão de campanhas e resultados (1 a 21 ago) · 8 achados, 3 bugs de tracking confirmados no código · NADA aplicado ainda, aguardando confirmação
+> Última atualização: **2026-08-21** · Revisão de campanhas e resultados (1 a 21 ago) · 8 achados, 4 bugs confirmados no código · Teste A/B: sem resultado, 3 bloqueios · NADA aplicado ainda, aguardando confirmação
 
 ---
 
@@ -46,7 +46,7 @@
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
-| Teste A/B LP mobile | ❌ | **Sem tráfego: 2 visualizações em 28 dias.** A campanha manda 173 de 187 cliques pra home. A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) |
+| Teste A/B LP mobile | ❌ | **Nunca deu resultado e não daria nem com tráfego (3 bloqueios, ver revisão 2026-08-21).** 28 dias: A = 2 views / 0 usuários · B = 0 views. Sem evento principal no GA4. E o método de leitura era furado: a frase de prefill de A é a frase padrão de 5 outras páginas, só B era identificável. A = `lp-apartamento.html` · B = `lp-apartamento-v2.html` · split 50/50 via `ab-test.js` |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
 | Dark mode contraste | ✅ | Bug sistêmico corrigido: `var(--white)` era usado tanto como token de superfície reativo quanto como "branco literal" sobre fundos sempre-escuros (foto do hero, seções navy) — no dark mode isso invertia pra quase-preto. Afetava os CTAs do hero, botão Contato do menu, ícone hambúrguer e o menu mobile inteiro no `index.html`. Também corrigidas 3 páginas (`residencial`, `comercial`, `processo`) que não tinham CSS de dark mode próprio nenhum (testemunhos e cases com texto navy sobre fundo quase-preto) |
 | Travessões no copy | ✅ | Removidos de todos os textos visíveis nas 7 páginas públicas (títulos, parágrafos, alt text, meta tags) — reescritos com vírgula, dois-pontos ou frases separadas |
@@ -149,6 +149,7 @@
 - [ ] **Marcar eventos principais no GA4** (achado 02) — 5 min, só painel, sem tocar no site
 - [ ] **Tirar o `source` do `main.js:72`** (achado 03) — 1 palavra
 - [ ] **Cortar Taubaté e Caçapava da segmentação** (achado 04) — libera ~R$65/período
+- [ ] **Decidir: recomeçar o teste A/B direito (frase de prefill própria pra A + `variant` como dimensão no GA4 + tráfego) ou encerrar e remover o `ab-test.js`** (achado 08)
 - [ ] **Levantar nº real de conversas no WhatsApp em 1-21/08** — é o dado que valida ou derruba as 11 conversões
 - [ ] Disparar campanha de reviews (3 mensagens hoje, escalar até 10/semana 1)
   - Template em `MARKETING-LOG.md` ou recuperar da conversa de origem
@@ -219,7 +220,18 @@
 
 **🟡 Achado 07 (MÉDIO, Ads):** Pmax "Arquiteto São José dos Campos" com 0 impressões em tudo (inclusive Telas de TV) poluindo relatórios. Conversões: 4 registrando, 3 sem conversões recentes, 1 não verificada.
 
-**🔵 Achado 08 (BAIXO, GA4):** teste A/B morto — LPs com 2 visualizações em 28 dias, 100% rejeição. `ab-test.js` continua sorteando visitantes que não existem.
+**🟠 Achado 08 (ALTO — revisado, GA4 + código):** **o teste A/B nunca produziu resultado, e não produziria nem com tráfego.** Três bloqueios independentes:
+
+1. **Sem tráfego.** Últimos 28 dias: A (`lp-apartamento.html`, título "Projeto Arquitetônico para Casais em...") = 2 views, 0 usuários, 100% rejeição. B (`lp-apartamento-v2.html`, título "Apartamento em São José dos Campos") = **não aparece no relatório**, 0 views. A campanha manda 173 de 187 cliques pra home.
+2. **Sem instrumentação.** Achado 02 — GA4 sem evento principal. Nada a comparar entre variantes.
+3. **Método de leitura quebrado na origem.** O log dizia "variante inferida pela frase do prefill". Mas a frase da variante A é a frase PADRÃO do site inteiro:
+   - A → `"Olá! Quero conversar sobre um projeto."` — idêntica à de `index`, `residencial`, `comercial`, `processo` e `lp-comercial` (verificado por grep)
+   - B → `"Olá! Vim pelo site, quero um orçamento de apartamento."` — única, 3 links
+   Só B era identificável. O controle nunca teve leitura possível.
+
+**Sobre os 618 views da LP em julho:** houve volume em algum momento, mas os bloqueios 2 e 3 já valiam lá, então aquele tráfego também não virou resultado. E provavelmente é irrecuperável: `ab-test.js` envia `ab_variant`/`ab_assignment` com o parâmetro `variant`, mas parâmetro só vira relatório depois de registrado como dimensão personalizada no GA4, e **esse registro não é retroativo**.
+
+**Pra rodar de verdade** são 3 coisas na ordem: (a) frase de prefill própria pra variante A, (b) registrar `variant` como dimensão personalizada no GA4, (c) grupo de anúncios mandando tráfego de "reforma de apartamento" pras LPs. Sem as três, roda de novo e dá em nada de novo.
 
 **Leilão — mudou o pelotão:** `favostudioarquitetura.com.br` **entrou com 13,48%** e supera em 50,42%. `robertafelix.com` recuou de 16,47% → 10,82% (supera em 50,95%). Também: ppsarquitetura.com, getninjas.com.br, fernandaauler.com.br (<10%).
 
