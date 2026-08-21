@@ -33,7 +33,7 @@ Esse arquivo contém:
 npx serve -l 3000 .
 
 # Validação rápida dos tracking IDs (deve retornar contagens não-zero)
-grep -c "AW-18186496405\|G-TXWFQ3D6PQ\|GTM-P6F5BN7Z" *.html
+grep -c "AW-18186496405\|G-DDECLK9VYV\|GTM-P6F5BN7Z" *.html
 
 # Confirma que tag antiga foi totalmente substituída
 grep -r "AW-18185024974" *.html main.js  # esperado: vazio

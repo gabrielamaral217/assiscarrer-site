@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-08-13** · Toggle EN/PT · Fix de contraste dark mode (bug sistêmico em `var(--white)`) · Ajustes mobile · Remoção de travessões em todos os textos
+> Última atualização: **2026-08-21** · Revisão de campanhas e resultados (1 a 21 ago) · 8 achados, 3 bugs de tracking confirmados no código · NADA aplicado ainda, aguardando confirmação
 
 ---
 
@@ -37,16 +37,16 @@
 | GA4 | ✅ | `G-DDECLK9VYV` (conta arquitetura@) |
 | Meta Pixel | ✅ | `2037009416852160` |
 | Google Ads tag | ✅ | `AW-18186496405` (conta arquitetura@assiscarrer.com) |
-| Conversão Lead Form | ✅ | Rótulo `F0xNCI3x6bIcEJXT_99D` · valor R$ 2.500 BRL |
-| Eventos custom | ✅ | `lead_form_submit`, `whatsapp_click`, `scroll_75` |
-| Campanha Google Ads | ✅ | "Search · Residencial+Comercial SJC" · Search puro · R$ 25/dia · 6 conv. a R$27/lead (14 dias) |
-| Crédito Google Ads | ✅ | R$ 880 vinculado (cobre ~35 dias) |
+| Conversão Lead Form | ❌ | Rótulo `F0xNCI3x6bIcEJXT_99D` · valor R$ 2.500 BRL. **BUG: dispara também em qualquer clique em `wa.me`** (`main.js:73` + 5 páginas), sem dedupe. Clique no botão verde conta igual a formulário enviado |
+| Eventos custom | 🟡 | `lead_form_submit`, `whatsapp_click`, `scroll_75` chegam no GA4, mas **nenhum marcado como evento principal** (GA4 mostra "Eventos principais: 0") |
+| Campanha Google Ads | 🟡 | "Search · Residencial+Comercial SJC" · Search puro · R$ 25/dia · 1 a 21 ago: R$460,28 · 187 cliques · 11 conv. a R$41,84. **Contagem de conversões não confiável, ver revisão 2026-08-21** |
+| Crédito Google Ads | ❌ | **Esgotado.** Saldo R$0,00 em 21/08. Gasto agora sai do Mastercard ...5270 (~R$660/mês no ritmo atual) |
 | Google Meu Negócio | ✅ | Categoria + descrição + 12 serviços + atributos + WhatsApp |
 | Reviews GMN | 🟡 | 2/10 (faltam 8 pra meta semana 1) |
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
-| Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) |
+| Teste A/B LP mobile | ❌ | **Sem tráfego: 2 visualizações em 28 dias.** A campanha manda 173 de 187 cliques pra home. A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
 | Dark mode contraste | ✅ | Bug sistêmico corrigido: `var(--white)` era usado tanto como token de superfície reativo quanto como "branco literal" sobre fundos sempre-escuros (foto do hero, seções navy) — no dark mode isso invertia pra quase-preto. Afetava os CTAs do hero, botão Contato do menu, ícone hambúrguer e o menu mobile inteiro no `index.html`. Também corrigidas 3 páginas (`residencial`, `comercial`, `processo`) que não tinham CSS de dark mode próprio nenhum (testemunhos e cases com texto navy sobre fundo quase-preto) |
 | Travessões no copy | ✅ | Removidos de todos os textos visíveis nas 7 páginas públicas (títulos, parágrafos, alt text, meta tags) — reescritos com vírgula, dois-pontos ou frases separadas |
@@ -78,19 +78,29 @@
 | Endereço oficial | R. Dr. Orlando Feirabend Filho, 230 · Centro Empresarial Aquarius · Sala 709 · Torre B · Jd. Aquarius · São José dos Campos/SP · 12246-190 |
 | Link review GMN | `https://g.page/r/CSoXeC74khRsEBM/review` |
 
-### Campanha Google Ads ativa
+### Campanha Google Ads ATIVA (a que gasta)
+
+| Campo | Valor |
+|-------|-------|
+| Nome | **Search · Residencial+Comercial SJC** |
+| Tipo | Search puro · 1 grupo de anúncios ("Grupo de anúncios 1") |
+| Orçamento | R$ 25/dia (gasto real ago: R$ 21,92/dia = 88% do teto) |
+| Lance | Maximizar conversões |
+| Conversão alvo | Enviar formulário de lead (`F0xNCI3x6bIcEJXT_99D`) · R$ 2.500 — ⚠️ ver achado 01 de 2026-08-21 |
+| Localizações | SJC + Taubaté + Caçapava + Jacareí (recomendado cortar Taubaté e Caçapava) |
+| Keywords com gasto | `"arquiteto são josé dos campos"`, `"arquiteto sjc"`, `"arquiteto taubaté"`, `"escritório de arquitetura sjc"`, `"projeto de interiores sjc"` |
+| Negativas (9) | autocad · curso · emprego · estudante · faculdade · gratis · salário · sketchup · vaga |
+| Extensões | Local (GMN) + chamada. Chamada: 1.301 impr · 0,38% · R$14,11 · 0 conv |
+| Recursos automáticos | ⚠️ **Ligados** — Google escolhendo páginas de destino sozinho, inclusive a versão `http://` |
+| Página de destino | Home (173 de 187 cliques) |
+
+### Campanha Performance Max (INATIVA — só polui relatório)
 
 | Campo | Valor |
 |-------|-------|
 | Nome | Arquiteto São José dos Campos |
 | Tipo | Performance Max |
-| Orçamento | R$ 25/dia · R$ 760/mês máximo |
-| Lance | Maximizar conversões |
-| Conversão alvo | Enviar formulário de lead (`F0xNCI3x6bIcEJXT_99D`) · R$ 2.500 |
-| Localizações | SJC + Taubaté + Caçapava + Jacareí |
-| Temas (10) | arquitetura, projeto arquitetonico, arquitetura de interiores, arquitetura residencial, projeto de arquitetura de interiores, serviços de arquitetura, arquitetos comerciais, arquiteto sjc, reforma apartamento sjc, arquiteto aquarius |
-| Anúncio | 4 títulos + 2 descrições + 9 imagens + 3 logos + telefone |
-| Status | Qualificada → Ativa após aprovação (~1h) |
+| Status | **0 impressões em tudo** (todos os dispositivos, todas as cidades, inclusive Telas de TV). Recomendado excluir |
 
 ### Imagens-chave em produção (`/site/images/portfolio/`)
 
@@ -135,6 +145,11 @@
 ## 🎯 Pendências
 
 ### Curto prazo (esta semana)
+- [ ] **Corrigir contagem de conversões** (achado 01 da revisão 2026-08-21) — nova ação de conversão no Ads só pra WhatsApp + dedupe no código
+- [ ] **Marcar eventos principais no GA4** (achado 02) — 5 min, só painel, sem tocar no site
+- [ ] **Tirar o `source` do `main.js:72`** (achado 03) — 1 palavra
+- [ ] **Cortar Taubaté e Caçapava da segmentação** (achado 04) — libera ~R$65/período
+- [ ] **Levantar nº real de conversas no WhatsApp em 1-21/08** — é o dado que valida ou derruba as 11 conversões
 - [ ] Disparar campanha de reviews (3 mensagens hoje, escalar até 10/semana 1)
   - Template em `MARKETING-LOG.md` ou recuperar da conversa de origem
   - Meta: 10 reviews em 7 dias, 30 em 90 dias (Parte 5.4 do plano)
@@ -171,6 +186,52 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-08-21 · Revisão de campanhas e resultados (1 a 21 ago) · 3 bugs de tracking confirmados
+**Pedido:** revisão das campanhas e resultados. Input: 22 prints de Google Ads + GA4 de 21/08/2026.
+
+**Relatório completo:** artifact `https://claude.ai/code/artifact/63972bb4-2732-45c6-b8aa-42f0de3241fa`
+
+**Números do período (Search · Residencial+Comercial SJC, 1 a 21 ago, 21 dias):**
+
+| Métrica | Ago (21d) | Jul (14d) | Var. por dia |
+|---|---|---|---|
+| Custo | R$ 460,28 | R$ 164,16 | +87% |
+| Cliques | 187 | 70 | +78% |
+| Impressões | 3.316 | 899 | +146% |
+| CTR | 5,64% | 7,79% | -28% |
+| CPC médio | R$ 2,46 | R$ 2,35 | +5% |
+| Conversões | 11 | 6 | +22% |
+| Custo/conv. | R$ 41,84 | R$ 27,36 | +53% |
+| Parcela de impressões | 56,63% | 47,39% | +9,2 p.p. |
+
+**🔴 Achado 01 (CRÍTICO, código):** `main.js:70-75` dispara `trackConversion()` (AW + rótulo `F0xNCI3x6bIcEJXT_99D`, R$2.500) em **qualquer** clique em link `wa.me`, incluindo o botão flutuante. Mesmo padrão em `comercial.html:600`, `residencial.html:531`, `processo.html:462`, `lp-apartamento.html:781`, `lp-comercial.html:765`. Sem dedupe. A ação de conversão no Ads se chama "Enviar formulário de lead" — ou seja, clique no botão verde = formulário enviado. Explica a inversão mobile/desktop: **desktop 10,45% de conv. (7 conv, R$24,06) vs mobile 3,33% (4 conv, R$72,96)**, oposto exato de julho (mobile 12,24%, desktop 0%). E explica o termo `arquitetos sjc`: 4 cliques → 4 conversões (100%).
+
+**🔴 Achado 02 (CRÍTICO, painel GA4):** "Eventos principais: 0". Os eventos chegam mas nenhum foi marcado como evento principal. GA4 não tem número de conversão nenhum — o Ads é fonte única, e está contaminado pelo achado 01.
+
+**🟠 Achado 03 (ALTO, código):** `main.js:72` envia `{ source: a.id }`. `source` é parâmetro reservado do GA4 e **reatribui a sessão inteira**. Confirmado no print: origem `waFloat / (not set)` com 2 sessões, roubadas de `google / cpc`.
+
+**🟠 Achado 04 (ALTO, Ads):** Taubaté R$56,76 / 26 cliques / **0 conversões** + keyword `"arquiteto taubaté"` R$59,74 / 27 cliques / 0 conv / pior CTR (4,79%). Caçapava R$8,08 / 0 conv. Extensão de chamada R$14,11 / 1.301 impr / 0,38% / 0 conv. Total ~R$79 (17% do período) sem retorno. SJC sozinha = 78,9% do custo e 10 das 11 conversões (R$36,30/conv). Jacareí converteu 1 (R$32,50), fica.
+
+**🟠 Achado 05 (ALTO, faturamento):** crédito R$880 **esgotado**. Saldo R$0,00, sem pagamentos futuros. Gasto passou pro Mastercard ...5270. ~R$660/mês no ritmo de R$21,92/dia.
+
+**🟡 Achado 06 (MÉDIO, Ads):** recursos criados automaticamente ligados. Google serve `http://` (sem HTTPS): 207 impr, CTR 1,45% vs 5,75% da home. E `residencial.html` (148 impr, CTR 4,05%). Home = 173 dos 187 cliques.
+
+**🟡 Achado 07 (MÉDIO, Ads):** Pmax "Arquiteto São José dos Campos" com 0 impressões em tudo (inclusive Telas de TV) poluindo relatórios. Conversões: 4 registrando, 3 sem conversões recentes, 1 não verificada.
+
+**🔵 Achado 08 (BAIXO, GA4):** teste A/B morto — LPs com 2 visualizações em 28 dias, 100% rejeição. `ab-test.js` continua sorteando visitantes que não existem.
+
+**Leilão — mudou o pelotão:** `favostudioarquitetura.com.br` **entrou com 13,48%** e supera em 50,42%. `robertafelix.com` recuou de 16,47% → 10,82% (supera em 50,95%). Também: ppsarquitetura.com, getninjas.com.br, fernandaauler.com.br (<10%).
+
+**Keywords (5 maiores = 87% do custo):** `"arquiteto são josé dos campos"` R$167,55/62/7,13% · `"arquiteto sjc"` R$106,85/42/5,66% · `"arquiteto taubaté"` R$59,74/27/4,79% · `"escritório de arquitetura sjc"` R$33,20/14/4,40% · `"projeto de interiores sjc"` R$32,47/14/7,18%. As 2 recomendações de julho que saíram do zero foram as duas últimas; `projeto de interiores sjc` empata em CTR com a principal da conta.
+
+**GA4 (28 dias):** 195 usuários (+28,3%) · 191 novos · 39s engajamento · `google/cpc` 141 usuários / 168 sessões · direto 30 · orgânico 16 · **`chatgpt.com / ai-assistant` 3 usuários / 4 sessões** (novo). Home 246 views / 44,1% rejeição; resto em unidades. Ressalvas: **Council Bluffs 19 de 195 usuários** (datacenter Google, ~10% não é gente) e GA4 registra 25-30% menos que os cliques do Ads.
+
+**Demografia (cliques):** 35-44 é a maior faixa, depois 25-34 · Feminino 83 vs Masculino 54 · **66 cliques (35%) do top 10% de renda**, alinhado ao público-alvo do plano; ~21 cliques dos 50% de menor renda.
+
+**⚠️ NADA FOI APLICADO.** Nenhuma mudança em campanha (regra do CLAUDE.md) e nenhuma correção de código, porque as correções alteram como as conversões passam a ser contadas. Ordem recomendada: (1) separar conversão de WhatsApp da de formulário, com dedupe; (2) marcar eventos principais no GA4; (3) tirar o `source` do `main.js:72`; (4) cortar Taubaté + Caçapava; (5) desligar recursos automáticos; (6) limpar conta; (7) decidir destino do teste A/B; (8) confirmar patamar de investimento.
+
+**Pergunta em aberto que decide tudo:** quantas conversas reais chegaram no WhatsApp entre 1 e 21/08? Se ~11, a medição está ok. Se 3-4, o CPL real é R$115-150 (acima da meta de R$80 do plano) e a prioridade vira a página, não o lance.
 
 ### 2026-08-13 · Toggle EN/PT · Fix de contraste dark mode · Ajustes mobile · Remoção de travessões
 **Pedido:** revisar o site com foco em mobile — (1) tirar o uso de travessão dos textos, (2) revisar contraste no dark mode (textos e logos), (3) manter o padrão de idioma do navegador com botão de troca EN/PT no menu, (4) revisar e melhorar a experiência mobile.
@@ -299,14 +360,14 @@ Resumo do `planomarketingassiscarrer.pdf` pra evitar precisar abrir o PDF toda v
 
 ```bash
 # Ver últimos commits
-cd /Users/gabriel.amaral/Site-AC/site && git log --oneline -10
+git log --oneline -10
 
-# Validar que IDs de tracking estão corretos
-grep -c "GTM-P6F5BN7Z" *.html        # esperado: 6
-grep -c "G-TXWFQ3D6PQ" *.html         # esperado: 6
-grep -c "2037009416852160" *.html     # esperado: 6
-grep -c "AW-18186496405" *.html       # esperado: 12 (gtag config + send_to)
-grep -c "F0xNCI3x6bIcEJXT_99D" *.html # esperado: 5 (LPs) + 1 (main.js)
+# Validar que IDs de tracking estão corretos (7 páginas públicas, 2 ocorrências cada)
+grep -l "GTM-P6F5BN7Z" *.html          # esperado: 7 arquivos
+grep -l "G-DDECLK9VYV" *.html          # esperado: 7 arquivos (NÃO G-TXWFQ3D6PQ, essa é a órfã)
+grep -l "2037009416852160" *.html      # esperado: 7 arquivos
+grep -l "AW-18186496405" *.html        # esperado: 7 arquivos
+grep -c "F0xNCI3x6bIcEJXT_99D" *.html main.js  # 6 páginas + main.js (index usa via main.js)
 
 # Confirmar que NÃO sobrou tag antiga
 grep -r "AW-18185024974\|HI92CLzb3LIcEM7rpd9D" *.html main.js
