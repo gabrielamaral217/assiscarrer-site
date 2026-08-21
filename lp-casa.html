@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto de Casa em São José dos Campos, do Terreno à Obra, Assis Carrer</title>
+  <meta name="description" content="Projeto de casa em SJC: construção em terreno, reforma e ampliação. Aprovação na prefeitura, projeto executivo e acompanhamento de obra. Urbanova, Esplanada do Sol, Jardim Oriente, Satélite." />
+  <meta name="keywords" content="projeto de casa em são josé dos campos, arquiteto urbanova, construir casa sjc, reforma de casa sjc, projeto arquitetônico casa, arquiteto esplanada do sol" />
+  <meta property="og:title" content="Projeto de Casa em São José dos Campos, do Terreno à Obra" />
+  <meta property="og:description" content="Para quem tem o terreno e vai construir, e para quem já tem a casa e quer deixá-la do jeito certo. Projeto completo, aprovação e obra acompanhada." />
+  <meta property="og:image" content="https://www.assiscarrer-arquitetura.com/images/portfolio/opt/proj-casa-render.jpg" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-P6F5BN7Z");</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDECLK9VYV"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DDECLK9VYV");gtag("config","AW-18186496405");</script>
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2037009416852160");fbq("track","PageView");</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037009416852160&ev=PageView&noscript=1" /></noscript>
+
+  <link rel="preload" as="image" href="images/portfolio/opt/proj-casa-render.webp" type="image/webp" fetchpriority="high" />
+
+  <style>
+    @font-face { font-family: 'Now'; src: url('fonts/Now-Light.otf') format('opentype'); font-weight: 300; }
+    @font-face { font-family: 'Now'; src: url('fonts/Now-Regular.otf') format('opentype'); font-weight: 400; }
+    @font-face { font-family: 'Now'; src: url('fonts/Now-Medium.otf') format('opentype'); font-weight: 500; }
+
+    :root {
+      color-scheme: light dark;
+      --navy:   #254467;
+      --copper: #A96D3E;
+      --dark:   #1C2D40;
+      --sand:   #C79872;
+      --cream:  #F5F0EB;
+      --white:  #ffffff;
+      --text:   #2a2a2a;
+      --muted:  #6b6b6b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Now', sans-serif; font-weight: 300; color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased; }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+    :focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
+
+    .section-tag {
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--copper); display: block; margin-bottom: 16px;
+    }
+    .inner { max-width: 1140px; margin: 0 auto; }
+
+    /* HEADER */
+    .lp-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(28,45,64,0.22);
+      backdrop-filter: blur(8px);
+    }
+    .lp-header img { height: 40px; width: auto; filter: drop-shadow(0 1px 4px rgba(0,0,0,0.35)); }
+    .lp-header-actions { display: flex; align-items: center; gap: 16px; }
+    .cta-header {
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #fff; border: 1px solid rgba(255,255,255,0.5);
+      padding: 10px 24px; transition: all 0.3s;
+    }
+    .cta-header:hover { background: #fff; color: var(--navy); }
+    .lang-toggle-lp {
+      font-family: 'Now', sans-serif;
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #fff; border: 1px solid rgba(255,255,255,0.4);
+      background: none; padding: 6px 12px; cursor: pointer; transition: all 0.3s;
+    }
+    .lang-toggle-lp:hover { background: #fff; color: var(--navy); }
+
+    /* HERO — fachada em full bleed. O render é 16:9, cortar em painel vertical
+       destruiria a composição, então aqui o hero foge do split das outras LPs. */
+    .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(to right, rgba(15,23,34,0.94) 0%, rgba(15,23,34,0.72) 42%, rgba(15,23,34,0.18) 100%),
+        linear-gradient(to top, rgba(15,23,34,0.85) 0%, transparent 45%);
+    }
+    .hero-content {
+      position: relative; z-index: 2; width: 100%;
+      max-width: 1140px; margin: 0 auto;
+      padding: 160px 40px 90px;
+    }
+    .hero-tag { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sand); margin-bottom: 22px; }
+    .hero-content h1 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(2rem, 4.4vw, 3.4rem);
+      line-height: 1.14; color: #fff; margin-bottom: 22px; max-width: 15ch;
+    }
+    .hero-content h1 em { font-style: normal; color: #f0c896; }
+    .hero-content > p.sub { font-size: 1.02rem; line-height: 1.75; color: rgba(255,255,255,0.78); max-width: 52ch; margin-bottom: 26px; }
+    .hero-proof { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand); margin-bottom: 32px; }
+    .btn-copper {
+      display: inline-block; background: var(--copper); color: #fff;
+      padding: 17px 40px; font-size: 12px; letter-spacing: 0.18em;
+      text-transform: uppercase; transition: background 0.3s; border: none; cursor: pointer;
+      font-family: 'Now', sans-serif;
+    }
+    .btn-copper:hover { background: var(--sand); }
+    .hero-nota { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 18px; letter-spacing: 0.04em; }
+
+    /* DOIS CAMINHOS */
+    .caminhos { background: var(--cream); padding: 88px 40px; }
+    .caminhos h2 {
+      font-family: 'Now', sans-serif; font-weight: 500;
+      font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--dark);
+      margin-bottom: 14px; line-height: 1.25; max-width: 20ch;
+    }
+    .caminhos > .inner > p.sub { font-size: 1rem; color: var(--muted); max-width: 62ch; line-height: 1.75; margin-bottom: 48px; }
+    .caminhos-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
+    .caminho-card {
+      background: var(--white); padding: 40px 36px 42px;
+      border-top: 3px solid var(--copper);
+      display: flex; flex-direction: column;
+    }
+    .caminho-card .cam-label {
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--copper); margin-bottom: 14px;
+    }
+    .caminho-card h3 { font-size: 1.35rem; font-weight: 500; color: var(--navy); margin-bottom: 14px; line-height: 1.3; }
+    .caminho-card > p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 26px; }
+    .caminho-card ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .caminho-card li { display: flex; gap: 12px; font-size: 0.92rem; color: var(--text); line-height: 1.6; }
+    .caminho-card li::before { content: ''; width: 16px; height: 1px; background: var(--copper); flex-shrink: 0; margin-top: 10px; }
+
+    /* DORES */
+    .dores { padding: 88px 40px; background: var(--white); }
+    .dores h2 { font-family: 'Now', sans-serif; font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.3rem); color: var(--dark); margin-bottom: 14px; line-height: 1.25; max-width: 22ch; }
+    .dores > .inner > p.sub { font-size: 1rem; color: var(--muted); max-width: 60ch; line-height: 1.75; margin-bottom: 48px; }
+    .dores-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2px; }
+    .dor-item { background: var(--cream); padding: 38px 30px; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
+    .dor-item:hover { border-color: var(--copper); }
+    .dor-num { font-size: 2.5rem; font-weight: 300; color: rgba(37,68,103,0.12); line-height: 1; margin-bottom: 16px; }
+    .dor-item h3 { font-size: 1.02rem; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
+    .dor-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    /* ESCOPO */
+    .escopo { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); min-height: 620px; }
+    .escopo-img { overflow: hidden; position: relative; }
+    .escopo-img img { height: 100%; transition: transform 0.7s ease; }
+    .escopo-img:hover img { transform: scale(1.04); }
+    .escopo-legenda {
+      position: absolute; left: 0; bottom: 0; right: 0;
+      padding: 22px 28px; background: linear-gradient(to top, rgba(15,23,34,0.9), transparent);
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.85);
+    }
+    .escopo-text {
+      background: var(--navy);
+      padding: clamp(60px, 8vw, 100px) clamp(36px, 5vw, 76px);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .escopo-text .section-tag { color: var(--sand); }
+    .escopo-text h2 { font-family: 'Now', sans-serif; font-weight: 500; font-size: clamp(1.55rem, 2.5vw, 2.15rem); color: #fff; margin-bottom: 22px; line-height: 1.25; }
+    .escopo-text > p { color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 10px; }
+    .beneficios { list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+    .beneficios li { display: flex; align-items: flex-start; gap: 12px; color: rgba(255,255,255,0.82); font-size: 0.94rem; line-height: 1.6; }
+    .beneficios li::before { content: ''; width: 18px; height: 1px; background: var(--copper); flex-shrink: 0; margin-top: 11px; }
+
+    /* GALERIA */
+    .galeria { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); height: 420px; gap: 2px; }
+    .galeria-item { overflow: hidden; cursor: pointer; position: relative; }
+    .galeria-item img { height: 100%; transition: transform 0.6s ease; }
+    .galeria-item:hover img { transform: scale(1.06); }
+    .galeria-cap {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 18px;
+      background: linear-gradient(to top, rgba(15,23,34,0.88), transparent);
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.9);
+    }
+
+    /* PROVA / ONDE ATUAMOS */
+    .prova { background: var(--cream); padding: 88px 40px; }
+    .prova h2 { font-family: 'Now', sans-serif; font-weight: 500; font-size: clamp(1.55rem, 3vw, 2.2rem); color: var(--dark); margin-bottom: 14px; line-height: 1.25; max-width: 22ch; }
+    .prova > .inner > p.sub { font-size: 1rem; color: var(--muted); max-width: 62ch; line-height: 1.75; margin-bottom: 44px; }
+    .prova-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; margin-bottom: 44px; }
+    .prova-card { background: var(--white); padding: 32px 28px; border-left: 3px solid var(--copper); }
+    .prova-card strong { display: block; font-size: 2rem; font-weight: 500; color: var(--navy); line-height: 1; margin-bottom: 10px; }
+    .prova-card span { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+    .bairros-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 18px; display: block; }
+    .bairros { display: flex; flex-wrap: wrap; gap: 10px; }
+    .bairro-chip {
+      background: var(--white); border: 1px solid rgba(37,68,103,0.14);
+      padding: 9px 18px; font-size: 0.88rem; color: var(--navy);
+    }
+
+    /* PROCESSO */
+    .processo-lp { background: var(--white); padding: 88px 40px; }
+    .processo-lp h2 { font-family: 'Now', sans-serif; font-weight: 500; font-size: clamp(1.55rem, 3vw, 2.2rem); color: var(--dark); margin-bottom: 12px; text-align: center; }
+    .processo-lp > .inner > p.sub { font-size: 0.98rem; color: var(--muted); text-align: center; max-width: 56ch; margin: 0 auto 48px; line-height: 1.7; }
+    .etapas { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 20px; }
+    .etapa { text-align: center; background: var(--cream); padding: 32px 20px 30px; }
+    .etapa-num {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--navy); color: #fff;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.08em;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+    }
+    .etapa h4 { font-weight: 500; font-size: 0.92rem; color: var(--navy); margin-bottom: 9px; }
+    .etapa p { font-size: 0.85rem; color: var(--muted); line-height: 1.62; }
+
+    /* FORM */
+    .form-section { background: var(--dark); padding: 88px 40px; }
+    .form-inner { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 60px; align-items: start; }
+    .form-texto .section-tag { color: var(--sand); }
+    .form-texto h2 { font-family: 'Now', sans-serif; font-weight: 500; font-size: clamp(1.55rem, 2.5vw, 2.1rem); color: #fff; margin-bottom: 18px; line-height: 1.25; }
+    .form-texto > p { color: rgba(255,255,255,0.58); line-height: 1.75; margin-bottom: 32px; }
+    .garantias { display: flex; flex-direction: column; gap: 12px; }
+    .garantia { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.72); font-size: 0.9rem; }
+    .garantia-icon { width: 32px; height: 32px; border: 1px solid var(--copper); display: flex; align-items: center; justify-content: center; color: var(--copper); flex-shrink: 0; font-size: 14px; }
+    form { display: flex; flex-direction: column; gap: 16px; }
+    form input, form select, form textarea {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      padding: 14px 16px; font-family: 'Now', sans-serif; font-size: 0.95rem;
+      color: #fff; outline: none; transition: border-color 0.3s;
+      border-radius: 0; -webkit-appearance: none;
+      width: 100%; min-width: 0; max-width: 100%;
+    }
+    form input::placeholder { color: rgba(255,255,255,0.3); }
+    form input:focus, form select:focus, form textarea:focus { border-color: var(--copper); }
+    form select option { background: var(--dark); color: #fff; }
+    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .btn-submit { background: var(--copper); border: none; color: #fff; padding: 16px; font-family: 'Now', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: background 0.3s; margin-top: 8px; }
+    .btn-submit:hover { background: var(--sand); }
+    .form-hint { margin-top: 12px; font-size: 12px; color: rgba(255,255,255,0.42); text-align: center; }
+    .form-ok { display: none; color: var(--sand); font-size: 0.9rem; text-align: center; padding: 12px; border: 1px solid var(--copper); margin-top: 12px; }
+    .form-ok.show { display: block; }
+
+    /* FOOTER */
+    .lp-footer { background: #111; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .lp-footer img { height: 28px; width: auto; }
+    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.32); }
+
+    /* WHATSAPP FLOAT */
+    .wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.15); z-index: 999; transition: transform .25s; }
+    .wa-float svg { width: 30px; height: 30px; }
+    .wa-float:hover { transform: translateY(-3px) scale(1.05); }
+    .wa-float::after { content:''; position:absolute; inset:0; border-radius:50%; border:2px solid #25D366; animation: waPulse 2.2s ease-out infinite; pointer-events:none; }
+    @keyframes waPulse { 0%{transform:scale(1);opacity:.7} 100%{transform:scale(1.6);opacity:0} }
+
+    /* LIGHTBOX */
+    .projeto-modal { position: fixed; inset: 0; background: rgba(15,31,53,0.94); backdrop-filter: blur(6px); z-index: 10001; display: none; align-items: center; justify-content: center; padding: 24px; opacity: 0; transition: opacity 0.3s ease; }
+    .projeto-modal.open { display: flex; opacity: 1; }
+    .projeto-modal-content { position: relative; max-width: 92vw; max-height: 88vh; display: flex; align-items: center; justify-content: center; transform: scale(0.97); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); }
+    .projeto-modal.open .projeto-modal-content { transform: scale(1); }
+    .projeto-modal-img { max-width: 100%; max-height: 88vh; object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    .projeto-modal-logo { position: absolute; width: 110px; height: 110px; opacity: 0.75; pointer-events: none; filter: brightness(0) invert(1) drop-shadow(0 4px 16px rgba(0,0,0,0.8)); }
+    .projeto-modal-close { position: absolute; top: 12px; right: 16px; background: none; border: none; color: #fff; font-size: 2.4rem; line-height: 1; cursor: pointer; padding: 8px 16px; z-index: 2; opacity: 0.85; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .etapas { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .prova-grid { grid-template-columns: minmax(0,1fr); }
+    }
+    @media (max-width: 768px) {
+      html { font-size: 16px; }
+      .lp-header { padding: 10px 16px; gap: 8px 12px; flex-wrap: wrap; }
+      .lp-header img { height: 26px; }
+      .lp-header-actions { flex: 1 1 100%; justify-content: space-between; gap: 10px; }
+      .cta-header { padding: 8px 14px; font-size: 10px; white-space: nowrap; letter-spacing: 0.12em; }
+      .lang-toggle-lp { padding: 6px 10px; font-size: 9px; letter-spacing: 0.1em; }
+
+      .hero { min-height: 92svh; }
+      .hero-bg::after {
+        background:
+          linear-gradient(to top, rgba(15,23,34,0.95) 0%, rgba(15,23,34,0.72) 42%, rgba(15,23,34,0.28) 100%);
+      }
+      .hero-content { padding: 130px 22px 52px; }
+      .hero-content h1 { font-size: 1.72rem; max-width: none; margin-bottom: 16px; }
+      .hero-content > p.sub { font-size: 0.95rem; margin-bottom: 20px; }
+      .hero-proof { font-size: 10px; letter-spacing: 0.1em; margin-bottom: 26px; }
+      .btn-copper { padding: 15px 30px; }
+
+      .caminhos, .dores, .prova, .processo-lp, .form-section { padding: 56px 22px; }
+      .caminhos-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
+      .caminho-card { padding: 32px 26px 34px; }
+      .caminhos h2, .dores h2, .prova h2 { font-size: 1.45rem; max-width: none; }
+      .caminhos > .inner > p.sub, .dores > .inner > p.sub, .prova > .inner > p.sub { margin-bottom: 30px; font-size: 0.95rem; }
+      .dores-grid { grid-template-columns: minmax(0,1fr); }
+      .dor-item { padding: 28px 24px; }
+      .escopo { grid-template-columns: minmax(0,1fr); min-height: 0; }
+      .escopo-img { height: 260px; }
+      .escopo-text { padding: 48px 24px; }
+      .escopo-text h2 { font-size: 1.4rem; }
+      .galeria { grid-template-columns: minmax(0,1fr); height: auto; }
+      .galeria-item { height: 230px; }
+      .etapas { grid-template-columns: minmax(0,1fr); gap: 12px; }
+      .etapa { display: grid; grid-template-columns: 46px 1fr; gap: 16px; text-align: left; align-items: start; padding: 22px 20px; }
+      .etapa-num { margin: 0; }
+      .processo-lp h2 { font-size: 1.4rem; }
+      .form-inner { grid-template-columns: minmax(0,1fr); gap: 32px; }
+      .form-texto h2 { font-size: 1.4rem; }
+      form input, form select { padding: 12px 14px; font-size: 16px; }
+      .lp-footer { flex-direction: column; text-align: center; padding: 24px; gap: 12px; }
+      .wa-float { width: 52px; height: 52px; right: 16px; bottom: 16px; }
+      .wa-float svg { width: 26px; height: 26px; }
+      .projeto-modal-logo { width: 64px; height: 64px; }
+    }
+    /* Dark mode. Atenção: --white aqui é token de SUPERFÍCIE (fundo de card), não "branco".
+       Texto sobre fundo sempre-escuro usa #fff literal, nunca var(--white).
+       Ver MARKETING-LOG.md, entrada de 2026-08-13. */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --white: #16191f;
+        --cream: #1a1d23;
+        --text:  #e8e8e8;
+        --muted: #a8a8a8;
+      }
+      body { background: #0d0f13; }
+      h1, h2, h3, h4 { color: var(--text); }
+      .caminho-card { background: #16191f; }
+      .caminho-card h3 { color: var(--sand); }
+      .caminho-card p, .caminho-card li { color: var(--muted); }
+      .dor-item { background: #16191f; }
+      .dor-item h3 { color: var(--sand); }
+      .dor-item p { color: var(--muted); }
+      .dor-num { color: rgba(199,152,114,0.18); }
+      .etapa { background: #16191f; }
+      .etapa h4 { color: var(--sand); }
+      .prova-card { background: #16191f; }
+      .prova-card strong { color: var(--sand); }
+      .bairro-chip { background: #16191f; color: var(--muted); border-color: rgba(255,255,255,0.14); }
+      input[type="text"], input[type="tel"], select, textarea {
+        background: #1f232a; color: #e8e8e8; border-color: rgba(255,255,255,0.18);
+      }
+      input::placeholder, textarea::placeholder { color: #707580; }
+      select option { background: #1f232a; color: #e8e8e8; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6F5BN7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="lp-header">
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+    <div class="lp-header-actions">
+      <button type="button" class="lang-toggle-lp" data-lang-toggle aria-label="Switch language">EN</button>
+      <a href="#form" class="cta-header" data-i18n="lpcasa.nav.cta">Orçamento em 24h</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/proj-casa-render.webp" />
+        <img src="images/portfolio/opt/proj-casa-render.jpg" alt="Projeto de casa em São José dos Campos: fachada em dois volumes com revestimento em pedra, ripado de madeira e jardim suspenso" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" />
+      </picture>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag" data-i18n="lpcasa.hero.tag">Projeto de casa · São José dos Campos e região</p>
+      <h1 data-i18n="lpcasa.hero.h1">Sua casa em SJC, <em>do terreno à obra</em></h1>
+      <p class="sub" data-i18n="lpcasa.hero.sub">Para quem comprou o terreno e vai construir do zero, e para quem já tem a casa e quer deixá-la do jeito que a vida pede agora. Projeto completo, aprovação na prefeitura e obra acompanhada de perto.</p>
+      <p class="hero-proof" data-i18n="lpcasa.hero.proof">100+ projetos · 7 anos em SJC · Urbanova · Esplanada do Sol · Jardim Oriente · Satélite</p>
+      <a href="#form" class="btn-copper" data-i18n="lpcasa.hero.cta">Orçamento em 24h</a>
+      <p class="hero-nota" data-i18n="lpcasa.hero.nota">Imagem: render de projeto autoral do escritório.</p>
+    </div>
+  </section>
+
+  <!-- DOIS CAMINHOS -->
+  <section class="caminhos">
+    <div class="inner">
+      <span class="section-tag" data-i18n="lpcasa.cam.tag">Por onde você começa</span>
+      <h2 data-i18n="lpcasa.cam.h2">Duas formas de chegar na mesma casa</h2>
+      <p class="sub" data-i18n="lpcasa.cam.sub">Construir do zero e reformar o que já existe são caminhos diferentes, com prazos, custos e documentação diferentes. O ponto de partida muda tudo, então a gente separa desde a primeira conversa.</p>
+      <div class="caminhos-grid">
+        <div class="caminho-card">
+          <span class="cam-label" data-i18n="lpcasa.cam1.label">Caminho 1</span>
+          <h3 data-i18n="lpcasa.cam1.h3">Você tem o terreno e vai construir</h3>
+          <p data-i18n="lpcasa.cam1.p">Terreno em condomínio ou em rua aberta, plano ou em declive. Antes de qualquer desenho bonito, a gente descobre o que aquele lote permite construir de fato.</p>
+          <ul>
+            <li data-i18n="lpcasa.cam1.li1">Estudo de viabilidade: recuos, taxa de ocupação, coeficiente e o que o condomínio exige</li>
+            <li data-i18n="lpcasa.cam1.li2">Implantação que aproveita sol, vento, vista e topografia em vez de brigar com eles</li>
+            <li data-i18n="lpcasa.cam1.li3">Projeto legal e aprovação na prefeitura, com a documentação toda em ordem</li>
+            <li data-i18n="lpcasa.cam1.li4">Estrutural com calculista e complementares antes de a primeira parede subir</li>
+          </ul>
+        </div>
+        <div class="caminho-card">
+          <span class="cam-label" data-i18n="lpcasa.cam2.label">Caminho 2</span>
+          <h3 data-i18n="lpcasa.cam2.h3">Você já tem a casa e quer mudá-la</h3>
+          <p data-i18n="lpcasa.cam2.p">A casa serviu bem por anos e agora não serve mais: a família cresceu, o trabalho virou home office, a cozinha fechada não faz mais sentido. Dá para resolver sem começar de novo.</p>
+          <ul>
+            <li data-i18n="lpcasa.cam2.li1">Levantamento do que existe hoje, incluindo o que é estrutural e não pode cair</li>
+            <li data-i18n="lpcasa.cam2.li2">Integração de ambientes, abertura de vãos e reforço estrutural quando necessário</li>
+            <li data-i18n="lpcasa.cam2.li3">Ampliação, novo pavimento, área gourmet, suíte ou espaço de trabalho</li>
+            <li data-i18n="lpcasa.cam2.li4">Fachada, esquadrias e iluminação repensadas sem perder a identidade da casa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DORES -->
+  <section class="dores">
+    <div class="inner">
+      <span class="section-tag" data-i18n="lpcasa.dores.tag">O que costuma dar errado</span>
+      <h2 data-i18n="lpcasa.dores.h2">Casa é a obra em que o erro custa mais caro</h2>
+      <p class="sub" data-i18n="lpcasa.dores.sub">Diferente de um apartamento, aqui você mexe em estrutura, fundação, documentação e uma obra que dura meses. Os três problemas abaixo aparecem em quase toda casa que chega até nós no meio do caminho.</p>
+      <div class="dores-grid">
+        <div class="dor-item">
+          <div class="dor-num">01</div>
+          <h3 data-i18n="lpcasa.dor1.h3">A obra para na prefeitura</h3>
+          <p data-i18n="lpcasa.dor1.p">Projeto feito sem olhar recuo, taxa de ocupação ou exigência do condomínio volta para a prancheta. Semanas perdidas, e às vezes o projeto inteiro precisa mudar.</p>
+        </div>
+        <div class="dor-item">
+          <div class="dor-num">02</div>
+          <h3 data-i18n="lpcasa.dor2.h3">O orçamento estoura no meio</h3>
+          <p data-i18n="lpcasa.dor2.p">Sem projeto executivo detalhado, cada decisão vira improviso no canteiro. Material comprado errado, retrabalho, e um custo final que ninguém consegue explicar.</p>
+        </div>
+        <div class="dor-item">
+          <div class="dor-num">03</div>
+          <h3 data-i18n="lpcasa.dor3.h3">Cada profissional puxa para um lado</h3>
+          <p data-i18n="lpcasa.dor3.p">Pedreiro, calculista, eletricista e marceneiro trabalhando sem um projeto comum é a receita de parede furada duas vezes e ponto de luz no lugar errado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESCOPO -->
+  <section class="escopo">
+    <div class="escopo-img">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/processo-obra.webp" />
+        <img src="images/portfolio/opt/processo-obra.jpg" alt="Obra de casa em São José dos Campos com estrutura de concreto e escoramento durante a execução" width="1400" height="1750" loading="lazy" decoding="async" />
+      </picture>
+      <div class="escopo-legenda" data-i18n="lpcasa.escopo.legenda">Obra acompanhada, não só desenhada</div>
+    </div>
+    <div class="escopo-text">
+      <span class="section-tag" data-i18n="lpcasa.escopo.tag">O que entra no projeto</span>
+      <h2 data-i18n="lpcasa.escopo.h2">Tudo o que a obra precisa, decidido antes de ela começar</h2>
+      <p data-i18n="lpcasa.escopo.p">A ideia é simples: quando o pedreiro chega, todas as decisões difíceis já foram tomadas, aprovadas por você e desenhadas. Nada fica para resolver no improviso.</p>
+      <ul class="beneficios">
+        <li data-i18n="lpcasa.benef1">Estudo de viabilidade do terreno ou levantamento completo da casa atual</li>
+        <li data-i18n="lpcasa.benef2">Plantas, cortes, fachadas e imagens 3D realistas para aprovar antes da obra</li>
+        <li data-i18n="lpcasa.benef3">Projeto legal e acompanhamento da aprovação na prefeitura</li>
+        <li data-i18n="lpcasa.benef4">Estrutural articulado com calculista e projetos complementares</li>
+        <li data-i18n="lpcasa.benef5">Projeto executivo detalhado, o documento que permite orçar e contratar com segurança</li>
+        <li data-i18n="lpcasa.benef6">Acompanhamento da obra, ou validação da equipe que você já tem</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" aria-label="Projetos de casa">
+    <div class="galeria-item">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/proj-casa-render.webp" />
+        <img src="images/portfolio/opt/proj-casa-render.jpg" alt="Render de fachada de casa em São José dos Campos com dois volumes, pedra e ripado de madeira" width="1600" height="900" loading="lazy" decoding="async" />
+      </picture>
+      <div class="galeria-cap" data-i18n="lpcasa.gal1">Fachada · projeto autoral</div>
+    </div>
+    <div class="galeria-item">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/case-real-ville.webp" />
+        <img src="images/portfolio/opt/case-real-ville.jpg" alt="Hall de entrada de casa em condomínio no Real Ville com trio de espelhos orgânicos sobre aparador de mármore" width="1400" height="2021" loading="lazy" decoding="async" />
+      </picture>
+      <div class="galeria-cap" data-i18n="lpcasa.gal2">Real Ville · casa em condomínio</div>
+    </div>
+    <div class="galeria-item">
+      <picture>
+        <source type="image/webp" srcset="images/portfolio/opt/case-living-pe-direito.webp" />
+        <img src="images/portfolio/opt/case-living-pe-direito.jpg" alt="Living com pé-direito alto e painel de mármore iluminado em residência de São José dos Campos" width="1200" height="2132" loading="lazy" decoding="async" />
+      </picture>
+      <div class="galeria-cap" data-i18n="lpcasa.gal3">Living · pé-direito duplo</div>
+    </div>
+  </section>
+
+  <!-- PROVA E BAIRROS -->
+  <section class="prova">
+    <div class="inner">
+      <span class="section-tag" data-i18n="lpcasa.prova.tag">Quem vai fazer</span>
+      <h2 data-i18n="lpcasa.prova.h2">Um escritório daqui, que vai no seu terreno</h2>
+      <p class="sub" data-i18n="lpcasa.prova.sub">Flavia e Beatriz tocam o escritório no Jardim Aquarius. Atendimento presencial, visita ao terreno ou à casa, e as mesmas arquitetas do começo ao fim do projeto.</p>
+      <div class="prova-grid">
+        <div class="prova-card">
+          <strong>100+</strong>
+          <span data-i18n="lpcasa.prova1">projetos residenciais e comerciais entregues</span>
+        </div>
+        <div class="prova-card">
+          <strong data-i18n="lpcasa.prova2.n">7 anos</strong>
+          <span data-i18n="lpcasa.prova2">de escritório aberto em São José dos Campos, desde 2019</span>
+        </div>
+        <div class="prova-card">
+          <strong>24h</strong>
+          <span data-i18n="lpcasa.prova3">é o prazo que a gente se compromete a responder com uma estimativa inicial</span>
+        </div>
+      </div>
+      <span class="bairros-label" data-i18n="lpcasa.bairros.label">Casas e obras em</span>
+      <div class="bairros">
+        <span class="bairro-chip">Urbanova</span>
+        <span class="bairro-chip">Esplanada do Sol</span>
+        <span class="bairro-chip">Jardim Oriente</span>
+        <span class="bairro-chip">Satélite</span>
+        <span class="bairro-chip">Real Ville</span>
+        <span class="bairro-chip" data-i18n="lpcasa.bairros.outros">e outros pontos de SJC e região</span>
+      </div>
+      <!-- SLOT DE DEPOIMENTOS: deixado vazio de propósito.
+           As outras páginas usam depoimentos com nomes fictícios como placeholder
+           (ver MARKETING-LOG.md). Aqui não foi inventado nenhum. Quando houver
+           depoimento real de cliente de casa, ele entra aqui. -->
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="processo-lp">
+    <div class="inner">
+      <span class="section-tag" style="text-align:center;" data-i18n="lpcasa.proc.tag">Como funciona</span>
+      <h2 data-i18n="lpcasa.proc.h2">Cinco etapas, na ordem que evita retrabalho</h2>
+      <p class="sub" data-i18n="lpcasa.proc.sub">Cada etapa só começa quando a anterior está aprovada por você. É o que impede a surpresa no meio da obra.</p>
+      <div class="etapas">
+        <div class="etapa">
+          <div class="etapa-num">01</div>
+          <div>
+            <h4 data-i18n="lpcasa.proc1.h4">Viabilidade</h4>
+            <p data-i18n="lpcasa.proc1.p">Visitamos o terreno ou a casa e levantamos o que a legislação e a estrutura permitem.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">02</div>
+          <div>
+            <h4 data-i18n="lpcasa.proc2.h4">Estudo preliminar</h4>
+            <p data-i18n="lpcasa.proc2.p">Implantação, distribuição dos ambientes e as primeiras imagens 3D para você reagir.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">03</div>
+          <div>
+            <h4 data-i18n="lpcasa.proc3.h4">Projeto legal</h4>
+            <p data-i18n="lpcasa.proc3.p">Documentação e entrada na prefeitura, acompanhando até sair a aprovação.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">04</div>
+          <div>
+            <h4 data-i18n="lpcasa.proc4.h4">Executivo</h4>
+            <p data-i18n="lpcasa.proc4.p">Detalhamento, estrutural e complementares. É com isso que se orça a obra de verdade.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">05</div>
+          <div>
+            <h4 data-i18n="lpcasa.proc5.h4">Obra</h4>
+            <p data-i18n="lpcasa.proc5.p">Acompanhamos a execução do início ao fim, ou validamos o trabalho da sua equipe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="form">
+    <div class="form-inner">
+      <div class="form-texto">
+        <span class="section-tag" data-i18n="lpcasa.form.tag">Vamos começar?</span>
+        <h2 data-i18n="lpcasa.form.h2">Conte sobre o terreno ou sobre a casa</h2>
+        <p data-i18n="lpcasa.form.p">Quanto mais a gente souber da fase em que você está, mais útil é a primeira conversa. Uma das arquitetas responde pessoalmente, sem compromisso.</p>
+        <div class="garantias">
+          <div class="garantia"><div class="garantia-icon" aria-hidden="true">✓</div><span data-i18n="lpcasa.garantia1">Visita ao terreno ou à casa em SJC e região</span></div>
+          <div class="garantia"><div class="garantia-icon" aria-hidden="true">✓</div><span data-i18n="lpcasa.garantia2">Aprovação na prefeitura acompanhada por nós</span></div>
+          <div class="garantia"><div class="garantia-icon" aria-hidden="true">✓</div><span data-i18n="lpcasa.garantia3">Você aprova materiais e custos antes da obra começar</span></div>
+          <div class="garantia"><div class="garantia-icon" aria-hidden="true">✓</div><span data-i18n="lpcasa.garantia4">Resposta em até 24 horas úteis</span></div>
+        </div>
+      </div>
+
+      <form id="lpFormCasa">
+        <div class="form-group">
+          <label for="f-nome" data-i18n="lpcasa.form.label.nome">Nome</label>
+          <input id="f-nome" type="text" name="nome" placeholder="Seu nome" data-i18n="lpcasa.form.ph.nome" data-i18n-attr="placeholder" required />
+        </div>
+        <div class="form-group">
+          <label for="f-wpp">WhatsApp</label>
+          <input id="f-wpp" type="tel" name="whatsapp" placeholder="(12) 9 0000-0000" required />
+        </div>
+        <div class="form-group">
+          <label for="f-fase" data-i18n="lpcasa.form.label.fase">Em que fase você está?</label>
+          <select id="f-fase" name="fase" required>
+            <option value="" data-i18n="lpcasa.form.select.ph">Selecione...</option>
+            <option data-i18n="lpcasa.opt.fase1">Tenho o terreno e quero construir</option>
+            <option data-i18n="lpcasa.opt.fase2">Vou comprar o terreno em breve</option>
+            <option data-i18n="lpcasa.opt.fase3">Tenho a casa e quero reformar</option>
+            <option data-i18n="lpcasa.opt.fase4">Tenho a casa e quero ampliar</option>
+            <option data-i18n="lpcasa.opt.fase5">Obra já começou e preciso de ajuda</option>
+            <option data-i18n="lpcasa.opt.fase6">Ainda avaliando</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-local" data-i18n="lpcasa.form.label.local">Onde fica?</label>
+          <select id="f-local" name="local" required>
+            <option value="" data-i18n="lpcasa.form.select.ph">Selecione...</option>
+            <option>Urbanova</option>
+            <option>Esplanada do Sol</option>
+            <option>Jardim Oriente</option>
+            <option>Satélite</option>
+            <option>Jardim Aquarius</option>
+            <option data-i18n="lpcasa.opt.local6">Outro bairro de São José dos Campos</option>
+            <option data-i18n="lpcasa.opt.local7">Outra cidade da região</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-prazo" data-i18n="lpcasa.form.label.prazo">Quando pretende iniciar?</label>
+          <select id="f-prazo" name="prazo" required>
+            <option value="" data-i18n="lpcasa.form.select.ph">Selecione...</option>
+            <option data-i18n="lpcasa.opt.prazo1">Imediato, próximos 30 dias</option>
+            <option data-i18n="lpcasa.opt.prazo2">Nos próximos 3 meses</option>
+            <option data-i18n="lpcasa.opt.prazo3">Nos próximos 6 meses</option>
+            <option data-i18n="lpcasa.opt.prazo4">Só pesquisando por enquanto</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit" data-i18n="lpcasa.form.submit">Quero meu orçamento em 24h</button>
+        <p class="form-hint" data-i18n="lpcasa.form.hint">Resposta em até 1 hora em horário comercial.</p>
+        <p class="form-ok" id="okCasa" data-i18n="lpcasa.form.ok">Recebemos! Em breve uma arquiteta entra em contato.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="lp-footer">
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+    <p data-i18n="lpcasa.footer.copy">© 2026 Assis Carrer Arquitetura, São José dos Campos, SP</p>
+  </footer>
+
+  <script>
+    window.AC_EN = {
+      "lpcasa.nav.cta": "Get a Quote in 24h",
+      "lpcasa.hero.tag": "House Design · São José dos Campos and region",
+      "lpcasa.hero.h1": "Your house in SJC, <em>from the lot to the build</em>",
+      "lpcasa.hero.sub": "For those who bought the lot and are building from scratch, and for those who already have the house and want it to fit the life they live now. Full design, city permits and a build we follow closely.",
+      "lpcasa.hero.proof": "100+ projects · 7 years in SJC · Urbanova · Esplanada do Sol · Jardim Oriente · Satélite",
+      "lpcasa.hero.cta": "Get a Quote in 24h",
+      "lpcasa.hero.nota": "Image: rendering of an in-house project.",
+
+      "lpcasa.cam.tag": "Where you start",
+      "lpcasa.cam.h2": "Two ways to reach the same house",
+      "lpcasa.cam.sub": "Building from scratch and renovating what already stands are different paths, with different timelines, costs and paperwork. The starting point changes everything, so we separate the two from the very first conversation.",
+      "lpcasa.cam1.label": "Path 1",
+      "lpcasa.cam1.h3": "You have the lot and you're building",
+      "lpcasa.cam1.p": "A lot inside a gated community or on an open street, flat or sloped. Before any pretty drawing, we find out what that piece of land actually allows you to build.",
+      "lpcasa.cam1.li1": "Feasibility study: setbacks, footprint ratio, floor area ratio and what the community requires",
+      "lpcasa.cam1.li2": "Siting that works with the sun, wind, views and slope instead of fighting them",
+      "lpcasa.cam1.li3": "Permit drawings and city approval, with all the paperwork in order",
+      "lpcasa.cam1.li4": "Structural design with an engineer, plus MEP, before the first wall goes up",
+      "lpcasa.cam2.label": "Path 2",
+      "lpcasa.cam2.h3": "You already have the house and want it changed",
+      "lpcasa.cam2.p": "The house served you well for years and now it doesn't: the family grew, work moved home, the closed kitchen stopped making sense. This can be solved without starting over.",
+      "lpcasa.cam2.li1": "Survey of what stands today, including what is structural and cannot come down",
+      "lpcasa.cam2.li2": "Opening up rooms, widening spans and reinforcing structure where needed",
+      "lpcasa.cam2.li3": "Extensions, a new floor, an outdoor kitchen, a suite or a workspace",
+      "lpcasa.cam2.li4": "Façade, windows and lighting rethought without losing the character of the house",
+
+      "lpcasa.dores.tag": "What usually goes wrong",
+      "lpcasa.dores.h2": "A house is the build where mistakes cost the most",
+      "lpcasa.dores.sub": "Unlike an apartment, here you touch structure, foundations, paperwork and a build that runs for months. The three problems below show up in almost every house that reaches us halfway through.",
+      "lpcasa.dor1.h3": "The build stalls at city hall",
+      "lpcasa.dor1.p": "A design drawn without checking setbacks, footprint or community rules comes straight back. Weeks lost, and sometimes the whole design has to change.",
+      "lpcasa.dor2.h3": "The budget blows up midway",
+      "lpcasa.dor2.p": "Without detailed construction drawings, every decision turns into improvisation on site. Wrong materials bought, work redone, and a final cost nobody can explain.",
+      "lpcasa.dor3.h3": "Every trade pulls a different way",
+      "lpcasa.dor3.p": "Builder, structural engineer, electrician and cabinetmaker working without one shared set of drawings is how you get a wall drilled twice and an outlet in the wrong place.",
+
+      "lpcasa.escopo.tag": "What the project includes",
+      "lpcasa.escopo.h2": "Everything the build needs, decided before it starts",
+      "lpcasa.escopo.p": "The idea is simple: by the time the builder arrives, every hard decision has already been made, approved by you and drawn. Nothing is left to improvise.",
+      "lpcasa.escopo.legenda": "A build we follow, not just draw",
+      "lpcasa.benef1": "Feasibility study of the lot, or a full survey of the existing house",
+      "lpcasa.benef2": "Plans, sections, elevations and realistic 3D images to approve before the build",
+      "lpcasa.benef3": "Permit drawings and follow-through on city approval",
+      "lpcasa.benef4": "Structural design coordinated with an engineer, plus MEP drawings",
+      "lpcasa.benef5": "Detailed construction drawings, the document that lets you price and hire safely",
+      "lpcasa.benef6": "On-site supervision, or review of the team you already have",
+
+      "lpcasa.gal1": "Façade · in-house project",
+      "lpcasa.gal2": "Real Ville · house in a gated community",
+      "lpcasa.gal3": "Living room · double-height ceiling",
+
+      "lpcasa.prova.tag": "Who does the work",
+      "lpcasa.prova.h2": "A local studio that comes to your lot",
+      "lpcasa.prova.sub": "Flavia and Beatriz run the studio in Jardim Aquarius. In-person service, a visit to your lot or house, and the same architects from the first sketch to the last day of the build.",
+      "lpcasa.prova1": "residential and commercial projects delivered",
+      "lpcasa.prova2.n": "7 years",
+      "lpcasa.prova2": "with the studio open in São José dos Campos, since 2019",
+      "lpcasa.prova3": "is how long we take to come back with a first estimate",
+      "lpcasa.bairros.label": "Houses and builds in",
+      "lpcasa.bairros.outros": "and other areas of SJC and the region",
+
+      "lpcasa.proc.tag": "How it works",
+      "lpcasa.proc.h2": "Five stages, in the order that avoids rework",
+      "lpcasa.proc.sub": "Each stage only starts once you have approved the previous one. That is what keeps surprises out of the middle of the build.",
+      "lpcasa.proc1.h4": "Feasibility",
+      "lpcasa.proc1.p": "We visit the lot or the house and establish what the law and the structure allow.",
+      "lpcasa.proc2.h4": "Concept design",
+      "lpcasa.proc2.p": "Siting, room layout and the first 3D images for you to react to.",
+      "lpcasa.proc3.h4": "Permit drawings",
+      "lpcasa.proc3.p": "Paperwork and filing with the city, followed through until approval comes out.",
+      "lpcasa.proc4.h4": "Construction set",
+      "lpcasa.proc4.p": "Details, structure and MEP. This is what lets you price the build for real.",
+      "lpcasa.proc5.h4": "Build",
+      "lpcasa.proc5.p": "We follow the work from start to finish, or review the team you already have.",
+
+      "lpcasa.form.tag": "Shall we start?",
+      "lpcasa.form.h2": "Tell us about the lot, or about the house",
+      "lpcasa.form.p": "The more we know about the stage you are at, the more useful the first conversation is. One of the architects answers personally, with no strings attached.",
+      "lpcasa.garantia1": "Visit to your lot or house in SJC and the region",
+      "lpcasa.garantia2": "City approval handled by us",
+      "lpcasa.garantia3": "You approve materials and costs before the build starts",
+      "lpcasa.garantia4": "Reply within 24 business hours",
+      "lpcasa.form.label.nome": "Name",
+      "lpcasa.form.ph.nome": "Your name",
+      "lpcasa.form.label.fase": "What stage are you at?",
+      "lpcasa.form.label.local": "Where is it?",
+      "lpcasa.form.label.prazo": "When do you plan to start?",
+      "lpcasa.form.select.ph": "Select...",
+      "lpcasa.opt.fase1": "I have the lot and want to build",
+      "lpcasa.opt.fase2": "I'm buying the lot soon",
+      "lpcasa.opt.fase3": "I have the house and want to renovate",
+      "lpcasa.opt.fase4": "I have the house and want to extend it",
+      "lpcasa.opt.fase5": "The build has started and I need help",
+      "lpcasa.opt.fase6": "Still figuring it out",
+      "lpcasa.opt.local6": "Another neighbourhood in São José dos Campos",
+      "lpcasa.opt.local7": "Another city in the region",
+      "lpcasa.opt.prazo1": "Right away, next 30 days",
+      "lpcasa.opt.prazo2": "In the next 3 months",
+      "lpcasa.opt.prazo3": "In the next 6 months",
+      "lpcasa.opt.prazo4": "Just researching for now",
+      "lpcasa.form.submit": "Get my quote in 24h",
+      "lpcasa.form.hint": "We reply within 1 hour during business hours.",
+      "lpcasa.form.ok": "Got it! One of the architects will be in touch shortly.",
+      "lpcasa.footer.copy": "© 2026 Assis Carrer Arquitetura, São José dos Campos, SP"
+    };
+  </script>
+  <script src="i18n.js"></script>
+
+  <div class="projeto-modal" id="projetoModal" aria-hidden="true" role="dialog" aria-label="Imagem ampliada">
+    <button class="projeto-modal-close" id="projetoModalClose" aria-label="Fechar">×</button>
+    <div class="projeto-modal-content">
+      <img class="projeto-modal-img" id="projetoModalImg" alt="" />
+      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" />
+    </div>
+  </div>
+
+  <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20casa%2C%20quero%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.7 4.6 1.9 6.46L4 29l7.74-1.86A11.95 11.95 0 0016 27c6.627 0 12-5.373 12-12S22.629 3 16.001 3zm5.27 14.42c-.29-.14-1.71-.84-1.97-.94-.27-.1-.46-.14-.66.14-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.12-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51l-.56-.01c-.2 0-.51.07-.78.37-.27.29-1.03 1.01-1.03 2.46s1.06 2.85 1.21 3.05c.14.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var PAGE = 'lp-casa';
+
+      function trackEvent(n, p) {
+        p = p || {};
+        if (window.dataLayer) window.dataLayer.push(Object.assign({ event: n }, p));
+        if (window.gtag) window.gtag('event', n, p);
+        if (window.fbq) window.fbq('trackCustom', n, p);
+      }
+
+      // Conversão do Google Ads. Só dispara no ENVIO DO FORMULÁRIO, que é o que a
+      // ação de conversão "Enviar formulário de lead" realmente significa.
+      // As outras páginas disparam isso também em clique de WhatsApp, o que infla
+      // a contagem e polui o lance automático (achado 01 da revisão de 2026-08-21).
+      // Esta página não repete esse comportamento.
+      var converted = false;
+      function trackLeadConversion() {
+        if (converted) return;      // trava de disparo único por carregamento
+        converted = true;
+        if (window.gtag) window.gtag('event', 'conversion', {
+          send_to: 'AW-18186496405/F0xNCI3x6bIcEJXT_99D', value: 2500.0, currency: 'BRL'
+        });
+        if (window.fbq) window.fbq('track', 'Lead', { value: 2500, currency: 'BRL' });
+      }
+
+      // Clique em WhatsApp: registra o evento, mas NÃO conta como envio de formulário.
+      // Quando existir uma ação de conversão própria pra WhatsApp no Google Ads,
+      // é aqui que o send_to dela entra.
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          trackEvent('whatsapp_click', { page: PAGE, origem: a.id || 'link' });
+        });
+      });
+
+      var s75 = false;
+      window.addEventListener('scroll', function () {
+        if (s75) return;
+        if ((scrollY + innerHeight) / document.body.scrollHeight >= 0.75) {
+          trackEvent('scroll_75', { page: PAGE });
+          s75 = true;
+        }
+      }, { passive: true });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('lpFormCasa');
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var d = Object.fromEntries(new FormData(this));
+          trackEvent('lead_form_submit', { page: PAGE, fase: d.fase, local: d.local, prazo: d.prazo });
+          trackLeadConversion();
+
+          var text = encodeURIComponent(
+            'Olá! Vim pela página de casa.\n\n' +
+            'Nome: ' + d.nome + '\n' +
+            'WhatsApp: ' + d.whatsapp + '\n' +
+            'Fase: ' + d.fase + '\n' +
+            'Local: ' + d.local + '\n' +
+            'Quando pretende iniciar: ' + d.prazo
+          );
+          window.open('https://wa.me/5512981534551?text=' + text, '_blank');
+          document.getElementById('okCasa').classList.add('show');
+        });
+
+        // Lightbox da galeria
+        var pm = document.getElementById('projetoModal');
+        var pmImg = document.getElementById('projetoModalImg');
+        var pmClose = document.getElementById('projetoModalClose');
+        document.querySelectorAll('.galeria-item').forEach(function (item) {
+          item.addEventListener('click', function () {
+            var img = item.querySelector('img');
+            if (!img) return;
+            pmImg.src = img.currentSrc || img.src;
+            pmImg.alt = img.alt || '';
+            pm.classList.add('open');
+            pm.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+        function closePM() {
+          pm.classList.remove('open');
+          pm.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+        pmClose.addEventListener('click', closePM);
+        pm.addEventListener('click', function (e) { if (e.target === pm) closePM(); });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && pm.classList.contains('open')) closePM();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

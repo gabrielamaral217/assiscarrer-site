@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-08-21** · Revisão de campanhas e resultados (1 a 21 ago) · 8 achados, 4 bugs confirmados no código · Teste A/B: sem resultado, 3 bloqueios · NADA aplicado ainda, aguardando confirmação
+> Última atualização: **2026-08-21** · Revisão de campanhas (1 a 21 ago) · Teste A/B encerrado, v2 fora do ar · Nova LP `lp-casa.html` (construção e reforma de casa) · Mudanças de CAMPANHA seguem pendentes de confirmação
 
 ---
 
@@ -31,7 +31,8 @@
 
 | Sistema | Status | Detalhes |
 |---------|--------|----------|
-| Site reposicionado | ✅ | 6 páginas: index, residencial, comercial, processo, lp-apartamento, lp-comercial |
+| Site reposicionado | ✅ | 7 páginas no ar: index, residencial, comercial, processo, lp-apartamento, lp-comercial, **lp-casa (nova)** |
+| LP de casa | ✅ | `lp-casa.html` · construção em terreno + reforma/ampliação · noindex via robots.txt · **sem campanha apontando ainda** |
 | Dark mode | ✅ | `prefers-color-scheme: dark` em todas as páginas |
 | GTM | ✅ | `GTM-P6F5BN7Z` |
 | GA4 | ✅ | `G-DDECLK9VYV` (conta arquitetura@) |
@@ -46,7 +47,7 @@
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
-| Teste A/B LP mobile | ❌ | **Nunca deu resultado e não daria nem com tráfego (3 bloqueios, ver revisão 2026-08-21).** 28 dias: A = 2 views / 0 usuários · B = 0 views. Sem evento principal no GA4. E o método de leitura era furado: a frase de prefill de A é a frase padrão de 5 outras páginas, só B era identificável. A = `lp-apartamento.html` · B = `lp-apartamento-v2.html` · split 50/50 via `ab-test.js` |
+| Teste A/B LP mobile | ✅ | **ENCERRADO em 2026-08-21.** Variante A (`lp-apartamento.html`) mantida no ar, variante B fora do ar (noindex, arquivo preservado). `ab-test.js` não é mais carregado por nenhuma página. Motivo: **nunca deu resultado e não daria nem com tráfego (3 bloqueios, ver revisão 2026-08-21).** 28 dias: A = 2 views / 0 usuários · B = 0 views. Sem evento principal no GA4. E o método de leitura era furado: a frase de prefill de A é a frase padrão de 5 outras páginas, só B era identificável. A = `lp-apartamento.html` · B = `lp-apartamento-v2.html` · split 50/50 via `ab-test.js` |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
 | Dark mode contraste | ✅ | Bug sistêmico corrigido: `var(--white)` era usado tanto como token de superfície reativo quanto como "branco literal" sobre fundos sempre-escuros (foto do hero, seções navy) — no dark mode isso invertia pra quase-preto. Afetava os CTAs do hero, botão Contato do menu, ícone hambúrguer e o menu mobile inteiro no `index.html`. Também corrigidas 3 páginas (`residencial`, `comercial`, `processo`) que não tinham CSS de dark mode próprio nenhum (testemunhos e cases com texto navy sobre fundo quase-preto) |
 | Travessões no copy | ✅ | Removidos de todos os textos visíveis nas 7 páginas públicas (títulos, parágrafos, alt text, meta tags) — reescritos com vírgula, dois-pontos ou frases separadas |
@@ -149,7 +150,9 @@
 - [ ] **Marcar eventos principais no GA4** (achado 02) — 5 min, só painel, sem tocar no site
 - [ ] **Tirar o `source` do `main.js:72`** (achado 03) — 1 palavra
 - [ ] **Cortar Taubaté e Caçapava da segmentação** (achado 04) — libera ~R$65/período
-- [ ] **Decidir: recomeçar o teste A/B direito (frase de prefill própria pra A + `variant` como dimensão no GA4 + tráfego) ou encerrar e remover o `ab-test.js`** (achado 08)
+- [x] ~~Decidir destino do teste A/B~~ → **encerrado em 2026-08-21**, variante A mantida, v2 fora do ar
+- [ ] **Criar grupo de anúncios de casa apontando pra `lp-casa.html`** (keywords: projeto de casa sjc, construir casa sjc, arquiteto urbanova, reforma de casa sjc). A LP está pronta e sem tráfego
+- [ ] **Mandar fotos de casas entregues** pra substituir/ampliar a galeria da `lp-casa.html` (hoje: 1 render + 1 case Real Ville + 1 living)
 - [ ] **Levantar nº real de conversas no WhatsApp em 1-21/08** — é o dado que valida ou derruba as 11 conversões
 - [ ] Disparar campanha de reviews (3 mensagens hoje, escalar até 10/semana 1)
   - Template em `MARKETING-LOG.md` ou recuperar da conversa de origem
@@ -187,6 +190,48 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-08-21 (2) · Teste A/B encerrado · Nova LP de casa (`lp-casa.html`)
+**Pedido:** manter a LP de apartamento antiga (variante A) e tirar a versão estilo Apple do ar sem apagar o arquivo. Criar uma página nova voltada a **casa**: construção de fato pra quem tem terreno, e obra pra quem quer adequar a casa ao gosto ou uso atual.
+
+**1. Teste A/B encerrado:**
+- `<script src="ab-test.js">` removido de `lp-apartamento.html` e `lp-apartamento-v2.html`. O sorteio 50/50 e o redirect entre slugs pararam. Quem acessa `/lp-apartamento` fica em `/lp-apartamento`.
+- `lp-apartamento-v2.html`: adicionado `<meta name="robots" content="noindex, nofollow">` + comentário no topo explicando como reativar. **Arquivo preservado**, como pedido.
+- `ab-test.js` mantido no repo, mas não é mais carregado por nenhuma página.
+- ⚠️ **v2 NÃO foi bloqueada no `robots.txt` de propósito.** `noindex` + `Disallow` se anulam: se o robots bloqueia o rastreamento, o Google nunca lê o `noindex` e a página pode continuar no índice. Pra des-indexar, o crawl precisa ser permitido. Isso está comentado dentro do `robots.txt`.
+
+**2. Nova LP `lp-casa.html`** (LP de tráfego pago, escolha do usuário; `Disallow` no robots.txt como as irmãs):
+
+| Seção | Conteúdo |
+|---|---|
+| Hero | Render de fachada (`proj-casa-render.png`) em full bleed. Foge do split das outras LPs porque o render é 16:9 e cortar em painel vertical destruiria a composição. Legenda declara que é render, não foto |
+| Dois caminhos | **A separação central da página.** Caminho 1: tem o terreno e vai construir. Caminho 2: já tem a casa e quer mudar. Prazos, custos e documentação diferentes |
+| Dores | 3, específicas de casa: obra travada na prefeitura, orçamento estourado no meio, profissionais sem projeto comum |
+| Escopo | Viabilidade, plantas/cortes/fachadas/3D, projeto legal e aprovação, estrutural com calculista + complementares, executivo, acompanhamento de obra. Foto de obra real (`processo-obra.jpg`) |
+| Galeria | 3 imagens com lightbox: render de fachada, Real Ville (casa em condomínio), living com pé-direito duplo |
+| Prova | 100+ projetos · 7 anos · resposta em 24h · chips de bairro: Urbanova, Esplanada do Sol, Jardim Oriente, Satélite, Real Ville |
+| Processo | 5 etapas: viabilidade → estudo preliminar → projeto legal → executivo → obra |
+| Form | Campos próprios de casa: fase (tenho terreno / vou comprar / reformar / ampliar / obra já começou / avaliando), local (bairro), prazo |
+
+**Bairros citados** foram informados pelo usuário nesta sessão: Urbanova, Esplanada do Sol, Jardim Oriente, Satélite e outros. Real Ville veio da `residencial.html`, que já trata o case como "casa em condomínio".
+
+**⚠️ Sem depoimento inventado.** As outras páginas usam depoimentos com nomes fictícios como placeholder. Nesta não foi criado nenhum: há um slot HTML comentado esperando depoimento real de cliente de casa.
+
+**3. Tracking da LP nova, de propósito diferente das irmãs:**
+- Clique em WhatsApp dispara **só** `whatsapp_click`, **não** a conversão de R$2.500. Evita repetir o achado 01 da revisão desta mesma data.
+- Conversão do Ads dispara só no **envio do formulário**, com trava de disparo único por carregamento (`converted` flag).
+- Frase de prefill do WhatsApp **exclusiva**: `"Olá! Vim pela página de casa, quero falar sobre um projeto."` Aplica a lição do achado 08: mensagem que chega com essa frase é rastreável até esta página. As outras páginas compartilham a frase genérica.
+- Quando existir ação de conversão própria pra WhatsApp no Ads, o `send_to` dela entra no handler de `whatsapp_click`, que já está marcado com comentário.
+
+**4. Imagem otimizada:** `proj-casa-render.png` 2383KB → 205KB webp / 193KB jpg (-91%), gerado em `images/portfolio/opt/`. As demais imagens da página reaproveitam arquivos que já existiam em `opt/`, sem reprocessar: `processo-obra`, `case-real-ville` e `case-living-pe-direito`.
+
+**Validado em Chromium headless** (mobile 390px e desktop 1440px, claro e escuro): zero erro de JS, zero overflow horizontal, toggle EN/PT funcional, lightbox abre e fecha com Esc, formulário dispara exatamente 1 conversão, clique no WhatsApp dispara `whatsapp_click` sem conversão. Regressão nas duas LPs de apartamento: sem erro, sem redirect, `noindex` presente só na v2.
+
+**Dois bugs encontrados e corrigidos durante o teste da página nova:**
+- Overflow horizontal de 39px no mobile: `<select>` com opção longa esticava a coluna do grid. Corrigido com `minmax(0,1fr)` em todos os grids + `min-width:0` nos campos.
+- Bloco de dark mode não pintava nada: estava declarado **antes** das regras de componente e, com a mesma especificidade, perdia no cascade. Movido pro fim do stylesheet. É o mesmo tipo de armadilha da entrada de 2026-08-13, por isso o comentário no topo do bloco.
+
+**⏳ Pendente pra LP de casa dar resultado:** ela está no ar mas **nenhuma campanha aponta pra ela**. Precisa de um grupo de anúncios novo com keywords de casa (`projeto de casa sjc`, `construir casa em são josé dos campos`, `arquiteto urbanova`, `reforma de casa sjc`). Isso é mudança de campanha, então depende de confirmação.
 
 ### 2026-08-21 · Revisão de campanhas e resultados (1 a 21 ago) · 3 bugs de tracking confirmados
 **Pedido:** revisão das campanhas e resultados. Input: 22 prints de Google Ads + GA4 de 21/08/2026.

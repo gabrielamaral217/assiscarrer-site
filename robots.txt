@@ -4,6 +4,11 @@ Allow: /
 # Landing pages de tráfego pago — não indexar pra não competir com pages principais no orgânico
 Disallow: /lp-apartamento.html
 Disallow: /lp-comercial.html
+Disallow: /lp-casa.html
+
+# lp-apartamento-v2.html NÃO entra aqui de propósito: ela usa <meta robots="noindex">
+# e o Google precisa poder rastrear a página para ler esse noindex e tirá-la do índice.
+# Bloquear no robots impediria isso e ela poderia continuar aparecendo na busca.
 
 # Propostas privadas
 Disallow: /proposta-assis-carrer.html
