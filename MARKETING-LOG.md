@@ -47,6 +47,7 @@
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
+| Black Friday 2026 | ✅ | `lp-black-friday.html` (noindex no robots): 25% em projeto + acompanhamento de obra, contrato assinado até 30/11/2026 23h59, 10 primeiros projetos. Frase do WhatsApp: "Quero a condição de Black Friday (25% no projeto)". Contagem regressiva; depois do prazo a página troca sozinha para "encerrada" e esconde o formulário |
 | Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) · **2026-11-02:** v2 ganhou o mesmo formulário da v1 (mensagem começa com a frase da v2, "Vim pelo site, quero um orçamento de apartamento", seguida dos dados). Teste mantido. Histórico: as 4 mensagens "Vim pela landing de projeto residencial" (12 a 19/06) são de antes do A/B (21/06) e de quando a Pmax mandava 100% para a v1; depois de 21/06 o Search caiu na home e as LPs quase não tiveram tráfego. |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
 | Idioma padrão | ✅ | Desde 2026-11-02 o site abre **sempre em português**; inglês só pelo botão EN (antes seguia `navigator.language` e celulares em inglês viam o site em inglês) |
@@ -174,6 +175,12 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-03 · Landing page de Black Friday
+- **Regras (definidas pelo Gabriel):** contrato assinado até 30/11/2026, desconto de 25% sobre projeto arquitetônico, interiores e acompanhamento de obra. Fora: execução, mão de obra, materiais, móveis e produtos. Limite de 10 primeiros contratos, sem contador na página. "Não cumulativo" foi acrescentado no regulamento: confirmar.
+- **Página:** `lp-black-friday.html`, mobile-first e escura nos dois temas, com hero, contagem até 30/11 23h59 (BRT), o que entra e o que não entra, 3 passos, prova (200+, 7 anos, 4,9 no Google, 3 depoimentos), formulário, WhatsApp e regulamento. Depois do prazo esconde formulário e contagem e volta a frase padrão do WhatsApp.
+- **Medição:** `whatsapp_click`, `lead_form_submit` e `scroll_75` com `page: 'lp-black-friday'`; mesma conversão do Ads e `Lead` no Pixel; `canal.js` marca Google/Meta. Mensagens contáveis pela frase "Quero a condição de Black Friday".
+- **robots.txt:** `Disallow: /lp-black-friday.html`, como nas outras LPs pagas.
 
 ### 2026-11-02 · LP v2: formulário + contraste no escuro · 200+ projetos
 - **Formulário na v2** (`#lpForm2`, no CTA final, com os mesmos campos da v1). A mensagem do WhatsApp começa com a frase da v2, então o A/B continua separando as versões pela frase: a v1 usa "Vim pela landing de projeto residencial" e a v2 "Vim pelo site, quero um orçamento de apartamento". Dispara `lead_form_submit` `{page: 'lp-apartamento-v2'}` e a conversão do Ads. Testado o envio (mensagem, eventos e confirmação).

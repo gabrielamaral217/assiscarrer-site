@@ -4,6 +4,7 @@ Allow: /
 # Landing pages de tráfego pago — não indexar pra não competir com pages principais no orgânico
 Disallow: /lp-apartamento.html
 Disallow: /lp-comercial.html
+Disallow: /lp-black-friday.html
 
 # Propostas privadas
 Disallow: /proposta-assis-carrer.html
