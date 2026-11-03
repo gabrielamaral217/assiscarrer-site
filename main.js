@@ -69,7 +69,8 @@ document.getElementById('contatoForm').addEventListener('submit', function(e) {
 // Track WhatsApp clicks (float + qualquer link wa.me) — conta como conversão de lead
 document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
   a.addEventListener('click', () => {
-    trackEvent('whatsapp_click', { source: a.id || 'link' });
+    // "source" é reservado no GA4 (sobrescreve a origem da sessão); por isso link_id
+    trackEvent('whatsapp_click', { link_id: a.id || 'link' });
     trackConversion();
   });
 });

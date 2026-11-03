@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-08-13** · Toggle EN/PT · Fix de contraste dark mode (bug sistêmico em `var(--white)`) · Ajustes mobile · Remoção de travessões em todos os textos
+> Última atualização: **2026-11-02** · Correção de atribuição no GA4 (`source` → `link_id`) · `canal.js`: frase do WhatsApp marca quem veio de anúncio Google/Meta
 
 ---
 
@@ -39,6 +39,7 @@
 | Google Ads tag | ✅ | `AW-18186496405` (conta arquitetura@assiscarrer.com) |
 | Conversão Lead Form | ✅ | Rótulo `F0xNCI3x6bIcEJXT_99D` · valor R$ 2.500 BRL |
 | Eventos custom | ✅ | `lead_form_submit`, `whatsapp_click`, `scroll_75` |
+| Canal no WhatsApp | ✅ | `canal.js` em todas as 7 páginas públicas: quem chega com `gclid`/`gbraid`/`wbraid` manda "Olá, vi o anúncio no Google!"; com `fbclid`/`utm_source` Meta manda "Olá, vi o anúncio de vocês!". Guardado 30 dias em `localStorage`. Visita sem anúncio mantém a frase original (preserva a leitura do A/B) |
 | Campanha Google Ads | ✅ | "Search · Residencial+Comercial SJC" · Search puro · R$ 25/dia · 6 conv. a R$27/lead (14 dias) |
 | Crédito Google Ads | ✅ | R$ 880 vinculado (cobre ~35 dias) |
 | Google Meu Negócio | ✅ | Categoria + descrição + 12 serviços + atributos + WhatsApp |
@@ -171,6 +172,15 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-02 · Correção de medição (atribuição GA4 + canal no WhatsApp)
+**Contexto:** conta Google Ads 346-764-6872 pausada para verificação do anunciante (docs enviados em 02/11). A análise de Ads + GA4 de 22/06 a 23/10 mostrou que os "leads" do Ads são cliques no wa.me (não mensagens) e que havia 8 sessões com origem `waFloat / (not set)`.
+
+**1. Bug de atribuição corrigido (`main.js`):** o `whatsapp_click` da home enviava o parâmetro `source: a.id`. No GA4, `source` é reservado e sobrescreve a origem da sessão, então quem clicava no botão flutuante virava `waFloat / (not set)` e perdia o `google / cpc`. Agora o parâmetro se chama `link_id`. As outras páginas já usavam `page` e não tinham o problema.
+
+**2. Novo `canal.js`:** marca a frase inicial do WhatsApp para quem veio de anúncio (Google: "Olá, vi o anúncio no Google!"; Meta: "Olá, vi o anúncio de vocês!"). Funciona nos links `wa.me` (troca o texto no clique) e nos formulários (envolve o `window.open`). Assim dá para contar as mensagens que chegaram de verdade por canal e comparar com as conversões do Ads. Visitas sem anúncio continuam com a frase original de cada página, então a inferência da variante do A/B não muda.
+
+**Pendências de painel (fora do código):** marcar `whatsapp_click` e `lead_form_submit` como eventos principais no GA4; na ação de conversão do Ads, contar "Uma" por clique; ativar "Enforce HTTPS" no GitHub Pages (hoje `http://www` responde 200 sem redirecionar; 27 cliques pagos caíram na versão http); conferir a segmentação de local da campanha ("Presença", pois São Paulo apareceu com 158 usuários).
 
 ### 2026-08-13 · Toggle EN/PT · Fix de contraste dark mode · Ajustes mobile · Remoção de travessões
 **Pedido:** revisar o site com foco em mobile — (1) tirar o uso de travessão dos textos, (2) revisar contraste no dark mode (textos e logos), (3) manter o padrão de idioma do navegador com botão de troca EN/PT no menu, (4) revisar e melhorar a experiência mobile.
