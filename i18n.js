@@ -1,14 +1,14 @@
 // Lightweight EN/PT toggle. Portuguese is the language baked into the HTML;
 // English strings live in a per-page `window.AC_EN` dictionary keyed by data-i18n id.
-// Default language follows the browser (navigator.language) unless the visitor
-// has explicitly toggled before (remembered in localStorage).
+// Default language is always Portuguese: the audience is local (SJC e região) and
+// many Brazilians keep the phone in English, which used to flip the whole site.
+// English only when the visitor toggles it (remembered in localStorage).
 (function () {
   var STORAGE_KEY = 'ac-lang';
   var originals = new WeakMap();
 
   function detectDefault() {
-    var nav = (navigator.language || navigator.userLanguage || 'pt').toLowerCase();
-    return nav.indexOf('en') === 0 ? 'en' : 'pt';
+    return 'pt';
   }
 
   function currentLang() {

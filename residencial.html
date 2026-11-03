@@ -25,7 +25,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="style.css" />
   <style>
     /* RESIDENCIAL — específicos */
@@ -38,7 +39,7 @@
     }
     .res-hero::before {
       content: ''; position: absolute; inset: 0;
-      background: url('images/portfolio/hero-residencial-integrado.jpg') center/cover no-repeat;
+      background: url('images/portfolio/opt/hero-residencial-integrado.webp') center/cover no-repeat;
       z-index: 0;
     }
     .res-hero::after {
@@ -198,6 +199,7 @@
       .res-hero { padding: 120px 0 60px; }
       .res-intro, .res-segmento, .res-cases, .res-processo, .res-depoimento, .res-cta { padding: 60px 0; }
       .seg-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
+      .res-hero::before { background-image: url('images/portfolio/opt/hero-residencial-integrado-800.webp'); }
       .seg-img img { height: 320px; }
       .res-segmento.casas .seg-grid { direction: ltr; }
       .cases-row { grid-template-columns: 1fr; gap: 20px; padding: 0 24px; }
@@ -216,7 +218,7 @@
   <nav id="navbar" class="scrolled">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="logo-light" />
+        <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" class="logo-light" />
         <img src="images/logo/logo-horizontal-crop.png" alt="Assis Carrer Arquitetura" class="logo-dark" />
       </a>
       <button class="nav-toggle" aria-label="Menu" id="navToggle">
@@ -262,7 +264,7 @@
   <section class="res-segmento apartamentos" id="apartamentos">
     <div class="seg-grid">
       <div class="seg-img">
-        <img src="images/portfolio/hero-apto-integrado-3amb.jpg" alt="Apartamento integrado em São José dos Campos: sala, jantar e cozinha contínuos" />
+        <img src="images/portfolio/opt/res-hero-apto-integrado-3amb-1400.webp" srcset="images/portfolio/opt/res-hero-apto-integrado-3amb-800.webp 800w, images/portfolio/opt/res-hero-apto-integrado-3amb-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 50vw" alt="Apartamento integrado em São José dos Campos: sala, jantar e cozinha contínuos" width="1400" height="933" loading="lazy" decoding="async" />
       </div>
       <div class="seg-text">
         <span class="section-tag" data-i18n="res.apto.tag">Apartamentos</span>
@@ -284,7 +286,7 @@
   <section class="res-segmento casas" id="casas">
     <div class="seg-grid">
       <div class="seg-img">
-        <img src="images/portfolio/case-living-pe-direito.jpg" alt="Sala de estar com pé-direito alto em casa de SJC" />
+        <img src="images/portfolio/opt/res-case-living-pe-direito-1400.webp" srcset="images/portfolio/opt/res-case-living-pe-direito-800.webp 800w, images/portfolio/opt/res-case-living-pe-direito-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 50vw" alt="Sala de estar com pé-direito alto em casa de SJC" width="1400" height="2487" loading="lazy" decoding="async" />
       </div>
       <div class="seg-text">
         <span class="section-tag" data-i18n="res.casa.tag">Casas</span>
@@ -310,7 +312,7 @@
       </div>
       <div class="cases-row">
         <div class="case-item">
-          <img src="images/portfolio/case-celebration-sala.jpg" alt="Cobertura Celebration Life em SJC: sala integrada com ilha canelada e vista da cidade" />
+          <img src="images/portfolio/opt/res-case-celebration-sala-1400.webp" srcset="images/portfolio/opt/res-case-celebration-sala-800.webp 800w, images/portfolio/opt/res-case-celebration-sala-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 33vw" alt="Cobertura Celebration Life em SJC: sala integrada com ilha canelada e vista da cidade" width="1400" height="928" loading="lazy" decoding="async" />
           <div class="case-body">
             <span class="case-bairro" data-i18n="res.case1.bairro">Celebration Life · Cobertura</span>
             <h3 data-i18n="res.case1.h3">Família Andrade, alto padrão</h3>
@@ -318,7 +320,7 @@
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-enjoy-aquarius-sala.jpg" alt="Apartamento Enjoy Aquarius em SJC: sala integrada com paleta nude e arcos" />
+          <img src="images/portfolio/opt/res-case-enjoy-aquarius-sala-1400.webp" srcset="images/portfolio/opt/res-case-enjoy-aquarius-sala-800.webp 800w, images/portfolio/opt/res-case-enjoy-aquarius-sala-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 33vw" alt="Apartamento Enjoy Aquarius em SJC: sala integrada com paleta nude e arcos" width="1400" height="933" loading="lazy" decoding="async" />
           <div class="case-body">
             <span class="case-bairro" data-i18n="res.case2.bairro">Enjoy Aquarius · Apartamento</span>
             <h3 data-i18n="res.case2.h3">Camila &amp; Pedro, projeto autoral</h3>
@@ -326,7 +328,7 @@
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-believe-jantar.jpg" alt="Apartamento Believe em SJC: sala de jantar com parede de pedra portuguesa" />
+          <img src="images/portfolio/opt/res-case-believe-jantar-1400.webp" srcset="images/portfolio/opt/res-case-believe-jantar-800.webp 800w, images/portfolio/opt/res-case-believe-jantar-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 33vw" alt="Apartamento Believe em SJC: sala de jantar com parede de pedra portuguesa" width="1400" height="933" loading="lazy" decoding="async" />
           <div class="case-body">
             <span class="case-bairro" data-i18n="res.case3.bairro">Believe · Apartamento</span>
             <h3 data-i18n="res.case3.h3">Mariana &amp; Lucas, autoral aconchegante</h3>
@@ -334,7 +336,7 @@
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-real-ville-hall.jpg" alt="Casa Real Ville em SJC: hall com trio de espelhos orgânicos" />
+          <img src="images/portfolio/opt/res-case-real-ville-hall-1400.webp" srcset="images/portfolio/opt/res-case-real-ville-hall-800.webp 800w, images/portfolio/opt/res-case-real-ville-hall-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 33vw" alt="Casa Real Ville em SJC: hall com trio de espelhos orgânicos" width="1400" height="2021" loading="lazy" decoding="async" />
           <div class="case-body">
             <span class="case-bairro" data-i18n="res.case4.bairro">Real Ville · Casa em condomínio</span>
             <h3 data-i18n="res.case4.h3">Família Costa, elegância clássica</h3>
@@ -342,7 +344,7 @@
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-portal-victoria-sala.jpg" alt="Apartamento Portal Victoria em SJC: sala integrada com cozinha americana" />
+          <img src="images/portfolio/opt/res-case-portal-victoria-sala-1400.webp" srcset="images/portfolio/opt/res-case-portal-victoria-sala-800.webp 800w, images/portfolio/opt/res-case-portal-victoria-sala-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 33vw" alt="Apartamento Portal Victoria em SJC: sala integrada com cozinha americana" width="1400" height="2261" loading="lazy" decoding="async" />
           <div class="case-body">
             <span class="case-bairro" data-i18n="res.case5.bairro">Portal Victoria · Apartamento</span>
             <h3 data-i18n="res.case5.h3">Beatriz &amp; Rafael, apartamento compacto</h3>
@@ -350,7 +352,7 @@
           </div>
         </div>
         <div class="case-item">
-          <img src="images/portfolio/case-sala-jantar-azul.jpg" alt="Apartamento em Floradas SJC: sala de jantar com parede azul e ripado madeira" />
+          <img src="images/portfolio/opt/res-case-sala-jantar-azul-1400.webp" srcset="images/portfolio/opt/res-case-sala-jantar-azul-800.webp 800w, images/portfolio/opt/res-case-sala-jantar-azul-1400.webp 1400w" sizes="(max-width: 768px) 100vw, 33vw" alt="Apartamento em Floradas SJC: sala de jantar com parede azul e ripado madeira" width="1400" height="1867" loading="lazy" decoding="async" />
           <div class="case-body">
             <span class="case-bairro" data-i18n="res.case6.bairro">Floradas · Apartamento</span>
             <h3 data-i18n="res.case6.h3">Apartamento jovem em Floradas</h3>
@@ -420,7 +422,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="index.html">
-        <img src="images/logo/logo-horizontal-negativo-crop.png" alt="Assis Carrer Arquitetura" class="footer-logo" />
+        <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" class="footer-logo" />
       </a>
       <p class="footer-copy" data-i18n="res.footer.copy">&copy; 2026 Assis Carrer Arquitetura. Todos os direitos reservados.</p>
       <ul class="footer-nav">

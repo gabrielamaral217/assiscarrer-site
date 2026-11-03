@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-02** · Correção de atribuição no GA4 (`source` → `link_id`) · `canal.js`: frase do WhatsApp marca quem veio de anúncio Google/Meta
+> Última atualização: **2026-11-02** · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -49,6 +49,8 @@
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
 | Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
+| Idioma padrão | ✅ | Desde 2026-11-02 o site abre **sempre em português**; inglês só pelo botão EN (antes seguia `navigator.language` e celulares em inglês viam o site em inglês) |
+| Performance mobile | 🟡 | Fotos com versões 800w/1400w (`images/portfolio/opt/`, `res-*`), fontes Now em woff2, Google Fonts sem bloquear a pintura. Gargalo restante: tags de terceiros (gtag carregado direto **e** via GTM, Meta Pixel) |
 | Dark mode contraste | ✅ | Bug sistêmico corrigido: `var(--white)` era usado tanto como token de superfície reativo quanto como "branco literal" sobre fundos sempre-escuros (foto do hero, seções navy) — no dark mode isso invertia pra quase-preto. Afetava os CTAs do hero, botão Contato do menu, ícone hambúrguer e o menu mobile inteiro no `index.html`. Também corrigidas 3 páginas (`residencial`, `comercial`, `processo`) que não tinham CSS de dark mode próprio nenhum (testemunhos e cases com texto navy sobre fundo quase-preto) |
 | Travessões no copy | ✅ | Removidos de todos os textos visíveis nas 7 páginas públicas (títulos, parágrafos, alt text, meta tags) — reescritos com vírgula, dois-pontos ou frases separadas |
 
@@ -172,6 +174,22 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-02 · Otimização mobile antes do Meta Ads
+**Motivo:** o Meta Ads vai trazer principalmente tráfego de celular. Lighthouse mobile (4G simulada) nas páginas no ar: home 41/100 (LCP 12,8 s, 2,1 MB), LP v2 37/100 (LCP 10 s, 2,2 MB), residencial 52/100 (LCP 10,6 s, **21 MB**).
+
+**O que mudou:**
+1. **Fotos:** `residencial.html` usava os JPGs originais (até 7,3 MB). Agora usa `opt/res-*-800.webp` e `-1400.webp` com `srcset`, `width`/`height` e `loading="lazy"`; o fundo do hero usa `opt/hero-residencial-integrado(-800).webp`. Home, LP v2 e LP v1 ganharam versões `-800.webp` no `srcset` (incluindo o preload do hero). `simbolo.png` (6000 px, 222 KB) e `sapore-acai.png` (4000 px, 226 KB) foram reduzidos no lugar para 12 KB e 31 KB.
+2. **Idioma:** `i18n.js` agora abre sempre em PT.
+3. **Fontes:** Now-Light/Regular/Medium em woff2 (cerca de 22 KB cada, com o .otf como fallback) e `font-display: swap` em todas. O CSS do Google Fonts carrega com `media="print" onload` para não bloquear a primeira pintura.
+4. **Logo em fundo escuro:** `logo-horizontal-negativo-crop.png` tinha o símbolo azul-marinho, que sumia no escuro (LP v2 em dark mode, headers e footers de residencial, comercial e processo). Trocado por `logobranco_pq.png` (branco e dourado), o mesmo da home.
+
+**Resultado local (Lighthouse mobile):** o peso caiu para 1,2 a 1,3 MB nas três páginas (residencial: de 21 MB para 1,3 MB; carregada inteira com rolagem, 476 KB). LP v2 subiu de 37 para 61 (FCP 0,9 s, LCP 6,0 s); home de 41 para 47. A nota simulada varia ±10 entre rodadas.
+
+**Pendente:**
+- O LCP simulado continua alto por causa das tags: `gtag.js` do G-DDECLK9VYV é carregado pela página e de novo pelo GTM, mais o AW e o Meta Pixel. Só um `page_view` é enviado (sem contagem dupla), mas a biblioteca carrega duas vezes. Para tirar o gtag direto das páginas é preciso revisar o GTM-P6F5BN7Z (tags de GA4, Ads e conversão).
+- A fonte Herokid em uso é a versão **DEMO** da Fontspring: conferir a licença.
+- Decidir se o A/B da LP de apartamento continua (a v1 segura ~20 s, a v2 ~2min14).
 
 ### 2026-11-02 · Correção de medição (atribuição GA4 + canal no WhatsApp)
 **Contexto:** conta Google Ads 346-764-6872 pausada para verificação do anunciante (docs enviados em 02/11). A análise de Ads + GA4 de 22/06 a 23/10 mostrou que os "leads" do Ads são cliques no wa.me (não mensagens) e que havia 8 sessões com origem `waFloat / (not set)`.

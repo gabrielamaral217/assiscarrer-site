@@ -5,21 +5,25 @@
   font-family: 'Herokid';
   src: url('fonts/Fontspring-DEMO-herokid-regularexpanded.otf') format('opentype');
   font-weight: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Now';
-  src: url('fonts/Now-Light.otf') format('opentype');
+  src: url('fonts/Now-Light.woff2') format('woff2'), url('fonts/Now-Light.otf') format('opentype');
   font-weight: 300;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Now';
-  src: url('fonts/Now-Regular.otf') format('opentype');
+  src: url('fonts/Now-Regular.woff2') format('woff2'), url('fonts/Now-Regular.otf') format('opentype');
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Now';
-  src: url('fonts/Now-Medium.otf') format('opentype');
+  src: url('fonts/Now-Medium.woff2') format('woff2'), url('fonts/Now-Medium.otf') format('opentype');
   font-weight: 500;
+  font-display: swap;
 }
 
 /* ============================================
