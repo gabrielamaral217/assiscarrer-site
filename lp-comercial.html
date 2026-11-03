@@ -26,7 +26,8 @@
     :root {
       color-scheme: light dark;
       --navy:   #254467;
-      --copper: #A96D3E;
+      --copper: #985F34;
+      --copper-btn: #985F34;
       --dark:   #1C2D40;
       --sand:   #C79872;
       --cream:  #F5F0EB;
@@ -41,6 +42,7 @@
         --cream: #1a1d23;
         --text:  #e8e8e8;
         --muted: #a8a8a8;
+        --copper: #d39963;
       }
       body { background: #0d0f13; }
       h1, h2, h3, h4 { color: var(--text) !important; }
@@ -53,7 +55,7 @@
       select option { background: #1f232a; color: #e8e8e8; }
       .casos, .porque, .form-section { background: #0d0f13 !important; }
       .caso-card { background: #16191f !important; }
-      .diferencial h4 { color: var(--sand) !important; }
+      .diferencial .h4 { color: var(--sand) !important; }
       .porque-texto p { color: var(--muted) !important; }
       .garantia { color: rgba(255,255,255,0.9) !important; }
       .garantia-icon { border-color: var(--copper) !important; color: var(--copper) !important; }
@@ -122,7 +124,7 @@
       line-height: 1.75; max-width: 560px; margin-bottom: 40px;
     }
     .hero-cta {
-      display: inline-block; background: var(--copper); color: #fff;
+      display: inline-block; background: var(--copper-btn); color: #fff;
       padding: 18px 40px; font-size: 12px; letter-spacing: 0.2em;
       text-transform: uppercase; transition: background 0.3s;
     }
@@ -152,7 +154,7 @@
       display: block; font-size: 2rem; font-weight: 500;
       color: var(--copper); margin-bottom: 4px;
     }
-    .cred-num span { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .cred-num span { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
     /* CASOS */
     .casos { padding: 80px 40px; }
@@ -205,7 +207,7 @@
       border-left: 2px solid var(--copper);
     }
     .diferencial-icon { color: var(--copper); font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
-    .diferencial h4 { font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
+    .diferencial .h4 { font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
     .diferencial p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
     /* DEPOIMENTO */
@@ -214,9 +216,9 @@
     .dep-stars-c { color: var(--copper); letter-spacing: 4px; margin-bottom: 16px; font-size: 16px; }
     .dep-card-c p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.92); margin-bottom: 22px; }
     .dep-autor-c { display: flex; align-items: center; gap: 14px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .dep-av-c { width: 44px; height: 44px; border-radius: 50%; background: var(--copper); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+    .dep-av-c { width: 44px; height: 44px; border-radius: 50%; background: var(--copper-btn); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
     .dep-autor-c strong { display: block; font-size: 14px; color: #fff; }
-    .dep-autor-c small { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .dep-autor-c small { font-size: 12px; color: rgba(255,255,255,0.78); }
     @media (max-width: 768px) { .dep-grid-c { grid-template-columns: 1fr !important; } }
     .depoimento blockquote {
       max-width: 700px; margin: 0 auto;
@@ -256,10 +258,10 @@
     form input:focus, form select:focus, form textarea:focus { border-color: var(--copper); }
     form select option { background: var(--dark); color: #fff; }
     form textarea { resize: vertical; min-height: 100px; }
-    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
     .form-group { display: flex; flex-direction: column; gap: 6px; }
     .btn-submit {
-      background: var(--copper); border: none; color: #fff;
+      background: var(--copper-btn); border: none; color: #fff;
       padding: 16px; font-family: 'Now', sans-serif; font-size: 12px;
       letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
       transition: background 0.3s; margin-top: 8px;
@@ -274,7 +276,7 @@
       display: flex; align-items: center; justify-content: space-between; gap: 24px;
     }
     .lp-footer img { height: 28px; width: auto; }
-    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.6); }
 
     /* WHATSAPP FLOATING BUTTON */
     .whatsapp-float {
@@ -358,7 +360,7 @@
     .etapas-c { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
     .etapa-c { text-align: left; }
     .etapa-c-num { font-size: 36px; color: var(--copper); font-weight: 300; margin-bottom: 16px; }
-    .etapa-c h4 { font-size: 18px; font-weight: 500; color: var(--dark); margin-bottom: 10px; }
+    .etapa-c .h4 { font-size: 18px; font-weight: 500; color: var(--dark); margin-bottom: 10px; }
     .etapa-c p { font-size: 14px; line-height: 1.6; color: var(--muted); }
 
     /* VIDEO PLACEHOLDER COMERCIAL */
@@ -372,7 +374,7 @@
     .video-placeholder-c:hover { opacity: 0.9; }
     .play-icon-c {
       width: 78px; height: 78px; border-radius: 50%;
-      background: var(--copper); color: #fff;
+      background: var(--copper-btn); color: #fff;
       display: flex; align-items: center; justify-content: center;
       font-size: 26px; padding-left: 6px;
     }
@@ -391,7 +393,7 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="lp-header">
-    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" width="1000" height="132" />
     <button type="button" class="lang-toggle-lp" data-lang-toggle aria-label="Switch language">EN</button>
     <a href="#form" class="cta-header" data-i18n="lpc.header.cta">Quero um projeto</a>
   </header>
@@ -482,21 +484,21 @@
             <div class="diferencial">
               <div class="diferencial-icon">◈</div>
               <div>
-                <h4 data-i18n="lpc.dif1.h4">Identidade visual integrada ao espaço</h4>
+                <h3 class="h4" data-i18n="lpc.dif1.h4">Identidade visual integrada ao espaço</h3>
                 <p data-i18n="lpc.dif1.p">Criamos ambientes que comunicam os valores da sua marca em cada detalhe.</p>
               </div>
             </div>
             <div class="diferencial">
               <div class="diferencial-icon">◈</div>
               <div>
-                <h4 data-i18n="lpc.dif2.h4">Funcionalidade para o dia a dia do negócio</h4>
+                <h3 class="h4" data-i18n="lpc.dif2.h4">Funcionalidade para o dia a dia do negócio</h3>
                 <p data-i18n="lpc.dif2.p">Beleza e operação andam juntas: fluxo de clientes, ergonomia e praticidade.</p>
               </div>
             </div>
             <div class="diferencial">
               <div class="diferencial-icon">◈</div>
               <div>
-                <h4 data-i18n="lpc.dif3.h4">Execução com equipe própria</h4>
+                <h3 class="h4" data-i18n="lpc.dif3.h4">Execução com equipe própria</h3>
                 <p data-i18n="lpc.dif3.p">Do projeto à entrega, com prazo e qualidade garantidos pelo nosso time.</p>
               </div>
             </div>
@@ -514,22 +516,22 @@
       <div class="etapas-c">
         <div class="etapa-c">
           <div class="etapa-c-num">01</div>
-          <h4 data-i18n="lpc.proc1.h4">Briefing</h4>
+          <h3 class="h4" data-i18n="lpc.proc1.h4">Briefing</h3>
           <p data-i18n="lpc.proc1.p">Entendemos seu negócio, marca, público e operação. O ponto comercial é mídia e precisa comunicar.</p>
         </div>
         <div class="etapa-c">
           <div class="etapa-c-num">02</div>
-          <h4 data-i18n="lpc.proc2.h4">Anteprojeto + 3D</h4>
+          <h3 class="h4" data-i18n="lpc.proc2.h4">Anteprojeto + 3D</h3>
           <p data-i18n="lpc.proc2.p">Apresentamos conceito e renders realistas. Você aprova o ambiente antes de qualquer compra.</p>
         </div>
         <div class="etapa-c">
           <div class="etapa-c-num">03</div>
-          <h4 data-i18n="lpc.proc3.h4">Projeto Executivo</h4>
+          <h3 class="h4" data-i18n="lpc.proc3.h4">Projeto Executivo</h3>
           <p data-i18n="lpc.proc3.p">Detalhamentos, especificações, cotações e cronograma. Tudo para a obra sair sem surpresas.</p>
         </div>
         <div class="etapa-c">
           <div class="etapa-c-num">04</div>
-          <h4 data-i18n="lpc.proc4.h4">Execução</h4>
+          <h3 class="h4" data-i18n="lpc.proc4.h4">Execução</h3>
           <p data-i18n="lpc.proc4.p">Acompanhamento técnico ou execução completa com nossa equipe. Entrega no prazo combinado.</p>
         </div>
       </div>
@@ -539,7 +541,7 @@
   <!-- DEPOIMENTOS -->
   <section class="depoimento">
     <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px;">
-      <span style="display:block;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--copper);text-align:center;margin-bottom:12px;" data-i18n="lpc.dep.tag">Depoimentos</span>
+      <span style="display:block;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#E2BC94;text-align:center;margin-bottom:12px;" data-i18n="lpc.dep.tag">Depoimentos</span>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:500;text-align:center;margin-bottom:48px;color:var(--dark);" data-i18n="lpc.dep.h2">O que dizem donos de negócios em SJC</h2>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="dep-grid-c">
         <div class="dep-card-c">
@@ -593,8 +595,8 @@
           <input type="tel" name="whatsapp" placeholder="(12) 9 0000-0000" required />
         </div>
         <div class="form-group">
-          <label data-i18n="lpc.form.label.segmento">Segmento</label>
-          <select name="segmento" required>
+          <label data-i18n="lpc.form.label.segmento" for="lpc-segmento">Segmento</label>
+          <select name="segmento" id="lpc-segmento" required>
             <option value="" data-i18n="lpc.form.select">Selecione...</option>
             <option data-i18n="lpc.opt.cafeteria">Cafeteria / Especialidade</option>
             <option data-i18n="lpc.opt.restaurante">Restaurante</option>
@@ -605,8 +607,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label data-i18n="lpc.form.label.prazo">Quando pretende iniciar?</label>
-          <select name="prazo" required>
+          <label data-i18n="lpc.form.label.prazo" for="lpc-prazo">Quando pretende iniciar?</label>
+          <select name="prazo" id="lpc-prazo" required>
             <option value="" data-i18n="lpc.form.select">Selecione...</option>
             <option data-i18n="lpc.opt.imediato">Imediato, próximos 30 dias</option>
             <option data-i18n="lpc.opt.3m">Nos próximos 3 meses</option>
@@ -622,7 +624,7 @@
   </section>
 
   <footer class="lp-footer">
-    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" width="1000" height="132" />
     <p data-i18n="lpc.footer.copy">© 2026 Assis Carrer Arquitetura, São José dos Campos, SP</p>
   </footer>
 
@@ -744,7 +746,7 @@
     <button class="projeto-modal-close" id="projetoModalClose" aria-label="Fechar">×</button>
     <div class="projeto-modal-content">
       <img class="projeto-modal-img" id="projetoModalImg" alt="" />
-      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" />
+      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" width="480" height="480" />
     </div>
   </div>
 

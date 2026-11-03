@@ -33,7 +33,8 @@
   color-scheme: light dark;
 
   --navy:   #254467;
-  --copper: #A96D3E;
+  --copper: #985F34;        /* cobre um pouco mais escuro: contraste AA em texto pequeno e botão com letra branca */
+  --copper-btn: #985F34;    /* fundo de botão com texto branco (igual nos dois temas) */
   --dark:   #1C2D40;
   --sand:   #C79872;
   --cream:  #F5F0EB;
@@ -74,6 +75,7 @@
     --border-soft:    rgba(255,255,255,0.10);
     --navbar-bg:      rgba(13,15,19,0.92);
     --shadow-soft:    0 1px 0 rgba(255,255,255,0.06);
+    --copper:         #d39963;   /* texto cobre legível sobre fundo escuro */
     /* Acentos copper/sand/navy mantidos — destacam em dark */
   }
 
@@ -149,7 +151,9 @@
   .seg-tipos span { color: #fff !important; }
 
   /* Botões primários: navy bg + texto light (mantém legível) */
-  .btn-primary { background: var(--copper) !important; border-color: var(--copper) !important; color: #fff !important; }
+  .btn-primary { background: var(--copper-btn) !important; border-color: var(--copper-btn) !important; color: #fff !important; }
+  .portfolio-cta p { color: var(--text) !important; }
+  .btn-portfolio-cta { color: var(--sand) !important; border-color: var(--sand) !important; }
   .btn-primary:hover { background: var(--sand) !important; border-color: var(--sand) !important; }
 
   /* Badge sobre o quadrado azul no Sobre */
@@ -217,6 +221,8 @@ h1, h2, h3 {
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
 h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
+/* Subtítulos que eram h4 viraram h3.h4 (ordem dos títulos); mantêm o visual de h4 */
+h3.h4 { font-family: inherit; font-size: 1em; font-weight: bold; line-height: inherit; }
 
 p {
   font-size: 1.15rem;
@@ -633,7 +639,7 @@ p {
   color: var(--copper);
   margin-bottom: 8px;
 }
-.equipe-card h4 {
+.equipe-card .h4 {
   font-family: var(--font-display);
   font-size: 1.15rem;
   color: var(--navy);
@@ -670,7 +676,7 @@ p {
   }
   .equipe-card:first-child { border-top: none; padding-top: 8px; }
   .equipe-spec { font-size: 10px; letter-spacing: 0.2em; }
-  .equipe-card h4 { font-size: 1.1rem; }
+  .equipe-card .h4 { font-size: 1.1rem; }
 }
 
 /* ============================================
@@ -894,7 +900,7 @@ p {
   padding-top: clamp(32px, 4vw, 48px);
   border-top: 1px solid rgba(37,68,103,0.12);
 }
-.contato-bloco h4 {
+.contato-bloco .h4 {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: normal;
@@ -1168,7 +1174,7 @@ p {
     font-size: 0.95rem;
     padding: 14px 20px;
   }
-  .nav-links .lang-toggle:hover { background: var(--copper) !important; color: #fff !important; }
+  .nav-links .lang-toggle:hover { background: var(--copper-btn) !important; color: #fff !important; }
   .nav-toggle { display: flex; z-index: 101; padding: 10px; margin: -10px; }
   .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .nav-toggle.open span:nth-child(2) { opacity: 0; }
@@ -1204,7 +1210,7 @@ p {
     font-size: 1rem;
     transition: background 0.2s, color 0.2s;
   }
-  .servico-card:active::after { background: var(--copper); color: #fff; }
+  .servico-card:active::after { background: var(--copper-btn); color: #fff; }
 
   .portfolio-grid {
     grid-template-columns: 1fr;

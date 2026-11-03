@@ -175,6 +175,14 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-11-02 · Ajustes de acessibilidade (contraste, títulos, dimensões)
+- **Contraste:** o cobre `#A96D3E` não passava em texto pequeno nem em botão com letra branca (3,6 a 4,25; o mínimo é 4,5). `--copper` agora é `#985F34` no tema claro e `#d39963` no escuro, e o novo `--copper-btn: #985F34` vale para os fundos de botão com texto branco. No modo escuro, o CTA do portfólio da home estava navy sobre quase-preto (1,25) e agora usa a cor de texto e o sand. Nas LPs, ficaram mais claros os labels do formulário, os números de credencial, o rodapé e o local dos depoimentos; as tags sobre navy usam `#E2BC94`.
+- **Ordem dos títulos:** os `h4` que vinham logo depois de `h2` (home, residencial, comercial, LP v1, LP comercial) viraram `h3.h4`. Os seletores CSS passaram de `h4` para `.h4` e `h3.h4` neutraliza o estilo de h3. O estilo calculado foi comparado antes e depois e é idêntico. `processo.html` não mudou (lá os h4 vêm depois de h3).
+- **Dimensões:** `width`/`height` em `logobranco_pq.png` e `simbolo.png`, com o tamanho renderizado conferido em 375 e 1280 px.
+- **LP v2 no celular:** o logo ficava espremido em 73×22 px, sem espaço ao lado de 3 botões. Abaixo de 420 px o botão "Explorar" do topo fica oculto (o hero já tem "Explorar ›") e o logo ganhou `object-fit: contain`.
+- **Outros:** botão EN/PT com nome acessível contendo o texto visível; `label for` nos selects da LP comercial.
+- **Resultado (Lighthouse a11y, claro e escuro):** 100 em home, residencial, comercial, processo, LP v2 e LP comercial; LP v1 92, só pelos números decorativos grandes (`.dor-num`, marca d'água), mantidos de propósito.
+
 ### 2026-11-02 · Otimização mobile antes do Meta Ads
 **Motivo:** o Meta Ads vai trazer principalmente tráfego de celular. Lighthouse mobile (4G simulada) nas páginas no ar: home 41/100 (LCP 12,8 s, 2,1 MB), LP v2 37/100 (LCP 10 s, 2,2 MB), residencial 52/100 (LCP 10,6 s, **21 MB**).
 

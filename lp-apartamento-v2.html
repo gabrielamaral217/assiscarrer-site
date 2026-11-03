@@ -121,9 +121,15 @@
       flex: 1;
       display: flex; align-items: center;
     }
+    .topbar .brand { min-width: 0; }
     .topbar .brand img {
       height: 22px; width: auto;
+      max-width: 100%; object-fit: contain; object-position: left center;
       display: block;
+    }
+    /* Celular: sem espaço para logo + 3 botões; o hero já repete "Explorar" */
+    @media (max-width: 420px) {
+      .topbar a.topbar-cta.ghost { display: none; }
     }
     /* Light mode usa o logo escuro */
     .topbar .brand .logo-dark { display: block; }
@@ -738,7 +744,7 @@
     <div class="topbar-inner">
       <a href="https://www.assiscarrer-arquitetura.com/" class="brand" aria-label="Assis Carrer Arquitetura">
         <img class="logo-dark" src="images/logo/logo-horizontal-crop.png" alt="Assis Carrer Arquitetura" />
-        <img class="logo-light" src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+        <img class="logo-light" src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" width="1000" height="132" />
       </a>
       <button type="button" class="topbar-cta ghost lang-toggle-v2" data-lang-toggle aria-label="Switch language">EN</button>
       <a href="#destaques" class="topbar-cta ghost" data-i18n="lpv2.nav.explorar">Explorar</a>

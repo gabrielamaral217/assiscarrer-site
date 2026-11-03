@@ -32,7 +32,8 @@
     });
     document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
       btn.textContent = lang === 'en' ? 'PT' : 'EN';
-      btn.setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
+      // o nome acessível precisa conter o texto visível (EN/PT)
+      btn.setAttribute('aria-label', lang === 'en' ? 'PT, mudar para português' : 'EN, switch to English');
     });
     document.body.setAttribute('data-lang', lang);
   }

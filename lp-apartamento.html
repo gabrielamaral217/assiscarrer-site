@@ -26,7 +26,8 @@
     :root {
       color-scheme: light dark;
       --navy:   #254467;
-      --copper: #A96D3E;
+      --copper: #985F34;
+      --copper-btn: #985F34;
       --dark:   #1C2D40;
       --sand:   #C79872;
       --cream:  #F5F0EB;
@@ -41,6 +42,7 @@
         --cream: #1a1d23;
         --text:  #e8e8e8;
         --muted: #a8a8a8;
+        --copper: #d39963;
       }
       body { background: #0d0f13; }
       h1, h2, h3, h4 { color: var(--text) !important; }
@@ -58,7 +60,7 @@
       .case-card { background: #16191f !important; }
       .case-card .case-meta h3 { color: var(--text) !important; }
       .processo-lp .etapa { background: #16191f !important; }
-      .etapa h4 { color: var(--sand) !important; }
+      .etapa .h4 { color: var(--sand) !important; }
       .etapa-num { color: #fff !important; }
       .garantia { color: rgba(255,255,255,0.9) !important; }
       .garantia-icon { border-color: var(--copper) !important; color: var(--copper) !important; }
@@ -173,7 +175,7 @@
       padding: clamp(60px, 8vw, 100px) clamp(40px, 5vw, 80px);
       display: flex; flex-direction: column; justify-content: center;
     }
-    .transf-text .section-tag { color: var(--sand); }
+    .transf-text .section-tag { color: #E2BC94; }
     .transf-text h2 {
       font-family: 'Now', sans-serif; font-weight: 500;
       font-size: clamp(1.6rem, 2.5vw, 2.2rem);
@@ -186,7 +188,7 @@
       color: rgba(255,255,255,0.8); font-size: 0.95rem;
     }
     .beneficios li::before {
-      content: ''; width: 18px; height: 1px; background: var(--copper);
+      content: ''; width: 18px; height: 1px; background: var(--copper-btn);
       flex-shrink: 0; margin-top: 11px;
     }
 
@@ -213,7 +215,7 @@
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
     }
-    .etapa h4 { font-weight: 500; font-size: 0.95rem; color: var(--navy); margin-bottom: 10px; }
+    .etapa .h4 { font-weight: 500; font-size: 0.95rem; color: var(--navy); margin-bottom: 10px; }
     .etapa p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
     /* FORM */
@@ -252,10 +254,10 @@
     form input:focus, form select:focus, form textarea:focus { border-color: var(--copper); }
     form select option { background: var(--dark); color: #fff; }
     form textarea { resize: vertical; min-height: 100px; }
-    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    form label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
     .form-group { display: flex; flex-direction: column; gap: 6px; }
     .btn-submit {
-      background: var(--copper); border: none; color: #fff;
+      background: var(--copper-btn); border: none; color: #fff;
       padding: 16px; font-family: 'Now', sans-serif; font-size: 12px;
       letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
       transition: background 0.3s; margin-top: 8px;
@@ -270,7 +272,7 @@
       display: flex; align-items: center; justify-content: space-between; gap: 24px;
     }
     .lp-footer img { height: 28px; width: auto; }
-    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .lp-footer p { font-size: 12px; color: rgba(255,255,255,0.6); }
 
     /* WHATSAPP FLOATING BUTTON */
     .whatsapp-float {
@@ -377,7 +379,7 @@
     .video-placeholder:hover { opacity: 0.9; }
     .play-icon {
       width: 78px; height: 78px; border-radius: 50%;
-      background: var(--copper); color: #fff;
+      background: var(--copper-btn); color: #fff;
       display: flex; align-items: center; justify-content: center;
       font-size: 26px; padding-left: 6px;
     }
@@ -389,7 +391,7 @@
     .dep-stars { color: var(--copper); letter-spacing: 4px; margin-bottom: 16px; font-size: 16px; }
     .dep-card p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.92); margin-bottom: 22px; }
     .dep-autor { display: flex; align-items: center; gap: 14px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .dep-av { width: 44px; height: 44px; border-radius: 50%; background: var(--copper); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+    .dep-av { width: 44px; height: 44px; border-radius: 50%; background: var(--copper-btn); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
     .dep-autor strong { display: block; font-size: 14px; color: #fff; }
     .dep-autor small { font-size: 12px; color: rgba(255,255,255,0.6); }
     @media (max-width: 768px) { .dep-grid { grid-template-columns: 1fr; } }
@@ -410,7 +412,7 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="lp-header">
-    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" width="1000" height="132" />
     <div class="lp-header-actions">
       <button type="button" class="lang-toggle-lp" data-lang-toggle aria-label="Switch language">EN</button>
       <a href="#form" class="cta-header" data-i18n="lpa.nav.cta">Orçamento em 24h</a>
@@ -424,7 +426,7 @@
       <h1 data-i18n="lpa.hero.h1">Seu apê pequeno pode ser <em>exatamente o lar que você imaginou</em></h1>
       <p data-i18n="lpa.hero.sub">Apartamentos compactos têm potencial enorme. A gente transforma cada centímetro em funcionalidade, conforto e estilo.</p>
       <p style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sand);margin-bottom:28px;" data-i18n="lpa.hero.proof">100+ projetos · 7 anos · Aquarius · Urbanova · Floradas</p>
-      <a href="#form" style="display:inline-block;background:var(--copper);color:#fff;padding:16px 36px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;transition:background 0.3s;" onmouseover="this.style.background='#C79872'" onmouseout="this.style.background='#A96D3E'" data-i18n="lpa.hero.cta">Orçamento em 24h</a>
+      <a href="#form" style="display:inline-block;background: var(--copper-btn);color:#fff;padding:16px 36px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;transition:background 0.3s;" onmouseover="this.style.background='#C79872'" onmouseout="this.style.background='#A96D3E'" data-i18n="lpa.hero.cta">Orçamento em 24h</a>
     </div>
     <div class="hero-right">
       <picture>
@@ -532,22 +534,22 @@
       <div class="etapas">
         <div class="etapa">
           <div class="etapa-num">01</div>
-          <h4 data-i18n="lpa.proc1.h4">Briefing</h4>
+          <h3 class="h4" data-i18n="lpa.proc1.h4">Briefing</h3>
           <p data-i18n="lpa.proc1.p">Conversamos sobre seu estilo de vida, necessidades e o que você sonha para o espaço.</p>
         </div>
         <div class="etapa">
           <div class="etapa-num">02</div>
-          <h4 data-i18n="lpa.proc2.h4">Levantamento e 3D</h4>
+          <h3 class="h4" data-i18n="lpa.proc2.h4">Levantamento e 3D</h3>
           <p data-i18n="lpa.proc2.p">Medimos o espaço e criamos imagens realistas para você ver o resultado antes da obra.</p>
         </div>
         <div class="etapa">
           <div class="etapa-num">03</div>
-          <h4 data-i18n="lpa.proc3.h4">Projeto Executivo</h4>
+          <h3 class="h4" data-i18n="lpa.proc3.h4">Projeto Executivo</h3>
           <p data-i18n="lpa.proc3.p">Documentação técnica completa para compras, contratações e execução sem imprevistos.</p>
         </div>
         <div class="etapa">
           <div class="etapa-num">04</div>
-          <h4 data-i18n="lpa.proc4.h4">Execução</h4>
+          <h3 class="h4" data-i18n="lpa.proc4.h4">Execução</h3>
           <p data-i18n="lpa.proc4.p">Com ou sem nossa equipe, você escolhe. Garantimos o resultado que foi projetado.</p>
         </div>
       </div>
@@ -639,7 +641,7 @@
   </section>
 
   <footer class="lp-footer">
-    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" />
+    <img src="images/logo/logobranco_pq.png" alt="Assis Carrer Arquitetura" width="1000" height="132" />
     <p data-i18n="lpa.footer.copy">© 2026 Assis Carrer Arquitetura, São José dos Campos, SP</p>
   </footer>
 
@@ -760,7 +762,7 @@
     <button class="projeto-modal-close" id="projetoModalClose" aria-label="Fechar">×</button>
     <div class="projeto-modal-content">
       <img class="projeto-modal-img" id="projetoModalImg" alt="" />
-      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" />
+      <img class="projeto-modal-logo" src="images/logo/simbolo.png" alt="" aria-hidden="true" width="480" height="480" />
     </div>
   </div>
 
