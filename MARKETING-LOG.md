@@ -47,7 +47,7 @@
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
-| Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) |
+| Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) · **2026-11-02:** v2 ganhou o mesmo formulário da v1 (mensagem começa com a frase da v2, "Vim pelo site, quero um orçamento de apartamento", seguida dos dados). Teste mantido. Histórico: as 4 mensagens "Vim pela landing de projeto residencial" (12 a 19/06) são de antes do A/B (21/06) e de quando a Pmax mandava 100% para a v1; depois de 21/06 o Search caiu na home e as LPs quase não tiveram tráfego. |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
 | Idioma padrão | ✅ | Desde 2026-11-02 o site abre **sempre em português**; inglês só pelo botão EN (antes seguia `navigator.language` e celulares em inglês viam o site em inglês) |
 | Performance mobile | 🟡 | Fotos com versões 800w/1400w (`images/portfolio/opt/`, `res-*`), fontes Now em woff2, Google Fonts sem bloquear a pintura. Gargalo restante: tags de terceiros (gtag carregado direto **e** via GTM, Meta Pixel) |
@@ -174,6 +174,13 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-02 · LP v2: formulário + contraste no escuro · 200+ projetos
+- **Formulário na v2** (`#lpForm2`, no CTA final, com os mesmos campos da v1). A mensagem do WhatsApp começa com a frase da v2, então o A/B continua separando as versões pela frase: a v1 usa "Vim pela landing de projeto residencial" e a v2 "Vim pelo site, quero um orçamento de apartamento". Dispara `lead_form_submit` `{page: 'lp-apartamento-v2'}` e a conversão do Ads. Testado o envio (mensagem, eventos e confirmação).
+- **Formulários com `method="post" action="#"`** (home, v1, v2, LP comercial): se o JS falhar, nome e telefone não vão para a URL.
+- **Contraste da v2 no escuro:** a topbar de 72% de opacidade deixava o conteúdo aparecer atrás do logo e dos botões; agora é 94% (claro e escuro). O "Orçamento" e o botão cobre no escuro passaram a texto escuro sobre o cobre claro. O botão do WhatsApp foi para um verde mais fechado (#16903f a #127a35): o texto branco tinha 1,6 a 2,9 de contraste. O `--copper` do claro da v2 passou a `#985F34`, como no resto do site.
+- **100 → 200 projetos** em todas as páginas (PT, EN e meta descriptions): 32 trocas. Na v2 o número grande dizia "100+ apartamentos entregues" e passou a "200+ projetos entregues", porque os 200 incluem os comerciais.
+- **Fora do site, para atualizar à mão:** textos e frases de destaque do Google Ads ("100+ projetos") e o Perfil da Empresa no Google, se mencionarem o número.
 
 ### 2026-11-02 · Ajustes de acessibilidade (contraste, títulos, dimensões)
 - **Contraste:** o cobre `#A96D3E` não passava em texto pequeno nem em botão com letra branca (3,6 a 4,25; o mínimo é 4,5). `--copper` agora é `#985F34` no tema claro e `#d39963` no escuro, e o novo `--copper-btn: #985F34` vale para os fundos de botão com texto branco. No modo escuro, o CTA do portfólio da home estava navy sobre quase-preto (1,25) e agora usa a cor de texto e o sand. Nas LPs, ficaram mais claros os labels do formulário, os números de credencial, o rodapé e o local dos depoimentos; as tags sobre navy usam `#E2BC94`.

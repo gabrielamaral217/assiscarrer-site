@@ -35,7 +35,7 @@
       --ink-soft: #424245;
       --muted:    #86868b;
       --hairline: rgba(0,0,0,0.08);
-      --copper:   #A96D3E;
+      --copper:   #985F34;
       /* gradients estilo Apple */
       --grad-warm: linear-gradient(90deg, #c89b6e 0%, #d5a370 30%, #b9805a 70%, #8c5f3e 100%);
       --grad-cool: linear-gradient(90deg, #6a7d92 0%, #8a98ac 40%, #adb9c9 100%);
@@ -107,7 +107,7 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       padding: calc(var(--safe-top) + 8px) 16px 8px 16px;
-      background: rgba(245,245,247,0.72);
+      background: rgba(245,245,247,0.94);
       backdrop-filter: saturate(180%) blur(20px);
       -webkit-backdrop-filter: saturate(180%) blur(20px);
       border-bottom: 1px solid var(--hairline);
@@ -157,7 +157,7 @@
 
     @media (prefers-color-scheme: dark) {
       .topbar {
-        background: rgba(10,10,12,0.72);
+        background: rgba(10,10,12,0.94);
         border-bottom-color: rgba(255,255,255,0.06);
       }
       .topbar .topbar-cta.ghost {
@@ -166,8 +166,9 @@
         color: var(--ink);
       }
       .topbar .topbar-cta.primary {
-        background: linear-gradient(180deg, var(--copper) 0%, #b97f4f 100%);
+        background: linear-gradient(180deg, var(--copper) 0%, #c48a58 100%);
         box-shadow: 0 0 0 1px rgba(211,153,99,0.3), 0 6px 18px rgba(0,0,0,0.4);
+        color: #1a1109;
       }
     }
 
@@ -672,6 +673,45 @@
     /* ==========================================
        CTA section
        ========================================== */
+    /* ==========================================
+       Formulário de orçamento (mesmos campos da v1)
+       ========================================== */
+    .lp-form {
+      max-width: 420px; margin: 0 auto 20px auto;
+      text-align: left;
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 22px 20px 20px 20px;
+      box-shadow: 0 1px 0 var(--hairline), 0 12px 32px -18px rgba(0,0,0,0.25);
+    }
+    .lp-form .field { margin-bottom: 14px; }
+    .lp-form label {
+      display: block; font-size: 13px; font-weight: 500;
+      color: var(--ink-soft); margin-bottom: 6px;
+    }
+    .lp-form input, .lp-form select {
+      width: 100%; font: inherit; font-size: 16px; /* 16px evita o zoom do iPhone */
+      color: var(--ink); background: var(--bg);
+      border: 1px solid var(--hairline); border-radius: 12px;
+      padding: 12px 14px; appearance: none; -webkit-appearance: none;
+    }
+    .lp-form select {
+      background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+      background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%;
+      background-size: 5px 5px; background-repeat: no-repeat;
+      padding-right: 36px;
+    }
+    .lp-form input:focus, .lp-form select:focus { outline: 2px solid var(--copper); outline-offset: 1px; }
+    .lp-form .btn-pill { width: 100%; justify-content: center; margin-top: 4px; }
+    .lp-form .form-hint { font-size: 13px; color: var(--muted); text-align: center; margin: 12px 0 0 0; max-width: none; }
+    .lp-form .form-ok { display: none; font-size: 14px; color: var(--ink); text-align: center; margin: 12px 0 0 0; max-width: none; }
+    .lp-form .form-ok.show { display: block; }
+    .cta-ou { font-size: 14px; color: var(--muted); margin: 8px auto 14px auto !important; }
+    @media (prefers-color-scheme: dark) {
+      .lp-form { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
+      .lp-form input, .lp-form select { background-color: #0e0f12; border-color: rgba(255,255,255,0.14); }
+    }
+
     .cta-section {
       text-align: center;
       padding: 80px 24px calc(80px + var(--safe-bottom)) 24px;
@@ -699,14 +739,17 @@
       transition: opacity 0.2s, transform 0.15s;
     }
     .btn-pill svg { width: 16px; height: 16px; }
+    @media (prefers-color-scheme: dark) {
+      .btn-pill:not(.whatsapp) { color: #1a1109; }
+    }
     .btn-pill:active { opacity: 0.85; transform: scale(0.97); }
     .btn-pill.whatsapp {
-      background: linear-gradient(180deg, #2ee06f 0%, #1faf53 100%);
+      background: linear-gradient(180deg, #16903f 0%, #127a35 100%);
       box-shadow: 0 8px 24px -8px rgba(37,211,102,0.55);
     }
     @media (prefers-color-scheme: dark) {
       .btn-pill.whatsapp {
-        background: linear-gradient(180deg, #36e87b 0%, #20c25e 100%);
+        background: linear-gradient(180deg, #16903f 0%, #127a35 100%);
         box-shadow: 0 0 0 1px rgba(54,232,123,0.35), 0 12px 32px -8px rgba(37,211,102,0.5);
       }
     }
@@ -819,11 +862,11 @@
        SECTION 2: STATS (números gigantes)
        ========================================== -->
   <section class="stats">
-    <h2 class="reveal" data-i18n="lpv2.stats.h2">Sete anos.<br>Cem projetos.</h2>
+    <h2 class="reveal" data-i18n="lpv2.stats.h2">Sete anos.<br>Duzentos projetos.</h2>
     <div class="stats-list">
       <div class="stat reveal">
-        <span class="stat-num" data-i18n="lpv2.stats.num1">100+</span>
-        <span class="stat-label" data-i18n="lpv2.stats.label1">apartamentos entregues</span>
+        <span class="stat-num" data-i18n="lpv2.stats.num1">200+</span>
+        <span class="stat-label" data-i18n="lpv2.stats.label1">projetos entregues</span>
       </div>
       <div class="stat reveal">
         <span class="stat-num cool" data-i18n="lpv2.stats.num2">7</span>
@@ -872,7 +915,7 @@
     <div class="arquitetas-body">
       <p class="eyebrow" data-i18n="lpv2.arq.eyebrow">Quem assina o projeto</p>
       <h2 data-i18n="lpv2.arq.h2"><span class="names">Flavia e Beatriz.</span><br>Duas sócias, um cuidado.</h2>
-      <p data-i18n="lpv2.arq.p">Sócias do escritório há sete anos, com mais de cem projetos juntos. A gente entrega projeto com tempo, atenção e identidade, do briefing à entrega das chaves.</p>
+      <p data-i18n="lpv2.arq.p">Sócias do escritório há sete anos, com mais de duzentos projetos juntos. A gente entrega projeto com tempo, atenção e identidade, do briefing à entrega das chaves.</p>
       <p class="signature" data-i18n="lpv2.arq.signature">Atendimento pessoal. Sem terceirizar você.</p>
     </div>
   </section>
@@ -1013,6 +1056,41 @@
   <section class="cta-section">
     <h2 class="reveal" data-i18n="lpv2.cta.h2">Vamos<br>conversar?</h2>
     <p class="reveal" data-i18n="lpv2.cta.p">As arquitetas Flavia e Beatriz<br>respondem em até 24h.</p>
+    <form id="lpForm2" class="lp-form reveal" method="post" action="#">
+      <div class="field">
+        <label for="v2-nome" data-i18n="lpv2.form.nome">Nome</label>
+        <input id="v2-nome" type="text" name="nome" autocomplete="name" placeholder="Seu nome" data-i18n="lpv2.form.ph.nome" data-i18n-attr="placeholder" required />
+      </div>
+      <div class="field">
+        <label for="v2-whatsapp">WhatsApp</label>
+        <input id="v2-whatsapp" type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(12) 9 0000-0000" required />
+      </div>
+      <div class="field">
+        <label for="v2-tipo" data-i18n="lpv2.form.tipo">Tipo de projeto</label>
+        <select id="v2-tipo" name="tipo" required>
+          <option value="" data-i18n="lpv2.form.selecione">Selecione...</option>
+          <option data-i18n="lpv2.opt.tipo1">Apartamento, projeto novo</option>
+          <option data-i18n="lpv2.opt.tipo2">Apartamento, reforma</option>
+          <option data-i18n="lpv2.opt.tipo3">Casa, projeto novo</option>
+          <option data-i18n="lpv2.opt.tipo4">Casa, reforma</option>
+          <option data-i18n="lpv2.opt.tipo5">Outro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="v2-prazo" data-i18n="lpv2.form.prazo">Quando pretende iniciar?</label>
+        <select id="v2-prazo" name="prazo" required>
+          <option value="" data-i18n="lpv2.form.selecione">Selecione...</option>
+          <option data-i18n="lpv2.opt.prazo1">Imediato, próximos 30 dias</option>
+          <option data-i18n="lpv2.opt.prazo2">Nos próximos 3 meses</option>
+          <option data-i18n="lpv2.opt.prazo3">Nos próximos 6 meses</option>
+          <option data-i18n="lpv2.opt.prazo4">Só pesquisando</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-pill" data-i18n="lpv2.form.submit">Quero meu orçamento em 24h</button>
+      <p class="form-hint" data-i18n="lpv2.form.hint">Abre o WhatsApp com seus dados já preenchidos.</p>
+      <p class="form-ok" id="ok2" data-i18n="lpv2.form.ok">Recebemos! Em breve uma arquiteta entra em contato.</p>
+    </form>
+    <p class="cta-ou reveal" data-i18n="lpv2.cta.ou">ou, se preferir, fale direto</p>
     <a href="https://wa.me/5512981534551?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20um%20or%C3%A7amento%20de%20apartamento." target="_blank" rel="noopener" class="btn-pill whatsapp reveal">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
       <span data-i18n="lpv2.cta.whatsapp">Falar pelo WhatsApp</span>
@@ -1039,9 +1117,9 @@
       "lpv2.card3.title": "Ready to<br>move in.",
       "lpv2.card3.desc": "Finished apartment, decor in place, keys in your hand.",
       "lpv2.card3.alt": "Finished apartment",
-      "lpv2.stats.h2": "Seven years.<br>A hundred projects.",
-      "lpv2.stats.num1": "100+",
-      "lpv2.stats.label1": "apartments delivered",
+      "lpv2.stats.h2": "Seven years.<br>Two hundred projects.",
+      "lpv2.stats.num1": "200+",
+      "lpv2.stats.label1": "projects delivered",
       "lpv2.stats.num2": "7",
       "lpv2.stats.label2": "years working in São José dos Campos",
       "lpv2.feature1.eyebrow": "Briefing",
@@ -1055,7 +1133,7 @@
       "lpv2.arq.alt": "Architects Flavia and Beatriz, Assis Carrer Arquitetura",
       "lpv2.arq.eyebrow": "Who signs the project",
       "lpv2.arq.h2": "<span class=\"names\">Flavia and Beatriz.</span><br>Two partners, one standard of care.",
-      "lpv2.arq.p": "Business partners for seven years, with more than a hundred projects together. We deliver every project with time, attention and identity, from the initial briefing to handing over the keys.",
+      "lpv2.arq.p": "Business partners for seven years, with more than two hundred projects together. We deliver every project with time, attention and identity, from the initial briefing to handing over the keys.",
       "lpv2.arq.signature": "Personal attention. We never outsource you.",
       "lpv2.lar.h2": "<span class=\"grad-cool\">Home.</span> <span class=\"grad-purple\">Detail.</span> <span class=\"grad-warm\">House.</span>",
       "lpv2.tall1.alt": "Living room with high ceilings",
@@ -1092,7 +1170,25 @@
       "lpv2.insta.follow": "Follow on Instagram",
       "lpv2.cta.h2": "Shall we<br>talk?",
       "lpv2.cta.p": "The architects Flavia and Beatriz<br>reply within 24h.",
-      "lpv2.cta.whatsapp": "Chat on WhatsApp"
+      "lpv2.cta.whatsapp": "Chat on WhatsApp",
+      "lpv2.cta.ou": "or, if you prefer, message us directly",
+      "lpv2.form.nome": "Name",
+      "lpv2.form.ph.nome": "Your name",
+      "lpv2.form.tipo": "Project type",
+      "lpv2.form.prazo": "When do you plan to start?",
+      "lpv2.form.selecione": "Select...",
+      "lpv2.opt.tipo1": "Apartment, new project",
+      "lpv2.opt.tipo2": "Apartment, renovation",
+      "lpv2.opt.tipo3": "House, new project",
+      "lpv2.opt.tipo4": "House, renovation",
+      "lpv2.opt.tipo5": "Other",
+      "lpv2.opt.prazo1": "Right away, next 30 days",
+      "lpv2.opt.prazo2": "Within 3 months",
+      "lpv2.opt.prazo3": "Within 6 months",
+      "lpv2.opt.prazo4": "Just researching",
+      "lpv2.form.submit": "Get my quote in 24h",
+      "lpv2.form.hint": "Opens WhatsApp with your details filled in.",
+      "lpv2.form.ok": "Got it! An architect will reach out soon."
     };
   </script>
   <script src="canal.js"></script>
@@ -1115,6 +1211,20 @@
         trackEvent('whatsapp_click', {page: 'lp-apartamento-v2'});
         trackConversion();
       });
+    });
+    // Formulário: mesma frase dos botões da v2 (o A/B continua lendo a v2 pela frase) + os dados
+    document.getElementById('lpForm2').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = Object.fromEntries(new FormData(this));
+      var text = encodeURIComponent(
+        'Olá! Vim pelo site, quero um orçamento de apartamento.\n\n' +
+        'Nome: ' + d.nome + '\nWhatsApp: ' + d.whatsapp + '\n' +
+        'Tipo de projeto: ' + d.tipo + '\nQuando pretende iniciar: ' + d.prazo
+      );
+      trackEvent('lead_form_submit', {page: 'lp-apartamento-v2', tipo_projeto: d.tipo, prazo: d.prazo});
+      trackConversion();
+      window.open('https://wa.me/5512981534551?text=' + text, '_blank');
+      document.getElementById('ok2').classList.add('show');
     });
     var s75 = false;
     window.addEventListener('scroll', function () {
