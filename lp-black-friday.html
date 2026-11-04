@@ -109,17 +109,20 @@
     /* Carrossel de projetos */
     .carousel { margin-top: 32px; margin-left: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(20px, env(safe-area-inset-right, 0px))); }
     .track {
-      display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 12px;
-      overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
-      padding: 0 20px 4px; scrollbar-width: none; overscroll-behavior-x: contain;
+      display: grid; grid-auto-flow: column; grid-auto-columns: 90%; gap: 10px;
+      overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+      padding: 0 16px 4px; scrollbar-width: none; overscroll-behavior-x: contain;
     }
     .track::-webkit-scrollbar { display: none; }
-    @media (min-width: 640px) { .track { grid-auto-columns: 300px; } }
+    @media (min-width: 640px) {
+      .carousel { width: min(calc(100vw - 32px), 1240px); margin-left: 50%; margin-right: 0; transform: translateX(-50%); }
+      .track { grid-auto-columns: 420px; gap: 16px; }
+    }
     .slide { position: relative; scroll-snap-align: start; border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--bg-card); }
     .slide img { width: 100%; height: 100%; object-fit: cover; }
     .slide figcaption {
       position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px;
-      font-size: 15px; font-weight: 600; text-align: left; color: #fff;
+      font-size: 17px; font-weight: 600; text-align: left; color: #fff;
       background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.72) 100%);
     }
     .dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
@@ -241,31 +244,31 @@
       <div class="carousel" aria-label="Projetos da Assis Carrer">
         <div class="track" id="track" tabindex="0">
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-celebration-sala-640.webp" alt="Sala integrada com vista da cidade, Celebration Life, projeto Assis Carrer" width="640" height="800" fetchpriority="high" />
+            <img src="images/portfolio/opt/car-case-celebration-sala-640.webp" srcset="images/portfolio/opt/car-case-celebration-sala-640.webp 640w, images/portfolio/opt/car-case-celebration-sala-hd.webp 742w" sizes="(min-width: 640px) 420px, 88vw" alt="Sala integrada com vista da cidade, Celebration Life, projeto Assis Carrer" width="640" height="800" fetchpriority="high" />
             <figcaption>Cobertura Celebration Life</figcaption>
           </figure>
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-enjoy-aquarius-sala-640.webp" alt="Sala integrada em tons nude, Enjoy Aquarius, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <img src="images/portfolio/opt/car-case-enjoy-aquarius-sala-640.webp" srcset="images/portfolio/opt/car-case-enjoy-aquarius-sala-640.webp 640w, images/portfolio/opt/car-case-enjoy-aquarius-sala-hd.webp 746w" sizes="(min-width: 640px) 420px, 88vw" alt="Sala integrada em tons nude, Enjoy Aquarius, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
             <figcaption>Apartamento Enjoy Aquarius</figcaption>
           </figure>
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-believe-jantar-640.webp" alt="Jantar com parede de pedra, apartamento Believe, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <img src="images/portfolio/opt/car-case-believe-jantar-640.webp" srcset="images/portfolio/opt/car-case-believe-jantar-640.webp 640w, images/portfolio/opt/car-case-believe-jantar-hd.webp 746w" sizes="(min-width: 640px) 420px, 88vw" alt="Jantar com parede de pedra, apartamento Believe, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
             <figcaption>Apartamento Believe</figcaption>
           </figure>
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-portal-victoria-640.webp" alt="Sala e cozinha integradas, Portal Victoria, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <img src="images/portfolio/opt/car-case-portal-victoria-640.webp" srcset="images/portfolio/opt/car-case-portal-victoria-640.webp 640w, images/portfolio/opt/car-case-portal-victoria-hd.webp 1080w" sizes="(min-width: 640px) 420px, 88vw" alt="Sala e cozinha integradas, Portal Victoria, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
             <figcaption>Apartamento Portal Victoria</figcaption>
           </figure>
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-cozinha-preta-640.webp" alt="Cozinha preta com marcenaria de madeira, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <img src="images/portfolio/opt/car-case-cozinha-preta-640.webp" srcset="images/portfolio/opt/car-case-cozinha-preta-640.webp 640w, images/portfolio/opt/car-case-cozinha-preta-hd.webp 900w" sizes="(min-width: 640px) 420px, 88vw" alt="Cozinha preta com marcenaria de madeira, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
             <figcaption>Cozinha preta com madeira</figcaption>
           </figure>
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-lavabo-rose-640.webp" alt="Lavabo em cimento queimado rosé com ripado, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <img src="images/portfolio/opt/car-case-lavabo-rose-640.webp" srcset="images/portfolio/opt/car-case-lavabo-rose-640.webp 640w, images/portfolio/opt/car-case-lavabo-rose-hd.webp 900w" sizes="(min-width: 640px) 420px, 88vw" alt="Lavabo em cimento queimado rosé com ripado, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
             <figcaption>Lavabo rosé</figcaption>
           </figure>
           <figure class="slide">
-            <img src="images/portfolio/opt/car-case-varanda-gourmet-640.webp" alt="Varanda gourmet com marcenaria verde, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <img src="images/portfolio/opt/car-case-varanda-gourmet-640.webp" srcset="images/portfolio/opt/car-case-varanda-gourmet-640.webp 640w, images/portfolio/opt/car-case-varanda-gourmet-hd.webp 1080w" sizes="(min-width: 640px) 420px, 88vw" alt="Varanda gourmet com marcenaria verde, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
             <figcaption>Varanda gourmet</figcaption>
           </figure>
           <figure class="slide">

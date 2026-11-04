@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-02** · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-04** · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -183,6 +183,7 @@
 - **robots.txt:** `Disallow: /lp-black-friday.html`, como nas outras LPs pagas.
 - **2026-11-04:** botão "Conhecer o escritório e os projetos" depois dos depoimentos, levando à home (`index.html`), com evento `conhecer_site_click`. O canal de anúncio fica salvo no navegador, então quem vai para a home continua sendo marcado no WhatsApp.
 - **2026-11-04:** a foto única do topo virou um **carrossel com 9 projetos** (Celebration, Enjoy Aquarius, Believe, Portal Victoria, cozinha preta, lavabo rosé, varanda gourmet, Sapore Gelato Caffè, CM Brigadeiros), em imagens 4:5 de 640 px (`opt/car-*-640.webp`, 18 a 62 KB cada), arrastável, com bolinhas. Em "Quem vai cuidar" entrou a faixa **"Marcas que confiaram no escritório"** com Sapore, Sapore Açaí, Artesane e CM Brigadeiros, em quadros brancos.
+- **2026-11-04:** carrossel maior, como o Gabriel pediu: no celular cada foto ocupa 90% da largura (~310 px; antes eram ~260 px) e no computador o carrossel sai da coluna de texto, com fotos de 420 px (antes 300 px). Sete fotos ganharam versão `opt/car-*-hd.webp` (742 a 1080 px) por `srcset`. Sapore e CM Brigadeiros ficam só na versão de 640 px, porque o original é menor que isso.
 
 ### 2026-11-02 · LP v2: formulário + contraste no escuro · 200+ projetos
 - **Formulário na v2** (`#lpForm2`, no CTA final, com os mesmos campos da v1). A mensagem do WhatsApp começa com a frase da v2, então o A/B continua separando as versões pela frase: a v1 usa "Vim pela landing de projeto residencial" e a v2 "Vim pelo site, quero um orçamento de apartamento". Dispara `lead_form_submit` `{page: 'lp-apartamento-v2'}` e a conversão do Ads. Testado o envio (mensagem, eventos e confirmação).
