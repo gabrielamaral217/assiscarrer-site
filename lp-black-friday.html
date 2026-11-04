@@ -81,6 +81,8 @@
     .btn-gold { background: linear-gradient(180deg, var(--gold) 0%, var(--gold-deep) 100%); color: var(--on-gold); }
     .btn-wa { background: linear-gradient(180deg, var(--wa) 0%, var(--wa-deep) 100%); color: #fff; }
     .btn-sm { font-size: 14px; padding: 8px 14px; }
+    .btn-ghost { color: var(--gold); border: 1px solid rgba(231,180,124,0.5); }
+    .mais { display: flex; justify-content: center; margin-top: 22px; }
 
     /* Hero */
     .hero { text-align: center; padding: 36px 0 28px; }
@@ -266,6 +268,9 @@
         <article class="review"><span class="stars">★★★★★</span><p>"Recomendo pra quem busca excelência e humanidade no trabalho de arquitetura."</p></article>
         <article class="review"><span class="stars">★★★★★</span><p>"Atenderam todas as expectativas que tinha para o meu projeto."</p></article>
       </div>
+      <div class="mais">
+        <a href="index.html" class="btn btn-ghost" id="bfConhecer">Conhecer o escritório e os projetos</a>
+      </div>
     </section>
 
     <!-- FORMULÁRIO -->
@@ -387,6 +392,10 @@
       trackConversion();
       window.open('https://wa.me/' + WA + '?text=' + text, '_blank');
       document.getElementById('bfOk').classList.add('show');
+    });
+
+    document.getElementById('bfConhecer').addEventListener('click', function () {
+      trackEvent('conhecer_site_click', {page: 'lp-black-friday'});
     });
 
     var s75 = false;
