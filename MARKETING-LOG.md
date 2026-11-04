@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-04** · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-04** · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -47,6 +47,7 @@
 | Cases nomeados site | ✅ | 5 residencial (Believe, Celebration, Enjoy Aquarius, Real Ville, Portal Victoria) + 2 consultórios + Sapore upgrade |
 | Instagram | 🟡 | 7k seguidores · bio precisa update conforme plano (ver pendências) |
 | Meta Ads | ⏳ | Não iniciado · Pixel pronto pra ligar |
+| Visibilidade em IA (GEO) | 🟡 | 2026-11-04: páginas `arquiteta-sao-jose-dos-campos.html` e `projeto-de-interiores-sjc.html` com perguntas frequentes (FAQPage), cartão do escritório completo no `index.html` (fundadoras, endereço, serviços, área atendida), `llms.txt` e sitemap atualizado. **Regra do Gabriel: nada de preço nem prazo em número nas páginas** ("tudo é muito customizado"). Sem tradução EN. Acompanhamento mensal em Pendências |
 | Black Friday 2026 | ✅ | `lp-black-friday.html` (noindex no robots): 25% em projeto + acompanhamento de obra, contrato assinado até 30/11/2026 23h59, 10 primeiros projetos. Frase do WhatsApp: "Quero a condição de Black Friday (25% no projeto)". Contagem regressiva; depois do prazo a página troca sozinha para "encerrada" e esconde o formulário |
 | Teste A/B LP mobile | 🟡 | A = `lp-apartamento.html` (controle) · B = `lp-apartamento-v2.html` (Apple-style, mobile-first). Split 50/50 via `ab-test.js`. Métrica: msgs WhatsApp recebidas. Variante inferida pela frase do prefill (sem código visível) · **2026-11-02:** v2 ganhou o mesmo formulário da v1 (mensagem começa com a frase da v2, "Vim pelo site, quero um orçamento de apartamento", seguida dos dados). Teste mantido. Histórico: as 4 mensagens "Vim pela landing de projeto residencial" (12 a 19/06) são de antes do A/B (21/06) e de quando a Pmax mandava 100% para a v1; depois de 21/06 o Search caiu na home e as LPs quase não tiveram tráfego. |
 | Toggle EN/PT | ✅ | `i18n.js` (novo) em todas as 7 páginas públicas (index, residencial, comercial, processo, lp-apartamento, lp-comercial, lp-apartamento-v2). Idioma padrão segue `navigator.language` do visitante; override manual persiste em `localStorage`. `proposta-assis-carrer.html` (proposta privada de cliente, bloqueada no robots.txt) ficou fora do escopo — não é página de navegação pública |
@@ -128,7 +129,7 @@
 | O quê | Versão oficial |
 |-------|----------------|
 | Tempo de mercado | **7 anos** (ou "desde 2019") — NUNCA "6 anos" |
-| Projetos entregues | **100+** |
+| Projetos entregues | **200+** (desde 2026-11-02) |
 | Gênero das sócias | Feminino — "as arquitetas" (Flavia + Beatriz) |
 | Nome com acento | **Flavia** (sem acento) |
 | CTA principal | **"Orçamento em 24h"** |
@@ -154,6 +155,9 @@
 - [ ] Acompanhar primeiros 7 dias da campanha Google Ads (sem mexer)
 
 ### Médio prazo (próximos 30 dias)
+- [ ] **Todo dia 5: teste de IA.** Perguntar em aba anônima no ChatGPT, Gemini e Perplexity: "melhor arquiteto em São José dos Campos", "arquiteta de interiores em SJC" e "escritório de arquitetura no Aquarius SJC". Anotar aqui se a Assis Carrer aparece e quem aparece. No GA4 (Aquisição › Aquisição de tráfego, origem/mídia) ver as visitas de `chatgpt.com`, `perplexity.ai` e `gemini.google.com`. Linha de base: 04/11/2026, antes das páginas novas serem indexadas
+- [ ] Enviar o sitemap no Google Search Console e no Bing Webmaster Tools (o ChatGPT busca pelo Bing)
+- [ ] Rever o FAQ de `processo.html`, que ainda cita prazos ("6 a 8 semanas", "3 a 5 meses"), contra a regra de não prometer prazo
 - [ ] Subir mais 20+ fotos no GMN (usar pasta `images/00.FOTOS OBRAS/`)
 - [ ] Ligar campanha Meta Ads (Pixel já está rodando · faltam criativos)
 - [ ] Calendário editorial Instagram 12 posts/mês (Parte 3 do plano)
@@ -175,6 +179,13 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-04 · Visibilidade em IA: páginas de SJC, FAQ e dados estruturados
+- **Por quê:** o Gabriel quer que a IA (ChatGPT, Gemini, Perplexity) cite a Assis Carrer quando alguém perguntar por arquiteto em SJC. As IAs tiram a resposta de páginas que respondem perguntas diretas e de dados estruturados.
+- **Páginas novas (no sitemap e indexáveis):** `arquiteta-sao-jose-dos-campos.html` (quem é o escritório, as arquitetas, serviços, regiões, 8 perguntas) e `projeto-de-interiores-sjc.html` (o que entra no projeto, arquitetura x interiores, 7 perguntas). As duas têm dados estruturados de FAQPage, Service e BreadcrumbList; eventos `whatsapp_click`, `faq_open` e `scroll_75` com `page` `arquiteta-sjc` / `interiores-sjc`. Em todo o texto, preço e prazo são "sob medida, depende do escopo", sem números, a pedido do Gabriel.
+- **index.html:** o cartão do escritório (dados estruturados) ganhou endereço completo, CEP, e-mail, fundadoras, ano de fundação (2019), serviços e cidades atendidas. O telefone foi corrigido para o WhatsApp oficial (antes era +55 12 99776-0398) e o Instagram para `@assiscarrer.arq` (antes `assiscarrer.arquitetura`). O contador "+100 projetos entregues" da seção Sobre passou a "+200".
+- **Rodapé** de index, residencial, comercial e processo com links para as duas páginas novas.
+- **`llms.txt`** na raiz (resumo do escritório para IAs) e `sitemap.xml` com as páginas novas.
 
 ### 2026-11-03 · Landing page de Black Friday
 - **Regras (definidas pelo Gabriel):** contrato assinado até 30/11/2026, desconto de 25% sobre projeto arquitetônico, interiores e acompanhamento de obra. Fora: execução, mão de obra, materiais, móveis e produtos. Limite de 10 primeiros contratos, sem contador na página. "Não cumulativo" foi acrescentado no regulamento: confirmar.
