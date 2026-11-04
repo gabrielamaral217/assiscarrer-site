@@ -19,7 +19,7 @@
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2037009416852160');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037009416852160&ev=PageView&noscript=1" /></noscript>
 
-  <link rel="preload" as="image" href="images/portfolio/opt/case-celebration-sala.webp" imagesrcset="images/portfolio/opt/res-case-celebration-sala-800.webp 800w, images/portfolio/opt/case-celebration-sala.webp 1400w" imagesizes="(max-width: 800px) 100vw, 760px" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/portfolio/opt/car-case-celebration-sala-640.webp" type="image/webp" fetchpriority="high" />
 
   <style>
     /* ==========================================
@@ -105,8 +105,33 @@
     .cd span { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
     .cd-label { text-align: center; font-size: 13px; color: var(--muted); margin-top: 8px; }
 
-    .hero-shot { margin-top: 32px; border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 3; }
-    .hero-shot img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Carrossel de projetos */
+    .carousel { margin-top: 32px; margin-left: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(20px, env(safe-area-inset-right, 0px))); }
+    .track {
+      display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 12px;
+      overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
+      padding: 0 20px 4px; scrollbar-width: none; overscroll-behavior-x: contain;
+    }
+    .track::-webkit-scrollbar { display: none; }
+    @media (min-width: 640px) { .track { grid-auto-columns: 300px; } }
+    .slide { position: relative; scroll-snap-align: start; border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--bg-card); }
+    .slide img { width: 100%; height: 100%; object-fit: cover; }
+    .slide figcaption {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px;
+      font-size: 15px; font-weight: 600; text-align: left; color: #fff;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.72) 100%);
+    }
+    .dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+    .dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: background .2s, width .2s; }
+    .dots span.on { background: var(--gold); width: 18px; border-radius: 3px; }
+    .swipe { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+    /* Logos de clientes */
+    .logos-title { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 30px; }
+    .logos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+    .logo-tile { background: #ffffff; border-radius: 14px; aspect-ratio: 1 / 1; display: grid; place-items: center; padding: 10px; min-width: 0; overflow: hidden; }
+    .logo-tile img { width: 100%; height: 100%; object-fit: contain; }
 
     /* Seções */
     section { padding: 44px 0; }
@@ -213,11 +238,47 @@
         </div>
         <p class="cd-label">até o fim da condição, em 30/11 às 23h59</p>
       </div>
-      <div class="hero-shot">
-        <picture>
-          <source type="image/webp" srcset="images/portfolio/opt/res-case-celebration-sala-800.webp 800w, images/portfolio/opt/case-celebration-sala.webp 1400w" sizes="(max-width: 800px) 100vw, 760px" />
-          <img src="images/portfolio/opt/case-celebration-sala.jpg" alt="Sala integrada da Cobertura Celebration Life, projeto Assis Carrer em São José dos Campos" width="1400" height="928" fetchpriority="high" />
-        </picture>
+      <div class="carousel" aria-label="Projetos da Assis Carrer">
+        <div class="track" id="track" tabindex="0">
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-celebration-sala-640.webp" alt="Sala integrada com vista da cidade, Celebration Life, projeto Assis Carrer" width="640" height="800" fetchpriority="high" />
+            <figcaption>Cobertura Celebration Life</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-enjoy-aquarius-sala-640.webp" alt="Sala integrada em tons nude, Enjoy Aquarius, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Apartamento Enjoy Aquarius</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-believe-jantar-640.webp" alt="Jantar com parede de pedra, apartamento Believe, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Apartamento Believe</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-portal-victoria-640.webp" alt="Sala e cozinha integradas, Portal Victoria, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Apartamento Portal Victoria</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-cozinha-preta-640.webp" alt="Cozinha preta com marcenaria de madeira, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Cozinha preta com madeira</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-lavabo-rose-640.webp" alt="Lavabo em cimento queimado rosé com ripado, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Lavabo rosé</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-varanda-gourmet-640.webp" alt="Varanda gourmet com marcenaria verde, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Varanda gourmet</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-case-sapore-greenwall-640.webp" alt="Salão da Sapore Gelato Caffè com parede verde, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>Sapore Gelato Caffè</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/portfolio/opt/car-proj-cm-brigadeiros-640.webp" alt="Quiosque da CM Brigadeiros em shopping, projeto Assis Carrer" width="640" height="800" loading="lazy" decoding="async" />
+            <figcaption>CM Brigadeiros · shopping</figcaption>
+          </figure>
+        </div>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <p class="swipe">Arraste para ver mais projetos</p>
       </div>
     </section>
 
@@ -267,6 +328,13 @@
         <article class="review"><span class="stars">★★★★★</span><p>"Atenderam todos meus pedidos e o projeto ficou do jeito que eu sonhava."</p></article>
         <article class="review"><span class="stars">★★★★★</span><p>"Recomendo pra quem busca excelência e humanidade no trabalho de arquitetura."</p></article>
         <article class="review"><span class="stars">★★★★★</span><p>"Atenderam todas as expectativas que tinha para o meu projeto."</p></article>
+      </div>
+      <p class="logos-title">Marcas que confiaram no escritório</p>
+      <div class="logos">
+        <div class="logo-tile"><img src="images/clientes/sapore.png" alt="Sapore Gelato Caffè" width="224" height="224" loading="lazy" /></div>
+        <div class="logo-tile"><img src="images/clientes/sapore-acai.png" alt="Sapore Açaí" width="600" height="600" loading="lazy" /></div>
+        <div class="logo-tile"><img src="images/clientes/artesane.jpg" alt="Artesane" width="225" height="225" loading="lazy" /></div>
+        <div class="logo-tile"><img src="images/clientes/cm-brigadeiro.png" alt="CM Brigadeiros" width="141" height="121" loading="lazy" /></div>
       </div>
       <div class="mais">
         <a href="index.html" class="btn btn-ghost" id="bfConhecer">Conhecer o escritório e os projetos</a>
@@ -397,6 +465,22 @@
     document.getElementById('bfConhecer').addEventListener('click', function () {
       trackEvent('conhecer_site_click', {page: 'lp-black-friday'});
     });
+
+    // Carrossel: bolinhas acompanham a rolagem
+    (function () {
+      var track = document.getElementById('track'), dots = document.getElementById('dots');
+      if (!track || !dots) return;
+      var slides = track.querySelectorAll('.slide');
+      slides.forEach(function () { dots.appendChild(document.createElement('span')); });
+      function marcar() {
+        var w = slides[0].getBoundingClientRect().width + 12;
+        var noFim = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+        var i = noFim ? slides.length - 1 : Math.min(slides.length - 1, Math.round(track.scrollLeft / w));
+        dots.querySelectorAll('span').forEach(function (d, j) { d.classList.toggle('on', j === i); });
+      }
+      track.addEventListener('scroll', marcar, {passive: true});
+      marcar();
+    })();
 
     var s75 = false;
     window.addEventListener('scroll', function () {
