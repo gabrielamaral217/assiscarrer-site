@@ -157,7 +157,6 @@
 ### Médio prazo (próximos 30 dias)
 - [ ] **Todo dia 5: teste de IA.** Perguntar em aba anônima no ChatGPT, Gemini e Perplexity: "melhor arquiteto em São José dos Campos", "arquiteta de interiores em SJC" e "escritório de arquitetura no Aquarius SJC". Anotar aqui se a Assis Carrer aparece e quem aparece. No GA4 (Aquisição › Aquisição de tráfego, origem/mídia) ver as visitas de `chatgpt.com`, `perplexity.ai` e `gemini.google.com`. Linha de base: 04/11/2026, antes das páginas novas serem indexadas
 - [ ] Enviar o sitemap no Google Search Console e no Bing Webmaster Tools (o ChatGPT busca pelo Bing)
-- [ ] Rever o FAQ de `processo.html`, que ainda cita prazos ("6 a 8 semanas", "3 a 5 meses"), contra a regra de não prometer prazo
 - [ ] Subir mais 20+ fotos no GMN (usar pasta `images/00.FOTOS OBRAS/`)
 - [ ] Ligar campanha Meta Ads (Pixel já está rodando · faltam criativos)
 - [ ] Calendário editorial Instagram 12 posts/mês (Parte 3 do plano)
@@ -179,6 +178,11 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-04 · Processo sem prazos em número
+- **Por quê:** regra do Gabriel, nada de preço nem prazo em número no site, porque cada projeto é customizado.
+- **processo.html (PT e EN):** os rótulos das etapas eram "Semana 1", "Semanas 2 a 4", "Semanas 5 a 8" e "8 a 24 semanas" e viraram "Início · conversa e visita", "Criação · layout e 3D", "Detalhamento técnico" e "Obra · conforme o seu projeto". A resposta "Quanto tempo leva?" saiu de "6 a 8 semanas / 3 a 5 meses / 4 a 6 meses" e passou a dizer que o prazo depende do imóvel, do escopo e das aprovações, com o cronograma montado com o cliente. Também saíram "em média, duas rodadas de refinamento", "visitas semanais" (agora "periódicas") e "quanto tempo leva" do topo e da meta description.
+- **Mantido:** a pergunta "Cobram pela visita técnica inicial?" continua dizendo que a primeira visita é gratuita para projetos qualificados. Falta o Gabriel confirmar.
 
 ### 2026-11-04 · Visibilidade em IA: páginas de SJC, FAQ e dados estruturados
 - **Por quê:** o Gabriel quer que a IA (ChatGPT, Gemini, Perplexity) cite a Assis Carrer quando alguém perguntar por arquiteto em SJC. As IAs tiram a resposta de páginas que respondem perguntas diretas e de dados estruturados.
