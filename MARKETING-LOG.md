@@ -180,6 +180,10 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-11-07 · Black Friday com a identidade da marca
+- O Gabriel quis manter a página preta, rápida e só sobre a promoção, mas com cara de Assis Carrer. Uma versão no layout completo do site (creme e azul-marinho) foi testada e descartada.
+- **lp-black-friday.html:** mesma estrutura e textos, agora com Cormorant Garamond nos títulos ("25% off." em itálico dourado), fonte Now no texto, botões e caixas retos em caixa alta espaçada, selo com linhas douradas, contagem e números em dourado serifado, passos 01/02/03 como no Processo, depoimentos em itálico e o símbolo da marca em marca d'água no topo. Formulário, medição, carrossel e encerramento em 30/11 sem mudança.
+
 ### 2026-11-07 · Banners da Black Friday (Meta e Google)
 - Pasta `assiscarrer/banners-black-friday/` (fora do repo), feita com as fotos profissionais de `images/00.FOTOS OBRAS/` (Celebration, Enjoy Aquarius, Believe, Real Ville e a foto das arquitetas), fonte Now e as cores da LP.
 - **Meta (`meta/`):** feed 4:5 com a oferta, feed 4:5 com as arquitetas, quadrado com "25%", stories 9:16 (texto fora das faixas de cima e de baixo) e carrossel de 5 cards (4 projetos + card da oferta).
