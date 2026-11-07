@@ -73,6 +73,7 @@
 | GitHub repo | gabrielamaral217/assiscarrer-site | branch `main` (GitHub Pages) |
 | Site público | https://www.assiscarrer-arquitetura.com | CNAME no repo |
 | Instagram | @assiscarrer.arq | 7k+ seguidores |
+| API Google (Claude) | projeto Cloud `assiscarrer-marketing` (arquitetura@) | GA4 property `538797588` lida pelo MCP `google-analytics` (Claude Code, escopo usuário). Credenciais só no PC do Gabriel, na pasta `.assiscarrer` do usuário (fora do repo). Google Ads API: token com Acesso básico na MCC 948-618-7939, falta colar em `google-ads.yaml` depois que a chave de acesso liberar |
 
 ### WhatsApp e contato
 
@@ -178,6 +179,11 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-07 · Claude com acesso ao GA4 (Ads a caminho)
+- Projeto `assiscarrer-marketing` no Google Cloud com Google Ads API, Analytics Data e Admin API; cliente OAuth de app para computador. Login de arquitetura@ com escopos analytics.readonly, adwords e cloud-platform.
+- MCP oficial do GA4 (`uvx analytics-mcp`) registrado no Claude Code. Teste 08/10 a 06/11: 107 sessões (63 diretas, 24 google/cpc, 13 orgânicas, **4 vindas do chatgpt.com**); 6 `whatsapp_click`, 1 `lead_form_submit`.
+- Google Ads: o developer token já existia com Acesso básico; ver o token exige a chave de acesso nova da conta (até 2 dias). Regra mantida: campanhas criadas pela API nascem pausadas; ativar ou mudar orçamento só com ok do Gabriel.
 
 ### 2026-11-04 · Processo sem prazos em número
 - **Por quê:** regra do Gabriel, nada de preço nem prazo em número no site, porque cada projeto é customizado.
