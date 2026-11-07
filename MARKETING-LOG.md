@@ -180,6 +180,12 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-11-07 · Banners da Black Friday (Meta e Google)
+- Pasta `assiscarrer/banners-black-friday/` (fora do repo), feita com as fotos profissionais de `images/00.FOTOS OBRAS/` (Celebration, Enjoy Aquarius, Believe, Real Ville e a foto das arquitetas), fonte Now e as cores da LP.
+- **Meta (`meta/`):** feed 4:5 com a oferta, feed 4:5 com as arquitetas, quadrado com "25%", stories 9:16 (texto fora das faixas de cima e de baixo) e carrossel de 5 cards (4 projetos + card da oferta).
+- **Google (`google/`):** 2 imagens paisagem 1.91:1 e 3 quadradas, **sem texto por cima** (o Google reprova imagem com texto sobreposto), para os recursos de imagem da campanha de pesquisa.
+- Para refazer: editar `src/banners.html` e renderizar com o Chrome headless (`--screenshot`, um banner por `#id`).
+
 ### 2026-11-07 · Claude com acesso ao GA4 (Ads a caminho)
 - Projeto `assiscarrer-marketing` no Google Cloud com Google Ads API, Analytics Data e Admin API; cliente OAuth de app para computador. Login de arquitetura@ com escopos analytics.readonly, adwords e cloud-platform.
 - MCP oficial do GA4 (`uvx analytics-mcp`) registrado no Claude Code. Teste 08/10 a 06/11: 107 sessões (63 diretas, 24 google/cpc, 13 orgânicas, **4 vindas do chatgpt.com**); 6 `whatsapp_click`, 1 `lead_form_submit`.
