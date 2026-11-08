@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-04** · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-07** · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -179,6 +179,12 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-07 · Faixa de Black Friday no site, selo da home e bairros de toda SJC
+- **Faixa no topo (`bf-banner.js`):** barra preta fixa com "Black Friday · 25% no seu projeto até 30/11 · Ver condição" (no celular, "25% no projeto · Ver"), levando para `lp-black-friday.html`. Entra em index, residencial, comercial, processo, arquiteta-sao-jose-dos-campos, projeto-de-interiores-sjc, lp-apartamento, lp-apartamento-v2 e lp-comercial (fora da própria LP e da proposta). Tem "×" (fica fechada na sessão), some sozinha após 30/11 23h59 e mede o clique como `bf_faixa_click`. **Para tirar antes (vagas esgotadas): `ATIVA = false` no topo do arquivo.**
+- **Selo "Arquitetura autoral · São José dos Campos" (home):** estava apagado sobre a foto clara. Agora em areia claro (#f3cf9f) com fundo escuro translúcido e filete à esquerda (`.hero-label` no style.css).
+- **Bairros:** o Gabriel não quer parecer que o escritório atende só 2 ou 3 bairros. Linha padrão embaixo dos botões: "200+ projetos · 7 anos · Aquarius · Urbanova · Satélite · Floradas · Esplanada · toda SJC" (home, residencial, lp-apartamento, PT e EN). Descrições do Google passam a dizer "em toda a cidade/toda SJC" (home, residencial, LPs de apartamento). Residencial ganhou Satélite, Vila Adyana e "e toda SJC" nos quadros de bairros. Páginas de SJC e llms.txt incluem Satélite (e Jd. das Indústrias no FAQ). Legendas de obras reais (ex.: "Casa em Urbanova") não mudaram.
+- Sobe junto a foto do Real Ville da LP de Black Friday, cujo deploy anterior (058ab7f) falhou por timeout do GitHub Pages.
 
 ### 2026-11-07 · Black Friday com a identidade da marca
 - O Gabriel quis manter a página preta, rápida e só sobre a promoção, mas com cara de Assis Carrer. Uma versão no layout completo do site (creme e azul-marinho) foi testada e descartada.
