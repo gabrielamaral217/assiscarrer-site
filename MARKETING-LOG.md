@@ -184,6 +184,7 @@
 - Pergunta "me indique arquitetos em sao jose dos campos", feita pelo Gabriel:
   - **Gemini:** Assis Carrer em **1º** (ficha do Google, 5,0). Resposta personalizada (conta logada e localização no Urbanova), então precisa repetir em janela anônima.
   - **ChatGPT:** **não cita**. A lista vem de dados de mapa, ordenada por nota e volume de avaliações: Mariana Lobo 4,9 (68), Bevilacqua 4,9 (45), Débora Toledo 4,9 (57), Fumagalli 5,0 (31), José Luís 5,0 (144), Analu Andrade 4,9 (100), Rafaela Andrade 5,0 (45), Cintia Silva 5,0 (28), Casa Lemham 5,0 (49), Fabio Gouvêa 5,0 (22).
+  - **Claude:** **não cita**. Mesma lógica de nota e volume no Google: José Luís (144), Analu Andrade (100), Rafaela Andrade (45), Rafaela Leme (41), Mariana Lobo (68), Fumagalli (31), Paiva (27), Luana Assunção (29).
 - GA4, visitas vindas de IA (90 dias): só chatgpt.com. Agosto 4 (robôs), setembro 2, outubro 2, novembro até dia 09: 3 (todas engajadas, cerca de 70 s). Todas entram pela home.
 - Alavanca principal: **volume de avaliações no Google** (os citados têm de 22 a 144) e ficha replicada no Bing Places e no Apple Business Connect.
 
