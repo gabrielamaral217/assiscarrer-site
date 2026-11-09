@@ -180,6 +180,13 @@
 
 ## 📅 Histórico (ordem cronológica reversa)
 
+### 2026-11-09 · Linha de base: visibilidade em IA
+- Pergunta "me indique arquitetos em sao jose dos campos", feita pelo Gabriel:
+  - **Gemini:** Assis Carrer em **1º** (ficha do Google, 5,0). Resposta personalizada (conta logada e localização no Urbanova), então precisa repetir em janela anônima.
+  - **ChatGPT:** **não cita**. A lista vem de dados de mapa, ordenada por nota e volume de avaliações: Mariana Lobo 4,9 (68), Bevilacqua 4,9 (45), Débora Toledo 4,9 (57), Fumagalli 5,0 (31), José Luís 5,0 (144), Analu Andrade 4,9 (100), Rafaela Andrade 5,0 (45), Cintia Silva 5,0 (28), Casa Lemham 5,0 (49), Fabio Gouvêa 5,0 (22).
+- GA4, visitas vindas de IA (90 dias): só chatgpt.com. Agosto 4 (robôs), setembro 2, outubro 2, novembro até dia 09: 3 (todas engajadas, cerca de 70 s). Todas entram pela home.
+- Alavanca principal: **volume de avaliações no Google** (os citados têm de 22 a 144) e ficha replicada no Bing Places e no Apple Business Connect.
+
 ### 2026-11-09 · Portuga Bake Shop nas referências e topo da home mais enxuto
 - **Home, topo:** saiu "Mais de 200 projetos entregues em 7 anos." do subtítulo (PT e EN); repetia a linha de prova logo abaixo. Fica "As arquitetas por trás de cafés, sorveterias e residências de referência na cidade."
 - **Portuga Bake Shop (parceira):** logo (`images/clientes/portuga.svg`, mascote oficial do site deles) em "Empresas que já transformamos" na home e nas marcas da LP de Black Friday (grade passou a 5). Foto do balcão (`opt/case-portuga-balcao.*`, 360×480 enviada pelo Gabriel) no portfólio da home (7º item; CM Brigadeiros passou a ocupar 2 colunas) e nos cases da página Comercial (2º card; último card ímpar centralizado).
