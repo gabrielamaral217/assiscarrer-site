@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-09** · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-09** · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -179,6 +179,14 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-09 · Revisão do anúncio de Black Friday no Google Ads (via API)
+- O Gabriel montou o anúncio de Black Friday (RSA 830870387488) dentro do grupo da campanha "Search · Residencial+Comercial SJC", levando para `lp-black-friday.html`. Revisado e ajustado com o ok dele.
+- **Anúncio BF:** 15 títulos (+ "Black Friday de Arquitetura", "Visita Técnica Gratuita", "Projeto Autoral em SJC", "Arquitetas Flavia e Beatriz"); "Orçamento em 24h" virou "Orçamento pelo WhatsApp"; descrição "SJC e vale" virou "Atendemos SJC e Vale do Paraíba...".
+- **Anúncio normal (813728245433):** sem "24h" (compromisso de prazo) e bairros ampliados ("Aquarius, Urbanova e Toda SJC"; "+200 projetos... Aquarius, Urbanova, Satélite e toda SJC").
+- **Recursos:** promoção 25% com exibição de 09 a 30/11; sitelink novo "Black Friday 25%" (asset 437845231240, 09 a 30/11); sitelinks Apartamentos ("Aquarius, Satélite e toda SJC") e Falar agora ("Fale direto com as arquitetas", sem "resposta em 24h").
+- **Pausa em 01/12:** a campanha não tem data de fim. Fica por regra automática no Google Ads (criada pelo Gabriel) ou rodando `python -I ~/.assiscarrer/pausar_bf.py` (pausa o anúncio BF e tira o sitelink).
+- Não mexido, para decisão do Gabriel: teto de lance R$ 3 (campanha "limitada pela estratégia"; sugerido R$ 4) e conversões "Local actions" como principais (inflam o número).
 
 ### 2026-11-09 · Claude conectado ao Google Ads (API)
 - Token colado em `google-ads.yaml`. O login do Google tinha expirado (reautenticação exigida pela conta) e foi refeito.
