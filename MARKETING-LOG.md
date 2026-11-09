@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-07** · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-09** · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -73,7 +73,7 @@
 | GitHub repo | gabrielamaral217/assiscarrer-site | branch `main` (GitHub Pages) |
 | Site público | https://www.assiscarrer-arquitetura.com | CNAME no repo |
 | Instagram | @assiscarrer.arq | 7k+ seguidores |
-| API Google (Claude) | projeto Cloud `assiscarrer-marketing` (arquitetura@) | GA4 property `538797588` lida pelo MCP `google-analytics` (Claude Code, escopo usuário). Credenciais só no PC do Gabriel, na pasta `.assiscarrer` do usuário (fora do repo). Google Ads API: token com Acesso básico na MCC 948-618-7939, falta colar em `google-ads.yaml` depois que a chave de acesso liberar |
+| API Google (Claude) | projeto Cloud `assiscarrer-marketing` (arquitetura@) | GA4 property `538797588` lida pelo MCP `google-analytics` (Claude Code, escopo usuário). Credenciais só no PC do Gabriel, na pasta `.assiscarrer` do usuário (fora do repo). Google Ads API ✅ desde 09/11: lê e cria na conta 346-764-6872 com acesso **Explorer do projeto Cloud** (desde 10/09/2026 o nível vale pelo projeto, não pelo token). A conta não está vinculada à MCC 948-618-7939; o acesso é direto (`login_customer_id` = 3467646872 no `google-ads.yaml`) |
 
 ### WhatsApp e contato
 
@@ -179,6 +179,12 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-09 · Claude conectado ao Google Ads (API)
+- Token colado em `google-ads.yaml`. O login do Google tinha expirado (reautenticação exigida pela conta) e foi refeito.
+- O Google mudou as regras em 10/09/2026: o nível de acesso da API passou a valer pelo **projeto do Google Cloud**, e o "Acesso básico" do token não migrou. Pedido o **acesso Explorer** no projeto `assiscarrer-marketing` (Cloud Console > Google Ads API > Níveis de acesso), aprovado em minutos.
+- Teste de leitura ok. Nos últimos 30 dias, "Search · Residencial+Comercial SJC" está ativa: 537 impressões, 23 cliques, R$ 64,02 e 4 conversões. "Arquiteto São José dos Campos" (PMax) está pausada.
+- Regra mantida: campanha criada pela API nasce pausada; ativar ou mudar orçamento só com ok do Gabriel.
 
 ### 2026-11-07 · Faixa de Black Friday no site, selo da home e bairros de toda SJC
 - **Faixa no topo (`bf-banner.js`):** barra preta fixa com "Black Friday · 25% no seu projeto até 30/11 · Ver condição" (no celular, "25% no projeto · Ver"), levando para `lp-black-friday.html`. Entra em index, residencial, comercial, processo, arquiteta-sao-jose-dos-campos, projeto-de-interiores-sjc, lp-apartamento, lp-apartamento-v2 e lp-comercial (fora da própria LP e da proposta). Tem "×" (fica fechada na sessão), some sozinha após 30/11 23h59 e mede o clique como `bf_faixa_click`. **Para tirar antes (vagas esgotadas): `ATIVA = false` no topo do arquivo.**
