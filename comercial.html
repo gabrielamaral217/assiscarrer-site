@@ -121,6 +121,7 @@
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
       max-width: 1000px; margin: 0 auto;
     }
+    .case-item:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 14px); justify-self: center; }
     .case-item { background: var(--white, #fff); color: var(--text, #2a2a2a); overflow: hidden; }
     .case-item img { width: 100%; height: 360px; object-fit: cover; display: block; }
     .case-body { padding: 22px 24px 26px; }
@@ -228,6 +229,7 @@
       .com-segmento.lojas .seg-grid { direction: ltr; }
       .cases-row { grid-template-columns: 1fr; gap: 20px; padding: 0 24px; }
       .case-item img { height: 240px; }
+      .case-item:last-child:nth-child(odd) { width: auto; }
       .diff-grid { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
       .processo-mini { grid-template-columns: 1fr 1fr; gap: 24px; padding: 0 24px; }
       .pm-item .pm-num { font-size: 2.4rem; }
@@ -344,6 +346,14 @@
             <span class="case-tag" data-i18n="com.case1.tag">Gastronomia · Gelateria</span>
             <h3>Sapore Gelato Caffè</h3>
             <p data-i18n="com.case1.p">Loja com identidade visual integrada à arquitetura. Um dos estabelecimentos mais visitados e fotografados de SJC.</p>
+          </div>
+        </div>
+        <div class="case-item">
+          <img src="images/portfolio/opt/case-portuga-balcao.jpg" alt="Portuga Bake Shop, balcão de vitrine com azulejos brancos e estrutura azul" />
+          <div class="case-body">
+            <span class="case-tag" data-i18n="com.case5.tag">Gastronomia · Padaria</span>
+            <h3>Portuga Bake Shop</h3>
+            <p data-i18n="com.case5.p">Padaria de bairro com azulejo branco, estrutura azul e a vitrine como protagonista. Parceiros que confiam no escritório.</p>
           </div>
         </div>
         <div class="case-item">
@@ -536,6 +546,8 @@
       "com.cases.h2": "Landmark spots in SJC that we designed",
       "com.case1.tag": "Food &amp; Beverage · Gelato Shop",
       "com.case1.p": "A store with visual identity fully integrated into the architecture. One of the most visited and photographed spots in SJC.",
+      "com.case5.tag": "Food · Bakery",
+      "com.case5.p": "A neighborhood bakery with white tiles, a blue steel structure and the display counter as the star. Partners who trust the studio.",
       "com.case2.tag": "Retail · Kiosk",
       "com.case2.p": "A mall kiosk with strong visual identity: a rosé palette, gold details and optimized operation.",
       "com.case3.tag": "Health · Boutique Practice",

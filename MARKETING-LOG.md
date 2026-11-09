@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-09** · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-09** · Portuga Bake Shop nas referências · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -179,6 +179,11 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-09 · Portuga Bake Shop nas referências e topo da home mais enxuto
+- **Home, topo:** saiu "Mais de 200 projetos entregues em 7 anos." do subtítulo (PT e EN); repetia a linha de prova logo abaixo. Fica "As arquitetas por trás de cafés, sorveterias e residências de referência na cidade."
+- **Portuga Bake Shop (parceira):** logo (`images/clientes/portuga.svg`, mascote oficial do site deles) em "Empresas que já transformamos" na home e nas marcas da LP de Black Friday (grade passou a 5). Foto do balcão (`opt/case-portuga-balcao.*`, 360×480 enviada pelo Gabriel) no portfólio da home (7º item; CM Brigadeiros passou a ocupar 2 colunas) e nos cases da página Comercial (2º card; último card ímpar centralizado).
+- Pendente: foto da Portuga em resolução maior. Aviso: a `lp-comercial.html` usa `images/lp/comercial-portuga.jpg` com legenda "Portuga Bake Shop", mas a foto parece ser de uma louçaria na Casacor; não alterado.
 
 ### 2026-11-09 · Revisão do anúncio de Black Friday no Google Ads (via API)
 - O Gabriel montou o anúncio de Black Friday (RSA 830870387488) dentro do grupo da campanha "Search · Residencial+Comercial SJC", levando para `lp-black-friday.html`. Revisado e ajustado com o ok dele.
