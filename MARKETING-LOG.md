@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-09** · Portuga Bake Shop nas referências · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-13** · Site fora do ar 11-13/11 (domínio na Wix) · Portuga Bake Shop nas referências · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -179,6 +179,12 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-13 · Site fora do ar de 11 a 13/11 (domínio bloqueado na Wix)
+- O domínio `assiscarrer-arquitetura.com` está registrado na **Wix** (DNS ns8/ns9.wixdns.net), renovado até 10/11/2027. Em 11/11 às 05h52 a Wix aplicou **client hold** e o domínio sumiu do DNS. O Gabriel destravou em 13/11 às 18h16.
+- **Impacto:** 35 cliques pagos no Ads (R$ 100,52) caíram em página de erro; o Analytics ficou sem dados de 11 a 13/11; o anúncio de Black Friday foi reprovado por "destino não funciona" (o Google revisa de novo sozinho; se continuar reprovado, pedir revisão na tela do anúncio).
+- **Como detectar:** muitos cliques no Ads e poucas visitas no Analytics. Conferir com `nslookup www.assiscarrer-arquitetura.com 8.8.8.8` e com o RDAP da Verisign (status `client hold`).
+- **Plano:** depois de 30/11, transferir o domínio para fora da Wix (Cloudflare sugerida), copiando antes o DNS do GitHub Pages (A 185.199.108-111.153 e www CNAME gabrielamaral217.github.io).
 
 ### 2026-11-09 · Linha de base: visibilidade em IA
 - Pergunta "me indique arquitetos em sao jose dos campos", feita pelo Gabriel:
