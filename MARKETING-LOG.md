@@ -2,7 +2,7 @@
 
 > **Arquivo de contexto vivo.** Lê isso antes de qualquer mudança relacionada ao plano de marketing.
 > Origem: `planomarketingassiscarrer.pdf` (raiz do repo).
-> Última atualização: **2026-11-13** · Site fora do ar 11-13/11 (domínio na Wix) · Portuga Bake Shop nas referências · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
+> Última atualização: **2026-11-20** · Teto do Ads para R$ 4 · Site fora do ar 11-13/11 (domínio na Wix) · Portuga Bake Shop nas referências · Revisão do anúncio de Black Friday no Ads · Claude conectado ao Google Ads (API) · Faixa de Black Friday no topo do site · Bairros de toda SJC · Black Friday com a identidade da marca · Páginas de SJC para IA (FAQ, dados estruturados, llms.txt) · LP de Black Friday (carrossel maior, logos de clientes, botão para o site) · Otimização mobile antes do Meta Ads (fotos leves, PT como padrão, fontes woff2, logo branco em fundo escuro) · Correção de atribuição GA4 + `canal.js`
 
 ---
 
@@ -179,6 +179,13 @@
 ---
 
 ## 📅 Histórico (ordem cronológica reversa)
+
+### 2026-11-20 · Teto de lance do Ads de R$ 3 para R$ 4
+- Semana 16–20/11: 22 cliques, R$ 58, cerca de 3 contatos (2 WhatsApp, 1 formulário). Gasto de ~R$ 12/dia num orçamento de R$ 25.
+- Parcela de impressões caiu para 46%; 54% perdida por classificação, 0% por orçamento. Nota da palavra "arquiteto sjc" caiu de 3 para 1 (Taubaté e Jacareí seguem em 1).
+- Decisão do Gabriel: **teto do Maximizar cliques passou de R$ 3 para R$ 4** na campanha "Search · Residencial+Comercial SJC" (via API). Orçamento continua R$ 25/dia.
+- Semana anterior (09–13/11): 56 cliques e R$ 162, dos quais 36 cliques (~R$ 103) com o site fora do ar (Wix).
+- Sugerido e não feito: palavras negativas com nomes de concorrentes (Kobbaz, Peroni, Débora Toledo, Marcelo Ohira); seção do site para Taubaté/Jacareí.
 
 ### 2026-11-13 · Site fora do ar de 11 a 13/11 (domínio bloqueado na Wix)
 - O domínio `assiscarrer-arquitetura.com` está registrado na **Wix** (DNS ns8/ns9.wixdns.net), renovado até 10/11/2027. Em 11/11 às 05h52 a Wix aplicou **client hold** e o domínio sumiu do DNS. O Gabriel destravou em 13/11 às 18h16.
